@@ -1,0 +1,162 @@
+# Grafo de dependencias y orden de avance
+
+## Reglas
+
+- Una flecha de dependencia obligatoria A → B significa que A necesita B cerrado con pruebas/evidencia y PR fusionado.
+- Las dependencias condicionales se aplican solo al flujo/operación citado en el bloqueo; no detienen el resto del servicio ni otras operaciones.
+- blocks es la relación inversa de la unión entre depends_on y dependency_ids condicionales.
+- External dependencies son issues existentes; los bloqueos sin issue están en blocking_conditions.
+
+## Dependencias obligatorias
+
+- **TAXONOMY-SVC-BACK-01** → sin prerrequisito interno
+- **TAXONOMY-SVC-BACK-02** → TAXONOMY-SVC-BACK-01
+- **TAXONOMY-SVC-BACK-03** → TAXONOMY-SVC-BACK-02
+- **TAXONOMY-SVC-BACK-04** → TAXONOMY-SVC-BACK-03
+- **TAXONOMY-SVC-BACK-05** → TAXONOMY-SVC-BACK-04
+- **TAXONOMY-SVC-BACK-06** → TAXONOMY-SVC-BACK-05
+- **TAXONOMY-SVC-BACK-07** → TAXONOMY-SVC-BACK-06
+- **TAXONOMY-SVC-BACK-08** → TAXONOMY-SVC-BACK-07, GATEWAY-BACK-01, SHARED-BACK-01
+- **TAXONOMY-SVC-BACK-09** → TAXONOMY-SVC-BACK-08, SHARED-BACK-03, CATALOG-SVC-BACK-06
+- **CATALOG-SVC-BACK-01** → sin prerrequisito interno
+- **CATALOG-SVC-BACK-02** → CATALOG-SVC-BACK-01
+- **CATALOG-SVC-BACK-03** → CATALOG-SVC-BACK-02
+- **CATALOG-SVC-BACK-04** → CATALOG-SVC-BACK-03
+- **CATALOG-SVC-BACK-05** → CATALOG-SVC-BACK-04
+- **CATALOG-SVC-BACK-06** → CATALOG-SVC-BACK-05
+- **CATALOG-SVC-BACK-07** → CATALOG-SVC-BACK-06
+- **CATALOG-SVC-BACK-08** → CATALOG-SVC-BACK-07, GATEWAY-BACK-01, SHARED-BACK-01
+- **CATALOG-SVC-BACK-09** → CATALOG-SVC-BACK-08, SHARED-BACK-03, TAXONOMY-SVC-BACK-04, PRICING-SVC-BACK-06, INVENTORY-SVC-BACK-06
+- **PRICING-SVC-BACK-01** → sin prerrequisito interno
+- **PRICING-SVC-BACK-02** → PRICING-SVC-BACK-01
+- **PRICING-SVC-BACK-03** → PRICING-SVC-BACK-02
+- **PRICING-SVC-BACK-04** → PRICING-SVC-BACK-03
+- **PRICING-SVC-BACK-05** → PRICING-SVC-BACK-04
+- **PRICING-SVC-BACK-06** → PRICING-SVC-BACK-05
+- **PRICING-SVC-BACK-07** → PRICING-SVC-BACK-06
+- **PRICING-SVC-BACK-08** → PRICING-SVC-BACK-07, GATEWAY-BACK-01, SHARED-BACK-01
+- **PRICING-SVC-BACK-09** → PRICING-SVC-BACK-08, SHARED-BACK-03, CATALOG-SVC-BACK-06
+- **PRICE-AUDIT-SVC-BACK-01** → sin prerrequisito interno
+- **PRICE-AUDIT-SVC-BACK-02** → PRICE-AUDIT-SVC-BACK-01
+- **PRICE-AUDIT-SVC-BACK-03** → PRICE-AUDIT-SVC-BACK-02
+- **PRICE-AUDIT-SVC-BACK-04** → PRICE-AUDIT-SVC-BACK-03
+- **PRICE-AUDIT-SVC-BACK-05** → PRICE-AUDIT-SVC-BACK-04
+- **PRICE-AUDIT-SVC-BACK-06** → PRICE-AUDIT-SVC-BACK-05
+- **PRICE-AUDIT-SVC-BACK-07** → PRICE-AUDIT-SVC-BACK-06
+- **PRICE-AUDIT-SVC-BACK-08** → PRICE-AUDIT-SVC-BACK-07, GATEWAY-BACK-01, SHARED-BACK-01
+- **PRICE-AUDIT-SVC-BACK-09** → PRICE-AUDIT-SVC-BACK-08, SHARED-BACK-03, PRICING-SVC-BACK-06
+- **PROMOTIONS-SVC-BACK-01** → sin prerrequisito interno
+- **PROMOTIONS-SVC-BACK-02** → PROMOTIONS-SVC-BACK-01
+- **PROMOTIONS-SVC-BACK-03** → PROMOTIONS-SVC-BACK-02
+- **PROMOTIONS-SVC-BACK-04** → PROMOTIONS-SVC-BACK-03
+- **PROMOTIONS-SVC-BACK-05** → PROMOTIONS-SVC-BACK-04
+- **PROMOTIONS-SVC-BACK-06** → PROMOTIONS-SVC-BACK-05
+- **PROMOTIONS-SVC-BACK-07** → PROMOTIONS-SVC-BACK-06
+- **PROMOTIONS-SVC-BACK-08** → PROMOTIONS-SVC-BACK-07, GATEWAY-BACK-01, SHARED-BACK-01
+- **PROMOTIONS-SVC-BACK-09** → PROMOTIONS-SVC-BACK-08, SHARED-BACK-03, CATALOG-SVC-BACK-06, PRICING-SVC-BACK-06, INVENTORY-SVC-BACK-06
+- **COMBOS-SVC-BACK-01** → sin prerrequisito interno
+- **COMBOS-SVC-BACK-02** → COMBOS-SVC-BACK-01
+- **COMBOS-SVC-BACK-03** → COMBOS-SVC-BACK-02
+- **COMBOS-SVC-BACK-04** → COMBOS-SVC-BACK-03
+- **COMBOS-SVC-BACK-05** → COMBOS-SVC-BACK-04
+- **COMBOS-SVC-BACK-06** → COMBOS-SVC-BACK-05
+- **COMBOS-SVC-BACK-07** → COMBOS-SVC-BACK-06
+- **COMBOS-SVC-BACK-08** → COMBOS-SVC-BACK-07, GATEWAY-BACK-01, SHARED-BACK-01
+- **COMBOS-SVC-BACK-09** → COMBOS-SVC-BACK-08, SHARED-BACK-03, CATALOG-SVC-BACK-06, PRICING-SVC-BACK-04, INVENTORY-SVC-BACK-06
+- **BULK-SVC-BACK-01** → sin prerrequisito interno
+- **BULK-SVC-BACK-02** → BULK-SVC-BACK-01
+- **BULK-SVC-BACK-03** → BULK-SVC-BACK-02
+- **BULK-SVC-BACK-04** → BULK-SVC-BACK-03
+- **BULK-SVC-BACK-05** → BULK-SVC-BACK-04
+- **BULK-SVC-BACK-06** → BULK-SVC-BACK-05
+- **BULK-SVC-BACK-07** → BULK-SVC-BACK-06
+- **BULK-SVC-BACK-08** → BULK-SVC-BACK-07, GATEWAY-BACK-01, SHARED-BACK-01
+- **BULK-SVC-BACK-09** → BULK-SVC-BACK-08, SHARED-BACK-03, CATALOG-SVC-BACK-06, PRICING-SVC-BACK-06, INVENTORY-SVC-BACK-06
+- **INVENTORY-SVC-BACK-01** → sin prerrequisito interno
+- **INVENTORY-SVC-BACK-02** → INVENTORY-SVC-BACK-01
+- **INVENTORY-SVC-BACK-03** → INVENTORY-SVC-BACK-02
+- **INVENTORY-SVC-BACK-04** → INVENTORY-SVC-BACK-03
+- **INVENTORY-SVC-BACK-05** → INVENTORY-SVC-BACK-04
+- **INVENTORY-SVC-BACK-06** → INVENTORY-SVC-BACK-05
+- **INVENTORY-SVC-BACK-07** → INVENTORY-SVC-BACK-06
+- **INVENTORY-SVC-BACK-08** → INVENTORY-SVC-BACK-07, GATEWAY-BACK-01, SHARED-BACK-01
+- **INVENTORY-SVC-BACK-09** → INVENTORY-SVC-BACK-08, SHARED-BACK-03
+- **GATEWAY-BACK-01** → sin prerrequisito interno
+- **GATEWAY-BACK-02** → GATEWAY-BACK-01
+- **GATEWAY-BACK-03** → GATEWAY-BACK-02, TAXONOMY-SVC-BACK-06, CATALOG-SVC-BACK-06, PRICING-SVC-BACK-06, INVENTORY-SVC-BACK-06
+- **SHARED-BACK-01** → sin prerrequisito interno
+- **DEPLOY-BACK-01** → GATEWAY-BACK-01
+- **DATA-BACK-01** → sin prerrequisito interno
+- **SHARED-BACK-03** → GATEWAY-BACK-01, SHARED-BACK-01
+- **SHARED-BACK-04** → BULK-SVC-BACK-08, COMBOS-SVC-BACK-08, CATALOG-SVC-BACK-08, PROMOTIONS-SVC-BACK-08, TAXONOMY-SVC-BACK-08, PRICING-SVC-BACK-08, PRICE-AUDIT-SVC-BACK-08, INVENTORY-SVC-BACK-08
+- **SHARED-BACK-05** → TAXONOMY-SVC-BACK-09, CATALOG-SVC-BACK-09, PRICING-SVC-BACK-09, PRICE-AUDIT-SVC-BACK-09, PROMOTIONS-SVC-BACK-09, COMBOS-SVC-BACK-09, BULK-SVC-BACK-09, INVENTORY-SVC-BACK-09, GATEWAY-BACK-03, DEPLOY-BACK-01, DATA-BACK-01, SHARED-BACK-04
+
+## Dependencias condicionales por operación
+
+- **TAXONOMY-SVC-BACK-08** · Solo baja segura de categoría/característica/marca que espera verificación de Catálogo. → CATALOG-SVC-BACK-06. Mantener el CRUD independiente; habilitar y probar esta secuencia cuando el consumer catalog.master.deactivation.check.requested y su respuesta estén disponibles.
+- **CATALOG-SVC-BACK-08** · Selectores de categoría, características y tipos en MK-003/004. → TAXONOMY-SVC-BACK-04. Las otras operaciones se integran de forma independiente; probar la selección cuando las lecturas de Taxonomía estén disponibles.
+- **CATALOG-SVC-BACK-08** · Preparación async de producto/variante y estado de inicialización. → PRICING-SVC-BACK-06, INVENTORY-SVC-BACK-06. Probar el flujo completo solo cuando Pricing e Inventory procesen y respondan a los mensajes de inicialización; no ocultar fallo ni crear precio sintético.
+- **PRICING-SVC-BACK-08** · Selección de producto/SKU en pantallas de precio si el flujo la requiere. → CATALOG-SVC-BACK-04. Mantener consulta/edición por ID de SKU independiente y conectar el selector cuando Catalog exponga sus consultas.
+- **PROMOTIONS-SVC-BACK-08** · Proyecciones vigentes usadas por promociones, precios y disponibilidad. → CATALOG-SVC-BACK-06, PRICING-SVC-BACK-06, INVENTORY-SVC-BACK-06. CRUD y validación local continúan; probar elegibilidad contra los publishers/consumers reales al completar estas cadenas.
+- **COMBOS-SVC-BACK-08** · Selector de componentes SKU, precio vigente y disponibilidad informativa. → CATALOG-SVC-BACK-04, PRICING-SVC-BACK-04, INVENTORY-SVC-BACK-06. List/detail independientes continúan; aceptar creación/disponibilidad real cuando los providers necesarios estén listos.
+- **BULK-SVC-BACK-08** · Importación/reanudación que espera resultados async de los tres bounded contexts. → CATALOG-SVC-BACK-06, PRICING-SVC-BACK-06, INVENTORY-SVC-BACK-06. Plantilla, preview y exportación pueden probarse por separado; el lote real no se declara E2E hasta que los tres handlers/resultados funcionen.
+
+## Issues externos
+
+- **TAXONOMY-SVC-BACK-02** → Taller-SW-Web/G6-Productos-Ofertas-backend#1 (ABIERTO): Conexión, permiso y proceso de shared Supabase/fixtures; no bloquea trabajo con DB aislada.
+- **TAXONOMY-SVC-BACK-08** → Taller-SW-Web/G6-Productos-Ofertas-frontend#10 (ABIERTO): Coordinar estado de MK-008; UI existente no acredita API.
+- **TAXONOMY-SVC-BACK-08** → Taller-SW-Web/G6-Productos-Ofertas-frontend#11 (ABIERTO): Coordinar estado de MK-009; UI existente no acredita API.
+- **TAXONOMY-SVC-BACK-08** → Taller-SW-Web/G6-Productos-Ofertas-frontend#12 (ABIERTO): Coordinar estado de MK-010; UI existente no acredita API.
+- **TAXONOMY-SVC-BACK-08** → Taller-SW-Web/G6-Productos-Ofertas-frontend#13 (ABIERTO): Coordinar estado de MK-011; UI existente no acredita API.
+- **TAXONOMY-SVC-BACK-08** → Taller-SW-Web/G6-Productos-Ofertas-frontend#14 (ABIERTO): Coordinar estado de MK-012; UI existente no acredita API.
+- **CATALOG-SVC-BACK-02** → Taller-SW-Web/G6-Productos-Ofertas-backend#1 (ABIERTO): Conexión, permiso y proceso de shared Supabase/fixtures; no bloquea trabajo con DB aislada.
+- **CATALOG-SVC-BACK-08** → Taller-SW-Web/G6-Productos-Ofertas-frontend#5 (ABIERTO): Coordinar estado de MK-003; UI existente no acredita API.
+- **CATALOG-SVC-BACK-08** → Taller-SW-Web/G6-Productos-Ofertas-frontend#6 (ABIERTO): Coordinar estado de MK-004; UI existente no acredita API.
+- **PRICING-SVC-BACK-02** → Taller-SW-Web/G6-Productos-Ofertas-backend#1 (ABIERTO): Conexión, permiso y proceso de shared Supabase/fixtures; no bloquea trabajo con DB aislada.
+- **PRICING-SVC-BACK-08** → Taller-SW-Web/G6-Productos-Ofertas-frontend#15 (ABIERTO): Coordinar estado de MK-013; UI existente no acredita API.
+- **PRICE-AUDIT-SVC-BACK-02** → Taller-SW-Web/G6-Productos-Ofertas-backend#1 (ABIERTO): Conexión, permiso y proceso de shared Supabase/fixtures; no bloquea trabajo con DB aislada.
+- **PRICE-AUDIT-SVC-BACK-08** → Taller-SW-Web/G6-Productos-Ofertas-frontend#16 (ABIERTO): Coordinar estado de MK-014; UI existente no acredita API.
+- **PROMOTIONS-SVC-BACK-02** → Taller-SW-Web/G6-Productos-Ofertas-backend#1 (ABIERTO): Conexión, permiso y proceso de shared Supabase/fixtures; no bloquea trabajo con DB aislada.
+- **PROMOTIONS-SVC-BACK-08** → Taller-SW-Web/G6-Productos-Ofertas-frontend#7 (ABIERTO): Coordinar estado de MK-005; UI existente no acredita API.
+- **PROMOTIONS-SVC-BACK-08** → Taller-SW-Web/G6-Productos-Ofertas-frontend#8 (ABIERTO): Coordinar estado de MK-006; UI existente no acredita API.
+- **PROMOTIONS-SVC-BACK-08** → Taller-SW-Web/G6-Productos-Ofertas-frontend#9 (ABIERTO): Coordinar estado de MK-007; UI existente no acredita API.
+- **COMBOS-SVC-BACK-02** → Taller-SW-Web/G6-Productos-Ofertas-backend#1 (ABIERTO): Conexión, permiso y proceso de shared Supabase/fixtures; no bloquea trabajo con DB aislada.
+- **COMBOS-SVC-BACK-08** → Taller-SW-Web/G6-Productos-Ofertas-frontend#4 (ABIERTO): Coordinar estado de MK-002; UI existente no acredita API.
+- **BULK-SVC-BACK-02** → Taller-SW-Web/G6-Productos-Ofertas-backend#1 (ABIERTO): Conexión, permiso y proceso de shared Supabase/fixtures; no bloquea trabajo con DB aislada.
+- **BULK-SVC-BACK-08** → Taller-SW-Web/G6-Productos-Ofertas-frontend#3 (CERRADO): Coordinar estado de MK-001; UI existente no acredita API.
+- **INVENTORY-SVC-BACK-02** → Taller-SW-Web/G6-Productos-Ofertas-backend#1 (ABIERTO): Conexión, permiso y proceso de shared Supabase/fixtures; no bloquea trabajo con DB aislada.
+- **INVENTORY-SVC-BACK-08** → Taller-SW-Web/G6-Productos-Ofertas-frontend#17 (ABIERTO): Coordinar estado de MK-015; UI existente no acredita API.
+- **INVENTORY-SVC-BACK-08** → Taller-SW-Web/G6-Productos-Ofertas-frontend#18 (ABIERTO): Coordinar estado de MK-016; UI existente no acredita API.
+- **DEPLOY-BACK-01** → Taller-SW-Web/G6-Productos-Ofertas-backend#8 (ABIERTO): CD Oracle existente; reusar lo entregado por PR #9 y no duplicarlo.
+- **DATA-BACK-01** → Taller-SW-Web/G6-Productos-Ofertas-backend#11 (ABIERTO): Reconciliar fixture por schema, no duplicar seed de su owner.
+- **DATA-BACK-01** → Taller-SW-Web/G6-Productos-Ofertas-backend#12 (ABIERTO): Reconciliar fixture por schema, no duplicar seed de su owner.
+- **DATA-BACK-01** → Taller-SW-Web/G6-Productos-Ofertas-backend#13 (ABIERTO): Reconciliar fixture por schema, no duplicar seed de su owner.
+- **DATA-BACK-01** → Taller-SW-Web/G6-Productos-Ofertas-backend#14 (ABIERTO): Reconciliar fixture por schema, no duplicar seed de su owner.
+- **DATA-BACK-01** → Taller-SW-Web/G6-Productos-Ofertas-backend#15 (ABIERTO): Reconciliar fixture por schema, no duplicar seed de su owner.
+- **DATA-BACK-01** → Taller-SW-Web/G6-Productos-Ofertas-backend#16 (ABIERTO): Reconciliar fixture por schema, no duplicar seed de su owner.
+- **DATA-BACK-01** → Taller-SW-Web/G6-Productos-Ofertas-backend#17 (ABIERTO): DATA-VAL-001: reusar validaciones aprobadas; no implica restore persistente.
+- **DATA-BACK-01** → Taller-SW-Web/G6-Productos-Ofertas-backend#1 (ABIERTO): Reusar runner de seed y respetar shared=verify_only.
+- **SHARED-BACK-04** → Taller-SW-Web/G6-Productos-Ofertas-frontend#3 (CERRADO): Fila de cobertura MK-001; reconcile, no duplicate.
+- **SHARED-BACK-04** → Taller-SW-Web/G6-Productos-Ofertas-frontend#4 (ABIERTO): Fila de cobertura MK-002; reconcile, no duplicate.
+- **SHARED-BACK-04** → Taller-SW-Web/G6-Productos-Ofertas-frontend#5 (ABIERTO): Fila de cobertura MK-003; reconcile, no duplicate.
+- **SHARED-BACK-04** → Taller-SW-Web/G6-Productos-Ofertas-frontend#6 (ABIERTO): Fila de cobertura MK-004; reconcile, no duplicate.
+- **SHARED-BACK-04** → Taller-SW-Web/G6-Productos-Ofertas-frontend#7 (ABIERTO): Fila de cobertura MK-005; reconcile, no duplicate.
+- **SHARED-BACK-04** → Taller-SW-Web/G6-Productos-Ofertas-frontend#8 (ABIERTO): Fila de cobertura MK-006; reconcile, no duplicate.
+- **SHARED-BACK-04** → Taller-SW-Web/G6-Productos-Ofertas-frontend#9 (ABIERTO): Fila de cobertura MK-007; reconcile, no duplicate.
+- **SHARED-BACK-04** → Taller-SW-Web/G6-Productos-Ofertas-frontend#10 (ABIERTO): Fila de cobertura MK-008; reconcile, no duplicate.
+- **SHARED-BACK-04** → Taller-SW-Web/G6-Productos-Ofertas-frontend#11 (ABIERTO): Fila de cobertura MK-009; reconcile, no duplicate.
+- **SHARED-BACK-04** → Taller-SW-Web/G6-Productos-Ofertas-frontend#12 (ABIERTO): Fila de cobertura MK-010; reconcile, no duplicate.
+- **SHARED-BACK-04** → Taller-SW-Web/G6-Productos-Ofertas-frontend#13 (ABIERTO): Fila de cobertura MK-011; reconcile, no duplicate.
+- **SHARED-BACK-04** → Taller-SW-Web/G6-Productos-Ofertas-frontend#14 (ABIERTO): Fila de cobertura MK-012; reconcile, no duplicate.
+- **SHARED-BACK-04** → Taller-SW-Web/G6-Productos-Ofertas-frontend#15 (ABIERTO): Fila de cobertura MK-013; reconcile, no duplicate.
+- **SHARED-BACK-04** → Taller-SW-Web/G6-Productos-Ofertas-frontend#16 (ABIERTO): Fila de cobertura MK-014; reconcile, no duplicate.
+- **SHARED-BACK-04** → Taller-SW-Web/G6-Productos-Ofertas-frontend#17 (ABIERTO): Fila de cobertura MK-015; reconcile, no duplicate.
+- **SHARED-BACK-04** → Taller-SW-Web/G6-Productos-Ofertas-frontend#18 (ABIERTO): Fila de cobertura MK-016; reconcile, no duplicate.
+
+## Bloqueos sin issue externo
+
+- UserBearer/demo y Supabase: resolver por operación antes de habilitar esa operación en publicación pública.
+- RabbitMQ productivo/retry-DLX: G5 y owner G6 de mensajería confirman versión/topología/provisioning; desarrollo local puede usar broker aislado.
+- Supabase demo pública: Marco y owner competente verifican RLS, grants, schemas expuestos, credenciales PostgreSQL y rutas públicas por separado.
+- Retail/Postventa: G4/Retail y Postventa homologan conciliación offline y reintegro F3.
+- Oracle: owner Oracle pendiente con responsables de servicios.

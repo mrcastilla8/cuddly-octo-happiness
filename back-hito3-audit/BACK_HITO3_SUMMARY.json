@@ -1,0 +1,86 @@
+{
+  "draft_issue_count": 81,
+  "matrix_rows": 81,
+  "manifest_records": 81,
+  "by_responsible": {
+    "Leonardo López": 9,
+    "Gabriel Poma": 9,
+    "Leonardo Vera": 18,
+    "Axel Cueva": 12,
+    "Marco Castilla": 18,
+    "Miguel Taco": 9,
+    "OWNER_PENDIENTE": 6
+  },
+  "by_service": {
+    "taxonomy-svc": 9,
+    "catalog-svc": 9,
+    "pricing-svc": 9,
+    "price-audit-svc": 9,
+    "promotions-svc": 9,
+    "combos-svc": 9,
+    "bulk-svc": 9,
+    "inventory-svc": 9,
+    "api-gateway": 3,
+    "transversal": 6
+  },
+  "by_initial_status": {
+    "PARCIAL": 16,
+    "NO_INICIADO": 62,
+    "IMPLEMENTADO_SIN_VALIDAR": 2,
+    "BLOQUEADO_ESPECÍFICO": 1
+  },
+  "blocks_fully_credited": 0,
+  "inventory_status_map": {
+    "INVENTORY-SVC-BACK-01": "IMPLEMENTADO_SIN_VALIDAR",
+    "INVENTORY-SVC-BACK-02": "IMPLEMENTADO_SIN_VALIDAR",
+    "INVENTORY-SVC-BACK-03": "PARCIAL",
+    "INVENTORY-SVC-BACK-04": "PARCIAL",
+    "INVENTORY-SVC-BACK-05": "PARCIAL",
+    "INVENTORY-SVC-BACK-06": "PARCIAL",
+    "INVENTORY-SVC-BACK-07": "PARCIAL",
+    "INVENTORY-SVC-BACK-08": "NO_INICIADO",
+    "INVENTORY-SVC-BACK-09": "PARCIAL"
+  },
+  "before_after": {
+    "before": 81,
+    "after": 81,
+    "retained": 80,
+    "merged": 0,
+    "removed": [
+      {
+        "id": "SHARED-BACK-02",
+        "reason": "INFRA #1 ya documenta SSL/conexión/configuración de env/seed runner; lo que sea por servicio va en BACK-01/02. El transversal duplicaba esa preparación."
+      }
+    ],
+    "added": [
+      {
+        "id": "SHARED-BACK-05",
+        "reason": "separar la aceptación demo transversal final del harness de feature, desbloqueando el ciclo con BACK-09."
+      }
+    ],
+    "split": [
+      {
+        "from": "SHARED-BACK-03",
+        "result": "SHARED-BACK-03 prepara harness antes de BACK-09; SHARED-BACK-05 hace smoke final después de BACK-09."
+      }
+    ]
+  },
+  "published": 0,
+  "repository_changes": 0,
+  "supabase_writes": 0,
+  "publication_authorized": false,
+  "security_observation": {
+    "rls_disabled_tables": 84,
+    "effective_public_exposure": "NOT_VERIFIED",
+    "advisory_roles_mentioned": [
+      "anon",
+      "authenticated"
+    ],
+    "unverified_layers": [
+      "effective grants",
+      "schemas exposed through Supabase API",
+      "direct PostgreSQL service credentials",
+      "public routes/external paths"
+    ]
+  }
+}
