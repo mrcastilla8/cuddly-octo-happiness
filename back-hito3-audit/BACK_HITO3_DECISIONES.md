@@ -9,3 +9,9 @@
 - Mantener fixtures/mocks para pruebas aisladas; en VITE_DATA_MODE=api el error real no cae a mocks.
 - Cada issue tiene un PR en un repositorio de código. BACK-08 permanece centralizado en Backend y crea PR solo en Frontend. Ningún issue requiere un único PR que edite Backend y Frontend a la vez.
 - El trabajo sin owner transversal aprobado queda OWNER_PENDIENTE. Candidatos en el manifiesto son propuestas, no asignaciones.
+
+
+- Acreditación retrospectiva: INVENTORY-PR10-RETROSPECTIVE permite citar PR #10 OPEN/DRAFT a varios bloques solo con commits/files/tests verificables; mantiene un PR por issue para trabajo nuevo, no crea PRs ficticios ni duplica implementaciones.
+- Inventory Frontend se clasifica por evidencia de la rama taco: conservar el mock adapter y specs Playwright sin tratarlos como adapter HTTP, páginas/rutas o pruebas pasadas.
+- Gateway BACK-03 puede implementar consumers y contract tests en broker aislado; los cuatro publishers son dependencias solo de las pruebas de integración reales. Se conservan guards userBearer y la restricción de publicación pública.
+- El snapshot de contrato se fija por SHA para validar operationIds/eventos offline; versiones RC siguen candidatas y no prueban homologación o implementación.

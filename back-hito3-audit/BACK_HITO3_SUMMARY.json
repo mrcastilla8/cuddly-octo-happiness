@@ -82,5 +82,18 @@
       "direct PostgreSQL service credentials",
       "public routes/external paths"
     ]
+  },
+  "publication_package_repository": "mrcastilla8/cuddly-octo-happiness",
+  "official_g6_repository_changes": 0,
+  "secret_scan": {
+    "status": "PASS",
+    "files_scanned": 13,
+    "findings": 0
+  },
+  "audit_snapshots": {
+    "frontend_inventory_branch": "taco@f01cb3146322cd546396a8fa73a8f07fcbc2fb93",
+    "backend_inventory_pr10": "OPEN/DRAFT@2c4a18105c5e379edc8476b9d315aa6be1134b80",
+    "openapi_blob_sha": "f64bfe9a097b2a0f74c2600988305443d92f640e",
+    "asyncapi_blob_sha": "a5552e51c651d1eabfcd6cbb9607abf8ab0573e9"
   }
 }

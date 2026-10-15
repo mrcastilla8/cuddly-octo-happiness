@@ -83,7 +83,7 @@
 - **INVENTORY-SVC-BACK-09** → INVENTORY-SVC-BACK-08, SHARED-BACK-03
 - **GATEWAY-BACK-01** → sin prerrequisito interno
 - **GATEWAY-BACK-02** → GATEWAY-BACK-01
-- **GATEWAY-BACK-03** → GATEWAY-BACK-02, TAXONOMY-SVC-BACK-06, CATALOG-SVC-BACK-06, PRICING-SVC-BACK-06, INVENTORY-SVC-BACK-06
+- **GATEWAY-BACK-03** → GATEWAY-BACK-01
 - **SHARED-BACK-01** → sin prerrequisito interno
 - **DEPLOY-BACK-01** → GATEWAY-BACK-01
 - **DATA-BACK-01** → sin prerrequisito interno
@@ -93,6 +93,7 @@
 
 ## Dependencias condicionales por operación
 
+- **GATEWAY-BACK-03** · Pruebas de integración con publishers reales de eventos BFF. → TAXONOMY-SVC-BACK-06, CATALOG-SVC-BACK-06, PRICING-SVC-BACK-06, INVENTORY-SVC-BACK-06. Consumers y contract tests usan mensajes de contrato en broker aislado; solo la integración real espera al publisher.
 - **TAXONOMY-SVC-BACK-08** · Solo baja segura de categoría/característica/marca que espera verificación de Catálogo. → CATALOG-SVC-BACK-06. Mantener el CRUD independiente; habilitar y probar esta secuencia cuando el consumer catalog.master.deactivation.check.requested y su respuesta estén disponibles.
 - **CATALOG-SVC-BACK-08** · Selectores de categoría, características y tipos en MK-003/004. → TAXONOMY-SVC-BACK-04. Las otras operaciones se integran de forma independiente; probar la selección cuando las lecturas de Taxonomía estén disponibles.
 - **CATALOG-SVC-BACK-08** · Preparación async de producto/variante y estado de inicialización. → PRICING-SVC-BACK-06, INVENTORY-SVC-BACK-06. Probar el flujo completo solo cuando Pricing e Inventory procesen y respondan a los mensajes de inicialización; no ocultar fallo ni crear precio sintético.

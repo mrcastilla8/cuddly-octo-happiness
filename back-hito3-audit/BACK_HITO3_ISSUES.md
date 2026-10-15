@@ -90,7 +90,7 @@ arquitectura/Arquitectura.md; REGISTRO_DEC_F.md y MATRIZ_TRAZABILIDAD_DEC_F.md (
 NO_INICIADO: en la rama/corte auditado no se acredita provider Drizzle funcional para este servicio.
 
 ## Dependencias bloqueantes
-- TAXONOMY-SVC-BACK-01 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
+- TAXONOMY-SVC-BACK-01 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 
 **Issues existentes relacionados:**
 - [Taller-SW-Web/G6-Productos-Ofertas-backend#1](https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/1) (ABIERTO): Conexión, permiso y proceso de shared Supabase/fixtures; no bloquea trabajo con DB aislada.
@@ -152,7 +152,7 @@ arquitectura/Arquitectura.md; REGISTRO_DEC_F.md y MATRIZ_TRAZABILIDAD_DEC_F.md (
 NO_INICIADO: scaffold no acredita reglas del bounded context.
 
 ## Dependencias bloqueantes
-- TAXONOMY-SVC-BACK-02 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
+- TAXONOMY-SVC-BACK-02 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 
 **Issues existentes relacionados:**
 - Sin issue externo previo identificado.
@@ -214,7 +214,7 @@ arquitectura/Arquitectura.md; REGISTRO_DEC_F.md y MATRIZ_TRAZABILIDAD_DEC_F.md (
 NO_INICIADO: GET /health no acredita operaciones de consulta de negocio.
 
 ## Dependencias bloqueantes
-- TAXONOMY-SVC-BACK-03 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
+- TAXONOMY-SVC-BACK-03 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 
 **Issues existentes relacionados:**
 - Sin issue externo previo identificado.
@@ -276,7 +276,7 @@ arquitectura/Arquitectura.md; REGISTRO_DEC_F.md y MATRIZ_TRAZABILIDAD_DEC_F.md (
 NO_INICIADO: no se acreditan operaciones de escritura de negocio.
 
 ## Dependencias bloqueantes
-- TAXONOMY-SVC-BACK-04 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
+- TAXONOMY-SVC-BACK-04 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 
 **Issues existentes relacionados:**
 - Sin issue externo previo identificado.
@@ -338,7 +338,7 @@ arquitectura/Arquitectura.md; REGISTRO_DEC_F.md y MATRIZ_TRAZABILIDAD_DEC_F.md (
 NO_INICIADO: no se acredita productor/consumer del servicio.
 
 ## Dependencias bloqueantes
-- TAXONOMY-SVC-BACK-05 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
+- TAXONOMY-SVC-BACK-05 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 
 **Issues existentes relacionados:**
 - Sin issue externo previo identificado.
@@ -400,7 +400,7 @@ arquitectura/Arquitectura.md; REGISTRO_DEC_F.md y MATRIZ_TRAZABILIDAD_DEC_F.md (
 NO_INICIADO: health básico no acredita la resiliencia/observabilidad de operaciones de negocio.
 
 ## Dependencias bloqueantes
-- TAXONOMY-SVC-BACK-06 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
+- TAXONOMY-SVC-BACK-06 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 
 **Issues existentes relacionados:**
 - Sin issue externo previo identificado.
@@ -462,9 +462,9 @@ arquitectura/Arquitectura.md; REGISTRO_DEC_F.md y MATRIZ_TRAZABILIDAD_DEC_F.md (
 NO_INICIADO: UI/mock/unavailable existentes no acreditan adapter HTTP real ni integración API.
 
 ## Dependencias bloqueantes
-- TAXONOMY-SVC-BACK-07 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
-- GATEWAY-BACK-01 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
-- SHARED-BACK-01 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
+- TAXONOMY-SVC-BACK-07 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
+- GATEWAY-BACK-01 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
+- SHARED-BACK-01 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 
 **Dependencias condicionales por operación:**
 - **Solo baja segura de categoría/característica/marca que espera verificación de Catálogo.** depende de CATALOG-SVC-BACK-06. Mantener el CRUD independiente; habilitar y probar esta secuencia cuando el consumer catalog.master.deactivation.check.requested y su respuesta estén disponibles.
@@ -535,8 +535,8 @@ arquitectura/Arquitectura.md; REGISTRO_DEC_F.md y MATRIZ_TRAZABILIDAD_DEC_F.md (
 NO_INICIADO: no se acredita E2E real React→Gateway→servicio→dependencias.
 
 ## Dependencias bloqueantes
-- TAXONOMY-SVC-BACK-08 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
-- SHARED-BACK-03 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
+- TAXONOMY-SVC-BACK-08 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
+- SHARED-BACK-03 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 
 **Issues existentes relacionados:**
 - Sin issue externo previo identificado.
@@ -660,7 +660,7 @@ arquitectura/Arquitectura.md; REGISTRO_DEC_F.md y MATRIZ_TRAZABILIDAD_DEC_F.md (
 NO_INICIADO: en la rama/corte auditado no se acredita provider Drizzle funcional para este servicio.
 
 ## Dependencias bloqueantes
-- CATALOG-SVC-BACK-01 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
+- CATALOG-SVC-BACK-01 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 
 **Issues existentes relacionados:**
 - [Taller-SW-Web/G6-Productos-Ofertas-backend#1](https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/1) (ABIERTO): Conexión, permiso y proceso de shared Supabase/fixtures; no bloquea trabajo con DB aislada.
@@ -722,7 +722,7 @@ arquitectura/Arquitectura.md; REGISTRO_DEC_F.md y MATRIZ_TRAZABILIDAD_DEC_F.md (
 NO_INICIADO: scaffold no acredita reglas del bounded context.
 
 ## Dependencias bloqueantes
-- CATALOG-SVC-BACK-02 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
+- CATALOG-SVC-BACK-02 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 
 **Issues existentes relacionados:**
 - Sin issue externo previo identificado.
@@ -784,7 +784,7 @@ arquitectura/Arquitectura.md; REGISTRO_DEC_F.md y MATRIZ_TRAZABILIDAD_DEC_F.md (
 NO_INICIADO: GET /health no acredita operaciones de consulta de negocio.
 
 ## Dependencias bloqueantes
-- CATALOG-SVC-BACK-03 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
+- CATALOG-SVC-BACK-03 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 
 **Issues existentes relacionados:**
 - Sin issue externo previo identificado.
@@ -846,7 +846,7 @@ arquitectura/Arquitectura.md; REGISTRO_DEC_F.md y MATRIZ_TRAZABILIDAD_DEC_F.md (
 NO_INICIADO: no se acreditan operaciones de escritura de negocio.
 
 ## Dependencias bloqueantes
-- CATALOG-SVC-BACK-04 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
+- CATALOG-SVC-BACK-04 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 
 **Issues existentes relacionados:**
 - Sin issue externo previo identificado.
@@ -896,7 +896,7 @@ Las operaciones de mensajería que AsyncAPI RC2 asigna al servicio se entregan y
 Issue central: Taller-SW-Web/G6-Productos-Ofertas-backend. PR/cambios de código esperados: Taller-SW-Web/G6-Productos-Ofertas-backend.
 
 ## Alcance
-Publica catalog.product.deactivated, catalog.sku.deactivated, catalog.master.deactivation.checked, catalog.bulk.upsert.completed/rejected, pricing.product.initialization.requested e inventory.sku.initialization.requested; consume taxonomy.category.updated, taxonomy.product-type-schema.changed, taxonomy.characteristic-value.updated, taxonomy.master.deactivation.check.requested, catalog.bulk.upsert.requested, pricing.product.initialization.completed/rejected e inventory.sku.initialization.completed/rejected, según responsabilidades de AsyncAPI RC2 candidata.
+Publica catalog.product.deactivated, catalog.sku.deactivated, catalog.master.deactivation.checked, catalog.bulk.upsert.completed y catalog.bulk.upsert.rejected, pricing.product.initialization.requested e inventory.sku.initialization.requested; consume taxonomy.category.updated, taxonomy.product-type-schema.changed, taxonomy.characteristic-value.updated, taxonomy.master.deactivation.check.requested, catalog.bulk.upsert.requested, pricing.product.initialization.completed y pricing.product.initialization.rejected e inventory.sku.initialization.completed e inventory.sku.initialization.rejected, según responsabilidades de AsyncAPI RC2 candidata.
 
 ## Fuera de alcance
 No modificar contratos ejecutables, migraciones aplicadas, credenciales, grants/policies, datos shared ni ownership ajeno. No publicar puertos internos/broker. Aplicar AGENTS.md y los límites de ownership; integrar por APIs/eventos del owner, no por acceso cross-schema.
@@ -908,7 +908,7 @@ arquitectura/Arquitectura.md; REGISTRO_DEC_F.md y MATRIZ_TRAZABILIDAD_DEC_F.md (
 NO_INICIADO: no se acredita productor/consumer del servicio.
 
 ## Dependencias bloqueantes
-- CATALOG-SVC-BACK-05 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
+- CATALOG-SVC-BACK-05 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 
 **Issues existentes relacionados:**
 - Sin issue externo previo identificado.
@@ -970,7 +970,7 @@ arquitectura/Arquitectura.md; REGISTRO_DEC_F.md y MATRIZ_TRAZABILIDAD_DEC_F.md (
 NO_INICIADO: health básico no acredita la resiliencia/observabilidad de operaciones de negocio.
 
 ## Dependencias bloqueantes
-- CATALOG-SVC-BACK-06 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
+- CATALOG-SVC-BACK-06 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 
 **Issues existentes relacionados:**
 - Sin issue externo previo identificado.
@@ -1032,9 +1032,9 @@ arquitectura/Arquitectura.md; REGISTRO_DEC_F.md y MATRIZ_TRAZABILIDAD_DEC_F.md (
 NO_INICIADO: UI/mock/unavailable existentes no acreditan adapter HTTP real ni integración API.
 
 ## Dependencias bloqueantes
-- CATALOG-SVC-BACK-07 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
-- GATEWAY-BACK-01 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
-- SHARED-BACK-01 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
+- CATALOG-SVC-BACK-07 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
+- GATEWAY-BACK-01 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
+- SHARED-BACK-01 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 
 **Dependencias condicionales por operación:**
 - **Selectores de categoría, características y tipos en MK-003/004.** depende de TAXONOMY-SVC-BACK-04. Las otras operaciones se integran de forma independiente; probar la selección cuando las lecturas de Taxonomía estén disponibles.
@@ -1103,8 +1103,8 @@ arquitectura/Arquitectura.md; REGISTRO_DEC_F.md y MATRIZ_TRAZABILIDAD_DEC_F.md (
 NO_INICIADO: no se acredita E2E real React→Gateway→servicio→dependencias.
 
 ## Dependencias bloqueantes
-- CATALOG-SVC-BACK-08 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
-- SHARED-BACK-03 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
+- CATALOG-SVC-BACK-08 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
+- SHARED-BACK-03 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 
 **Issues existentes relacionados:**
 - Sin issue externo previo identificado.
@@ -1228,7 +1228,7 @@ arquitectura/Arquitectura.md; REGISTRO_DEC_F.md y MATRIZ_TRAZABILIDAD_DEC_F.md (
 NO_INICIADO: en la rama/corte auditado no se acredita provider Drizzle funcional para este servicio.
 
 ## Dependencias bloqueantes
-- PRICING-SVC-BACK-01 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
+- PRICING-SVC-BACK-01 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 
 **Issues existentes relacionados:**
 - [Taller-SW-Web/G6-Productos-Ofertas-backend#1](https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/1) (ABIERTO): Conexión, permiso y proceso de shared Supabase/fixtures; no bloquea trabajo con DB aislada.
@@ -1290,7 +1290,7 @@ arquitectura/Arquitectura.md; REGISTRO_DEC_F.md y MATRIZ_TRAZABILIDAD_DEC_F.md (
 NO_INICIADO: scaffold no acredita reglas del bounded context.
 
 ## Dependencias bloqueantes
-- PRICING-SVC-BACK-02 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
+- PRICING-SVC-BACK-02 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 
 **Issues existentes relacionados:**
 - Sin issue externo previo identificado.
@@ -1352,7 +1352,7 @@ arquitectura/Arquitectura.md; REGISTRO_DEC_F.md y MATRIZ_TRAZABILIDAD_DEC_F.md (
 NO_INICIADO: GET /health no acredita operaciones de consulta de negocio.
 
 ## Dependencias bloqueantes
-- PRICING-SVC-BACK-03 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
+- PRICING-SVC-BACK-03 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 
 **Issues existentes relacionados:**
 - Sin issue externo previo identificado.
@@ -1414,7 +1414,7 @@ arquitectura/Arquitectura.md; REGISTRO_DEC_F.md y MATRIZ_TRAZABILIDAD_DEC_F.md (
 NO_INICIADO: no se acreditan operaciones de escritura de negocio.
 
 ## Dependencias bloqueantes
-- PRICING-SVC-BACK-04 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
+- PRICING-SVC-BACK-04 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 
 **Issues existentes relacionados:**
 - Sin issue externo previo identificado.
@@ -1464,7 +1464,7 @@ Las operaciones de mensajería que AsyncAPI RC2 asigna al servicio se entregan y
 Issue central: Taller-SW-Web/G6-Productos-Ofertas-backend. PR/cambios de código esperados: Taller-SW-Web/G6-Productos-Ofertas-backend.
 
 ## Alcance
-Publica pricing.price.changed, pricing.product.initialization.completed/rejected y pricing.bulk.price.apply.completed/rejected; consume pricing.product.initialization.requested, pricing.bulk.price.apply.requested y catalog.sku.deactivated, conforme a AsyncAPI RC2 candidata.
+Publica pricing.price.changed, pricing.product.initialization.completed y pricing.product.initialization.rejected y pricing.bulk.price.apply.completed y pricing.bulk.price.apply.rejected; consume pricing.product.initialization.requested, pricing.bulk.price.apply.requested y catalog.sku.deactivated, conforme a AsyncAPI RC2 candidata.
 
 ## Fuera de alcance
 No modificar contratos ejecutables, migraciones aplicadas, credenciales, grants/policies, datos shared ni ownership ajeno. No publicar puertos internos/broker. Aplicar AGENTS.md y los límites de ownership; integrar por APIs/eventos del owner, no por acceso cross-schema.
@@ -1476,7 +1476,7 @@ arquitectura/Arquitectura.md; REGISTRO_DEC_F.md y MATRIZ_TRAZABILIDAD_DEC_F.md (
 NO_INICIADO: no se acredita productor/consumer del servicio.
 
 ## Dependencias bloqueantes
-- PRICING-SVC-BACK-05 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
+- PRICING-SVC-BACK-05 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 
 **Issues existentes relacionados:**
 - Sin issue externo previo identificado.
@@ -1538,7 +1538,7 @@ arquitectura/Arquitectura.md; REGISTRO_DEC_F.md y MATRIZ_TRAZABILIDAD_DEC_F.md (
 NO_INICIADO: health básico no acredita la resiliencia/observabilidad de operaciones de negocio.
 
 ## Dependencias bloqueantes
-- PRICING-SVC-BACK-06 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
+- PRICING-SVC-BACK-06 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 
 **Issues existentes relacionados:**
 - Sin issue externo previo identificado.
@@ -1600,9 +1600,9 @@ arquitectura/Arquitectura.md; REGISTRO_DEC_F.md y MATRIZ_TRAZABILIDAD_DEC_F.md (
 NO_INICIADO: UI/mock/unavailable existentes no acreditan adapter HTTP real ni integración API.
 
 ## Dependencias bloqueantes
-- PRICING-SVC-BACK-07 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
-- GATEWAY-BACK-01 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
-- SHARED-BACK-01 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
+- PRICING-SVC-BACK-07 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
+- GATEWAY-BACK-01 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
+- SHARED-BACK-01 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 
 **Dependencias condicionales por operación:**
 - **Selección de producto/SKU en pantallas de precio si el flujo la requiere.** depende de CATALOG-SVC-BACK-04. Mantener consulta/edición por ID de SKU independiente y conectar el selector cuando Catalog exponga sus consultas.
@@ -1669,8 +1669,8 @@ arquitectura/Arquitectura.md; REGISTRO_DEC_F.md y MATRIZ_TRAZABILIDAD_DEC_F.md (
 NO_INICIADO: no se acredita E2E real React→Gateway→servicio→dependencias.
 
 ## Dependencias bloqueantes
-- PRICING-SVC-BACK-08 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
-- SHARED-BACK-03 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
+- PRICING-SVC-BACK-08 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
+- SHARED-BACK-03 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 
 **Issues existentes relacionados:**
 - Sin issue externo previo identificado.
@@ -1794,7 +1794,7 @@ arquitectura/Arquitectura.md; REGISTRO_DEC_F.md y MATRIZ_TRAZABILIDAD_DEC_F.md (
 NO_INICIADO: en la rama/corte auditado no se acredita provider Drizzle funcional para este servicio.
 
 ## Dependencias bloqueantes
-- PRICE-AUDIT-SVC-BACK-01 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
+- PRICE-AUDIT-SVC-BACK-01 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 
 **Issues existentes relacionados:**
 - [Taller-SW-Web/G6-Productos-Ofertas-backend#1](https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/1) (ABIERTO): Conexión, permiso y proceso de shared Supabase/fixtures; no bloquea trabajo con DB aislada.
@@ -1856,7 +1856,7 @@ arquitectura/Arquitectura.md; REGISTRO_DEC_F.md y MATRIZ_TRAZABILIDAD_DEC_F.md (
 NO_INICIADO: scaffold no acredita reglas del bounded context.
 
 ## Dependencias bloqueantes
-- PRICE-AUDIT-SVC-BACK-02 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
+- PRICE-AUDIT-SVC-BACK-02 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 
 **Issues existentes relacionados:**
 - Sin issue externo previo identificado.
@@ -1918,7 +1918,7 @@ arquitectura/Arquitectura.md; REGISTRO_DEC_F.md y MATRIZ_TRAZABILIDAD_DEC_F.md (
 NO_INICIADO: GET /health no acredita operaciones de consulta de negocio.
 
 ## Dependencias bloqueantes
-- PRICE-AUDIT-SVC-BACK-03 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
+- PRICE-AUDIT-SVC-BACK-03 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 
 **Issues existentes relacionados:**
 - Sin issue externo previo identificado.
@@ -1980,7 +1980,7 @@ arquitectura/Arquitectura.md; REGISTRO_DEC_F.md y MATRIZ_TRAZABILIDAD_DEC_F.md (
 NO_INICIADO: no se acreditan operaciones de escritura de negocio.
 
 ## Dependencias bloqueantes
-- PRICE-AUDIT-SVC-BACK-04 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
+- PRICE-AUDIT-SVC-BACK-04 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 
 **Issues existentes relacionados:**
 - Sin issue externo previo identificado.
@@ -2042,7 +2042,7 @@ arquitectura/Arquitectura.md; REGISTRO_DEC_F.md y MATRIZ_TRAZABILIDAD_DEC_F.md (
 NO_INICIADO: no se acredita productor/consumer del servicio.
 
 ## Dependencias bloqueantes
-- PRICE-AUDIT-SVC-BACK-05 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
+- PRICE-AUDIT-SVC-BACK-05 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 
 **Issues existentes relacionados:**
 - Sin issue externo previo identificado.
@@ -2104,7 +2104,7 @@ arquitectura/Arquitectura.md; REGISTRO_DEC_F.md y MATRIZ_TRAZABILIDAD_DEC_F.md (
 NO_INICIADO: health básico no acredita la resiliencia/observabilidad de operaciones de negocio.
 
 ## Dependencias bloqueantes
-- PRICE-AUDIT-SVC-BACK-06 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
+- PRICE-AUDIT-SVC-BACK-06 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 
 **Issues existentes relacionados:**
 - Sin issue externo previo identificado.
@@ -2166,9 +2166,9 @@ arquitectura/Arquitectura.md; REGISTRO_DEC_F.md y MATRIZ_TRAZABILIDAD_DEC_F.md (
 NO_INICIADO: UI/mock/unavailable existentes no acreditan adapter HTTP real ni integración API.
 
 ## Dependencias bloqueantes
-- PRICE-AUDIT-SVC-BACK-07 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
-- GATEWAY-BACK-01 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
-- SHARED-BACK-01 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
+- PRICE-AUDIT-SVC-BACK-07 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
+- GATEWAY-BACK-01 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
+- SHARED-BACK-01 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 
 **Issues existentes relacionados:**
 - [Taller-SW-Web/G6-Productos-Ofertas-frontend#16](https://github.com/Taller-SW-Web/G6-Productos-Ofertas-frontend/issues/16) (ABIERTO): Coordinar estado de MK-014; UI existente no acredita API.
@@ -2232,8 +2232,8 @@ arquitectura/Arquitectura.md; REGISTRO_DEC_F.md y MATRIZ_TRAZABILIDAD_DEC_F.md (
 NO_INICIADO: no se acredita E2E real React→Gateway→servicio→dependencias.
 
 ## Dependencias bloqueantes
-- PRICE-AUDIT-SVC-BACK-08 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
-- SHARED-BACK-03 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
+- PRICE-AUDIT-SVC-BACK-08 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
+- SHARED-BACK-03 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 
 **Issues existentes relacionados:**
 - Sin issue externo previo identificado.
@@ -2357,7 +2357,7 @@ arquitectura/Arquitectura.md; REGISTRO_DEC_F.md y MATRIZ_TRAZABILIDAD_DEC_F.md (
 NO_INICIADO: en la rama/corte auditado no se acredita provider Drizzle funcional para este servicio.
 
 ## Dependencias bloqueantes
-- PROMOTIONS-SVC-BACK-01 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
+- PROMOTIONS-SVC-BACK-01 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 
 **Issues existentes relacionados:**
 - [Taller-SW-Web/G6-Productos-Ofertas-backend#1](https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/1) (ABIERTO): Conexión, permiso y proceso de shared Supabase/fixtures; no bloquea trabajo con DB aislada.
@@ -2419,7 +2419,7 @@ arquitectura/Arquitectura.md; REGISTRO_DEC_F.md y MATRIZ_TRAZABILIDAD_DEC_F.md (
 NO_INICIADO: scaffold no acredita reglas del bounded context.
 
 ## Dependencias bloqueantes
-- PROMOTIONS-SVC-BACK-02 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
+- PROMOTIONS-SVC-BACK-02 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 
 **Issues existentes relacionados:**
 - Sin issue externo previo identificado.
@@ -2481,7 +2481,7 @@ arquitectura/Arquitectura.md; REGISTRO_DEC_F.md y MATRIZ_TRAZABILIDAD_DEC_F.md (
 NO_INICIADO: GET /health no acredita operaciones de consulta de negocio.
 
 ## Dependencias bloqueantes
-- PROMOTIONS-SVC-BACK-03 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
+- PROMOTIONS-SVC-BACK-03 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 
 **Issues existentes relacionados:**
 - Sin issue externo previo identificado.
@@ -2543,7 +2543,7 @@ arquitectura/Arquitectura.md; REGISTRO_DEC_F.md y MATRIZ_TRAZABILIDAD_DEC_F.md (
 NO_INICIADO: no se acreditan operaciones de escritura de negocio.
 
 ## Dependencias bloqueantes
-- PROMOTIONS-SVC-BACK-04 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
+- PROMOTIONS-SVC-BACK-04 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 
 **Issues existentes relacionados:**
 - Sin issue externo previo identificado.
@@ -2593,7 +2593,7 @@ Las operaciones de mensajería que AsyncAPI RC2 asigna al servicio se entregan y
 Issue central: Taller-SW-Web/G6-Productos-Ofertas-backend. PR/cambios de código esperados: Taller-SW-Web/G6-Productos-Ofertas-backend.
 
 ## Alcance
-Consume catalog.product.deactivated, catalog.sku.deactivated, pricing.price.changed, inventory.stock.changed, promotions.coupon.consumption.requested y promotions.coupon.restoration.requested. Publica promotions.coupon.consumption.completed/rejected y restoration.completed/rejected; los mensajes de solicitud los produce Ventas, no Promotions, según AsyncAPI RC2 candidata.
+Consume catalog.product.deactivated, catalog.sku.deactivated, pricing.price.changed, inventory.stock.changed, promotions.coupon.consumption.requested y promotions.coupon.restoration.requested. Publica promotions.coupon.consumption.completed y promotions.coupon.consumption.rejected y promotions.coupon.restoration.completed y promotions.coupon.restoration.rejected; los mensajes de solicitud los produce Ventas, no Promotions, según AsyncAPI RC2 candidata.
 
 ## Fuera de alcance
 No modificar contratos ejecutables, migraciones aplicadas, credenciales, grants/policies, datos shared ni ownership ajeno. No publicar puertos internos/broker. Aplicar AGENTS.md y los límites de ownership; integrar por APIs/eventos del owner, no por acceso cross-schema.
@@ -2605,7 +2605,7 @@ arquitectura/Arquitectura.md; REGISTRO_DEC_F.md y MATRIZ_TRAZABILIDAD_DEC_F.md (
 NO_INICIADO: no se acredita productor/consumer del servicio.
 
 ## Dependencias bloqueantes
-- PROMOTIONS-SVC-BACK-05 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
+- PROMOTIONS-SVC-BACK-05 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 
 **Issues existentes relacionados:**
 - Sin issue externo previo identificado.
@@ -2667,7 +2667,7 @@ arquitectura/Arquitectura.md; REGISTRO_DEC_F.md y MATRIZ_TRAZABILIDAD_DEC_F.md (
 NO_INICIADO: health básico no acredita la resiliencia/observabilidad de operaciones de negocio.
 
 ## Dependencias bloqueantes
-- PROMOTIONS-SVC-BACK-06 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
+- PROMOTIONS-SVC-BACK-06 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 
 **Issues existentes relacionados:**
 - Sin issue externo previo identificado.
@@ -2729,9 +2729,9 @@ arquitectura/Arquitectura.md; REGISTRO_DEC_F.md y MATRIZ_TRAZABILIDAD_DEC_F.md (
 NO_INICIADO: UI/mock/unavailable existentes no acreditan adapter HTTP real ni integración API.
 
 ## Dependencias bloqueantes
-- PROMOTIONS-SVC-BACK-07 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
-- GATEWAY-BACK-01 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
-- SHARED-BACK-01 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
+- PROMOTIONS-SVC-BACK-07 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
+- GATEWAY-BACK-01 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
+- SHARED-BACK-01 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 
 **Dependencias condicionales por operación:**
 - **Proyecciones vigentes usadas por promociones, precios y disponibilidad.** depende de CATALOG-SVC-BACK-06, PRICING-SVC-BACK-06, INVENTORY-SVC-BACK-06. CRUD y validación local continúan; probar elegibilidad contra los publishers/consumers reales al completar estas cadenas.
@@ -2802,8 +2802,8 @@ arquitectura/Arquitectura.md; REGISTRO_DEC_F.md y MATRIZ_TRAZABILIDAD_DEC_F.md (
 NO_INICIADO: no se acredita E2E real React→Gateway→servicio→dependencias.
 
 ## Dependencias bloqueantes
-- PROMOTIONS-SVC-BACK-08 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
-- SHARED-BACK-03 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
+- PROMOTIONS-SVC-BACK-08 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
+- SHARED-BACK-03 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 
 **Issues existentes relacionados:**
 - Sin issue externo previo identificado.
@@ -2927,7 +2927,7 @@ arquitectura/Arquitectura.md; REGISTRO_DEC_F.md y MATRIZ_TRAZABILIDAD_DEC_F.md (
 NO_INICIADO: en la rama/corte auditado no se acredita provider Drizzle funcional para este servicio.
 
 ## Dependencias bloqueantes
-- COMBOS-SVC-BACK-01 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
+- COMBOS-SVC-BACK-01 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 
 **Issues existentes relacionados:**
 - [Taller-SW-Web/G6-Productos-Ofertas-backend#1](https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/1) (ABIERTO): Conexión, permiso y proceso de shared Supabase/fixtures; no bloquea trabajo con DB aislada.
@@ -2989,7 +2989,7 @@ arquitectura/Arquitectura.md; REGISTRO_DEC_F.md y MATRIZ_TRAZABILIDAD_DEC_F.md (
 NO_INICIADO: scaffold no acredita reglas del bounded context.
 
 ## Dependencias bloqueantes
-- COMBOS-SVC-BACK-02 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
+- COMBOS-SVC-BACK-02 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 
 **Issues existentes relacionados:**
 - Sin issue externo previo identificado.
@@ -3051,7 +3051,7 @@ arquitectura/Arquitectura.md; REGISTRO_DEC_F.md y MATRIZ_TRAZABILIDAD_DEC_F.md (
 NO_INICIADO: GET /health no acredita operaciones de consulta de negocio.
 
 ## Dependencias bloqueantes
-- COMBOS-SVC-BACK-03 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
+- COMBOS-SVC-BACK-03 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 
 **Issues existentes relacionados:**
 - Sin issue externo previo identificado.
@@ -3113,7 +3113,7 @@ arquitectura/Arquitectura.md; REGISTRO_DEC_F.md y MATRIZ_TRAZABILIDAD_DEC_F.md (
 NO_INICIADO: no se acreditan operaciones de escritura de negocio.
 
 ## Dependencias bloqueantes
-- COMBOS-SVC-BACK-04 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
+- COMBOS-SVC-BACK-04 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 
 **Issues existentes relacionados:**
 - Sin issue externo previo identificado.
@@ -3175,7 +3175,7 @@ arquitectura/Arquitectura.md; REGISTRO_DEC_F.md y MATRIZ_TRAZABILIDAD_DEC_F.md (
 NO_INICIADO: no se acredita productor/consumer del servicio.
 
 ## Dependencias bloqueantes
-- COMBOS-SVC-BACK-05 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
+- COMBOS-SVC-BACK-05 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 
 **Issues existentes relacionados:**
 - Sin issue externo previo identificado.
@@ -3237,7 +3237,7 @@ arquitectura/Arquitectura.md; REGISTRO_DEC_F.md y MATRIZ_TRAZABILIDAD_DEC_F.md (
 NO_INICIADO: health básico no acredita la resiliencia/observabilidad de operaciones de negocio.
 
 ## Dependencias bloqueantes
-- COMBOS-SVC-BACK-06 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
+- COMBOS-SVC-BACK-06 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 
 **Issues existentes relacionados:**
 - Sin issue externo previo identificado.
@@ -3299,9 +3299,9 @@ arquitectura/Arquitectura.md; REGISTRO_DEC_F.md y MATRIZ_TRAZABILIDAD_DEC_F.md (
 NO_INICIADO: UI/mock/unavailable existentes no acreditan adapter HTTP real ni integración API.
 
 ## Dependencias bloqueantes
-- COMBOS-SVC-BACK-07 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
-- GATEWAY-BACK-01 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
-- SHARED-BACK-01 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
+- COMBOS-SVC-BACK-07 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
+- GATEWAY-BACK-01 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
+- SHARED-BACK-01 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 
 **Dependencias condicionales por operación:**
 - **Selector de componentes SKU, precio vigente y disponibilidad informativa.** depende de CATALOG-SVC-BACK-04, PRICING-SVC-BACK-04, INVENTORY-SVC-BACK-06. List/detail independientes continúan; aceptar creación/disponibilidad real cuando los providers necesarios estén listos.
@@ -3368,8 +3368,8 @@ arquitectura/Arquitectura.md; REGISTRO_DEC_F.md y MATRIZ_TRAZABILIDAD_DEC_F.md (
 NO_INICIADO: no se acredita E2E real React→Gateway→servicio→dependencias.
 
 ## Dependencias bloqueantes
-- COMBOS-SVC-BACK-08 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
-- SHARED-BACK-03 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
+- COMBOS-SVC-BACK-08 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
+- SHARED-BACK-03 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 
 **Issues existentes relacionados:**
 - Sin issue externo previo identificado.
@@ -3493,7 +3493,7 @@ arquitectura/Arquitectura.md; REGISTRO_DEC_F.md y MATRIZ_TRAZABILIDAD_DEC_F.md (
 NO_INICIADO: en la rama/corte auditado no se acredita provider Drizzle funcional para este servicio.
 
 ## Dependencias bloqueantes
-- BULK-SVC-BACK-01 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
+- BULK-SVC-BACK-01 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 
 **Issues existentes relacionados:**
 - [Taller-SW-Web/G6-Productos-Ofertas-backend#1](https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/1) (ABIERTO): Conexión, permiso y proceso de shared Supabase/fixtures; no bloquea trabajo con DB aislada.
@@ -3555,7 +3555,7 @@ arquitectura/Arquitectura.md; REGISTRO_DEC_F.md y MATRIZ_TRAZABILIDAD_DEC_F.md (
 NO_INICIADO: scaffold no acredita reglas del bounded context.
 
 ## Dependencias bloqueantes
-- BULK-SVC-BACK-02 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
+- BULK-SVC-BACK-02 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 
 **Issues existentes relacionados:**
 - Sin issue externo previo identificado.
@@ -3617,7 +3617,7 @@ arquitectura/Arquitectura.md; REGISTRO_DEC_F.md y MATRIZ_TRAZABILIDAD_DEC_F.md (
 NO_INICIADO: GET /health no acredita operaciones de consulta de negocio.
 
 ## Dependencias bloqueantes
-- BULK-SVC-BACK-03 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
+- BULK-SVC-BACK-03 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 
 **Issues existentes relacionados:**
 - Sin issue externo previo identificado.
@@ -3679,7 +3679,7 @@ arquitectura/Arquitectura.md; REGISTRO_DEC_F.md y MATRIZ_TRAZABILIDAD_DEC_F.md (
 NO_INICIADO: no se acreditan operaciones de escritura de negocio.
 
 ## Dependencias bloqueantes
-- BULK-SVC-BACK-04 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
+- BULK-SVC-BACK-04 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 
 **Issues existentes relacionados:**
 - Sin issue externo previo identificado.
@@ -3729,7 +3729,7 @@ Las operaciones de mensajería que AsyncAPI RC2 asigna al servicio se entregan y
 Issue central: Taller-SW-Web/G6-Productos-Ofertas-backend. PR/cambios de código esperados: Taller-SW-Web/G6-Productos-Ofertas-backend.
 
 ## Alcance
-Publica catalog.bulk.upsert.requested, pricing.bulk.price.apply.requested e inventory.bulk.stock.adjust.requested; consume catalog.bulk.upsert.completed/rejected, pricing.bulk.price.apply.completed/rejected e inventory.bulk.stock.adjust.completed/rejected. Outbox para comandos locales durables; inbox/dedupe para resultados recibidos, según AsyncAPI RC2 candidata.
+Publica catalog.bulk.upsert.requested, pricing.bulk.price.apply.requested e inventory.bulk.stock.adjust.requested; consume catalog.bulk.upsert.completed y catalog.bulk.upsert.rejected, pricing.bulk.price.apply.completed y pricing.bulk.price.apply.rejected e inventory.bulk.stock.adjust.completed e inventory.bulk.stock.adjust.rejected. Outbox para comandos locales durables; inbox/dedupe para resultados recibidos, según AsyncAPI RC2 candidata.
 
 ## Fuera de alcance
 No modificar contratos ejecutables, migraciones aplicadas, credenciales, grants/policies, datos shared ni ownership ajeno. No publicar puertos internos/broker. Aplicar AGENTS.md y los límites de ownership; integrar por APIs/eventos del owner, no por acceso cross-schema.
@@ -3741,7 +3741,7 @@ arquitectura/Arquitectura.md; REGISTRO_DEC_F.md y MATRIZ_TRAZABILIDAD_DEC_F.md (
 NO_INICIADO: no se acredita productor/consumer del servicio.
 
 ## Dependencias bloqueantes
-- BULK-SVC-BACK-05 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
+- BULK-SVC-BACK-05 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 
 **Issues existentes relacionados:**
 - Sin issue externo previo identificado.
@@ -3803,7 +3803,7 @@ arquitectura/Arquitectura.md; REGISTRO_DEC_F.md y MATRIZ_TRAZABILIDAD_DEC_F.md (
 NO_INICIADO: health básico no acredita la resiliencia/observabilidad de operaciones de negocio.
 
 ## Dependencias bloqueantes
-- BULK-SVC-BACK-06 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
+- BULK-SVC-BACK-06 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 
 **Issues existentes relacionados:**
 - Sin issue externo previo identificado.
@@ -3865,9 +3865,9 @@ arquitectura/Arquitectura.md; REGISTRO_DEC_F.md y MATRIZ_TRAZABILIDAD_DEC_F.md (
 NO_INICIADO: UI/mock/unavailable existentes no acreditan adapter HTTP real ni integración API.
 
 ## Dependencias bloqueantes
-- BULK-SVC-BACK-07 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
-- GATEWAY-BACK-01 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
-- SHARED-BACK-01 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
+- BULK-SVC-BACK-07 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
+- GATEWAY-BACK-01 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
+- SHARED-BACK-01 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 
 **Dependencias condicionales por operación:**
 - **Importación/reanudación que espera resultados async de los tres bounded contexts.** depende de CATALOG-SVC-BACK-06, PRICING-SVC-BACK-06, INVENTORY-SVC-BACK-06. Plantilla, preview y exportación pueden probarse por separado; el lote real no se declara E2E hasta que los tres handlers/resultados funcionen.
@@ -3934,8 +3934,8 @@ arquitectura/Arquitectura.md; REGISTRO_DEC_F.md y MATRIZ_TRAZABILIDAD_DEC_F.md (
 NO_INICIADO: no se acredita E2E real React→Gateway→servicio→dependencias.
 
 ## Dependencias bloqueantes
-- BULK-SVC-BACK-08 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
-- SHARED-BACK-03 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
+- BULK-SVC-BACK-08 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
+- SHARED-BACK-03 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 
 **Issues existentes relacionados:**
 - Sin issue externo previo identificado.
@@ -3993,8 +3993,10 @@ No modificar contratos ejecutables, migraciones aplicadas, credenciales, grants/
 ## Fuentes normativas
 arquitectura/Arquitectura.md; REGISTRO_DEC_F.md y MATRIZ_TRAZABILIDAD_DEC_F.md (DEC-F-001..015 adoptadas internamente, no homologación externa); SPEC/HU/FLOW-015/016, DEC-F adoptadas aplicables y datos/inventory-svc/physical-model.md; OpenAPI 0.6.0-rc.1 candidata en master y AsyncAPI 0.6.0-rc.2 candidata en master cuando aplique. No cambiar contrato ni atribuir aceptación externa.
 
+**Acreditación retrospectiva:** PR #10 aporta evidencia histórica compartida por bloque. Ver commits/files/tests específicos del manifiesto; esto no crea un PR por issue, no acredita merge/cierre y no reemplaza PR propio para cambios nuevos.
+
 ## Estado inicial
-IMPLEMENTADO_SIN_VALIDAR: PR #10 OPEN/DRAFT añade configuración/auth del servicio (apps/inventory-svc/CONFIGURACION.md, src/config/inventory.config.ts, src/auth/*, module/main). El scaffold health existente no equivale al PR fusionado.
+IMPLEMENTADO_SIN_VALIDAR: PR #10 OPEN/DRAFT añade configuración/auth del servicio (apps/inventory-svc/CONFIGURACION.md, apps/inventory-svc/src/config/inventory.config.ts, apps/inventory-svc/src/auth/*, module/main). El scaffold health existente no equivale al PR fusionado.
 
 ## Dependencias bloqueantes
 - Ninguna dependencia interna.
@@ -4018,7 +4020,7 @@ IMPLEMENTADO_SIN_VALIDAR: PR #10 OPEN/DRAFT añade configuración/auth del servi
 ## Pruebas obligatorias
 Unit/config tests de env faltante/malformado, health vs readiness y ausencia de secretos en logs.
 
-**Trazabilidad específica de PR #10 (OPEN/DRAFT; head 2c4a18105c5e379edc8476b9d315aa6be1134b80):** Auth y config aparecen en PR #10; no está fusionado. Commits relacionados: 03a491879255, 3378f0413ada, 393773e2f494. Archivos: apps/inventory-svc/CONFIGURACION.md; src/config/inventory.config.ts; src/auth/*; src/inventory-svc.module.ts; src/main.ts. Pruebas: test/app.e2e-spec.ts: health y casos JWT 401/403. Perspectiva del PR: no fusionado; revalidar contra diff/CI al ejecutar.
+**Trazabilidad específica de PR #10 (OPEN/DRAFT; head 2c4a18105c5e379edc8476b9d315aa6be1134b80):** Auth y config aparecen en PR #10; no está fusionado. Commits relacionados: 03a491879255, 3378f0413ada, 393773e2f494. Archivos: apps/inventory-svc/CONFIGURACION.md; apps/inventory-svc/src/config/inventory.config.ts; apps/inventory-svc/src/auth/*; apps/inventory-svc/src/inventory-svc.module.ts; apps/inventory-svc/src/main.ts. Pruebas: apps/inventory-svc/test/app.e2e-spec.ts: health y casos JWT 401/403. Perspectiva del PR: no fusionado; revalidar contra diff/CI al ejecutar.
 
 ## Evidencias de cierre
 - [ ] Un PR revisable desde la rama autorizada en Taller-SW-Web/G6-Productos-Ofertas-backend con SHA y diff acotado.
@@ -4057,11 +4059,13 @@ No modificar contratos ejecutables, migraciones aplicadas, credenciales, grants/
 ## Fuentes normativas
 arquitectura/Arquitectura.md; REGISTRO_DEC_F.md y MATRIZ_TRAZABILIDAD_DEC_F.md (DEC-F-001..015 adoptadas internamente, no homologación externa); SPEC/HU/FLOW-015/016, DEC-F adoptadas aplicables y datos/inventory-svc/physical-model.md; OpenAPI 0.6.0-rc.1 candidata en master y AsyncAPI 0.6.0-rc.2 candidata en master cuando aplique. No cambiar contrato ni atribuir aceptación externa.
 
+**Acreditación retrospectiva:** PR #10 aporta evidencia histórica compartida por bloque. Ver commits/files/tests específicos del manifiesto; esto no crea un PR por issue, no acredita merge/cierre y no reemplaza PR propio para cambios nuevos.
+
 ## Estado inicial
-IMPLEMENTADO_SIN_VALIDAR: PR #10 añade Drizzle/schema/repositorios y conexión PostgreSQL (src/drizzle/schema.ts, src/database/*, src/repositories/drizzle/*, src/repositories/interfaces/*). PR abierto; no runtime compartido acreditado.
+IMPLEMENTADO_SIN_VALIDAR: PR #10 añade Drizzle/schema/repositorios y conexión PostgreSQL (apps/inventory-svc/src/drizzle/schema.ts, apps/inventory-svc/src/database/*, apps/inventory-svc/src/repositories/drizzle/*, apps/inventory-svc/src/repositories/interfaces/*). PR abierto; no runtime compartido acreditado.
 
 ## Dependencias bloqueantes
-- INVENTORY-SVC-BACK-01 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
+- INVENTORY-SVC-BACK-01 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 
 **Issues existentes relacionados:**
 - [Taller-SW-Web/G6-Productos-Ofertas-backend#1](https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/1) (ABIERTO): Conexión, permiso y proceso de shared Supabase/fixtures; no bloquea trabajo con DB aislada.
@@ -4082,7 +4086,7 @@ IMPLEMENTADO_SIN_VALIDAR: PR #10 añade Drizzle/schema/repositorios y conexión 
 ## Pruebas obligatorias
 Unit tests de mapping y transacciones; una instancia PostgreSQL aislada por suite, no contenedor por test; verificar permisos positivos/negativos sin escribir en Supabase compartido.
 
-**Trazabilidad específica de PR #10 (OPEN/DRAFT; head 2c4a18105c5e379edc8476b9d315aa6be1134b80):** Drizzle y acceso PostgreSQL implementados en la cabeza abierta. Commits relacionados: 8a0204313fa6, bf8f699bfe31, 13da441f4767. Archivos: src/drizzle/schema.ts; src/database/*; src/repositories/drizzle/*; src/repositories/interfaces/*. Pruebas: test/inventory.real.integration.spec.ts: Drizzle/UPDATE RETURNING/transacción rollback. Perspectiva del PR: no fusionado; revalidar contra diff/CI al ejecutar.
+**Trazabilidad específica de PR #10 (OPEN/DRAFT; head 2c4a18105c5e379edc8476b9d315aa6be1134b80):** Drizzle y acceso PostgreSQL implementados en la cabeza abierta. Commits relacionados: 8a0204313fa6, bf8f699bfe31, 13da441f4767. Archivos: apps/inventory-svc/src/drizzle/schema.ts; apps/inventory-svc/src/database/*; apps/inventory-svc/src/repositories/drizzle/*; apps/inventory-svc/src/repositories/interfaces/*. Pruebas: apps/inventory-svc/test/inventory.real.integration.spec.ts: Drizzle/UPDATE RETURNING/transacción rollback. Perspectiva del PR: no fusionado; revalidar contra diff/CI al ejecutar.
 
 ## Evidencias de cierre
 - [ ] Un PR revisable desde la rama autorizada en Taller-SW-Web/G6-Productos-Ofertas-backend con SHA y diff acotado.
@@ -4121,11 +4125,13 @@ No modificar contratos ejecutables, migraciones aplicadas, credenciales, grants/
 ## Fuentes normativas
 arquitectura/Arquitectura.md; REGISTRO_DEC_F.md y MATRIZ_TRAZABILIDAD_DEC_F.md (DEC-F-001..015 adoptadas internamente, no homologación externa); SPEC/HU/FLOW-015/016, DEC-F adoptadas aplicables y datos/inventory-svc/physical-model.md; OpenAPI 0.6.0-rc.1 candidata en master y AsyncAPI 0.6.0-rc.2 candidata en master cuando aplique. No cambiar contrato ni atribuir aceptación externa.
 
+**Acreditación retrospectiva:** PR #10 aporta evidencia histórica compartida por bloque. Ver commits/files/tests específicos del manifiesto; esto no crea un PR por issue, no acredita merge/cierre y no reemplaza PR propio para cambios nuevos.
+
 ## Estado inicial
 PARCIAL: PR #10 implementa reservas/idempotencia, saldo/disponibilidad, operaciones y Kardex; quedan reglas/operaciones SPEC-015 no cubiertas, entre ellas incidencias, traslados, reintegro F3, conciliación offline y umbrales.
 
 ## Dependencias bloqueantes
-- INVENTORY-SVC-BACK-02 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
+- INVENTORY-SVC-BACK-02 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 
 **Issues existentes relacionados:**
 - Sin issue externo previo identificado.
@@ -4146,7 +4152,7 @@ PARCIAL: PR #10 implementa reservas/idempotencia, saldo/disponibilidad, operacio
 ## Pruebas obligatorias
 Unit tests de invariantes/estados límite/errores; fixtures solo en pruebas aisladas.
 
-**Trazabilidad específica de PR #10 (OPEN/DRAFT; head 2c4a18105c5e379edc8476b9d315aa6be1134b80):** Reserva/saldo/Kardex probados parcialmente; incidentes, traslado, F3/reintegro, offline y umbrales pendientes. Commits relacionados: 8a0204313fa6, 721fde7f5cb2, fb9f2ed042f9. Archivos: src/reservations/reservations.service.ts; src/disponibilidad/*; src/operations/*; src/kardex/*; src/idempotency/*. Pruebas: src/reservations/reservations.concurrency.spec.ts; src/reservations/reservations.cycle.spec.ts; src/disponibilidad/disponibilidad.spec.ts. Perspectiva del PR: no fusionado; revalidar contra diff/CI al ejecutar.
+**Trazabilidad específica de PR #10 (OPEN/DRAFT; head 2c4a18105c5e379edc8476b9d315aa6be1134b80):** Reserva/saldo/Kardex probados parcialmente; incidentes, traslado, F3/reintegro, offline y umbrales pendientes. Commits relacionados: 8a0204313fa6, 721fde7f5cb2, fb9f2ed042f9. Archivos: apps/inventory-svc/src/reservations/reservations.service.ts; apps/inventory-svc/src/disponibilidad/*; apps/inventory-svc/src/operations/*; apps/inventory-svc/src/kardex/*; apps/inventory-svc/src/idempotency/*. Pruebas: apps/inventory-svc/src/reservations/reservations.concurrency.spec.ts; apps/inventory-svc/src/reservations/reservations.cycle.spec.ts; apps/inventory-svc/src/disponibilidad/disponibilidad.spec.ts. Perspectiva del PR: no fusionado; revalidar contra diff/CI al ejecutar.
 
 ## Evidencias de cierre
 - [ ] Un PR revisable desde la rama autorizada en Taller-SW-Web/G6-Productos-Ofertas-backend con SHA y diff acotado.
@@ -4185,11 +4191,13 @@ No modificar contratos ejecutables, migraciones aplicadas, credenciales, grants/
 ## Fuentes normativas
 arquitectura/Arquitectura.md; REGISTRO_DEC_F.md y MATRIZ_TRAZABILIDAD_DEC_F.md (DEC-F-001..015 adoptadas internamente, no homologación externa); SPEC/HU/FLOW-015/016, DEC-F adoptadas aplicables y datos/inventory-svc/physical-model.md; OpenAPI 0.6.0-rc.1 candidata en master y AsyncAPI 0.6.0-rc.2 candidata en master cuando aplique. No cambiar contrato ni atribuir aceptación externa.
 
+**Acreditación retrospectiva:** PR #10 aporta evidencia histórica compartida por bloque. Ver commits/files/tests específicos del manifiesto; esto no crea un PR por issue, no acredita merge/cierre y no reemplaza PR propio para cambios nuevos.
+
 ## Estado inicial
-PARCIAL: PR #10 implementa GET disponibilidad/operación y POST verificar cantidad/reservar/confirmar/liberar en src/inventory.controller.ts; no cubre todas las operationId de Inventario del OpenAPI candidato.
+PARCIAL: PR #10 implementa GET disponibilidad/operación y POST verificar cantidad/reservar/confirmar/liberar en apps/inventory-svc/src/inventory.controller.ts; no cubre todas las operationId de Inventario del OpenAPI candidato.
 
 ## Dependencias bloqueantes
-- INVENTORY-SVC-BACK-03 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
+- INVENTORY-SVC-BACK-03 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 
 **Issues existentes relacionados:**
 - Sin issue externo previo identificado.
@@ -4210,7 +4218,7 @@ PARCIAL: PR #10 implementa GET disponibilidad/operación y POST verificar cantid
 ## Pruebas obligatorias
 Contract tests de operationIds de lectura/evaluación afectados: parámetros, 2xx, Problem.code, paginación/estado vacío y seguridad declarada; sin Playwright.
 
-**Trazabilidad específica de PR #10 (OPEN/DRAFT; head 2c4a18105c5e379edc8476b9d315aa6be1134b80):** Solo un subconjunto de operaciones HTTP está en el controller; no todas las operationId OpenAPI. Commits relacionados: 66324068beaf, 3378f0413ada, 2b994ee3b601. Archivos: src/inventory.controller.ts. Pruebas: test/app.e2e-spec.ts: GET disponibilidad/operación, POST verificar/reservar/confirmar/liberar. Perspectiva del PR: no fusionado; revalidar contra diff/CI al ejecutar.
+**Trazabilidad específica de PR #10 (OPEN/DRAFT; head 2c4a18105c5e379edc8476b9d315aa6be1134b80):** Solo un subconjunto de operaciones HTTP está en el controller; no todas las operationId OpenAPI. Commits relacionados: 66324068beaf, 3378f0413ada, 2b994ee3b601. Archivos: apps/inventory-svc/src/inventory.controller.ts. Pruebas: apps/inventory-svc/test/app.e2e-spec.ts: GET disponibilidad/operación, POST verificar/reservar/confirmar/liberar. Perspectiva del PR: no fusionado; revalidar contra diff/CI al ejecutar.
 
 ## Evidencias de cierre
 - [ ] Un PR revisable desde la rama autorizada en Taller-SW-Web/G6-Productos-Ofertas-backend con SHA y diff acotado.
@@ -4249,11 +4257,13 @@ No modificar contratos ejecutables, migraciones aplicadas, credenciales, grants/
 ## Fuentes normativas
 arquitectura/Arquitectura.md; REGISTRO_DEC_F.md y MATRIZ_TRAZABILIDAD_DEC_F.md (DEC-F-001..015 adoptadas internamente, no homologación externa); SPEC/HU/FLOW-015/016, DEC-F adoptadas aplicables y datos/inventory-svc/physical-model.md; OpenAPI 0.6.0-rc.1 candidata en master y AsyncAPI 0.6.0-rc.2 candidata en master cuando aplique. No cambiar contrato ni atribuir aceptación externa.
 
+**Acreditación retrospectiva:** PR #10 aporta evidencia histórica compartida por bloque. Ver commits/files/tests específicos del manifiesto; esto no crea un PR por issue, no acredita merge/cierre y no reemplaza PR propio para cambios nuevos.
+
 ## Estado inicial
 PARCIAL: PR #10 implementa comandos de reserva, confirmar y liberar; faltan varios writes OpenAPI (umbrales, incidencias, reintegro, conciliación offline, recepción de traslado).
 
 ## Dependencias bloqueantes
-- INVENTORY-SVC-BACK-04 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
+- INVENTORY-SVC-BACK-04 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 
 **Issues existentes relacionados:**
 - Sin issue externo previo identificado.
@@ -4274,7 +4284,7 @@ PARCIAL: PR #10 implementa comandos de reserva, confirmar y liberar; faltan vari
 ## Pruebas obligatorias
 Unit + contract de operaciones mutables afectadas; autorización, validación, versionado/idempotency, rollback y persistencia aislada.
 
-**Trazabilidad específica de PR #10 (OPEN/DRAFT; head 2c4a18105c5e379edc8476b9d315aa6be1134b80):** Comandos reserva cubiertos; otros writes HTTP no están en controller. Commits relacionados: 8a0204313fa6, 66324068beaf, 2b994ee3b601. Archivos: src/inventory.controller.ts; src/reservations/reservations.service.ts; src/idempotency/idempotency.service.ts. Pruebas: test/app.e2e-spec.ts; src/reservations/reservations.cycle.spec.ts. Perspectiva del PR: no fusionado; revalidar contra diff/CI al ejecutar.
+**Trazabilidad específica de PR #10 (OPEN/DRAFT; head 2c4a18105c5e379edc8476b9d315aa6be1134b80):** Comandos reserva cubiertos; otros writes HTTP no están en controller. Commits relacionados: 8a0204313fa6, 66324068beaf, 2b994ee3b601. Archivos: apps/inventory-svc/src/inventory.controller.ts; apps/inventory-svc/src/reservations/reservations.service.ts; apps/inventory-svc/src/idempotency/idempotency.service.ts. Pruebas: apps/inventory-svc/test/app.e2e-spec.ts; apps/inventory-svc/src/reservations/reservations.cycle.spec.ts. Perspectiva del PR: no fusionado; revalidar contra diff/CI al ejecutar.
 
 ## Evidencias de cierre
 - [ ] Un PR revisable desde la rama autorizada en Taller-SW-Web/G6-Productos-Ofertas-backend con SHA y diff acotado.
@@ -4305,7 +4315,7 @@ Las operaciones de mensajería que AsyncAPI RC2 asigna al servicio se entregan y
 Issue central: Taller-SW-Web/G6-Productos-Ofertas-backend. PR/cambios de código esperados: Taller-SW-Web/G6-Productos-Ofertas-backend.
 
 ## Alcance
-Publica inventory.stock.changed/adjusted, reservation.created/rejected/consumed/released/expired, consumption.completed/rejected, inventory.bulk.stock.adjust.completed/rejected y inventory.sku.initialization.completed/rejected; consume catalog.sku.deactivated, inventory.bulk.stock.adjust.requested e inventory.sku.initialization.requested, según AsyncAPI RC2 candidata.
+Publica inventory.stock.changed e inventory.stock.adjusted, inventory.reservation.created, inventory.reservation.rejected, inventory.reservation.consumed, inventory.reservation.released e inventory.reservation.expired, inventory.consumption.completed e inventory.consumption.rejected, inventory.bulk.stock.adjust.completed e inventory.bulk.stock.adjust.rejected y inventory.sku.initialization.completed e inventory.sku.initialization.rejected; consume catalog.sku.deactivated, inventory.bulk.stock.adjust.requested e inventory.sku.initialization.requested, según AsyncAPI RC2 candidata.
 
 ## Fuera de alcance
 No modificar contratos ejecutables, migraciones aplicadas, credenciales, grants/policies, datos shared ni ownership ajeno. No publicar puertos internos/broker. Aplicar AGENTS.md y los límites de ownership; integrar por APIs/eventos del owner, no por acceso cross-schema.
@@ -4313,11 +4323,13 @@ No modificar contratos ejecutables, migraciones aplicadas, credenciales, grants/
 ## Fuentes normativas
 arquitectura/Arquitectura.md; REGISTRO_DEC_F.md y MATRIZ_TRAZABILIDAD_DEC_F.md (DEC-F-001..015 adoptadas internamente, no homologación externa); SPEC/HU/FLOW-015/016, DEC-F adoptadas aplicables y datos/inventory-svc/physical-model.md; OpenAPI 0.6.0-rc.1 candidata en master y AsyncAPI 0.6.0-rc.2 candidata en master cuando aplique. No cambiar contrato ni atribuir aceptación externa.
 
+**Acreditación retrospectiva:** PR #10 aporta evidencia histórica compartida por bloque. Ver commits/files/tests específicos del manifiesto; esto no crea un PR por issue, no acredita merge/cierre y no reemplaza PR propio para cambios nuevos.
+
 ## Estado inicial
 PARCIAL: PR #10 implementa outbox/publicación y workers. No acredita consumers de inventory.bulk.stock.adjust.requested ni inventory.sku.initialization.requested.
 
 ## Dependencias bloqueantes
-- INVENTORY-SVC-BACK-05 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
+- INVENTORY-SVC-BACK-05 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 
 **Issues existentes relacionados:**
 - Sin issue externo previo identificado.
@@ -4338,7 +4350,7 @@ PARCIAL: PR #10 implementa outbox/publicación y workers. No acredita consumers 
 ## Pruebas obligatorias
 Unit/contract publisher-consumer con message_id/dedup/retry; broker ephemeral una vez por suite. Solo pruebas de provider/consumer, no homologación ni E2E.
 
-**Trazabilidad específica de PR #10 (OPEN/DRAFT; head 2c4a18105c5e379edc8476b9d315aa6be1134b80):** Outbox/workers productores descritos; no se acreditan consumers bulk adjust/SKU init. Commits relacionados: 4f03d9d3a87d, 22c055f922ce, 9cba206f68e9, b947fd9e9a7f. Archivos: src/outbox/*; src/workers/*; src/reservations/reservations.service.ts. Pruebas: src/outbox/outbox-publisher.spec.ts; src/workers/inventory-workers.spec.ts; test/inventory.real.integration.spec.ts. Perspectiva del PR: no fusionado; revalidar contra diff/CI al ejecutar.
+**Trazabilidad específica de PR #10 (OPEN/DRAFT; head 2c4a18105c5e379edc8476b9d315aa6be1134b80):** Outbox/workers productores descritos; no se acreditan consumers bulk adjust/SKU init. Commits relacionados: 4f03d9d3a87d, 22c055f922ce, 9cba206f68e9, b947fd9e9a7f. Archivos: apps/inventory-svc/src/outbox/*; apps/inventory-svc/src/workers/*; apps/inventory-svc/src/reservations/reservations.service.ts. Pruebas: apps/inventory-svc/src/outbox/outbox-publisher.spec.ts; apps/inventory-svc/src/workers/inventory-workers.spec.ts; apps/inventory-svc/test/inventory.real.integration.spec.ts. Perspectiva del PR: no fusionado; revalidar contra diff/CI al ejecutar.
 
 ## Evidencias de cierre
 - [ ] Un PR revisable desde la rama autorizada en Taller-SW-Web/G6-Productos-Ofertas-backend con SHA y diff acotado.
@@ -4377,11 +4389,13 @@ No modificar contratos ejecutables, migraciones aplicadas, credenciales, grants/
 ## Fuentes normativas
 arquitectura/Arquitectura.md; REGISTRO_DEC_F.md y MATRIZ_TRAZABILIDAD_DEC_F.md (DEC-F-001..015 adoptadas internamente, no homologación externa); SPEC/HU/FLOW-015/016, DEC-F adoptadas aplicables y datos/inventory-svc/physical-model.md; OpenAPI 0.6.0-rc.1 candidata en master y AsyncAPI 0.6.0-rc.2 candidata en master cuando aplique. No cambiar contrato ni atribuir aceptación externa.
 
+**Acreditación retrospectiva:** PR #10 aporta evidencia histórica compartida por bloque. Ver commits/files/tests específicos del manifiesto; esto no crea un PR por issue, no acredita merge/cierre y no reemplaza PR propio para cambios nuevos.
+
 ## Estado inicial
 PARCIAL: PR #10 incluye Problem Details, expiración y recuperación outbox; falta comprobar la cobertura restante de indisponibilidad, métricas y contratos.
 
 ## Dependencias bloqueantes
-- INVENTORY-SVC-BACK-06 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
+- INVENTORY-SVC-BACK-06 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 
 **Issues existentes relacionados:**
 - Sin issue externo previo identificado.
@@ -4402,7 +4416,7 @@ PARCIAL: PR #10 incluye Problem Details, expiración y recuperación outbox; fal
 ## Pruebas obligatorias
 Pruebas focalizadas de timeout/DB/broker fallido, recuperación, métricas/log redaction; suite completa después en CI.
 
-**Trazabilidad específica de PR #10 (OPEN/DRAFT; head 2c4a18105c5e379edc8476b9d315aa6be1134b80):** Problem Details/recovery cubiertos parcialmente; runtime/homologación no acreditados. Commits relacionados: 61541b6d9160, 116e7b306f3a, b947fd9e9a7f. Archivos: src/errors/*; src/reservations/reservation-expiration.service.ts; src/outbox/outbox-publisher.service.ts; src/workers/*. Pruebas: src/reservations/reservation-expiration.spec.ts; test/inventory.real.integration.spec.ts. Perspectiva del PR: no fusionado; revalidar contra diff/CI al ejecutar.
+**Trazabilidad específica de PR #10 (OPEN/DRAFT; head 2c4a18105c5e379edc8476b9d315aa6be1134b80):** Problem Details/recovery cubiertos parcialmente; runtime/homologación no acreditados. Commits relacionados: 61541b6d9160, 116e7b306f3a, b947fd9e9a7f. Archivos: apps/inventory-svc/src/errors/*; apps/inventory-svc/src/reservations/reservation-expiration.service.ts; apps/inventory-svc/src/outbox/outbox-publisher.service.ts; apps/inventory-svc/src/workers/*. Pruebas: apps/inventory-svc/src/reservations/reservation-expiration.spec.ts; apps/inventory-svc/test/inventory.real.integration.spec.ts. Perspectiva del PR: no fusionado; revalidar contra diff/CI al ejecutar.
 
 ## Evidencias de cierre
 - [ ] Un PR revisable desde la rama autorizada en Taller-SW-Web/G6-Productos-Ofertas-backend con SHA y diff acotado.
@@ -4433,7 +4447,7 @@ Las pantallas MK del bounded context usan adaptadores HTTP reales y muestran res
 Issue central: Taller-SW-Web/G6-Productos-Ofertas-backend. PR/cambios de código esperados: Taller-SW-Web/G6-Productos-Ofertas-frontend (el issue permanece centralizado en Backend).
 
 ## Alcance
-MK-015/016 no tienen feature, páginas ni adapters de Inventory en src/features ni rutas React en el checkout auditado. Crear la experiencia conforme a component-spec/HU; no asumir paths frontend. Mock/fixture solo para pruebas aisladas. Adaptadores actuales: No existe feature inventory detectada en src/features; no adapter actual. Backend PR #10 sí agrega provider/controller de un subconjunto de operaciones; no cubre UI. Operaciones OpenAPI asociadas a MK: MK-015: GET /inventario/umbrales (obtenerUmbralesInventario); PUT /inventario/umbrales/global (actualizarUmbralGlobal); PUT /inventario/umbrales/skus/{sku} (establecerUmbralSku); DELETE /inventario/umbrales/skus/{sku} (eliminarUmbralSku); POST /inventario/incidencias (reportarIncidenciaInventario); POST /inventario/incidencias/{incidenciaId}/resolver (resolverIncidenciaInventario); GET /inventario/traslados (listarTrasladosInventario); GET /inventario/traslados/{trasladoId} (obtenerTrasladoInventario); POST /inventario/traslados/{trasladoId}/recepciones (registrarRecepcionTrasladoInventario); POST /inventario/reintegros (reintegrarInventario); POST /inventario/conciliaciones-offline (conciliarVentaOffline) | MK-016: GET /inventario/dashboard (obtenerDashboardInventario); GET /inventario/disponibilidad/comercial (consultarDisponibilidadComercial); POST /inventario/disponibilidad/comercial/verificar (verificarCantidadComercial); GET /inventario/operaciones/{operationId} (consultarOperacionInventario)
+En la rama Frontend taco (f01cb3146322cd546396a8fa73a8f07fcbc2fb93) existe src/features/inventory/adapters/mockInventoryAdapter.ts, pero es mock y no acredita HTTP. La búsqueda por árbol no encontró componentes/páginas ni un adapter real bajo src/features/inventory; AppRoutes, productRoutes y demoRoutes tampoco registran rutas /inventario. tests/inventory.spec.ts contiene 20 declaraciones Playwright para MK-015, MK-016 y navegación; no se ejecutaron en esta auditoría y sus rutas esperadas no constan en los routers. Inspeccionar/reutilizar/reparar estos artefactos antes de crear nuevos; no duplicar trabajo. Backend PR #10 cubre solo un subconjunto de operations y no sustituye esta integración. Operaciones OpenAPI asociadas a MK: MK-015: GET /inventario/umbrales (obtenerUmbralesInventario); PUT /inventario/umbrales/global (actualizarUmbralGlobal); PUT /inventario/umbrales/skus/{sku} (establecerUmbralSku); DELETE /inventario/umbrales/skus/{sku} (eliminarUmbralSku); POST /inventario/incidencias (reportarIncidenciaInventario); POST /inventario/incidencias/{incidenciaId}/resolver (resolverIncidenciaInventario); GET /inventario/traslados (listarTrasladosInventario); GET /inventario/traslados/{trasladoId} (obtenerTrasladoInventario); POST /inventario/traslados/{trasladoId}/recepciones (registrarRecepcionTrasladoInventario); POST /inventario/reintegros (reintegrarInventario); POST /inventario/conciliaciones-offline (conciliarVentaOffline) | MK-016: GET /inventario/dashboard (obtenerDashboardInventario); GET /inventario/disponibilidad/comercial (consultarDisponibilidadComercial); POST /inventario/disponibilidad/comercial/verificar (verificarCantidadComercial); GET /inventario/operaciones/{operationId} (consultarOperacionInventario)
 
 ## Fuera de alcance
 No modificar contratos ejecutables, migraciones aplicadas, credenciales, grants/policies, datos shared ni ownership ajeno. No publicar puertos internos/broker. Aplicar AGENTS.md y los límites de ownership; integrar por APIs/eventos del owner, no por acceso cross-schema.
@@ -4442,12 +4456,12 @@ No modificar contratos ejecutables, migraciones aplicadas, credenciales, grants/
 arquitectura/Arquitectura.md; REGISTRO_DEC_F.md y MATRIZ_TRAZABILIDAD_DEC_F.md (DEC-F-001..015 adoptadas internamente, no homologación externa); SPEC/HU/FLOW-015/016, DEC-F adoptadas aplicables y datos/inventory-svc/physical-model.md; OpenAPI 0.6.0-rc.1 candidata en master y AsyncAPI 0.6.0-rc.2 candidata en master cuando aplique. No cambiar contrato ni atribuir aceptación externa.
 
 ## Estado inicial
-NO_INICIADO: Frontend #17/#18 están abiertos; el checkout auditado no tiene feature inventory, páginas ni adapter HTTP. La existencia del backend no acredita esta integración.
+NO_INICIADO: en Frontend taco existe un adapter mock y una suite Playwright de 20 casos, pero no constan páginas/rutas Inventory ni adapter HTTP real en el árbol auditado. No se declara prueba pasada; las rutas esperadas por la suite tampoco aparecen en AppRoutes/productRoutes/demoRoutes.
 
 ## Dependencias bloqueantes
-- INVENTORY-SVC-BACK-07 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
-- GATEWAY-BACK-01 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
-- SHARED-BACK-01 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
+- INVENTORY-SVC-BACK-07 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
+- GATEWAY-BACK-01 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
+- SHARED-BACK-01 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 
 **Issues existentes relacionados:**
 - [Taller-SW-Web/G6-Productos-Ofertas-frontend#17](https://github.com/Taller-SW-Web/G6-Productos-Ofertas-frontend/issues/17) (ABIERTO): Coordinar estado de MK-015; UI existente no acredita API.
@@ -4460,12 +4474,14 @@ NO_INICIADO: Frontend #17/#18 están abiertos; el checkout auditado no tiene fea
 - **P0 — Publicación de páginas/datos de esta feature en la demo.** Responsable de resolver: Marco y owner competente de Seguridad/Supabase. Desbloqueo: Revisar security por operationId y las capas efectivas de datos/rutas; la ausencia de userBearer en OpenAPI no acredita grants ni autorización de publicación.
 
 ## Tareas
+- [ ] Revisar y decidir si se reutiliza o repara src/features/inventory/adapters/mockInventoryAdapter.ts y tests/inventory.spec.ts; no recrear estos artefactos sin comprobar su estado.
 - [ ] Conectar pantallas MK y flujos listados en Alcance al HTTP client compartido.
 - [ ] Quitar mock del composition mode api; conservar fixtures y mock exclusivamente en pruebas o modo mock explícito.
 - [ ] Cubrir loading/empty/success/401/403/409/5xx y evitar retries que dupliquen writes.
 
 ## Criterios de aceptación
 - [ ] Cada MK listado llama los operationIds enumerados y refleja errores/autorización en UI.
+- [ ] Acreditar por separado adapter HTTP y rutas/páginas; mocks y specs Playwright existentes no cuentan como integración real.
 - [ ] Modo api nunca devuelve fixtures/mocks en error ni muestra saldo detallado fuera de alcance.
 - [ ] Las llamadas userBearer no se activan en demo anónima sin resolución formal.
 
@@ -4514,12 +4530,14 @@ No modificar contratos ejecutables, migraciones aplicadas, credenciales, grants/
 ## Fuentes normativas
 arquitectura/Arquitectura.md; REGISTRO_DEC_F.md y MATRIZ_TRAZABILIDAD_DEC_F.md (DEC-F-001..015 adoptadas internamente, no homologación externa); SPEC/HU/FLOW-015/016, DEC-F adoptadas aplicables y datos/inventory-svc/physical-model.md; OpenAPI 0.6.0-rc.1 candidata en master y AsyncAPI 0.6.0-rc.2 candidata en master cuando aplique. No cambiar contrato ni atribuir aceptación externa.
 
+**Acreditación retrospectiva:** PR #10 aporta evidencia histórica compartida por bloque. Ver commits/files/tests específicos del manifiesto; esto no crea un PR por issue, no acredita merge/cierre y no reemplaza PR propio para cambios nuevos.
+
 ## Estado inicial
-PARCIAL: PR #10 contiene test/app.e2e-spec.ts, reservas.cycle/concurrency specs y test/inventory.real.integration.spec.ts (11/11 declarado en el PR, PostgreSQL/RabbitMQ efímeros). No es E2E React→Gateway ni está fusionado.
+PARCIAL: PR #10 contiene apps/inventory-svc/test/app.e2e-spec.ts, reservas.cycle/concurrency specs y apps/inventory-svc/test/inventory.real.integration.spec.ts (11/11 declarado en el PR, PostgreSQL/RabbitMQ efímeros). No es E2E React→Gateway ni está fusionado.
 
 ## Dependencias bloqueantes
-- INVENTORY-SVC-BACK-08 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
-- SHARED-BACK-03 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
+- INVENTORY-SVC-BACK-08 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
+- SHARED-BACK-03 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 
 **Issues existentes relacionados:**
 - Sin issue externo previo identificado.
@@ -4540,7 +4558,7 @@ PARCIAL: PR #10 contiene test/app.e2e-spec.ts, reservas.cycle/concurrency specs 
 ## Pruebas obligatorias
 MK-015: threshold read/write, reportar/resolver incidencia, recepción de traslado y registro de reintegro solo con autorización externa; bloquea secuencias G4/G7 pendientes. MK-016: consulta comercial disponible/indeterminada, verificación independiente de reserva, dashboard autorizado y operación/replay; nunca enseñar stock_balance/Kardex por canal. Escalar tests afectados primero; un stack Postgres/Rabbit aislado compartido por la suite. Playwright solo Chromium/1 worker local, sin screenshot/video/tracing en éxitos. E2E real no acepta mocks.
 
-**Trazabilidad específica de PR #10 (OPEN/DRAFT; head 2c4a18105c5e379edc8476b9d315aa6be1134b80):** PR #10 OPEN/DRAFT; no es merged ni prueba deployment. Commits relacionados: 2b994ee3b601, ae4b27cd71fb. Archivos: test/app.e2e-spec.ts; test/inventory.real.integration.spec.ts; src/reservations/reservations.concurrency.spec.ts; src/reservations/reservations.cycle.spec.ts. Pruebas: PR #10 declara 11/11 test/inventory.real.integration.spec.ts; incluye PG/Rabbit efímeros. Los tests del servicio no son E2E React→Gateway.. Perspectiva del PR: no fusionado; revalidar contra diff/CI al ejecutar.
+**Trazabilidad específica de PR #10 (OPEN/DRAFT; head 2c4a18105c5e379edc8476b9d315aa6be1134b80):** PR #10 OPEN/DRAFT; no es merged ni prueba deployment. Commits relacionados: 2b994ee3b601, ae4b27cd71fb. Archivos: apps/inventory-svc/test/app.e2e-spec.ts; apps/inventory-svc/test/inventory.real.integration.spec.ts; apps/inventory-svc/src/reservations/reservations.concurrency.spec.ts; apps/inventory-svc/src/reservations/reservations.cycle.spec.ts. Pruebas: PR #10 declara 11/11 apps/inventory-svc/test/inventory.real.integration.spec.ts; incluye PG/Rabbit efímeros. Los tests del servicio no son E2E React→Gateway.. Perspectiva del PR: no fusionado; revalidar contra diff/CI al ejecutar.
 
 ## Evidencias de cierre
 - [ ] Un PR revisable desde la rama autorizada en Taller-SW-Web/G6-Productos-Ofertas-backend con SHA y diff acotado.
@@ -4645,7 +4663,7 @@ arquitectura/Arquitectura.md; REGISTRO_DEC_F.md y MATRIZ_TRAZABILIDAD_DEC_F.md (
 BLOQUEADO_ESPECÍFICO: no existe una decisión autorizada de acceso demo sin login para operaciones userBearer. Se puede preparar validación/passthrough seguro, sin omitir guards; habilitar el acceso demo queda bloqueado por operación.
 
 ## Dependencias bloqueantes
-- GATEWAY-BACK-01 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
+- GATEWAY-BACK-01 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 
 **Issues existentes relacionados:**
 - Sin issue externo previo identificado.
@@ -4697,7 +4715,7 @@ El Gateway procesa únicamente los eventos BFF que AsyncAPI RC2 ya le asigna, si
 Issue central: Taller-SW-Web/G6-Productos-Ofertas-backend. PR/cambios de código esperados: Taller-SW-Web/G6-Productos-Ofertas-backend.
 
 ## Alcance
-Conectar los consumers x-consumers api-gateway/bff de AsyncAPI RC2 candidata: taxonomy.category.updated, taxonomy.master.deactivated, catalog.product.deactivated, pricing.price.changed, inventory.stock.changed/adjusted y reservation.created/consumed/released/expired. El contrato declara recepción, no autoriza nuevo almacenamiento o endpoint; aclarar con owner si falta destino.
+Implementar consumers únicamente para los 11 eventos con x-consumers api-gateway/bff en AsyncAPI RC2 candidata: taxonomy.category.updated, taxonomy.master.deactivated, catalog.product.deactivated, pricing.price.changed, inventory.stock.changed, inventory.stock.adjusted, inventory.sku.initialization.rejected, inventory.reservation.created, inventory.reservation.consumed, inventory.reservation.released e inventory.reservation.expired. Unit/contract tests de consumer y recuperación usan mensajes de contrato en broker aislado; no esperan cierre de publishers. Solo la prueba de integración con publisher real depende de TAXONOMY-SVC-BACK-06, CATALOG-SVC-BACK-06, PRICING-SVC-BACK-06 e INVENTORY-SVC-BACK-06 respectivamente. No añadir rutas, storage, permisos ni eventos propios.
 
 ## Fuera de alcance
 No modificar contratos ejecutables, migraciones aplicadas, credenciales, grants/policies, datos shared ni ownership ajeno. No publicar puertos internos/broker. Aplicar AGENTS.md y los límites de ownership; integrar por APIs/eventos del owner, no por acceso cross-schema.
@@ -4706,14 +4724,16 @@ No modificar contratos ejecutables, migraciones aplicadas, credenciales, grants/
 arquitectura/Arquitectura.md; REGISTRO_DEC_F.md y MATRIZ_TRAZABILIDAD_DEC_F.md (DEC-F-001..015 adoptadas internamente, no homologación externa); OpenAPI 0.6.0-rc.1 y AsyncAPI 0.6.0-rc.2 en master como candidatas; Arquitectura/Arquitectura.md y responsabilidad BFF declarada en AsyncAPI.; OpenAPI 0.6.0-rc.1 candidata en master y AsyncAPI 0.6.0-rc.2 candidata en master cuando aplique. No cambiar contrato ni atribuir aceptación externa.
 
 ## Estado inicial
-NO_INICIADO: no hay consumidores BFF/eventos ni correlación integrada acreditada.
+NO_INICIADO: no se acredita consumer BFF; handlers y pruebas de contrato pueden desarrollarse en broker aislado, sin esperar a publishers ni resolver la publicación de demo.
 
 ## Dependencias bloqueantes
-- GATEWAY-BACK-02 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
-- TAXONOMY-SVC-BACK-06 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
-- CATALOG-SVC-BACK-06 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
-- PRICING-SVC-BACK-06 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
-- INVENTORY-SVC-BACK-06 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
+- GATEWAY-BACK-01 (base del Gateway); el trabajo de consumers no depende del cierre de publishers ni de la autenticación de la demo.
+
+**Dependencias condicionales por integración con publishers reales:**
+- TAXONOMY-SVC-BACK-06 para taxonomy.category.updated y taxonomy.master.deactivated.
+- CATALOG-SVC-BACK-06 para catalog.product.deactivated.
+- PRICING-SVC-BACK-06 para pricing.price.changed.
+- INVENTORY-SVC-BACK-06 para inventory.stock.changed, inventory.stock.adjusted, inventory.sku.initialization.rejected, inventory.reservation.created, inventory.reservation.consumed, inventory.reservation.released e inventory.reservation.expired.
 
 **Issues existentes relacionados:**
 - Sin issue externo previo identificado.
@@ -4722,17 +4742,19 @@ NO_INICIADO: no hay consumidores BFF/eventos ni correlación integrada acreditad
 - **P1 — Provisioning de broker y garantías retry/DLX productivas.** Responsable de resolver: G5 y owner G6 de mensajería. Desbloqueo: Homologación del contrato/topología aplicable y evidencia provider/consumer; la lógica interna puede probarse con broker aislado.
 
 ## Tareas
-- [ ] Suscribirse únicamente a eventos que AsyncAPI RC2 lista para api-gateway/bff.
-- [ ] Correlacionar con port BFF existente; si no existe destino/retención aprobada, dejar ese consumer específico bloqueado.
-- [ ] No crear rutas, payloads ni persistencia propios sin fuente aprobada.
+- [ ] Implementar handlers y pruebas de contrato con mensajes fixtures en broker aislado; no esperar a publishers reales.
+- [ ] Correlacionar solo con destinos BFF existentes; si falta destino/retención aprobada, aislar ese consumer específico.
+- [ ] Ejecutar integración real por evento cuando el publisher correspondiente esté listo.
+- [ ] Preservar guards y semántica userBearer de las rutas HTTP; no habilitar demo pública ni crear rutas, payloads o persistencia propios.
 
 ## Criterios de aceptación
-- [ ] Cada consumer implementado corresponde a x-consumers api-gateway/bff en AsyncAPI RC2.
-- [ ] Cada evento tiene responsable de consumo y destino aprobado; sin nuevos endpoints o tablas.
-- [ ] Eventos fuera de ruta/duplicados quedan visibles y no alteran dominios ajenos.
+- [ ] Los 11 handlers solo corresponden a eventos declarados para api-gateway/bff en AsyncAPI RC2.
+- [ ] Unit/contract tests del consumer pasan con broker aislado sin levantar productores.
+- [ ] La integración con publishers reales se exige solo para los eventos cuya dependencia condicional se haya desbloqueado.
+- [ ] Se preserva la autenticación existente; no se crean rutas ni tablas sin contrato/decisión.
 
 ## Pruebas obligatorias
-Contract tests de mensajes receive definidos en AsyncAPI RC2; dedupe, orden/restart y no handler para mensaje sin destino. Broker aislado reutilizado una vez por suite; no test de producción.
+Unit y contract tests de los 11 consumers con envelopes fixtures basados en AsyncAPI RC2 y broker aislado reutilizado una vez por suite. Pruebas de integración por publisher solo cuando esté disponible (las cuatro dependencias condicionales); no se afirma E2E de demo.
 
 ## Evidencias de cierre
 - [ ] Un PR revisable desde la rama autorizada en Taller-SW-Web/G6-Productos-Ofertas-backend con SHA y diff acotado.
@@ -4837,7 +4859,7 @@ Gobernanza: AGENTS.md de Docs/Backend/Frontend; issues INFRA/DATA/MK vigentes; c
 PARCIAL: Backend #8 sigue OPEN; PR #9 MERGED aporta CD reusable, pero no acredita despliegue integrado de React+Gateway+servicios.
 
 ## Dependencias bloqueantes
-- GATEWAY-BACK-01 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
+- GATEWAY-BACK-01 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 
 **Issues existentes relacionados:**
 - [Taller-SW-Web/G6-Productos-Ofertas-backend#8](https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/8) (ABIERTO): CD Oracle existente; reusar lo entregado por PR #9 y no duplicarlo.
@@ -4968,8 +4990,8 @@ Gobernanza: AGENTS.md de Docs/Backend/Frontend; issues INFRA/DATA/MK vigentes; c
 PARCIAL: hay Playwright en Frontend y pruebas Vitest/provider en Backend; no hay harness verificado React→Gateway→servicio real.
 
 ## Dependencias bloqueantes
-- GATEWAY-BACK-01 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
-- SHARED-BACK-01 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
+- GATEWAY-BACK-01 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
+- SHARED-BACK-01 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 
 **Issues existentes relacionados:**
 - Sin issue externo previo identificado.
@@ -5031,14 +5053,14 @@ Gobernanza: AGENTS.md de Docs/Backend/Frontend; issues INFRA/DATA/MK vigentes; c
 NO_INICIADO: MK/issues y pantallas están en repositorios distintos; falta una matriz de cobertura MK→operationId→adapter→pruebas/evidencia.
 
 ## Dependencias bloqueantes
-- BULK-SVC-BACK-08 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
-- COMBOS-SVC-BACK-08 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
-- CATALOG-SVC-BACK-08 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
-- PROMOTIONS-SVC-BACK-08 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
-- TAXONOMY-SVC-BACK-08 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
-- PRICING-SVC-BACK-08 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
-- PRICE-AUDIT-SVC-BACK-08 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
-- INVENTORY-SVC-BACK-08 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
+- BULK-SVC-BACK-08 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
+- COMBOS-SVC-BACK-08 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
+- CATALOG-SVC-BACK-08 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
+- PROMOTIONS-SVC-BACK-08 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
+- TAXONOMY-SVC-BACK-08 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
+- PRICING-SVC-BACK-08 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
+- PRICE-AUDIT-SVC-BACK-08 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
+- INVENTORY-SVC-BACK-08 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 
 **Issues existentes relacionados:**
 - [Taller-SW-Web/G6-Productos-Ofertas-frontend#3](https://github.com/Taller-SW-Web/G6-Productos-Ofertas-frontend/issues/3) (CERRADO): Fila de cobertura MK-001; reconcile, no duplicate.
@@ -5115,18 +5137,18 @@ Gobernanza: AGENTS.md de Docs/Backend/Frontend; issues INFRA/DATA/MK vigentes; c
 NO_INICIADO: no se acredita todavía una validación de demo integrada sin mocks.
 
 ## Dependencias bloqueantes
-- TAXONOMY-SVC-BACK-09 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
-- CATALOG-SVC-BACK-09 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
-- PRICING-SVC-BACK-09 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
-- PRICE-AUDIT-SVC-BACK-09 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
-- PROMOTIONS-SVC-BACK-09 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
-- COMBOS-SVC-BACK-09 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
-- BULK-SVC-BACK-09 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
-- INVENTORY-SVC-BACK-09 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
-- GATEWAY-BACK-03 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
-- DEPLOY-BACK-01 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
-- DATA-BACK-01 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
-- SHARED-BACK-04 (aceptado, probado con evidencia, PR fusionado e issue cerrado).
+- TAXONOMY-SVC-BACK-09 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
+- CATALOG-SVC-BACK-09 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
+- PRICING-SVC-BACK-09 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
+- PRICE-AUDIT-SVC-BACK-09 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
+- PROMOTIONS-SVC-BACK-09 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
+- COMBOS-SVC-BACK-09 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
+- BULK-SVC-BACK-09 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
+- INVENTORY-SVC-BACK-09 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
+- GATEWAY-BACK-03 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
+- DEPLOY-BACK-01 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
+- DATA-BACK-01 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
+- SHARED-BACK-04 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 
 **Issues existentes relacionados:**
 - Sin issue externo previo identificado.

@@ -24,7 +24,20 @@
 
 ## Estado posterior
 
-81 issues: 56 NO_INICIADO, 16 PARCIAL, 2 IMPLEMENTADO_SIN_VALIDAR y 1 BLOQUEADO_ESPECÍFICO; 0 IMPLEMENTADO_VALIDADO. Las dos piezas de Inventory con código en PR abierto se clasifican IMPLEMENTADO_SIN_VALIDAR; el resto se reporta con alcance faltante.
+## Conteos reconciliados contra MANIFEST y SUMMARY
+
+| Estado | Cantidad |
+|---|---:|
+| NO_INICIADO | 62 |
+| PARCIAL | 16 |
+| IMPLEMENTADO_SIN_VALIDAR | 2 |
+| IMPLEMENTADO_VALIDADO | 0 |
+| NO_APLICA | 0 |
+| BLOQUEADO_ESPECÍFICO | 1 |
+
+Total de registros: 81.
+
+Estado del paquete recalculado desde MANIFEST: 81 issues. Las dos piezas de Inventory con código en PR abierto se clasifican IMPLEMENTADO_SIN_VALIDAR; el resto se reporta con alcance faltante.
 
 Sin publicación, escritura GitHub, edición de repositorios, ejecución SQL, cambio de credenciales ni despliegue.
 
@@ -35,3 +48,16 @@ Sin publicación, escritura GitHub, edición de repositorios, ejecución SQL, ca
 - Se agregaron seis conjuntos de dependencias condicionales de operación en BACK-08 (Taxonomía, Catálogo, Pricing, Promociones, Combos y Bulk). Solo condicionan los flujos nombrados; las otras operaciones siguen avanzando de forma independiente.
 - Catalog BACK-06 ahora distingue la publicación de pricing.product.initialization.requested e inventory.sku.initialization.requested de los resultados de inicialización que consume, conforme a AsyncAPI RC2.
 - El dry-run valida ciclos, referencias e inversas sobre dependencias obligatorias más condicionales.
+
+
+## Correcciones de esta auditoría
+
+- El manifiesto incorpora service explícito en cada registro y el validador comprueba los conteos declarados, sin un total rígido.
+- Los conteos quedan reconciliados entre MANIFEST, SUMMARY, MATRIZ, ISSUES, CAMBIOS y DEPENDENCIAS; NO_INICIADO: 62.
+- Frontend taco conserva un mock adapter y una suite Playwright de 20 declaraciones; el snapshot no tiene páginas/rutas ni adapter HTTP Inventory.
+- La excepción retrospectiva del PR #10 conserva el PR histórico y sus commits/paths verificables; un PR por issue sigue aplicando a trabajo nuevo.
+- GATEWAY-BACK-03 puede probar consumers con contratos en entorno aislado; publishers reales son dependencias condicionales únicamente para pruebas integradas.
+- La lista de eventos usa nombres completos de AsyncAPI. La excepción histórica PR #10 valida SHA, commits, paths y tests del diff; la evidencia no afirma merge.
+- Se sustituyeron frases de dependencias que aparentaban estar ya cerradas por condiciones futuras de prerrequisito.
+- El dry-run cruza los seis artefactos, valida asignaciones, grafo, contratos y cuerpos idénticos en manifiesto/markdown; las pruebas negativas son in-memory y dejan el manifiesto intacto.
+- La revisión de seguridad del paquete público no encontró secretos ni rutas locales en sus 13 archivos.
