@@ -45,7 +45,7 @@ export function validatePackage({ manifest, summary, matrixText, issuesText, cha
   } else {
     if (manifest.publication_authorized !== true || publicationLedger?.authorized !== true) fail("SAFETY", `modo ${mode} requiere autorización de publicación en manifiesto y ledger`);
     if (publicationLedger?.authorization_id !== "APPROVAL-BACK-HITO3-PUBLISH-20261016" || publicationLedger?.approved_by !== "Marco Castilla" || publicationLedger?.approved_at !== "2026-10-16" || publicationLedger?.repository !== manifest.issue_repository || publicationLedger?.source_sha !== manifest.publication_authorization?.source_sha || manifest.publication_authorization?.approval_reference !== "autorización expresa comunicada en esta conversación" || manifest.publication_authorization?.excludes_implementation !== true || manifest.publication_authorization?.excludes_deployment !== true) fail("SAFETY", "metadatos de autorización de publicación incompletos o divergentes");
-    if (publicationLedger?.preflight_snapshot?.preflight_existing_issues?.length !== 26 || publicationLedger?.preflight_snapshot?.preflight_existing_prs?.length !== 7 || publicationLedger?.preflight_snapshot?.int_asap_snapshot?.length !== 14) fail("SAFETY", "snapshot de preflight no contiene issues/PRs existentes e INT-ASAP #20–#33");
+    if (publicationLedger?.preflight_snapshot?.preflight_existing_issues?.length !== 26 || publicationLedger?.preflight_snapshot?.preflight_existing_prs?.length !== 7 || publicationLedger?.preflight_snapshot?.int_asap_snapshot?.length !== 15) fail("SAFETY", "snapshot de preflight no contiene issues/PRs existentes e INT-ASAP #19–#33");
     if (mode === "authorized" && publicationLedger?.publication_completed === true) fail("SAFETY", "modo authorized no admite publicación marcada como completada");
     if (mode === "completed" && (publicationLedger?.publication_started !== true || publicationLedger?.publication_completed !== true)) fail("SAFETY", "modo completed requiere inicio y finalización registrados");
   }
@@ -263,12 +263,33 @@ export function validatePackage({ manifest, summary, matrixText, issuesText, cha
 
   const ledgerRecords = publicationLedger?.records ?? [];
   const recordedIds = new Set();
+  const ledgerById = new Map();
   for (const record of ledgerRecords) {
     if (!byId.has(record?.logical_id) || recordedIds.has(record?.logical_id)) fail("LEDGER", `ID ausente o duplicado en ledger: ${record?.logical_id}`);
-    if (record?.logical_id) recordedIds.add(record.logical_id);
+    if (record?.logical_id) { recordedIds.add(record.logical_id); ledgerById.set(record.logical_id, record); }
     if (record?.repository !== manifest.issue_repository || record?.source_sha !== manifest.publication_authorization?.source_sha || !Number.isInteger(record?.number) || !record?.url?.endsWith(`/issues/${record.number}`) || record?.verification_status !== "VERIFIED" || !record?.title || !record?.assignee_login || !record?.created_at) fail("LEDGER", `registro incompleto o no verificado: ${record?.logical_id}`);
   }
   if (mode === "completed" && (recordedIds.size !== count || items.some(item => !recordedIds.has(item.id)))) fail("LEDGER", `publicación completa requiere exactamente ${count} IDs verificados`);
   if (mode === "completed" && items.some(item => ledgerRecords.find(record => record.logical_id === item.id)?.state !== "OPEN")) fail("LEDGER", "todos los issues BACK publicados deben estar OPEN");
+  if (mode === "completed") {
+    for (const item of items) {
+      const record = ledgerById.get(item.id);
+      if (!record) continue;
+      const expectedInverse = items.filter(other => other.depends_on.includes(item.id)).map(other => other.id).sort();
+      const groups = [
+        ["mandatory", [...item.depends_on].sort()],
+        ["mandatory_inverse", expectedInverse],
+        ["conditional", [...new Set(item.blocking_conditions.flatMap(condition => condition.dependency_ids ?? []))].sort()]
+      ];
+      for (const [field, expected] of groups) {
+        const actual = record.dependency_references?.[field] ?? [];
+        if (!same(actual.map(ref => ref.logical_id).sort(), expected)) fail("LEDGER", `${item.id}: refs ${field} no coinciden con el grafo`);
+        for (const ref of actual) {
+          const target = ledgerById.get(ref.logical_id);
+          if (!target || ref.number !== target.number || ref.url !== target.url) fail("LEDGER", `${item.id}: enlace ${field} no coincide con el registro de ${ref.logical_id}`);
+        }
+      }
+    }
+  }
   return { errors, metrics: { records: count, unique_ids: byId.size, statuses: statusCounts, services, owners, dependency_edges: [...edgesById.values()].reduce((n, es) => n + es.length, 0), dependency_cycles: errors.some(e => e.startsWith("CYCLE:")) ? "present" : 0, mk_covered: mkCovered.size, openapi_operations: operationMap.size, asyncapi_messages: messageNames.size, bff_events: asyncapi?.bff_consumed_events?.length ?? 0, owner_pending: pendingOwners.length, publishable: items.filter(i => i.publishable).length, int_asap_issues: traceByNumber.size, int_asap_backlinks: [...reverseTrace.values()].reduce((n, ids) => n + new Set(ids).size, 0), publication_records: ledgerRecords.length, validation_mode: mode } };
 }

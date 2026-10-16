@@ -1,9 +1,9 @@
 {
   "manifest_version": 2,
-  "generated_for": "Hito 3 BACK issue drafts — aprobación formal de responsables y dry-run; publicación no autorizada",
+  "generated_for": "BACK Hito 3: autorización y publicación oficial completada",
   "generated_date": "2026-10-16",
   "publication_authorized": true,
-  "publication_state": "PUBLICACION_AUTORIZADA_NO_INICIADA",
+  "publication_state": "PUBLICACION_COMPLETADA",
   "issue_count": 82,
   "issue_repository": "Taller-SW-Web/G6-Productos-Ofertas-backend",
   "publication_ledger": "BACK_HITO3_PUBLICATION_LEDGER.json",
@@ -4864,7 +4864,7 @@
       "review_scope": "todos los archivos actuales de back-hito3-audit, incluidos BACK_HITO3_APROBACION_RESPONSABLES.md y BACK_HITO3_PREPUBLICACION.md",
       "reviewed_at": "2026-10-16"
     },
-    "no_official_g6_repo_changes": true,
+    "no_official_g6_repo_changes": false,
     "protected_transversal_owner_count": 7,
     "pending_transversal_owner_count": 0,
     "package_file_count": 16,
@@ -4894,8 +4894,30 @@
         "int_asap_backlinks": 51
       },
       "dry_run": "PASS",
-      "negative_tests": "PASS (8 casos negativos)",
+      "negative_tests": "PASS (10 casos negativos)",
       "semantic_collision_review": "Solapamientos INT-ASAP son parciales, previstos y no sustituyen los alcances BACK; issues DATA/INFRA existentes mantienen alcances de datos/infraestructura distintos."
+    },
+    "publication_postflight": {
+      "status": "PASS",
+      "verified_at": "2026-10-16T08:43:50.368Z",
+      "issues_verified": 82,
+      "unique_logical_ids": 82,
+      "duplicates": 0,
+      "open_issues": 82,
+      "assignments_verified": 82,
+      "mandatory_edges_resolved": 132,
+      "total_graph_edges_resolved": 158,
+      "int_asap_issues_unchanged": 15,
+      "preexisting_issues_unchanged": 26,
+      "preexisting_prs_unchanged": 7,
+      "native_dependency_relations": "NOT_CONFIGURED; se verificaron enlaces Markdown bidireccionales para obligatorias; condicionales separadas"
+    },
+    "official_g6_publication": {
+      "repository": "Taller-SW-Web/G6-Productos-Ofertas-backend",
+      "issues_created": 82,
+      "issues_reconciled": 0,
+      "issues_open": 82,
+      "implementation_performed": false
     }
   },
   "owner_assignment_policy": {

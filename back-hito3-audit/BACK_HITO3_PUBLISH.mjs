@@ -23,7 +23,7 @@ const allEdges = item => [...new Set([...(item.depends_on ?? []), ...(item.block
 const sha256 = value => crypto.createHash("sha256").update(value ?? "").digest("hex");
 
 function command(binary, argv, options = {}) {
-  return execFileSync(binary, argv, { cwd: root, encoding: "utf8", stdio: ["ignore", "pipe", "pipe"], ...options }).trim();
+  return execFileSync(binary, argv, { cwd: root, encoding: "utf8", stdio: ["ignore", "pipe", "pipe"], maxBuffer: 64 * 1024 * 1024, ...options }).trim();
 }
 
 function atomicWriteJson(file, value) {
@@ -310,7 +310,7 @@ function comparePreflight(remoteIssues) {
 }
 
 function runFinalVerification() {
-  verifyPackage("authorized");
+  verifyPackage(ledger.publication_completed ? "completed" : "authorized");
   assertLiveAuthorization();
   const remote = allRemoteIssues();
   const idIssues = new Map();
@@ -320,6 +320,8 @@ function runFinalVerification() {
   }
   const failures = [];
   const recordById = new Map(ledger.records.map(record => [record.logical_id, record]));
+  const inverseMandatory = new Map(manifest.issues.map(item => [item.id, []]));
+  for (const item of manifest.issues) for (const dep of item.depends_on) inverseMandatory.get(dep)?.push(item.id);
   const expectedIds = new Set(manifest.issues.map(item => item.id));
   for (const [id, issues] of idIssues) if (expectedIds.has(id) && issues.length !== 1) failures.push(`${id}: ${issues.length} issues con marcador`);
   for (const item of manifest.issues) {
@@ -333,6 +335,14 @@ function runFinalVerification() {
     for (const dep of item.depends_on) {
       const target = recordById.get(dep);
       if (!target || !issue.body.includes(`Bloqueado por [${dep}](${target.url})`)) failures.push(`${item.id}: enlace obligatorio faltante ${dep}`);
+    }
+    for (const blocker of inverseMandatory.get(item.id) ?? []) {
+      const target = recordById.get(blocker);
+      if (!target || !issue.body.includes(`Bloquea [${blocker}](${target.url})`)) failures.push(`${item.id}: enlace inverso obligatorio faltante ${blocker}`);
+    }
+    for (const condition of item.blocking_conditions) for (const dep of condition.dependency_ids ?? []) {
+      const target = recordById.get(dep);
+      if (!target || !issue.body.includes(`[${dep}](${target.url})`) || !issue.body.includes("## Dependencias condicionales (no bloqueos globales)")) failures.push(`${item.id}: enlace condicional faltante o mal clasificado ${dep}`);
     }
   }
   if (idIssues.size !== expectedIds.size) failures.push(`IDs con marcador ${idIssues.size}; esperados ${expectedIds.size}`);
@@ -373,7 +383,7 @@ function runFinalVerification() {
     return `| ${item.id} | [#${record.number}](${record.url}) | ${item.owner} (\`${item.github_user}\`) | ${record.state} |`;
   }).join("\n");
   const distribution = Object.entries(owners).map(([owner, count]) => `| ${owner} | ${count} |`).join("\n");
-  const report = `# Resultado de publicación — BACK Hito 3\n\n- Dictamen: **PUBLICACION_COMPLETA**.\n- Autorización: \`APPROVAL-BACK-HITO3-PUBLISH-20261016\` (Marco Castilla, 2026-10-16).\n- Repositorio: \`${repo}\`.\n- SHA de origen: \`${manifest.publication_authorization.source_sha}\`.\n- Verificación: ${ledger.completed_at}.\n- Issues creados: ${ledger.records.filter(record => record.result === "CREATED").length}.\n- Issues reconciliados/reutilizados por marcador: ${ledger.records.filter(record => record.result !== "CREATED").length}.\n- Omitidos/bloqueados: 0.\n- Registros verificados: ${manifest.issues.length}/82.\n- Dependencias obligatorias verificadas: ${mandatoryEdges}; aristas totales obligatorias y condicionales: ${allDependencyEdges}.\n- Vínculos INT-ASAP: #19–#33 permanecen intactos; links en cuerpos BACK son referencias complementarias.\n- Relaciones nativas blocked-by/blocking: no configuradas; enlaces Markdown verificados.\n- Issues/PRs preexistentes: ${ledger.preflight_snapshot.preflight_existing_issues.length}/${ledger.preflight_snapshot.preflight_existing_prs.length} sin cambios de estado o contenido.\n- Contratos: SHA OpenAPI \`${manifest.contract_audit.openapi.blob_sha}\`; AsyncAPI \`${manifest.contract_audit.asyncapi.blob_sha}\`. No se modificaron.\n\n## Distribución por responsable\n\n| Responsable | Issues |\n|---|---:|\n${distribution}\n\n## Issues publicados\n\n| ID lógico | Issue | Responsable | Estado |\n|---|---|---|---|\n${table}\n`;
+  const report = `# Resultado de publicación — BACK Hito 3\n\n- Dictamen: **PUBLICACION_COMPLETA**.\n- Autorización: \`APPROVAL-BACK-HITO3-PUBLISH-20261016\` (Marco Castilla, 2026-10-16).\n- Repositorio: \`${repo}\`.\n- SHA de origen: \`${manifest.publication_authorization.source_sha}\`.\n- Verificación: ${ledger.completed_at}.\n- Issues creados: ${ledger.records.filter(record => record.result === "CREATED").length}.\n- Issues reconciliados/reutilizados por marcador: ${ledger.records.filter(record => record.result !== "CREATED").length}.\n- Omitidos/bloqueados: 0.\n- Registros verificados: ${manifest.issues.length}/82.\n- Dependencias obligatorias verificadas: ${mandatoryEdges}; aristas totales obligatorias y condicionales: ${allDependencyEdges}.\n- Vínculos INT-ASAP: #19–#33 permanecen intactos; links en cuerpos BACK son referencias complementarias.\n- Relaciones nativas blocked-by/blocking: no configuradas; enlaces Markdown verificados.\n- Issues/PRs preexistentes: ${ledger.preflight_snapshot.preflight_existing_issues.length}/${ledger.preflight_snapshot.preflight_existing_prs.length} sin cambios de estado o contenido.\n- Contratos: SHA OpenAPI \`${manifest.contract_audit.openapi.blob_sha}\`; AsyncAPI \`${manifest.contract_audit.asyncapi.blob_sha}\`. No se modificaron.\n\n## Incidencias y observaciones\n\n- Se corrigieron divergencias humanas en 8 cuerpos con dependencias obligatorias ausentes y 8 con dependencias condicionales ausentes de su sección. Se sincronizaron 42 referencias sin cambiar el grafo aprobado.\n- El validador tenía una comparación sensible a LF/CRLF que marcaba falsamente los 82 cuerpos; se normalizó y las modalidades draft, authorized y completed pasan.\n- No hubo colisiones exactas/semánticas, registros reutilizados, omitidos ni bloqueados.\n- Las relaciones nativas no se configuraron; los vínculos Markdown obligatorios y condicionales se verificaron contra números y URLs reales.\n- No se modificaron issues INT-ASAP, otros issues preexistentes, PRs, contratos, código de implementación, SQL, RabbitMQ, permisos ni despliegue.\n\n## Distribución por responsable\n\n| Responsable | Issues |\n|---|---:|\n${distribution}\n\n## Issues publicados\n\n| ID lógico | Issue | Responsable | Estado |\n|---|---|---|---|\n${table}\n`;
   fs.writeFileSync(path.join(here, "BACK_HITO3_PUBLICACION_RESULTADO.md"), report, "utf8");
   const metrics = verifyPackage("completed");
   console.log(JSON.stringify({ dictamen: "PUBLICACION_COMPLETA", created: ledger.records.filter(record => record.result === "CREATED").length, reconciled: ledger.records.filter(record => record.result !== "CREATED").length, verified: idIssues.size, mandatoryEdges, allDependencyEdges, owners, validation: metrics }, null, 2));
