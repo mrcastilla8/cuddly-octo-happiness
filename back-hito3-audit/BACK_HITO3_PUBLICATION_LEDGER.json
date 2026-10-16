@@ -3621,6 +3621,17 @@
     ],
     "int_asap_snapshot": [
       {
+        "number": 19,
+        "manifest_label": "EPIC #19",
+        "title": "[INT-ASAP][EPIC] Integración HTTP/AMQP G6 con Marketplace (G1), Chatbot (G3), Retail (G4) y Ventas/Postventa (G5)",
+        "state": "OPEN",
+        "assignees": [
+          "mrcastilla8"
+        ],
+        "updated_at": "2026-10-16T06:56:02Z",
+        "body_sha256": "4f7a71d2a932e2b50d31fe576ce418f6079c759a8ceb22f01b46fd1af3ce50b5"
+      },
+      {
         "number": 20,
         "manifest_label": "Asegurar endpoint HTTPS 443 para integraciones G6",
         "title": "[INT-ASAP][INFRA] Asegurar endpoint HTTPS 443 para integraciones G6",
@@ -3776,11 +3787,11 @@
       }
     ]
   },
-  "updated_at": "2026-10-16T08:41:59.755Z",
-  "completed_at": "2026-10-16T08:41:59.735Z",
+  "updated_at": "2026-10-16T08:43:05.032Z",
+  "completed_at": "2026-10-16T08:43:05.012Z",
   "post_publication_verification": {
     "status": "PASS",
-    "verified_at": "2026-10-16T08:41:59.735Z",
+    "verified_at": "2026-10-16T08:43:05.012Z",
     "issues_verified": 82,
     "unique_logical_ids": 82,
     "duplicates": 0,
@@ -3788,7 +3799,7 @@
     "assignments_verified": 82,
     "mandatory_edges_resolved": 132,
     "total_graph_edges_resolved": 158,
-    "int_asap_issues_unchanged": 14,
+    "int_asap_issues_unchanged": 15,
     "preexisting_issues_unchanged": 26,
     "preexisting_prs_unchanged": 7,
     "native_dependency_relations": "NOT_CONFIGURED; se verificaron enlaces Markdown bidireccionales para obligatorias; condicionales separadas"
