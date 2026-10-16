@@ -86,10 +86,11 @@
 - **GATEWAY-BACK-03** → GATEWAY-BACK-01
 - **SHARED-BACK-01** → sin prerrequisito interno
 - **DEPLOY-BACK-01** → GATEWAY-BACK-01
+- **DEPLOY-BACK-02** → DEPLOY-BACK-01, GATEWAY-BACK-01, SHARED-BACK-03
 - **DATA-BACK-01** → sin prerrequisito interno
 - **SHARED-BACK-03** → GATEWAY-BACK-01, SHARED-BACK-01
 - **SHARED-BACK-04** → BULK-SVC-BACK-08, COMBOS-SVC-BACK-08, CATALOG-SVC-BACK-08, PROMOTIONS-SVC-BACK-08, TAXONOMY-SVC-BACK-08, PRICING-SVC-BACK-08, PRICE-AUDIT-SVC-BACK-08, INVENTORY-SVC-BACK-08
-- **SHARED-BACK-05** → TAXONOMY-SVC-BACK-09, CATALOG-SVC-BACK-09, PRICING-SVC-BACK-09, PRICE-AUDIT-SVC-BACK-09, PROMOTIONS-SVC-BACK-09, COMBOS-SVC-BACK-09, BULK-SVC-BACK-09, INVENTORY-SVC-BACK-09, GATEWAY-BACK-03, DEPLOY-BACK-01, DATA-BACK-01, SHARED-BACK-04
+- **SHARED-BACK-05** → TAXONOMY-SVC-BACK-09, CATALOG-SVC-BACK-09, PRICING-SVC-BACK-09, PRICE-AUDIT-SVC-BACK-09, PROMOTIONS-SVC-BACK-09, COMBOS-SVC-BACK-09, BULK-SVC-BACK-09, INVENTORY-SVC-BACK-09, GATEWAY-BACK-03, DEPLOY-BACK-01, DEPLOY-BACK-02, DATA-BACK-01, SHARED-BACK-04
 
 ## Dependencias condicionales por operación
 
@@ -102,7 +103,11 @@
 - **COMBOS-SVC-BACK-08** · Selector de componentes SKU, precio vigente y disponibilidad informativa. → CATALOG-SVC-BACK-04, PRICING-SVC-BACK-04, INVENTORY-SVC-BACK-06. List/detail independientes continúan; aceptar creación/disponibilidad real cuando los providers necesarios estén listos.
 - **BULK-SVC-BACK-08** · Importación/reanudación que espera resultados async de los tres bounded contexts. → CATALOG-SVC-BACK-06, PRICING-SVC-BACK-06, INVENTORY-SVC-BACK-06. Plantilla, preview y exportación pueden probarse por separado; el lote real no se declara E2E hasta que los tres handlers/resultados funcionen.
 
+- **DEPLOY-BACK-02** · Readiness solo para servicios seleccionados y habilitados por allowlist; no bloquea por servicios aún no habilitados. → TAXONOMY-SVC-BACK-01, CATALOG-SVC-BACK-01, PRICING-SVC-BACK-01, PRICE-AUDIT-SVC-BACK-01, PROMOTIONS-SVC-BACK-01, COMBOS-SVC-BACK-01, BULK-SVC-BACK-01, INVENTORY-SVC-BACK-01. DEPLOY-BACK-02 reutiliza INFRA #8/PR #9 y requiere autorización escrita, secretos protegidos y rollback.
+
 ## Issues externos
+
+- **DEPLOY-BACK-02** → Taller-SW-Web/G6-Productos-Ofertas-backend#8 (ABIERTO): reutilizar CD Oracle/allowlist existente; no duplicar workflows.
 
 - **TAXONOMY-SVC-BACK-02** → Taller-SW-Web/G6-Productos-Ofertas-backend#1 (ABIERTO): Conexión, permiso y proceso de shared Supabase/fixtures; no bloquea trabajo con DB aislada.
 - **TAXONOMY-SVC-BACK-08** → Taller-SW-Web/G6-Productos-Ofertas-frontend#10 (ABIERTO): Coordinar estado de MK-008; UI existente no acredita API.

@@ -1,6 +1,6 @@
 # Borradores BACK Hito 3 — versión auditada
 
-> 81 IDs lógicos no publicados. Cada issue central está en Backend; BACK-08 y algunos transversales generan un único PR en Frontend según el campo code_repository. Contratos RC citados como candidatos, no acuerdos homologados.
+> 82 IDs lógicos no publicados. Cada issue central está en Backend; BACK-08 y algunos transversales generan un único PR en Frontend según el campo code_repository. Contratos RC citados como candidatos, no acuerdos homologados.
 
 ---
 
@@ -4894,6 +4894,85 @@ Validación estática de compose/manifests/secret refs y health; smoke solo en a
 
 ## Riesgos o bloqueos específicos
 - **P1 — Despliegue Oracle integrado.** Responsable de resolver: Owner Oracle pendiente y responsables de servicios habilitados. Desbloqueo: Aprobación de ambiente/ventana, secretos privados, TLS/red/readiness/rollback; no publicar si artefacto de servicio no está habilitado.
+
+---
+
+---
+
+# [BACK][deploy][02] Activar liberación integrada autorizada en Oracle
+
+**DEPLOY-BACK-02 · OWNER_PENDIENTE · NO_INICIADO**
+
+## Objetivo
+Activar y ejecutar, bajo autorización explícita y con alcance acotado, una versión integrada de la demo G6 en Oracle usando los mecanismos de despliegue existentes.
+
+## Responsable
+**OWNER_PENDIENTE** (no asignar hasta aprobación formal de Marco). Candidatos técnicos no asignados: Marco Castilla — coordinación de liberación; Axel Cueva — gateway/infra. La candidatura no equivale a aceptación.
+Issue de coordinación en Backend. Cambios de código, si fueran necesarios y aprobados, se limitan a Taller-SW-Web/G6-Productos-Ofertas-backend; el issue no autoriza cambios en el repositorio Frontend.
+
+## Alcance
+Reutilizar INFRA #8/PR #9 y la composición preparada por DEPLOY-BACK-01 para ejecutar manualmente una liberación aprobada de Frontend + Gateway + el subconjunto de microservicios que figure habilitado en el allowlist vigente. Si Frontend carece de artefacto o mecanismo de entrega aprobado, detener solo la integración de Frontend y solicitar el trabajo separado a su owner; no copiar ni crear pipelines aquí. No habilitar servicios desde este issue.
+
+## Fuera de alcance
+No crear ni modificar workflows, allowlists, credenciales, permisos, contratos, servicios Frontend o despliegues de componentes no habilitados. No ejecutar SQL ni cambiar datos comerciales.
+
+## Fuentes normativas
+- Arquitectura.md §39 define el E2E como Frontend + Gateway + servicios relevantes; no autoriza por sí misma un despliegue Oracle.
+- Backend INFRA #8 sigue OPEN. Su objetivo es generalizar CD Oracle para nueve servicios; su criterio 5 habilita Inventory inicialmente, y el criterio 9 prohíbe desplegar automáticamente la VM durante ese lote. PR #9 está MERGED (head afbae4e66063898882f6586a07039d34facf2db8, 2026-10-14); aporta el mecanismo reusable, no la activación de una demo integrada.
+- DEPLOY-BACK-01 prepara la composición “sin desplegarla”. SHARED-BACK-05 verifica la demo después de sus dependencias, pero no ejecuta ni autoriza el despliegue.
+- La guía Oracle de Inventory dice que CD no es operativo hasta completar la preparación manual; el health actual no prueba conectividad DB ni integración funcional.
+
+## Estado inicial
+NO_INICIADO: no se encontró issue BACK vigente que autorice y detalle la activación/ejecución integrada. Este draft tampoco autoriza ejecutarla hasta satisfacer las aprobaciones y gates de este mismo issue.
+
+## Dependencias bloqueantes
+- DEPLOY-BACK-01 (composición, referencias secretas, readiness y rollback preparados).
+- GATEWAY-BACK-01 (rutas/health internos implementados y verificados).
+- SHARED-BACK-03 (harness Frontend/Gateway y smoke selectivo preparado).
+
+**Dependencias condicionales de readiness:** los BACK-01 de los servicios elegidos en el alcance aprobado, de entre TAXONOMY-SVC-BACK-01, CATALOG-SVC-BACK-01, PRICING-SVC-BACK-01, PRICE-AUDIT-SVC-BACK-01, PROMOTIONS-SVC-BACK-01, COMBOS-SVC-BACK-01, BULK-SVC-BACK-01 e INVENTORY-SVC-BACK-01. Se evalúa solo el subconjunto permitido por el allowlist INFRA #8 vigente; un servicio no habilitado no bloquea ni se despliega.
+
+**Dependencia externa existente:** Backend #8 (INFRA-002), actualmente OPEN; cerrar/revisar sus gates y confirmar que el SHA/servicio elegido satisface el flujo de CI/CD vigente. Reutilizar PR #9 y los artefactos Oracle ya instalados; no duplicar workflows, scripts genéricos ni política de allowlist.
+
+**Bloqueos específicos y condición de desbloqueo:**
+- **P0 — Autorización y readiness Oracle.** Responsable de resolver: Marco y owner de Oracle aprobado. Registrar aprobación escrita con ambiente, ventana, SHA exacto, componentes habilitados y operador; confirmar prerequisites manuales, conectividad TLS/SSH validada y rollback probado. Sin esa evidencia, no activar el deploy.
+- **P0 — Artefactos/allowlist de cada componente.** Owner del servicio y responsable de INFRA #8. Desbloqueo por componente: imagen/artefacto inmutable identificado, allowlist activa, CI de master verde para el mismo SHA y health/readiness disponible. Omitir componentes que no satisfagan el gate; no habilitarlos en este ticket.
+- **P1 — Secreto o entrega Frontend no preparados.** Owners Frontend/Oracle. Usar solo proceso existente y aprobado; secretos se referencian desde el almacén autorizado, nunca se copian al repo, issue, logs ni comandos visibles. No crear credenciales ni cambiar permisos.
+
+## Tareas
+- [ ] Revisar aprobación y alcance de una ventana; fijar SHA/artefactos y lista allowlisted, inicialmente limitada al servicio habilitado por INFRA #8.
+- [ ] Verificar CI exitoso de master del mismo SHA, el gate de workflow manual, referencias a secretos existentes, permisos mínimos, TLS/known_hosts, rutas de red y readiness de cada componente seleccionado.
+- [ ] Ejecutar el despliegue manual mediante el flujo ya existente; no añadir otro workflow ni alterar allowlists, credenciales o permisos.
+- [ ] Correr smoke por HTTPS/URL ya configurada: UI disponible, Gateway saludable y operaciones read-only existentes elegidas por operationId/MK. Playwright Chromium con un worker. No inventar endpoints, evitar bypass de auth y no abrir puertos internos.
+- [ ] Si el flujo necesita escrituras, usar solo fixture/registro de prueba con autorización y limpieza preaprobadas; sin SQL, migraciones, credenciales nuevas ni cambios a datos comerciales desde este issue.
+- [ ] Ante fallo, revertir los artefactos a sus SHA previos con el mecanismo existente, verificar health/readiness anterior y registrar resultados sanitizados; no ejecutar rollback de base de datos/datos desde este issue.
+
+## Criterios de aceptación
+- [ ] Aprobación escrita enlazada, ambiente/ventana, operador, componentes permitidos y SHA exactos registrados antes de ejecutar.
+- [ ] INFRA #8/PR #9 se reutiliza sin copiar CI/CD; solo se despliegan servicios actualmente habilitados y con CI verde del mismo SHA. No se exige ni se activa servicio fuera del alcance elegido.
+- [ ] Valores de secretos permanecen en el almacén autorizado/Oracle, no en Git, issue, artefactos ni logs; no hay cambio de secretos o permisos.
+- [ ] Readiness de Frontend, Gateway y cada componente incluido se demuestra con endpoint/configuración existente y evidencia por SHA; health de proceso solo no se presenta como readiness funcional.
+- [ ] Smoke selectivo usa rutas existentes y auth autorizada; registra resultado de UI, Gateway y operación de servicio; distingue lo no disponible y no declara E2E completo si faltan componentes.
+- [ ] Rollback de artefactos se ensaya o ejecuta conforme al procedimiento ya aprobado; SHA anterior queda saludable. No se modifica esquema ni datos para revertir.
+- [ ] Si Frontend o algún servicio no está habilitado/listo, se excluye o el resultado se marca bloqueado parcial; no se amplía el allowlist ni se duplica su pipeline.
+
+## Pruebas obligatorias
+Preflight estático, verificación de SHA/CI/allowlist/secret references y readiness por componente; smoke sobre ambiente Oracle autorizado; Playwright Chromium, workers=1. Probar ruta de rollback en staging/fixture aislada cuando sea posible y registrar límites si la VM productiva no admite ensayo. Cada resultado se vincula a SHA, ventana y logs sanitizados.
+
+## Evidencias de cierre
+- [ ] Aprobación, ventana, lista de servicios habilitados y SHA; URL de run de CI/CD existente.
+- [ ] Readiness y smoke con resultados por Frontend/Gateway/servicio, operación y versión; secretos redactados.
+- [ ] Rollback y verificación de la versión anterior, o bloqueo concreto si el ensayo no fue autorizado.
+- [ ] PR de este issue solo si se requieren cambios backend, sin duplicar workflow ni tocar repositorios oficiales fuera de su ownership.
+- [ ] Distinguir despliegue ejecutado, prueba funcional, homologación y aprobación de seguridad.
+
+## Definición de terminado
+- La liberación autorizada y su rollback están documentados con evidencia reproducible y sanitizada.
+- El despliegue queda limitado al conjunto autorizado y habilitado en INFRA #8.
+- No se afirma que todos los microservicios estén en Oracle si alguno no fue habilitado o verificado.
+
+## Riesgos o bloqueos específicos
+- Infra #8 restringe su habilitación inicial a Inventory y mantiene prohibición de deploy automático durante ese lote. No inferir permiso para ampliar servicios o desplegar demo pública. Resolver el alcance posterior con Marco/owner INFRA y los owners de cada servicio antes de activar otro componente.
 
 ---
 

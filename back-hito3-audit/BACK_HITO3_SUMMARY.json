@@ -1,7 +1,7 @@
 {
-  "draft_issue_count": 81,
-  "matrix_rows": 81,
-  "manifest_records": 81,
+  "draft_issue_count": 82,
+  "matrix_rows": 82,
+  "manifest_records": 82,
   "by_responsible": {
     "Leonardo López": 9,
     "Gabriel Poma": 9,
@@ -9,7 +9,7 @@
     "Axel Cueva": 12,
     "Marco Castilla": 18,
     "Miguel Taco": 9,
-    "OWNER_PENDIENTE": 6
+    "OWNER_PENDIENTE": 7
   },
   "by_service": {
     "taxonomy-svc": 9,
@@ -21,11 +21,12 @@
     "bulk-svc": 9,
     "inventory-svc": 9,
     "api-gateway": 3,
-    "transversal": 6
+    "transversal": 6,
+    "deployment": 1
   },
   "by_initial_status": {
     "PARCIAL": 16,
-    "NO_INICIADO": 62,
+    "NO_INICIADO": 63,
     "IMPLEMENTADO_SIN_VALIDAR": 2,
     "BLOQUEADO_ESPECÍFICO": 1
   },
@@ -43,7 +44,7 @@
   },
   "before_after": {
     "before": 81,
-    "after": 81,
+    "after": 82,
     "retained": 80,
     "merged": 0,
     "removed": [
@@ -56,6 +57,10 @@
       {
         "id": "SHARED-BACK-05",
         "reason": "separar la aceptación demo transversal final del harness de feature, desbloqueando el ciclo con BACK-09."
+      },
+      {
+        "id": "DEPLOY-BACK-02",
+        "reason": "cerrar el vacío entre preparación (DEPLOY-BACK-01) y validación posterior (SHARED-BACK-05) con activación Oracle estrictamente autorizada, sin duplicar INFRA #8/PR #9."
       }
     ],
     "split": [
@@ -94,6 +99,23 @@
     "frontend_inventory_branch": "taco@f01cb3146322cd546396a8fa73a8f07fcbc2fb93",
     "backend_inventory_pr10": "OPEN/DRAFT@2c4a18105c5e379edc8476b9d315aa6be1134b80",
     "openapi_blob_sha": "f64bfe9a097b2a0f74c2600988305443d92f640e",
-    "asyncapi_blob_sha": "a5552e51c651d1eabfcd6cbb9607abf8ab0573e9"
+    "asyncapi_blob_sha": "a5552e51c651d1eabfcd6cbb9607abf8ab0573e9",
+    "deployment_gap": {
+      "verdict": "FALTA_ISSUE",
+      "infra8": "OPEN; initially Inventory allowlist; no automatic deployment in this lot",
+      "prepared_issue": "DEPLOY-BACK-01",
+      "post_deployment_validation": "SHARED-BACK-05",
+      "execution_issue": "DEPLOY-BACK-02"
+    },
+    "infra8": {
+      "state": "OPEN",
+      "issue_url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/8",
+      "initial_service_allowlist": "inventory-svc",
+      "pr9": {
+        "state": "MERGED",
+        "head_sha": "afbae4e66063898882f6586a07039d34facf2db8",
+        "merged_at": "2026-10-14T18:19:10Z"
+      }
+    }
   }
 }

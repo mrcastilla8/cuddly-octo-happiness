@@ -41,16 +41,25 @@ export function validatePackage({ manifest, summary, matrixText, issuesText, cha
   const statusCounts = Object.fromEntries(STATUSES.map(s => [s, 0]));
   const services = {}, owners = {};
   for (const item of items) {
-    const expectedService = Object.entries(SERVICE_BY_PREFIX).find(([prefix]) => item.id.startsWith(prefix))?.[1];
+    const expectedService = item.id === "DEPLOY-BACK-02" ? "deployment" : Object.entries(SERVICE_BY_PREFIX).find(([prefix]) => item.id.startsWith(prefix))?.[1];
     if (!expectedService || item.service !== expectedService) fail("SERVICE", `${item.id} service=${item.service ?? "ausente"}; esperado ${expectedService ?? "prefijo reconocido"}`);
-    if (!item.owner || !item.branch || (item.service !== "transversal" && !item.github_user) || !item.code_repository) fail("OWNER", `responsable incompleto en ${item.id}`);
+    if (!item.owner || !item.branch || (!['transversal', 'deployment'].includes(item.service) && !item.github_user) || !item.code_repository) fail("OWNER", `responsable incompleto en ${item.id}`);
     if (!STATUSES.includes(item.status)) fail("STATUS", `estado desconocido en ${item.id}: ${item.status}`);
     else statusCounts[item.status]++;
     services[item.service] = (services[item.service] ?? 0) + 1;
     owners[item.owner] = (owners[item.owner] ?? 0) + 1;
     const official = OWNERS[item.service];
     if (official && (item.owner !== official[0] || item.github_user !== official[1] || item.branch !== official[2])) fail("OWNER", `${item.id} no coincide con usuario oficial y rama para ${item.service}`);
-    if (item.service === "transversal" && (item.owner !== "OWNER_PENDIENTE" || item.github_user !== null || item.branch !== "OWNER_PENDIENTE")) fail("OWNER", `${item.id} transversal debe conservar OWNER_PENDIENTE`);
+    if (item.service === "transversal" || item.service === "deployment") {
+      if (item.owner === "OWNER_PENDIENTE") {
+        if (item.github_user !== null || item.branch !== "OWNER_PENDIENTE" || item.assignee_status !== "NO_ASIGNAR") fail("OWNER", `${item.id} pendiente debe conservar login nulo, rama pendiente y NO_ASIGNAR`);
+      } else {
+        const approval = (manifest.owner_assignment_approvals ?? []).find(a => a.issue_id === item.id);
+        const approvedPair = Object.values(OWNERS).some(([name, login, branch]) => name === item.owner && login === item.github_user && branch === item.branch);
+        const approvalRefIsReviewable = /^https:\/\//.test(approval?.approval_reference ?? "") || /^APPROVAL-[A-Z0-9-]{6,}$/.test(approval?.approval_reference ?? "");
+        if (!approvedPair || !approval || approval.owner !== item.owner || approval.github_user !== item.github_user || approval.branch !== item.branch || approval.code_repository !== item.code_repository || approval.approved_by !== "Marco Castilla" || !/^\d{4}-\d{2}-\d{2}$/.test(approval.approved_at ?? "") || !approvalRefIsReviewable || item.assignee_status !== "APROBADO_FORMALMENTE") fail("OWNER", `${item.id} tiene asignación sin aprobación formal verificable`);
+      }
+    }
     if (item.code_repository !== CODE_REPOSITORY(item)) fail("CODE_REPOSITORY", `${item.id} apunta a ${item.code_repository}`);
     if (item.issue_repository !== manifest.issue_repository) fail("REPOSITORY", `issue_repository distinto en ${item.id}`);
     if (item.publishable !== false || item.publication_state !== "BORRADOR_NO_PUBLICADO") fail("SAFETY", `${item.id} no está protegido como borrador`);
@@ -154,8 +163,13 @@ export function validatePackage({ manifest, summary, matrixText, issuesText, cha
     for (const match of item.scope.matchAll(/\b[a-z][a-z0-9]*(?:\.[a-z][a-z0-9]*){2,}\b/g)) if (!match[0].endsWith(".spec.ts") && !messageNames.has(match[0])) fail("ASYNCAPI", `${item.id} referencia mensaje no declarado: ${match[0]}`);
   }
 
-  const pendingOwners = items.filter(i => i.service === "transversal" && i.owner === "OWNER_PENDIENTE");
-  if (pendingOwners.length !== 6) fail("OWNER", `transversales pendientes ${pendingOwners.length}, esperados 6`);
+  const protectedIds = manifest.owner_assignment_policy?.protected_transversal_ids ?? [];
+  if (protectedIds.length !== manifest.review_metadata?.protected_transversal_owner_count || protectedIds.some(id => byId.get(id)?.service !== "transversal")) fail("OWNER", "la lista protegida de responsables transversales no coincide con los seis alcances declarados");
+  const approvalIds = (manifest.owner_assignment_approvals ?? []).map(a => a.issue_id);
+  if (new Set(approvalIds).size !== approvalIds.length) fail("OWNER", "hay registros de aprobación formal duplicados");
+  const pendingOwners = protectedIds.map(id => byId.get(id)).filter(item => item?.owner === "OWNER_PENDIENTE");
+  if (pendingOwners.length !== manifest.review_metadata?.pending_transversal_owner_count) fail("OWNER", "conteo de owners pendientes diverge de los metadatos del manifiesto");
+  for (const id of protectedIds) if (!byId.has(id)) fail("OWNER", `falta alcance transversal protegido ${id}`);
   const snapshot = manifest.retrospective_evidence_policy;
   if (snapshot?.policy_id !== "INVENTORY-PR10-RETROSPECTIVE" || !snapshot?.verification?.commit_shas?.length || !snapshot?.verification?.changed_files?.length || snapshot.verification.state !== "OPEN" || snapshot.verification.draft !== true || snapshot.verification.number !== 10) fail("PR10", "excepción retrospectiva carece de evidencia verificable");
   const evidenceFiles = snapshot?.verification?.changed_files ?? [];
@@ -170,7 +184,7 @@ export function validatePackage({ manifest, summary, matrixText, issuesText, cha
     }
   }
   const secretScan = manifest.review_metadata?.secret_scan;
-  if (secretScan?.status !== "PASS" || secretScan.findings !== 0 || manifest.review_metadata.protected_transversal_owner_count !== 6) fail("SECURITY", "escaneo de secretos incompleto o propietarios transversales no protegidos");
+  if (secretScan?.status !== "PASS" || secretScan.findings !== 0) fail("SECURITY", "escaneo de secretos incompleto");
 
   return { errors, metrics: { records: count, unique_ids: byId.size, statuses: statusCounts, services, owners, dependency_edges: [...edgesById.values()].reduce((n, es) => n + es.length, 0), dependency_cycles: errors.some(e => e.startsWith("CYCLE:")) ? "present" : 0, mk_covered: mkCovered.size, openapi_operations: operationMap.size, asyncapi_messages: messageNames.size, bff_events: asyncapi?.bff_consumed_events?.length ?? 0, owner_pending: pendingOwners.length, publishable: items.filter(i => i.publishable).length } };
 }

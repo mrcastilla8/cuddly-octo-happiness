@@ -1,10 +1,10 @@
 {
   "manifest_version": 2,
-  "generated_for": "Hito 3 BACK issue drafts — revisión y dry-run únicamente",
+  "generated_for": "Hito 3 BACK issue drafts — auditoría y dry-run; publicación no autorizada",
   "generated_date": "2026-10-15",
   "publication_authorized": false,
   "publication_state": "BORRADOR_NO_PUBLICADO",
-  "issue_count": 81,
+  "issue_count": 82,
   "issue_repository": "Taller-SW-Web/G6-Productos-Ofertas-backend",
   "publication_ledger": "BACK_HITO3_PUBLICATION_LEDGER.json",
   "dry_run_validator": "BACK_HITO3_DRY_RUN.mjs",
@@ -38,6 +38,7 @@
       "initial_state": "PARCIAL: scaffold NestJS y GET /health existen en la app; readiness, configuración validada y dependencia de negocio no acreditadas.",
       "depends_on": [],
       "blocks": [
+        "DEPLOY-BACK-02",
         "TAXONOMY-SVC-BACK-02"
       ],
       "external_dependencies": [],
@@ -137,9 +138,9 @@
         "TAXONOMY-SVC-BACK-03"
       ],
       "blocks": [
-        "TAXONOMY-SVC-BACK-05",
         "CATALOG-SVC-BACK-08",
-        "CATALOG-SVC-BACK-09"
+        "CATALOG-SVC-BACK-09",
+        "TAXONOMY-SVC-BACK-05"
       ],
       "external_dependencies": [],
       "blocking_conditions": [],
@@ -199,8 +200,8 @@
         "TAXONOMY-SVC-BACK-05"
       ],
       "blocks": [
-        "TAXONOMY-SVC-BACK-07",
-        "GATEWAY-BACK-03"
+        "GATEWAY-BACK-03",
+        "TAXONOMY-SVC-BACK-07"
       ],
       "external_dependencies": [],
       "blocking_conditions": [
@@ -269,8 +270,8 @@
         "SHARED-BACK-01"
       ],
       "blocks": [
-        "TAXONOMY-SVC-BACK-09",
-        "SHARED-BACK-04"
+        "SHARED-BACK-04",
+        "TAXONOMY-SVC-BACK-09"
       ],
       "external_dependencies": [
         {
@@ -450,7 +451,8 @@
       "initial_state": "PARCIAL: scaffold NestJS y GET /health existen en la app; readiness, configuración validada y dependencia de negocio no acreditadas.",
       "depends_on": [],
       "blocks": [
-        "CATALOG-SVC-BACK-02"
+        "CATALOG-SVC-BACK-02",
+        "DEPLOY-BACK-02"
       ],
       "external_dependencies": [],
       "blocking_conditions": [],
@@ -550,8 +552,8 @@
       ],
       "blocks": [
         "CATALOG-SVC-BACK-05",
-        "PRICING-SVC-BACK-08",
-        "COMBOS-SVC-BACK-08"
+        "COMBOS-SVC-BACK-08",
+        "PRICING-SVC-BACK-08"
       ],
       "external_dependencies": [],
       "blocking_conditions": [],
@@ -611,16 +613,16 @@
         "CATALOG-SVC-BACK-05"
       ],
       "blocks": [
-        "TAXONOMY-SVC-BACK-08",
-        "TAXONOMY-SVC-BACK-09",
+        "BULK-SVC-BACK-08",
+        "BULK-SVC-BACK-09",
         "CATALOG-SVC-BACK-07",
+        "COMBOS-SVC-BACK-09",
+        "GATEWAY-BACK-03",
         "PRICING-SVC-BACK-09",
         "PROMOTIONS-SVC-BACK-08",
         "PROMOTIONS-SVC-BACK-09",
-        "COMBOS-SVC-BACK-09",
-        "BULK-SVC-BACK-08",
-        "BULK-SVC-BACK-09",
-        "GATEWAY-BACK-03"
+        "TAXONOMY-SVC-BACK-08",
+        "TAXONOMY-SVC-BACK-09"
       ],
       "external_dependencies": [],
       "blocking_conditions": [
@@ -832,6 +834,7 @@
       "initial_state": "PARCIAL: scaffold NestJS y GET /health existen en la app; readiness, configuración validada y dependencia de negocio no acreditadas.",
       "depends_on": [],
       "blocks": [
+        "DEPLOY-BACK-02",
         "PRICING-SVC-BACK-02"
       ],
       "external_dependencies": [],
@@ -931,9 +934,9 @@
         "PRICING-SVC-BACK-03"
       ],
       "blocks": [
-        "PRICING-SVC-BACK-05",
         "COMBOS-SVC-BACK-08",
-        "COMBOS-SVC-BACK-09"
+        "COMBOS-SVC-BACK-09",
+        "PRICING-SVC-BACK-05"
       ],
       "external_dependencies": [],
       "blocking_conditions": [],
@@ -993,15 +996,15 @@
         "PRICING-SVC-BACK-05"
       ],
       "blocks": [
-        "CATALOG-SVC-BACK-08",
-        "CATALOG-SVC-BACK-09",
-        "PRICING-SVC-BACK-07",
-        "PRICE-AUDIT-SVC-BACK-09",
-        "PROMOTIONS-SVC-BACK-08",
-        "PROMOTIONS-SVC-BACK-09",
         "BULK-SVC-BACK-08",
         "BULK-SVC-BACK-09",
-        "GATEWAY-BACK-03"
+        "CATALOG-SVC-BACK-08",
+        "CATALOG-SVC-BACK-09",
+        "GATEWAY-BACK-03",
+        "PRICE-AUDIT-SVC-BACK-09",
+        "PRICING-SVC-BACK-07",
+        "PROMOTIONS-SVC-BACK-08",
+        "PROMOTIONS-SVC-BACK-09"
       ],
       "external_dependencies": [],
       "blocking_conditions": [
@@ -1188,6 +1191,7 @@
       "initial_state": "PARCIAL: scaffold NestJS y GET /health existen en la app; readiness, configuración validada y dependencia de negocio no acreditadas.",
       "depends_on": [],
       "blocks": [
+        "DEPLOY-BACK-02",
         "PRICE-AUDIT-SVC-BACK-02"
       ],
       "external_dependencies": [],
@@ -1517,6 +1521,7 @@
       "initial_state": "PARCIAL: scaffold NestJS y GET /health existen en la app; readiness, configuración validada y dependencia de negocio no acreditadas.",
       "depends_on": [],
       "blocks": [
+        "DEPLOY-BACK-02",
         "PROMOTIONS-SVC-BACK-02"
       ],
       "external_dependencies": [],
@@ -1905,7 +1910,8 @@
       "initial_state": "PARCIAL: scaffold NestJS y GET /health existen en la app; readiness, configuración validada y dependencia de negocio no acreditadas.",
       "depends_on": [],
       "blocks": [
-        "COMBOS-SVC-BACK-02"
+        "COMBOS-SVC-BACK-02",
+        "DEPLOY-BACK-02"
       ],
       "external_dependencies": [],
       "blocking_conditions": [],
@@ -2248,7 +2254,8 @@
       "initial_state": "PARCIAL: scaffold NestJS y GET /health existen en la app; readiness, configuración validada y dependencia de negocio no acreditadas.",
       "depends_on": [],
       "blocks": [
-        "BULK-SVC-BACK-02"
+        "BULK-SVC-BACK-02",
+        "DEPLOY-BACK-02"
       ],
       "external_dependencies": [],
       "blocking_conditions": [],
@@ -2593,6 +2600,7 @@
       "initial_state": "IMPLEMENTADO_SIN_VALIDAR: PR #10 OPEN/DRAFT añade configuración/auth del servicio (apps/inventory-svc/CONFIGURACION.md, apps/inventory-svc/src/config/inventory.config.ts, apps/inventory-svc/src/auth/*, module/main). El scaffold health existente no equivale al PR fusionado.",
       "depends_on": [],
       "blocks": [
+        "DEPLOY-BACK-02",
         "INVENTORY-SVC-BACK-02"
       ],
       "external_dependencies": [],
@@ -2910,16 +2918,16 @@
         "INVENTORY-SVC-BACK-05"
       ],
       "blocks": [
-        "CATALOG-SVC-BACK-08",
-        "CATALOG-SVC-BACK-09",
-        "PROMOTIONS-SVC-BACK-08",
-        "PROMOTIONS-SVC-BACK-09",
-        "COMBOS-SVC-BACK-08",
-        "COMBOS-SVC-BACK-09",
         "BULK-SVC-BACK-08",
         "BULK-SVC-BACK-09",
+        "CATALOG-SVC-BACK-08",
+        "CATALOG-SVC-BACK-09",
+        "COMBOS-SVC-BACK-08",
+        "COMBOS-SVC-BACK-09",
+        "GATEWAY-BACK-03",
         "INVENTORY-SVC-BACK-07",
-        "GATEWAY-BACK-03"
+        "PROMOTIONS-SVC-BACK-08",
+        "PROMOTIONS-SVC-BACK-09"
       ],
       "external_dependencies": [],
       "blocking_conditions": [
@@ -3272,18 +3280,19 @@
       "initial_state": "PARCIAL: checkout solo acredita GET /health; falta enrutamiento del API del módulo.",
       "depends_on": [],
       "blocks": [
-        "TAXONOMY-SVC-BACK-08",
-        "CATALOG-SVC-BACK-08",
-        "PRICING-SVC-BACK-08",
-        "PRICE-AUDIT-SVC-BACK-08",
-        "PROMOTIONS-SVC-BACK-08",
-        "COMBOS-SVC-BACK-08",
         "BULK-SVC-BACK-08",
-        "INVENTORY-SVC-BACK-08",
+        "CATALOG-SVC-BACK-08",
+        "COMBOS-SVC-BACK-08",
+        "DEPLOY-BACK-01",
+        "DEPLOY-BACK-02",
         "GATEWAY-BACK-02",
         "GATEWAY-BACK-03",
-        "DEPLOY-BACK-01",
-        "SHARED-BACK-03"
+        "INVENTORY-SVC-BACK-08",
+        "PRICE-AUDIT-SVC-BACK-08",
+        "PRICING-SVC-BACK-08",
+        "PROMOTIONS-SVC-BACK-08",
+        "SHARED-BACK-03",
+        "TAXONOMY-SVC-BACK-08"
       ],
       "external_dependencies": [],
       "blocking_conditions": [],
@@ -3401,15 +3410,15 @@
       "initial_state": "NO_INICIADO: VITE_DATA_MODE, repositorios mock/unavailable existentes, pero no cliente HTTP transversal acreditado.",
       "depends_on": [],
       "blocks": [
-        "TAXONOMY-SVC-BACK-08",
-        "CATALOG-SVC-BACK-08",
-        "PRICING-SVC-BACK-08",
-        "PRICE-AUDIT-SVC-BACK-08",
-        "PROMOTIONS-SVC-BACK-08",
-        "COMBOS-SVC-BACK-08",
         "BULK-SVC-BACK-08",
+        "CATALOG-SVC-BACK-08",
+        "COMBOS-SVC-BACK-08",
         "INVENTORY-SVC-BACK-08",
-        "SHARED-BACK-03"
+        "PRICE-AUDIT-SVC-BACK-08",
+        "PRICING-SVC-BACK-08",
+        "PROMOTIONS-SVC-BACK-08",
+        "SHARED-BACK-03",
+        "TAXONOMY-SVC-BACK-08"
       ],
       "external_dependencies": [],
       "blocking_conditions": [],
@@ -3442,6 +3451,7 @@
         "GATEWAY-BACK-01"
       ],
       "blocks": [
+        "DEPLOY-BACK-02",
         "SHARED-BACK-05"
       ],
       "external_dependencies": [
@@ -3482,6 +3492,79 @@
       "publishable": false,
       "publication_state": "BORRADOR_NO_PUBLICADO",
       "service": "transversal"
+    },
+    {
+      "id": "DEPLOY-BACK-02",
+      "title": "[BACK][deploy][02] Activar liberación integrada autorizada en Oracle",
+      "issue_repository": "Taller-SW-Web/G6-Productos-Ofertas-backend",
+      "code_repository": "Taller-SW-Web/G6-Productos-Ofertas-backend",
+      "service": "deployment",
+      "owner": "OWNER_PENDIENTE",
+      "github_user": null,
+      "branch": "OWNER_PENDIENTE",
+      "assignee_status": "NO_ASIGNAR",
+      "status": "NO_INICIADO",
+      "initial_state": "NO_INICIADO: INFRA #8 ofrece CD reusable pero sigue OPEN y habilita inicialmente Inventory; DEPLOY-BACK-01 prohíbe desplegar durante la preparación y SHARED-BACK-05 solo verifica después de la liberación.",
+      "depends_on": [
+        "DEPLOY-BACK-01",
+        "GATEWAY-BACK-01",
+        "SHARED-BACK-03"
+      ],
+      "blocks": [
+        "SHARED-BACK-05"
+      ],
+      "external_dependencies": [
+        {
+          "repository": "Taller-SW-Web/G6-Productos-Ofertas-backend",
+          "number": 8,
+          "status_at_cutoff": "OPEN",
+          "status_label": "ABIERTO",
+          "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/8",
+          "role": "Cerrar/revisar gates de CD Oracle y reutilizar el allowlist/flujo existente; no crear pipeline ni habilitar servicios desde este issue."
+        }
+      ],
+      "blocking_conditions": [
+        {
+          "scope": "Readiness solo para el conjunto de microservicios elegido en la aprobación de ventana; no se exige desplegar los demás.",
+          "dependency_ids": [
+            "TAXONOMY-SVC-BACK-01",
+            "CATALOG-SVC-BACK-01",
+            "PRICING-SVC-BACK-01",
+            "PRICE-AUDIT-SVC-BACK-01",
+            "PROMOTIONS-SVC-BACK-01",
+            "COMBOS-SVC-BACK-01",
+            "BULK-SVC-BACK-01",
+            "INVENTORY-SVC-BACK-01"
+          ],
+          "owner_to_resolve": "Owner del servicio seleccionado e INFRA",
+          "condition": "Aplicar solo a un servicio incluido en el allowlist de INFRA #8 y en la aprobación escrita; SHA de artefacto inmutable, CI verde de master para ese SHA y readiness comprobada. Servicios no habilitados se excluyen sin bloquear el subconjunto autorizado.",
+          "severity": "P1"
+        },
+        {
+          "scope": "Autorización de la ventana Oracle integrada.",
+          "owner_to_resolve": "Marco y owner de Oracle aprobado",
+          "condition": "Aprobación escrita que registre ambiente, ventana, operador, SHA y componentes permitidos; validar TLS/SSH, configuración, referencias a secretos existentes y rollback. No activar antes.",
+          "severity": "P0"
+        },
+        {
+          "scope": "Entrega del Frontend integrado.",
+          "owner_to_resolve": "Owner de Frontend y owner de Oracle",
+          "condition": "Reutilizar artefacto y proceso existente aprobado. Si no existen, bloquear solo Frontend y solicitar tarea separada al owner; no editar Frontend ni crear un pipeline paralelo.",
+          "severity": "P1"
+        }
+      ],
+      "related_prs": [],
+      "owner_candidates": [
+        "Marco Castilla — coordinación de liberación; candidato, no asignado.",
+        "Axel Cueva — Gateway/infra; candidato, no asignado."
+      ],
+      "objective": "Activar y ejecutar, bajo autorización explícita y con alcance acotado, una versión integrada de la demo G6 en Oracle usando los mecanismos de despliegue existentes.",
+      "scope": "Reutilizar INFRA #8/PR #9 y la composición preparada por DEPLOY-BACK-01 para ejecutar manualmente una liberación aprobada de Frontend + Gateway + el subconjunto de microservicios que figure habilitado en el allowlist vigente. Si Frontend carece de artefacto o mecanismo de entrega aprobado, detener solo la integración de Frontend y solicitar el trabajo separado a su owner; no copiar ni crear pipelines aquí. No habilitar servicios desde este issue.",
+      "source_refs": "Arquitectura.md §39; Backend INFRA #8 y PR #9; Backend ops/oracle/README.md; DEPLOY-BACK-01; SHARED-BACK-05. PR #9 MERGED afbae4e66063898882f6586a07039d34facf2db8.",
+      "test_strategy": "Preflight de aprobación/SHA/CI/allowlist/secrets refs/readiness; smoke selectivo contra URLs/rutas existentes; Playwright Chromium con workers=1; rollback de artefactos por flujo existente.",
+      "body": "## Objetivo\nActivar y ejecutar, bajo autorización explícita y con alcance acotado, una versión integrada de la demo G6 en Oracle usando los mecanismos de despliegue existentes.\n\n## Responsable\n**OWNER_PENDIENTE** (no asignar hasta aprobación formal de Marco). Candidatos técnicos no asignados: Marco Castilla — coordinación de liberación; Axel Cueva — gateway/infra. La candidatura no equivale a aceptación.\nIssue de coordinación en Backend. Cambios de código, si fueran necesarios y aprobados, se limitan a Taller-SW-Web/G6-Productos-Ofertas-backend; el issue no autoriza cambios en el repositorio Frontend.\n\n## Alcance\nReutilizar INFRA #8/PR #9 y la composición preparada por DEPLOY-BACK-01 para ejecutar manualmente una liberación aprobada de Frontend + Gateway + el subconjunto de microservicios que figure habilitado en el allowlist vigente. Si Frontend carece de artefacto o mecanismo de entrega aprobado, detener solo la integración de Frontend y solicitar el trabajo separado a su owner; no copiar ni crear pipelines aquí. No habilitar servicios desde este issue.\n\n## Fuera de alcance\nNo crear ni modificar workflows, allowlists, credenciales, permisos, contratos, servicios Frontend o despliegues de componentes no habilitados. No ejecutar SQL ni cambiar datos comerciales.\n\n## Fuentes normativas\n- Arquitectura.md §39 define el E2E como Frontend + Gateway + servicios relevantes; no autoriza por sí misma un despliegue Oracle.\n- Backend INFRA #8 sigue OPEN. Su objetivo es generalizar CD Oracle para nueve servicios; su criterio 5 habilita Inventory inicialmente, y el criterio 9 prohíbe desplegar automáticamente la VM durante ese lote. PR #9 está MERGED (head afbae4e66063898882f6586a07039d34facf2db8, 2026-10-14); aporta el mecanismo reusable, no la activación de una demo integrada.\n- DEPLOY-BACK-01 prepara la composición “sin desplegarla”. SHARED-BACK-05 verifica la demo después de sus dependencias, pero no ejecuta ni autoriza el despliegue.\n- La guía Oracle de Inventory dice que CD no es operativo hasta completar la preparación manual; el health actual no prueba conectividad DB ni integración funcional.\n\n## Estado inicial\nNO_INICIADO: no se encontró issue BACK vigente que autorice y detalle la activación/ejecución integrada. Este draft tampoco autoriza ejecutarla hasta satisfacer las aprobaciones y gates de este mismo issue.\n\n## Dependencias bloqueantes\n- DEPLOY-BACK-01 (composición, referencias secretas, readiness y rollback preparados).\n- GATEWAY-BACK-01 (rutas/health internos implementados y verificados).\n- SHARED-BACK-03 (harness Frontend/Gateway y smoke selectivo preparado).\n\n**Dependencias condicionales de readiness:** los BACK-01 de los servicios elegidos en el alcance aprobado, de entre TAXONOMY-SVC-BACK-01, CATALOG-SVC-BACK-01, PRICING-SVC-BACK-01, PRICE-AUDIT-SVC-BACK-01, PROMOTIONS-SVC-BACK-01, COMBOS-SVC-BACK-01, BULK-SVC-BACK-01 e INVENTORY-SVC-BACK-01. Se evalúa solo el subconjunto permitido por el allowlist INFRA #8 vigente; un servicio no habilitado no bloquea ni se despliega.\n\n**Dependencia externa existente:** Backend #8 (INFRA-002), actualmente OPEN; cerrar/revisar sus gates y confirmar que el SHA/servicio elegido satisface el flujo de CI/CD vigente. Reutilizar PR #9 y los artefactos Oracle ya instalados; no duplicar workflows, scripts genéricos ni política de allowlist.\n\n**Bloqueos específicos y condición de desbloqueo:**\n- **P0 — Autorización y readiness Oracle.** Responsable de resolver: Marco y owner de Oracle aprobado. Registrar aprobación escrita con ambiente, ventana, SHA exacto, componentes habilitados y operador; confirmar prerequisites manuales, conectividad TLS/SSH validada y rollback probado. Sin esa evidencia, no activar el deploy.\n- **P0 — Artefactos/allowlist de cada componente.** Owner del servicio y responsable de INFRA #8. Desbloqueo por componente: imagen/artefacto inmutable identificado, allowlist activa, CI de master verde para el mismo SHA y health/readiness disponible. Omitir componentes que no satisfagan el gate; no habilitarlos en este ticket.\n- **P1 — Secreto o entrega Frontend no preparados.** Owners Frontend/Oracle. Usar solo proceso existente y aprobado; secretos se referencian desde el almacén autorizado, nunca se copian al repo, issue, logs ni comandos visibles. No crear credenciales ni cambiar permisos.\n\n## Tareas\n- [ ] Revisar aprobación y alcance de una ventana; fijar SHA/artefactos y lista allowlisted, inicialmente limitada al servicio habilitado por INFRA #8.\n- [ ] Verificar CI exitoso de master del mismo SHA, el gate de workflow manual, referencias a secretos existentes, permisos mínimos, TLS/known_hosts, rutas de red y readiness de cada componente seleccionado.\n- [ ] Ejecutar el despliegue manual mediante el flujo ya existente; no añadir otro workflow ni alterar allowlists, credenciales o permisos.\n- [ ] Correr smoke por HTTPS/URL ya configurada: UI disponible, Gateway saludable y operaciones read-only existentes elegidas por operationId/MK. Playwright Chromium con un worker. No inventar endpoints, evitar bypass de auth y no abrir puertos internos.\n- [ ] Si el flujo necesita escrituras, usar solo fixture/registro de prueba con autorización y limpieza preaprobadas; sin SQL, migraciones, credenciales nuevas ni cambios a datos comerciales desde este issue.\n- [ ] Ante fallo, revertir los artefactos a sus SHA previos con el mecanismo existente, verificar health/readiness anterior y registrar resultados sanitizados; no ejecutar rollback de base de datos/datos desde este issue.\n\n## Criterios de aceptación\n- [ ] Aprobación escrita enlazada, ambiente/ventana, operador, componentes permitidos y SHA exactos registrados antes de ejecutar.\n- [ ] INFRA #8/PR #9 se reutiliza sin copiar CI/CD; solo se despliegan servicios actualmente habilitados y con CI verde del mismo SHA. No se exige ni se activa servicio fuera del alcance elegido.\n- [ ] Valores de secretos permanecen en el almacén autorizado/Oracle, no en Git, issue, artefactos ni logs; no hay cambio de secretos o permisos.\n- [ ] Readiness de Frontend, Gateway y cada componente incluido se demuestra con endpoint/configuración existente y evidencia por SHA; health de proceso solo no se presenta como readiness funcional.\n- [ ] Smoke selectivo usa rutas existentes y auth autorizada; registra resultado de UI, Gateway y operación de servicio; distingue lo no disponible y no declara E2E completo si faltan componentes.\n- [ ] Rollback de artefactos se ensaya o ejecuta conforme al procedimiento ya aprobado; SHA anterior queda saludable. No se modifica esquema ni datos para revertir.\n- [ ] Si Frontend o algún servicio no está habilitado/listo, se excluye o el resultado se marca bloqueado parcial; no se amplía el allowlist ni se duplica su pipeline.\n\n## Pruebas obligatorias\nPreflight estático, verificación de SHA/CI/allowlist/secret references y readiness por componente; smoke sobre ambiente Oracle autorizado; Playwright Chromium, workers=1. Probar ruta de rollback en staging/fixture aislada cuando sea posible y registrar límites si la VM productiva no admite ensayo. Cada resultado se vincula a SHA, ventana y logs sanitizados.\n\n## Evidencias de cierre\n- [ ] Aprobación, ventana, lista de servicios habilitados y SHA; URL de run de CI/CD existente.\n- [ ] Readiness y smoke con resultados por Frontend/Gateway/servicio, operación y versión; secretos redactados.\n- [ ] Rollback y verificación de la versión anterior, o bloqueo concreto si el ensayo no fue autorizado.\n- [ ] PR de este issue solo si se requieren cambios backend, sin duplicar workflow ni tocar repositorios oficiales fuera de su ownership.\n- [ ] Distinguir despliegue ejecutado, prueba funcional, homologación y aprobación de seguridad.\n\n## Definición de terminado\n- La liberación autorizada y su rollback están documentados con evidencia reproducible y sanitizada.\n- El despliegue queda limitado al conjunto autorizado y habilitado en INFRA #8.\n- No se afirma que todos los microservicios estén en Oracle si alguno no fue habilitado o verificado.\n\n## Riesgos o bloqueos específicos\n- Infra #8 restringe su habilitación inicial a Inventory y mantiene prohibición de deploy automático durante ese lote. No inferir permiso para ampliar servicios o desplegar demo pública. Resolver el alcance posterior con Marco/owner INFRA y los owners de cada servicio antes de activar otro componente.",
+      "publishable": false,
+      "publication_state": "BORRADOR_NO_PUBLICADO"
     },
     {
       "id": "DATA-BACK-01",
@@ -3602,14 +3685,15 @@
         "SHARED-BACK-01"
       ],
       "blocks": [
-        "TAXONOMY-SVC-BACK-09",
-        "CATALOG-SVC-BACK-09",
-        "PRICING-SVC-BACK-09",
-        "PRICE-AUDIT-SVC-BACK-09",
-        "PROMOTIONS-SVC-BACK-09",
-        "COMBOS-SVC-BACK-09",
         "BULK-SVC-BACK-09",
-        "INVENTORY-SVC-BACK-09"
+        "CATALOG-SVC-BACK-09",
+        "COMBOS-SVC-BACK-09",
+        "DEPLOY-BACK-02",
+        "INVENTORY-SVC-BACK-09",
+        "PRICE-AUDIT-SVC-BACK-09",
+        "PRICING-SVC-BACK-09",
+        "PROMOTIONS-SVC-BACK-09",
+        "TAXONOMY-SVC-BACK-09"
       ],
       "external_dependencies": [],
       "blocking_conditions": [],
@@ -3819,7 +3903,8 @@
         "GATEWAY-BACK-03",
         "DEPLOY-BACK-01",
         "DATA-BACK-01",
-        "SHARED-BACK-04"
+        "SHARED-BACK-04",
+        "DEPLOY-BACK-02"
       ],
       "blocks": [],
       "external_dependencies": [],
@@ -4692,11 +4777,72 @@
       "status": "PASS",
       "files_scanned": 13,
       "findings": 0,
-      "patterns": ["private keys", "GitHub/AWS/Slack tokens", "credential URLs", "email addresses", "local filesystem paths"],
+      "patterns": [
+        "private keys",
+        "GitHub/AWS/Slack tokens",
+        "credential URLs",
+        "email addresses",
+        "local filesystem paths"
+      ],
       "review_scope": "paquete público back-hito3-audit; sin divulgar valores encontrados",
       "reviewed_at": "2026-10-15"
     },
     "no_official_g6_repo_changes": true,
-    "protected_transversal_owner_count": 6
+    "protected_transversal_owner_count": 6,
+    "pending_transversal_owner_count": 6
+  },
+  "owner_assignment_policy": {
+    "pending_marker": "OWNER_PENDIENTE",
+    "protected_transversal_ids": [
+      "SHARED-BACK-01",
+      "DEPLOY-BACK-01",
+      "DATA-BACK-01",
+      "SHARED-BACK-03",
+      "SHARED-BACK-04",
+      "SHARED-BACK-05"
+    ],
+    "assignment_rule": "Una asignación transversal/deployment deja de ser pendiente solo cuando se actualizan owner, github_user, branch y code_repository y se registra una aprobación formal de Marco en owner_assignment_approvals con approval_reference y fecha ISO. El validador coteja todos los valores; una candidatura no cuenta.",
+    "approval_record_fields": [
+      "issue_id",
+      "owner",
+      "github_user",
+      "branch",
+      "code_repository",
+      "approved_by",
+      "approved_at",
+      "approval_reference"
+    ],
+    "approval_reference_rule": "URL HTTPS revisable o identificador APPROVAL-... asociado a una aprobación escrita de Marco; no aceptar texto de candidatura ni valor sin fuente."
+  },
+  "owner_assignment_approvals": [],
+  "audit_findings": {
+    "deployment_oracle_gap": {
+      "verdict": "FALTA_ISSUE",
+      "audited_at": "2026-10-15",
+      "evidence": [
+        "Arquitectura.md §39 define el flujo de integración Frontend + gateway + servicios relevantes, pero no activa despliegue en Oracle.",
+        "Backend issue #8 está OPEN; criterio 5 habilita Inventory inicialmente y criterio 9 prohíbe deploy automático durante ese lote.",
+        "DEPLOY-BACK-01 prepara la composición y prohíbe desplegarla.",
+        "SHARED-BACK-05 valida la demo después de sus dependencias, no ejecuta la liberación."
+      ],
+      "prepared_issue_id": "DEPLOY-BACK-02",
+      "execution_authorized_now": false,
+      "infra_issue": {
+        "repository": "Taller-SW-Web/G6-Productos-Ofertas-backend",
+        "number": 8,
+        "state": "OPEN",
+        "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/8",
+        "enabled_initially": "inventory-svc",
+        "criterion_9": "no automatic deployment during the INFRA #8 development batch"
+      },
+      "infra_pr": {
+        "repository": "Taller-SW-Web/G6-Productos-Ofertas-backend",
+        "number": 9,
+        "state": "MERGED",
+        "merged_at": "2026-10-14T18:19:10Z",
+        "head_sha": "afbae4e66063898882f6586a07039d34facf2db8",
+        "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/pull/9"
+      }
+    }
   }
 }

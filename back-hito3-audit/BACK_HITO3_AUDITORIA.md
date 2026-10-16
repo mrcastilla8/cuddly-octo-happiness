@@ -86,9 +86,9 @@ Las referencias Frontend reconsultadas muestran MK-001 issue #3 CLOSED, MK-002..
 
 ## Cierre de auditoría del paquete público
 
-- Conteos recalculados desde los registros y cruzados entre MANIFEST, SUMMARY, MATRIZ, ISSUES, CAMBIOS y DEPENDENCIAS: 81 registros, 62 NO_INICIADO, 16 PARCIAL, 2 IMPLEMENTADO_SIN_VALIDAR, 1 BLOQUEADO_ESPECÍFICO; 0 IMPLEMENTADO_VALIDADO y 0 NO_APLICA. El validador no fija el total; comprueba que las declaraciones coincidan.
+- Conteos recalculados desde los registros y cruzados entre MANIFEST, SUMMARY, MATRIZ, ISSUES, CAMBIOS y DEPENDENCIAS: 82 registros, 63 NO_INICIADO, 16 PARCIAL, 2 IMPLEMENTADO_SIN_VALIDAR, 1 BLOQUEADO_ESPECÍFICO; 0 IMPLEMENTADO_VALIDADO y 0 NO_APLICA. El validador no fija el total; comprueba que las declaraciones coincidan.
 - Responsable, login, rama y repositorio de código verificados por registro. Los seis usuarios oficiales mantienen sus asignaciones; los seis transversales siguen OWNER_PENDIENTE.
-- Grafo acíclico: 146 aristas obligatorias y condicionales, sin referencias rotas, autorreferencias ni divergencias de `blocks`.
+- Grafo acíclico: 158 aristas obligatorias y condicionales tras agregar DEPLOY-BACK-02, sin referencias rotas, autorreferencias ni divergencias de `blocks`.
 - Contratos auditados contra snapshots de OpenAPI RC1 (135 operationIds) y AsyncAPI RC2 (40 mensajes); los 11 eventos BFF del Gateway están presentes en AsyncAPI. No se añadieron operaciones ni mensajes.
 - Inventory Frontend: `taco` contiene adapter mock y 20 declaraciones Playwright; no se ejecutaron. No se hallaron componentes/páginas Inventory ni rutas registradas. PR #10 Backend sigue OPEN/DRAFT; su excepción retrospectiva conserva SHA, commits, archivos y pruebas como procedencia, no como PRs por issue ni como evidencia de merge.
 - Gateway BACK-03: pruebas de consumers y contrato pueden correr con broker aislado. Solo las integraciones con los cuatro publishers reales dependen de ellos; auth y límites de seguridad se conservan.
@@ -101,3 +101,12 @@ Las referencias Frontend reconsultadas muestran MK-001 issue #3 CLOSED, MK-002..
 - PR #10 y sus checks deben revalidarse si se actualiza el corte; permanece sin merge/cierre acreditados.
 - Los contratos RC no prueban homologación o implementación externa. Provisioning de broker, garantías retry/DLX y pruebas con publishers reales quedan con los owners correspondientes.
 - Esta auditoría documental no acredita runtime ni resuelve permisos de Seguridad, exposición efectiva de Supabase o autorización de demo pública.
+
+
+## Dictamen adicional: FALTA_ISSUE
+
+Evidencia: INFRA #8 sigue OPEN y su criterio 5 limita la habilitación inicial a Inventory, mientras el criterio 9 impide desplegar automáticamente la VM durante ese lote. DEPLOY-BACK-01 solo prepara composición y explícitamente no despliega. SHARED-BACK-05 ejecuta smoke real después de los BACK-09 y no activa la liberación. Arquitectura.md §39 requiere el recorrido E2E Frontend + Gateway + servicios relevantes, pero no es una autorización de deploy. No existe issue vigente que conecte la autorización, ejecución Oracle, readiness y rollback.
+
+Se agrega **DEPLOY-BACK-02** como borrador: aprobación escrita por ventana/ambiente/SHA/conjunto, reutilización de CD vigente, secretos por referencias protegidas, readiness, smoke selectivo y rollback de artefactos. Solo alcanza componentes actualmente habilitados. Los no habilitados se omiten; no se crea pipeline ni se habilitan desde este issue. No autoriza ejecutar despliegue ahora. INFRA #8: https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/8. PR #9 está MERGED (head afbae4e66063898882f6586a07039d34facf2db8; 2026-10-14T18:19:10Z), pero INFRA #8 sigue OPEN.
+
+El validador mantiene OWNER_PENDIENTE y login nulo para los seis IDs transversales protegidos. Una asignación futura se acepta solo si se actualizan responsable/login/rama/repositorio y `assignee_status=APROBADO_FORMALMENTE`, y existe un registro concordante en `owner_assignment_approvals` con aprobador Marco Castilla, fecha y referencia de aprobación revisable (URL HTTPS o ID `APPROVAL-...`). Se probó esa transición sobre una copia de un issue transversal en memoria; el manifiesto publicado no se asignó.
