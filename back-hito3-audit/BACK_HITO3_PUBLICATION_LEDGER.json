@@ -1341,6 +1341,196 @@
         "conditional": []
       },
       "errors": []
+    },
+    {
+      "logical_id": "INVENTORY-SVC-BACK-08",
+      "number": 104,
+      "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/104",
+      "repository": "Taller-SW-Web/G6-Productos-Ofertas-backend",
+      "title": "[BACK][inventory-svc][08] Integrar stock y dashboard React vía Gateway",
+      "owner": "Miguel Taco",
+      "assignee_login": "MiguelTacoZavala",
+      "source_sha": "716503d70b7b0d5c855d8879c91ee98a8dae2d85",
+      "created_at": "2026-10-16T08:36:04Z",
+      "result": "CREATED",
+      "verification_status": "VERIFIED",
+      "state": "OPEN",
+      "dependency_references": {
+        "mandatory": [],
+        "conditional": []
+      },
+      "errors": []
+    },
+    {
+      "logical_id": "INVENTORY-SVC-BACK-09",
+      "number": 105,
+      "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/105",
+      "repository": "Taller-SW-Web/G6-Productos-Ofertas-backend",
+      "title": "[BACK][inventory-svc][09] E2E de stock, persistencia y errores",
+      "owner": "Miguel Taco",
+      "assignee_login": "MiguelTacoZavala",
+      "source_sha": "716503d70b7b0d5c855d8879c91ee98a8dae2d85",
+      "created_at": "2026-10-16T08:36:10Z",
+      "result": "CREATED",
+      "verification_status": "VERIFIED",
+      "state": "OPEN",
+      "dependency_references": {
+        "mandatory": [],
+        "conditional": []
+      },
+      "errors": []
+    },
+    {
+      "logical_id": "GATEWAY-BACK-01",
+      "number": 106,
+      "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/106",
+      "repository": "Taller-SW-Web/G6-Productos-Ofertas-backend",
+      "title": "[BACK][gateway][01] Implementar routing interno y límites",
+      "owner": "Axel Cueva",
+      "assignee_login": "AXL031",
+      "source_sha": "716503d70b7b0d5c855d8879c91ee98a8dae2d85",
+      "created_at": "2026-10-16T08:36:15Z",
+      "result": "CREATED",
+      "verification_status": "VERIFIED",
+      "state": "OPEN",
+      "dependency_references": {
+        "mandatory": [],
+        "conditional": []
+      },
+      "errors": []
+    },
+    {
+      "logical_id": "GATEWAY-BACK-02",
+      "number": 107,
+      "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/107",
+      "repository": "Taller-SW-Web/G6-Productos-Ofertas-backend",
+      "title": "[BACK][gateway][02] Aislar demo sin login y resolver auth",
+      "owner": "Axel Cueva",
+      "assignee_login": "AXL031",
+      "source_sha": "716503d70b7b0d5c855d8879c91ee98a8dae2d85",
+      "created_at": "2026-10-16T08:36:20Z",
+      "result": "CREATED",
+      "verification_status": "VERIFIED",
+      "state": "OPEN",
+      "dependency_references": {
+        "mandatory": [],
+        "conditional": []
+      },
+      "errors": []
+    },
+    {
+      "logical_id": "GATEWAY-BACK-03",
+      "number": 108,
+      "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/108",
+      "repository": "Taller-SW-Web/G6-Productos-Ofertas-backend",
+      "title": "[BACK][gateway][03] Consumir eventos para seguimiento asíncrono",
+      "owner": "Axel Cueva",
+      "assignee_login": "AXL031",
+      "source_sha": "716503d70b7b0d5c855d8879c91ee98a8dae2d85",
+      "created_at": "2026-10-16T08:36:26Z",
+      "result": "CREATED",
+      "verification_status": "VERIFIED",
+      "state": "OPEN",
+      "dependency_references": {
+        "mandatory": [],
+        "conditional": []
+      },
+      "errors": []
+    },
+    {
+      "logical_id": "SHARED-BACK-01",
+      "number": 109,
+      "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/109",
+      "repository": "Taller-SW-Web/G6-Productos-Ofertas-backend",
+      "title": "[BACK][shared][01] Cliente HTTP común de React para modo API",
+      "owner": "Gabriel Poma",
+      "assignee_login": "GabrielPGu",
+      "source_sha": "716503d70b7b0d5c855d8879c91ee98a8dae2d85",
+      "created_at": "2026-10-16T08:36:34Z",
+      "result": "CREATED",
+      "verification_status": "VERIFIED",
+      "state": "OPEN",
+      "dependency_references": {
+        "mandatory": [],
+        "conditional": []
+      },
+      "errors": []
+    },
+    {
+      "logical_id": "DEPLOY-BACK-01",
+      "number": 110,
+      "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/110",
+      "repository": "Taller-SW-Web/G6-Productos-Ofertas-backend",
+      "title": "[BACK][deploy][01] Componer demostración privada en Oracle",
+      "owner": "Axel Cueva",
+      "assignee_login": "AXL031",
+      "source_sha": "716503d70b7b0d5c855d8879c91ee98a8dae2d85",
+      "created_at": "2026-10-16T08:36:41Z",
+      "result": "CREATED",
+      "verification_status": "VERIFIED",
+      "state": "OPEN",
+      "dependency_references": {
+        "mandatory": [],
+        "conditional": []
+      },
+      "errors": []
+    },
+    {
+      "logical_id": "DEPLOY-BACK-02",
+      "number": 111,
+      "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/111",
+      "repository": "Taller-SW-Web/G6-Productos-Ofertas-backend",
+      "title": "[BACK][deploy][02] Activar liberación integrada autorizada en Oracle",
+      "owner": "Marco Castilla",
+      "assignee_login": "mrcastilla8",
+      "source_sha": "716503d70b7b0d5c855d8879c91ee98a8dae2d85",
+      "created_at": "2026-10-16T08:36:46Z",
+      "result": "CREATED",
+      "verification_status": "VERIFIED",
+      "state": "OPEN",
+      "dependency_references": {
+        "mandatory": [],
+        "conditional": []
+      },
+      "errors": []
+    },
+    {
+      "logical_id": "DATA-BACK-01",
+      "number": 112,
+      "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/112",
+      "repository": "Taller-SW-Web/G6-Productos-Ofertas-backend",
+      "title": "[BACK][data][01] Restaurar dataset demo de forma controlada",
+      "owner": "Axel Cueva",
+      "assignee_login": "AXL031",
+      "source_sha": "716503d70b7b0d5c855d8879c91ee98a8dae2d85",
+      "created_at": "2026-10-16T08:36:51Z",
+      "result": "CREATED",
+      "verification_status": "VERIFIED",
+      "state": "OPEN",
+      "dependency_references": {
+        "mandatory": [],
+        "conditional": []
+      },
+      "errors": []
+    },
+    {
+      "logical_id": "SHARED-BACK-03",
+      "number": 113,
+      "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/113",
+      "repository": "Taller-SW-Web/G6-Productos-Ofertas-backend",
+      "title": "[BACK][shared][03] Harness transversal E2E y presentación",
+      "owner": "Gabriel Poma",
+      "assignee_login": "GabrielPGu",
+      "source_sha": "716503d70b7b0d5c855d8879c91ee98a8dae2d85",
+      "created_at": "2026-10-16T08:36:56Z",
+      "result": "CREATED",
+      "verification_status": "VERIFIED",
+      "state": "OPEN",
+      "dependency_references": {
+        "mandatory": [],
+        "conditional": []
+      },
+      "errors": []
     }
   ],
   "incidents": [],
@@ -1831,5 +2021,5 @@
       }
     ]
   },
-  "updated_at": "2026-10-16T08:35:48.001Z"
+  "updated_at": "2026-10-16T08:36:58.884Z"
 }
