@@ -1531,6 +1531,44 @@
         "conditional": []
       },
       "errors": []
+    },
+    {
+      "logical_id": "SHARED-BACK-04",
+      "number": 114,
+      "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/114",
+      "repository": "Taller-SW-Web/G6-Productos-Ofertas-backend",
+      "title": "[BACK][shared][04] Cerrar matriz de integración de las 16 MK",
+      "owner": "Marco Castilla",
+      "assignee_login": "mrcastilla8",
+      "source_sha": "716503d70b7b0d5c855d8879c91ee98a8dae2d85",
+      "created_at": "2026-10-16T08:37:14Z",
+      "result": "CREATED",
+      "verification_status": "VERIFIED",
+      "state": "OPEN",
+      "dependency_references": {
+        "mandatory": [],
+        "conditional": []
+      },
+      "errors": []
+    },
+    {
+      "logical_id": "SHARED-BACK-05",
+      "number": 115,
+      "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/115",
+      "repository": "Taller-SW-Web/G6-Productos-Ofertas-backend",
+      "title": "[BACK][shared][05] Validar demo integrada real sin mocks",
+      "owner": "Marco Castilla",
+      "assignee_login": "mrcastilla8",
+      "source_sha": "716503d70b7b0d5c855d8879c91ee98a8dae2d85",
+      "created_at": "2026-10-16T08:37:19Z",
+      "result": "CREATED",
+      "verification_status": "VERIFIED",
+      "state": "OPEN",
+      "dependency_references": {
+        "mandatory": [],
+        "conditional": []
+      },
+      "errors": []
     }
   ],
   "incidents": [],
@@ -2021,5 +2059,5 @@
       }
     ]
   },
-  "updated_at": "2026-10-16T08:36:58.884Z"
+  "updated_at": "2026-10-16T08:37:21.580Z"
 }
