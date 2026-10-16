@@ -201,6 +201,196 @@
         "conditional": []
       },
       "errors": []
+    },
+    {
+      "logical_id": "CATALOG-SVC-BACK-02",
+      "number": 44,
+      "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/44",
+      "repository": "Taller-SW-Web/G6-Productos-Ofertas-backend",
+      "title": "[BACK][catalog-svc][02] Implementar persistencia Drizzle",
+      "owner": "Gabriel Poma",
+      "assignee_login": "GabrielPGu",
+      "source_sha": "716503d70b7b0d5c855d8879c91ee98a8dae2d85",
+      "created_at": "2026-10-16T08:30:10Z",
+      "result": "CREATED",
+      "verification_status": "VERIFIED",
+      "state": "OPEN",
+      "dependency_references": {
+        "mandatory": [],
+        "conditional": []
+      },
+      "errors": []
+    },
+    {
+      "logical_id": "CATALOG-SVC-BACK-03",
+      "number": 45,
+      "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/45",
+      "repository": "Taller-SW-Web/G6-Productos-Ofertas-backend",
+      "title": "[BACK][catalog-svc][03] Implementar reglas de negocio",
+      "owner": "Gabriel Poma",
+      "assignee_login": "GabrielPGu",
+      "source_sha": "716503d70b7b0d5c855d8879c91ee98a8dae2d85",
+      "created_at": "2026-10-16T08:30:14Z",
+      "result": "CREATED",
+      "verification_status": "VERIFIED",
+      "state": "OPEN",
+      "dependency_references": {
+        "mandatory": [],
+        "conditional": []
+      },
+      "errors": []
+    },
+    {
+      "logical_id": "CATALOG-SVC-BACK-04",
+      "number": 46,
+      "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/46",
+      "repository": "Taller-SW-Web/G6-Productos-Ofertas-backend",
+      "title": "[BACK][catalog-svc][04] Implementar consultas HTTP",
+      "owner": "Gabriel Poma",
+      "assignee_login": "GabrielPGu",
+      "source_sha": "716503d70b7b0d5c855d8879c91ee98a8dae2d85",
+      "created_at": "2026-10-16T08:30:18Z",
+      "result": "CREATED",
+      "verification_status": "VERIFIED",
+      "state": "OPEN",
+      "dependency_references": {
+        "mandatory": [],
+        "conditional": []
+      },
+      "errors": []
+    },
+    {
+      "logical_id": "CATALOG-SVC-BACK-05",
+      "number": 47,
+      "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/47",
+      "repository": "Taller-SW-Web/G6-Productos-Ofertas-backend",
+      "title": "[BACK][catalog-svc][05] Implementar escrituras HTTP",
+      "owner": "Gabriel Poma",
+      "assignee_login": "GabrielPGu",
+      "source_sha": "716503d70b7b0d5c855d8879c91ee98a8dae2d85",
+      "created_at": "2026-10-16T08:30:23Z",
+      "result": "CREATED",
+      "verification_status": "VERIFIED",
+      "state": "OPEN",
+      "dependency_references": {
+        "mandatory": [],
+        "conditional": []
+      },
+      "errors": []
+    },
+    {
+      "logical_id": "CATALOG-SVC-BACK-06",
+      "number": 48,
+      "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/48",
+      "repository": "Taller-SW-Web/G6-Productos-Ofertas-backend",
+      "title": "[BACK][catalog-svc][06] Implementar eventos y RabbitMQ",
+      "owner": "Gabriel Poma",
+      "assignee_login": "GabrielPGu",
+      "source_sha": "716503d70b7b0d5c855d8879c91ee98a8dae2d85",
+      "created_at": "2026-10-16T08:30:28Z",
+      "result": "CREATED",
+      "verification_status": "VERIFIED",
+      "state": "OPEN",
+      "dependency_references": {
+        "mandatory": [],
+        "conditional": []
+      },
+      "errors": []
+    },
+    {
+      "logical_id": "CATALOG-SVC-BACK-07",
+      "number": 49,
+      "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/49",
+      "repository": "Taller-SW-Web/G6-Productos-Ofertas-backend",
+      "title": "[BACK][catalog-svc][07] Consolidar robustez y observabilidad",
+      "owner": "Gabriel Poma",
+      "assignee_login": "GabrielPGu",
+      "source_sha": "716503d70b7b0d5c855d8879c91ee98a8dae2d85",
+      "created_at": "2026-10-16T08:30:34Z",
+      "result": "CREATED",
+      "verification_status": "VERIFIED",
+      "state": "OPEN",
+      "dependency_references": {
+        "mandatory": [],
+        "conditional": []
+      },
+      "errors": []
+    },
+    {
+      "logical_id": "CATALOG-SVC-BACK-08",
+      "number": 50,
+      "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/50",
+      "repository": "Taller-SW-Web/G6-Productos-Ofertas-backend",
+      "title": "[BACK][catalog-svc][08] Integrar pantallas React vía Gateway",
+      "owner": "Gabriel Poma",
+      "assignee_login": "GabrielPGu",
+      "source_sha": "716503d70b7b0d5c855d8879c91ee98a8dae2d85",
+      "created_at": "2026-10-16T08:30:38Z",
+      "result": "CREATED",
+      "verification_status": "VERIFIED",
+      "state": "OPEN",
+      "dependency_references": {
+        "mandatory": [],
+        "conditional": []
+      },
+      "errors": []
+    },
+    {
+      "logical_id": "CATALOG-SVC-BACK-09",
+      "number": 51,
+      "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/51",
+      "repository": "Taller-SW-Web/G6-Productos-Ofertas-backend",
+      "title": "[BACK][catalog-svc][09] Verificar flujo end-to-end",
+      "owner": "Gabriel Poma",
+      "assignee_login": "GabrielPGu",
+      "source_sha": "716503d70b7b0d5c855d8879c91ee98a8dae2d85",
+      "created_at": "2026-10-16T08:30:43Z",
+      "result": "CREATED",
+      "verification_status": "VERIFIED",
+      "state": "OPEN",
+      "dependency_references": {
+        "mandatory": [],
+        "conditional": []
+      },
+      "errors": []
+    },
+    {
+      "logical_id": "PRICING-SVC-BACK-01",
+      "number": 52,
+      "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/52",
+      "repository": "Taller-SW-Web/G6-Productos-Ofertas-backend",
+      "title": "[BACK][pricing-svc][01] Preparar estructura y configuración",
+      "owner": "Leonardo Vera",
+      "assignee_login": "LeonardoVera",
+      "source_sha": "716503d70b7b0d5c855d8879c91ee98a8dae2d85",
+      "created_at": "2026-10-16T08:30:48Z",
+      "result": "CREATED",
+      "verification_status": "VERIFIED",
+      "state": "OPEN",
+      "dependency_references": {
+        "mandatory": [],
+        "conditional": []
+      },
+      "errors": []
+    },
+    {
+      "logical_id": "PRICING-SVC-BACK-02",
+      "number": 53,
+      "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/53",
+      "repository": "Taller-SW-Web/G6-Productos-Ofertas-backend",
+      "title": "[BACK][pricing-svc][02] Implementar persistencia Drizzle",
+      "owner": "Leonardo Vera",
+      "assignee_login": "LeonardoVera",
+      "source_sha": "716503d70b7b0d5c855d8879c91ee98a8dae2d85",
+      "created_at": "2026-10-16T08:30:52Z",
+      "result": "CREATED",
+      "verification_status": "VERIFIED",
+      "state": "OPEN",
+      "dependency_references": {
+        "mandatory": [],
+        "conditional": []
+      },
+      "errors": []
     }
   ],
   "incidents": [],
@@ -691,5 +881,5 @@
       }
     ]
   },
-  "updated_at": "2026-10-16T08:29:50.492Z"
+  "updated_at": "2026-10-16T08:30:55.556Z"
 }
