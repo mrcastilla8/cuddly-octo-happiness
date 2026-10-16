@@ -1,25 +1,38 @@
-# Preflight y publicación controlada — borradores solamente
+# Procedimiento de publicación controlada — BACK Hito 3
 
-## Archivos leídos por el dry-run
+## Alcance y autorización
 
-Desde `back-hito3-audit`, `node .\BACK_HITO3_DRY_RUN.mjs` lee `BACK_HITO3_MANIFEST.json`, `BACK_HITO3_SUMMARY.json`, `BACK_HITO3_MATRIZ.md`, `BACK_HITO3_ISSUES.md`, `BACK_HITO3_CAMBIOS.md`, `BACK_HITO3_DEPENDENCIAS.md`, `BACK_HITO3_INT_ASAP_TRAZABILIDAD.md`, `BACK_HITO3_APROBACION_RESPONSABLES.md` y `BACK_HITO3_PUBLICATION_LEDGER.json`; importa `BACK_HITO3_VALIDATOR.mjs`. Solo valida coherencia local. No contacta GitHub ni escribe archivos.
+La autorización vigente es `APPROVAL-BACK-HITO3-PUBLISH-20261016`, registrada en [BACK_HITO3_AUTORIZACION_PUBLICACION.md](BACK_HITO3_AUTORIZACION_PUBLICACION.md). Repositorio destino único: `Taller-SW-Web/G6-Productos-Ofertas-backend`. Todos los 82 issues se publican allí, aunque `code_repository` apunte a Frontend. La autorización no incluye implementación, PRs de implementación, contratos, datos/SQL, RabbitMQ, permisos, Oracle, despliegue ni cambios a issues oficiales preexistentes.
 
-El validador cruza manifiesto, SUMMARY, matriz, cuerpos, aprobaciones, ledger, dependencias, MK, contratos fijados por SHA y trazabilidad INT-ASAP. Para cada #20–#33 extrae IDs BACK de la misma fila Markdown que contiene el issue enlazado y exige igualdad exacta con el manifiesto. Comprueba 82 IDs únicos, inversas `blocks`, grafo y `publication_authorized=false`.
+## Fuentes y validaciones
 
-## Estado de autorización
+Los cuerpos funcionales provienen de `BACK_HITO3_MANIFEST.json`; el cuerpo Markdown aprobado se mantiene sincronizado en `BACK_HITO3_ISSUES.md`. No regenerar issues. Antes de publicar, ejecutar:
 
-La aprobación formal `APPROVAL-BACK-HITO3-OWNERS-20261016` autoriza registrar responsables y preparar documentos. **No autoriza publicar los 82 issues.** Se mantienen `publication_authorized=false`, `publication_started=false`, `authorized=false` y `records=[]`. Todos los registros siguen `BORRADOR_NO_PUBLICADO`.
+```powershell
+node .\BACK_HITO3_DRY_RUN.mjs --mode=authorized
+node .\BACK_HITO3_DRY_RUN_NEGATIVE_TESTS.mjs --mode=authorized
+```
 
-## Gates antes de cualquier publicación futura
+El validador conserva `--mode=draft` para comprobar el estado previo con autorización falsa y ledger vacío. `authorized` valida autorización, snapshot del preflight y cualquier ledger parcial. `completed` exige 82 registros únicos verificados OPEN, con dependencias resueltas. Ningún modo omite chequeos de IDs, ownership, contratos, INT-ASAP, grafo o cuerpo humano.
 
-1. Obtener instrucción posterior y expresa de Marco que autorice publicar el lote y su alcance.
-2. Repetir el preflight de repositorios oficiales, ramas, asignabilidad, issues abiertos/cerrados, duplicados, INT-ASAP, PR #10, INFRA #1/#8 y SHA/vigencia de contratos. Un resultado `NO_VERIFICADO` debe resolverse o mantenerse como gate sin inferir permiso.
-3. Reconciliar cada `logical_id` contra todos los issues actuales, detectar duplicados semánticos y determinar si se crea, reutiliza o detiene cada elemento. No inferir número por título.
-4. Revisar diffs y ejecutar de nuevo dry-run y pruebas negativas. Solo tras autorización específica futura, cambiar los flags requeridos y registrar el ledger antes de cada mutación.
-5. Si se autoriza, crear/reutilizar issues con cuerpo exacto y asignación aprobada. Resolver dependencias a números reales solo entonces. No cerrar issues, fusionar PRs ni desplegar como parte de este gate.
+## Lotes, idempotencia y checkpoints
 
-## Límites
+[BACK_HITO3_PUBLISH.mjs](BACK_HITO3_PUBLISH.mjs) usa GitHub CLI, verifica identidad/permisos, limita cada lote a 10, agrega el marcador estable `<!-- BACK-LOGICAL-ID: ID -->`, crea en Backend con el responsable del manifiesto, consulta la respuesta remota y escribe el ledger atómicamente antes de continuar. Antes de crear consulta el ledger y los issues de GitHub. Si falla la respuesta de creación, reconsulta el marcador; no reintenta mientras no demuestre que el issue no existe. Una colisión de título sin marcador detiene ese ID.
 
-El dry-run y el preflight no modifican repositorios oficiales, no ejecutan `gh issue create/edit/close`, asignaciones, SQL, despliegues ni cambios de infraestructura. La coordinación de DEPLOY-BACK-02 no concede permiso para operar Oracle o transferir permisos. La autorización formal de responsables no constituye autorización de publicación.
+Ejemplo de reanudación secuencial:
 
-El ledger `BACK_HITO3_PUBLICATION_LEDGER.json` debe permanecer con `authorized=false`, `publication_started=false` y `records=[]` hasta una autorización posterior y expresa.
+```powershell
+node .\BACK_HITO3_PUBLISH.mjs --batch=1 --size=10
+node .\BACK_HITO3_PUBLISH.mjs --batch=2 --size=10
+# continuar en lotes de hasta 10, hasta cubrir los 82 registros
+```
+
+Cada lote verifica y persiste cada issue antes de pasar al siguiente; luego crea un commit/checkpoint en `main` del pizarrón y lo sube. Repetir un lote reconcilia por marcador y ledger sin duplicar. No editar issues INT-ASAP ni issues/PRs preexistentes.
+
+## Dependencias
+
+Después de tener los 82 IDs en el ledger, ejecutar `node .\BACK_HITO3_PUBLISH.mjs --resolve-dependencies`. Añade URLs y números reales únicamente a los issues BACK creados/reconciliados por marcador. Las dependencias obligatorias y sus inversas se publican en apartados distintos; las condicionales quedan rotuladas como no globales. INT-ASAP permanece como referencia complementaria. Las relaciones nativas blocked-by/blocking no se configuran; el ledger registra el estado y se verifican enlaces Markdown bidireccionales.
+
+## Cierre y reanudación
+
+Ejecutar `node .\BACK_HITO3_PUBLISH.mjs --verify-final` después de resolver dependencias. Verifica 82 marcadores únicos, cuerpo, título, repositorio, assignee, estado OPEN, URLs, enlaces, y compara issues/PRs preexistentes con el snapshot; confirma INT-ASAP #19–#33 intacto. Solo tras pasar esa verificación marca el ledger completo, genera `BACK_HITO3_PUBLICACION_RESULTADO.md`, valida con `--mode=completed` y crea/push el checkpoint final. Incidentes y registros parciales permanecen en el ledger; no borrar historial para pasar validación.

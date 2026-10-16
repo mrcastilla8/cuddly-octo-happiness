@@ -24,11 +24,13 @@ const canonical = value => Array.isArray(value) ? value.map(canonical) : value &
 const same = (a, b) => JSON.stringify(canonical(a)) === JSON.stringify(canonical(b));
 const allEdges = item => [...new Set([...(item.depends_on ?? []), ...(item.blocking_conditions ?? []).flatMap(c => c.dependency_ids ?? [])])];
 
-export function validatePackage({ manifest, summary, matrixText, issuesText, changesText, dependenciesText, intAsapMatrixText, approvalText, publicationLedger }) {
+export function validatePackage({ manifest, summary, matrixText, issuesText, changesText, dependenciesText, intAsapMatrixText, approvalText, publicationLedger, mode = "draft" }) {
   const errors = [];
   const fail = (category, message) => errors.push(`${category}: ${message}`);
+  if (!["draft", "authorized", "completed"].includes(mode)) fail("MODE", `modo de validación desconocido: ${mode}`);
   const items = manifest?.issues ?? [];
   const byId = new Map();
+  const logicalIdsIn = text => [...new Set((String(text ?? "").match(/[A-Z][A-Z0-9]+(?:-[A-Z0-9]+)+/g) ?? []).filter(id => byId.has(id)))].sort();
   if (!Array.isArray(items) || !items.length) fail("MANIFEST", "no contiene registros");
   for (const item of items) {
     if (!item?.id) { fail("DUPLICATE", "ID ausente"); continue; }
@@ -36,8 +38,17 @@ export function validatePackage({ manifest, summary, matrixText, issuesText, cha
   }
   const count = items.length;
   if (manifest.issue_count !== count) fail("COUNT", "issue_count no coincide con MANIFEST");
-  if (manifest.publication_authorized !== false) fail("SAFETY", "publication_authorized debe permanecer false");
-  if (publicationLedger?.authorized !== false || publicationLedger?.publication_started !== false || !Array.isArray(publicationLedger?.records) || publicationLedger.records.length !== 0) fail("SAFETY", "ledger debe conservar authorized=false, publication_started=false y records=[]");
+  if (!Array.isArray(publicationLedger?.records)) fail("SAFETY", "ledger debe contener records como arreglo");
+  if (mode === "draft") {
+    if (manifest.publication_authorized !== false) fail("SAFETY", "modo draft requiere publication_authorized=false");
+    if (publicationLedger?.authorized !== false || publicationLedger?.publication_started !== false || publicationLedger.records.length !== 0) fail("SAFETY", "modo draft requiere authorized=false, publication_started=false y records=[]");
+  } else {
+    if (manifest.publication_authorized !== true || publicationLedger?.authorized !== true) fail("SAFETY", `modo ${mode} requiere autorización de publicación en manifiesto y ledger`);
+    if (publicationLedger?.authorization_id !== "APPROVAL-BACK-HITO3-PUBLISH-20261016" || publicationLedger?.approved_by !== "Marco Castilla" || publicationLedger?.approved_at !== "2026-10-16" || publicationLedger?.repository !== manifest.issue_repository || publicationLedger?.source_sha !== manifest.publication_authorization?.source_sha || manifest.publication_authorization?.approval_reference !== "autorización expresa comunicada en esta conversación" || manifest.publication_authorization?.excludes_implementation !== true || manifest.publication_authorization?.excludes_deployment !== true) fail("SAFETY", "metadatos de autorización de publicación incompletos o divergentes");
+    if (publicationLedger?.preflight_snapshot?.preflight_existing_issues?.length !== 26 || publicationLedger?.preflight_snapshot?.preflight_existing_prs?.length !== 7 || publicationLedger?.preflight_snapshot?.int_asap_snapshot?.length !== 14) fail("SAFETY", "snapshot de preflight no contiene issues/PRs existentes e INT-ASAP #20–#33");
+    if (mode === "authorized" && publicationLedger?.publication_completed === true) fail("SAFETY", "modo authorized no admite publicación marcada como completada");
+    if (mode === "completed" && (publicationLedger?.publication_started !== true || publicationLedger?.publication_completed !== true)) fail("SAFETY", "modo completed requiere inicio y finalización registrados");
+  }
 
   const statusCounts = Object.fromEntries(STATUSES.map(s => [s, 0]));
   const services = {}, owners = {};
@@ -63,11 +74,17 @@ export function validatePackage({ manifest, summary, matrixText, issuesText, cha
     }
     if (item.code_repository !== CODE_REPOSITORY(item)) fail("CODE_REPOSITORY", `${item.id} apunta a ${item.code_repository}`);
     if (item.issue_repository !== manifest.issue_repository) fail("REPOSITORY", `issue_repository distinto en ${item.id}`);
-    if (item.publishable !== false || item.publication_state !== "BORRADOR_NO_PUBLICADO") fail("SAFETY", `${item.id} no está protegido como borrador`);
+    if (item.publishable !== false || item.publication_state !== "BORRADOR_NO_PUBLICADO") fail("SAFETY", `${item.id} no está protegido como borrador en la fuente aprobada`);
     if (!item.body || !item.title) fail("ISSUES", `falta título o cuerpo en ${item.id}`);
     for (const field of ["depends_on", "blocks", "external_dependencies", "blocking_conditions", "related_prs"]) if (!Array.isArray(item[field])) fail("MANIFEST", `${item.id} no define ${field} como arreglo`);
     for (const ext of item.external_dependencies ?? []) if (!Number.isInteger(ext.number) || ext.number < 1 || !ext.repository || !String(ext.url).endsWith(`/issues/${ext.number}`)) fail("DEPENDENCIAS", `referencia externa inválida en ${item.id}`);
     for (const heading of ["Objetivo", "Responsable", "Alcance", "Fuera de alcance", "Fuentes normativas", "Estado inicial", "Dependencias bloqueantes", "Tareas", "Criterios de aceptación", "Pruebas obligatorias", "Evidencias de cierre", "Definición de terminado", "Riesgos o bloqueos específicos"]) if (!item.body?.includes(`## ${heading}`)) fail("ISSUES", `falta sección ${heading} en ${item.id}`);
+    const mandatoryBody = item.body?.split("## Dependencias bloqueantes")[1]?.split(/\n\n\*\*/)[0] ?? "";
+    const conditionalBody = item.body?.split("**Bloqueos específicos y condición de desbloqueo:**")[1]?.split(/\n## /)[0] ?? "";
+    if (!same(logicalIdsIn(mandatoryBody), sorted(item.depends_on ?? []))) fail("DEPENDENCIAS_BODY", `${item.id}: dependencias obligatorias del cuerpo no coinciden con depends_on`);
+    const conditionalExpected = sorted([...new Set((item.blocking_conditions ?? []).flatMap(condition => condition.dependency_ids ?? []))]);
+    if (!same(logicalIdsIn(conditionalBody), conditionalExpected)) fail("DEPENDENCIAS_BODY", `${item.id}: dependencias condicionales del cuerpo no coinciden con blocking_conditions.dependency_ids`);
+    for (const condition of item.blocking_conditions ?? []) if (!(condition.dependency_ids ?? []).length && !conditionalBody.includes(condition.scope) && !conditionalBody.includes(condition.condition)) fail("DEPENDENCIAS_BODY", `${item.id}: condición operativa no aparece en su sección humana`);
   }
 
   if (summary.draft_issue_count !== count || summary.manifest_records !== count || summary.matrix_rows !== count) fail("SUMMARY", "draft_issue_count/manifest_records/matrix_rows no coinciden con MANIFEST");
@@ -93,10 +110,10 @@ export function validatePackage({ manifest, summary, matrixText, issuesText, cha
   const issueBlocks = new Map(issuesText.split(/\r?\n---\r?\n/).map(block => {
     const id = block.match(/^\*\*([A-Z][A-Z0-9-]+) ·/m)?.[1];
     const bodyStart = block.indexOf("\n## Objetivo");
-    const body = bodyStart >= 0 ? block.slice(bodyStart + 1).trimEnd() : undefined;
+    const body = bodyStart >= 0 ? block.slice(bodyStart + 1).replace(/\r\n/g, "\n").trimEnd() : undefined;
     return [id, body];
   }).filter(([id]) => id));
-  for (const item of items) if (issueBlocks.get(item.id) !== item.body?.trimEnd()) fail("ISSUES", `cuerpo markdown no coincide con MANIFEST en ${item.id}`);
+  for (const item of items) if (issueBlocks.get(item.id) !== item.body?.replace(/\r\n/g, "\n").trimEnd()) fail("ISSUES", `cuerpo markdown no coincide con MANIFEST en ${item.id}`);
 
   const changesCounts = {};
   for (const line of changesText.split(/\r?\n/)) {
@@ -167,6 +184,13 @@ export function validatePackage({ manifest, summary, matrixText, issuesText, cha
     if (!same(actual, expected)) fail("DEPENDENCIAS", `dependencia obligatoria diverge en ${item.id}`);
     const conditionalRefs = item.blocking_conditions.flatMap(c => c.dependency_ids ?? []);
     if (conditionalRefs.length && !dependenciesText.includes(`**${item.id}** ·`)) fail("DEPENDENCIAS", `falta condición documentada en ${item.id}`);
+    for (const condition of item.blocking_conditions ?? []) {
+      const refs = sorted([...new Set(condition.dependency_ids ?? [])]);
+      if (refs.length) {
+        const rows = dependenciesText.split(/\r?\n/).filter(line => line.startsWith(`- **${item.id}** ·`) && line.includes(" → "));
+        if (!rows.some(line => same(logicalIdsIn(line.split(" → ").slice(1).join(" → ").split(". ")[0]), refs))) fail("DEPENDENCIAS", `condición/documentación condicional diverge en ${item.id}: ${condition.scope}`);
+      }
+    }
   }
 
   const mkExpected = {"BULK-SVC-BACK-08":[1],"COMBOS-SVC-BACK-08":[2],"CATALOG-SVC-BACK-08":[3,4],"PROMOTIONS-SVC-BACK-08":[5,6,7],"TAXONOMY-SVC-BACK-08":[8,9,10,11,12],"PRICING-SVC-BACK-08":[13],"PRICE-AUDIT-SVC-BACK-08":[14],"INVENTORY-SVC-BACK-08":[15,16]};
@@ -237,5 +261,14 @@ export function validatePackage({ manifest, summary, matrixText, issuesText, cha
   const packageFiles = manifest.review_metadata?.package_file_count;
   if (secretScan?.status !== "PASS" || secretScan.findings !== 0 || !Number.isInteger(secretScan.files_scanned) || secretScan.files_scanned !== packageFiles || secretScan.reviewed_at !== "2026-10-16") fail("SECURITY", "escaneo de secretos incompleto o conteo/fecha no coincide con el paquete vigente");
 
-  return { errors, metrics: { records: count, unique_ids: byId.size, statuses: statusCounts, services, owners, dependency_edges: [...edgesById.values()].reduce((n, es) => n + es.length, 0), dependency_cycles: errors.some(e => e.startsWith("CYCLE:")) ? "present" : 0, mk_covered: mkCovered.size, openapi_operations: operationMap.size, asyncapi_messages: messageNames.size, bff_events: asyncapi?.bff_consumed_events?.length ?? 0, owner_pending: pendingOwners.length, publishable: items.filter(i => i.publishable).length, int_asap_issues: traceByNumber.size, int_asap_backlinks: [...reverseTrace.values()].reduce((n, ids) => n + new Set(ids).size, 0) } };
+  const ledgerRecords = publicationLedger?.records ?? [];
+  const recordedIds = new Set();
+  for (const record of ledgerRecords) {
+    if (!byId.has(record?.logical_id) || recordedIds.has(record?.logical_id)) fail("LEDGER", `ID ausente o duplicado en ledger: ${record?.logical_id}`);
+    if (record?.logical_id) recordedIds.add(record.logical_id);
+    if (record?.repository !== manifest.issue_repository || record?.source_sha !== manifest.publication_authorization?.source_sha || !Number.isInteger(record?.number) || !record?.url?.endsWith(`/issues/${record.number}`) || record?.verification_status !== "VERIFIED" || !record?.title || !record?.assignee_login || !record?.created_at) fail("LEDGER", `registro incompleto o no verificado: ${record?.logical_id}`);
+  }
+  if (mode === "completed" && (recordedIds.size !== count || items.some(item => !recordedIds.has(item.id)))) fail("LEDGER", `publicación completa requiere exactamente ${count} IDs verificados`);
+  if (mode === "completed" && items.some(item => ledgerRecords.find(record => record.logical_id === item.id)?.state !== "OPEN")) fail("LEDGER", "todos los issues BACK publicados deben estar OPEN");
+  return { errors, metrics: { records: count, unique_ids: byId.size, statuses: statusCounts, services, owners, dependency_edges: [...edgesById.values()].reduce((n, es) => n + es.length, 0), dependency_cycles: errors.some(e => e.startsWith("CYCLE:")) ? "present" : 0, mk_covered: mkCovered.size, openapi_operations: operationMap.size, asyncapi_messages: messageNames.size, bff_events: asyncapi?.bff_consumed_events?.length ?? 0, owner_pending: pendingOwners.length, publishable: items.filter(i => i.publishable).length, int_asap_issues: traceByNumber.size, int_asap_backlinks: [...reverseTrace.values()].reduce((n, ids) => n + new Set(ids).size, 0), publication_records: ledgerRecords.length, validation_mode: mode } };
 }

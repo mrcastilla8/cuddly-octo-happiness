@@ -1,8 +1,503 @@
 {
-  "ledger_version": 1,
-  "authorized": false,
+  "ledger_version": 2,
+  "authorized": true,
+  "authorization_id": "APPROVAL-BACK-HITO3-PUBLISH-20261016",
+  "approved_by": "Marco Castilla",
+  "approved_at": "2026-10-16",
+  "authorization_reference": "autorización expresa comunicada en esta conversación",
+  "repository": "Taller-SW-Web/G6-Productos-Ofertas-backend",
+  "source_sha": "716503d70b7b0d5c855d8879c91ee98a8dae2d85",
   "publication_started": false,
+  "publication_completed": false,
+  "native_dependency_relations": "NOT_CONFIGURED; se documentarán enlaces Markdown bidireccionales verificados",
   "created_at": null,
-  "manifest_version": 2,
-  "records": []
+  "records": [],
+  "incidents": [],
+  "preflight_snapshot": {
+    "preflight_existing_issues": [
+      {
+        "number": 33,
+        "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/33",
+        "title": "[INT-ASAP][G5][PROMOTIONS] INT-G5-03 — Implementar consumo y restauración de cupones por AMQP",
+        "state": "OPEN",
+        "assignees": [
+          "AXL031"
+        ],
+        "updated_at": "2026-10-16T06:55:59Z",
+        "body_sha256": "f1a3748019c2bb04b772802fb037655bb5547b1cf3f5c6dc130524a4a35a6539"
+      },
+      {
+        "number": 32,
+        "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/32",
+        "title": "[INT-ASAP][E2E] INT-G5-05 — Validar integración real G5–G6 (Ventas/Postventa)",
+        "state": "OPEN",
+        "assignees": [
+          "mrcastilla8"
+        ],
+        "updated_at": "2026-10-16T06:57:33Z",
+        "body_sha256": "5efe1c2df50e8356735678a4291c6149ac6c9cd414266535ddf617fa43512ec2"
+      },
+      {
+        "number": 31,
+        "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/31",
+        "title": "[INT-ASAP][G5][POSTVENTA] INT-G5-04 — Coordinar disponibilidad y reintegro físico M2",
+        "state": "OPEN",
+        "assignees": [
+          "MiguelTacoZavala"
+        ],
+        "updated_at": "2026-10-16T06:27:14Z",
+        "body_sha256": "ca2a98588396e6b828424d8bdfd63bc606561b21b2c0ac451a04af5b23865c9a"
+      },
+      {
+        "number": 30,
+        "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/30",
+        "title": "[INT-ASAP][G5][INVENTORY] INT-G5-02 — Verificar flujo HTTP de reservas de Ventas",
+        "state": "OPEN",
+        "assignees": [
+          "MiguelTacoZavala"
+        ],
+        "updated_at": "2026-10-16T06:52:55Z",
+        "body_sha256": "6e1f0f72231c6c75804024f67251e925d38f6b749c473a33067be053a712bb4d"
+      },
+      {
+        "number": 29,
+        "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/29",
+        "title": "[INT-ASAP][G5][INFRA] INT-G5-01 — Homologar y validar conectividad AMQP privada",
+        "state": "OPEN",
+        "assignees": [
+          "mrcastilla8"
+        ],
+        "updated_at": "2026-10-16T06:57:30Z",
+        "body_sha256": "93a1fa9c3cc9eb043f4fe22cd6f0ff7610de4e99e389f37fb18d6ec56d6d8363"
+      },
+      {
+        "number": 28,
+        "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/28",
+        "title": "[INT-ASAP][E2E] Validar consultas Retail (G4) y separar conciliación bloqueada",
+        "state": "OPEN",
+        "assignees": [
+          "mrcastilla8"
+        ],
+        "updated_at": "2026-10-16T06:52:53Z",
+        "body_sha256": "d203c878b1d0a47afcb99bbfb2f1722104efbf8554115de7beb0b8162b0750bc"
+      },
+      {
+        "number": 27,
+        "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/27",
+        "title": "[INT-ASAP][E2E] Validar corte inicial Chatbot (G3)",
+        "state": "OPEN",
+        "assignees": [
+          "mrcastilla8"
+        ],
+        "updated_at": "2026-10-16T05:53:56Z",
+        "body_sha256": "82985096979b56be2a1d4eb1c816c2e739216128559631257d456fb5e31a2c51"
+      },
+      {
+        "number": 26,
+        "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/26",
+        "title": "[INT-ASAP][E2E] Validar corte de lectura Marketplace (G1)",
+        "state": "OPEN",
+        "assignees": [
+          "mrcastilla8"
+        ],
+        "updated_at": "2026-10-16T05:53:25Z",
+        "body_sha256": "fd5cb155407b43a9aea5d7b17a8e3eb2c7a89a1e3606b5856f98a8ba6c6a4d76"
+      },
+      {
+        "number": 25,
+        "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/25",
+        "title": "[INT-ASAP][INVENTORY] Completar GET comercial y auditar verificador existente",
+        "state": "OPEN",
+        "assignees": [
+          "MiguelTacoZavala"
+        ],
+        "updated_at": "2026-10-16T06:27:22Z",
+        "body_sha256": "877dc8393a061aba35ac5f504311b2d2336825b11da034731a4dc79dc6fc0bf9"
+      },
+      {
+        "number": 24,
+        "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/24",
+        "title": "[INT-ASAP][PRICING] Habilitar consultas de precio por SKU y canal",
+        "state": "OPEN",
+        "assignees": [
+          "LeonardoVera"
+        ],
+        "updated_at": "2026-10-16T06:27:24Z",
+        "body_sha256": "a70385816e6a16600fb2937779644c76569eadbdadce2dd92a406ba57dcae082"
+      },
+      {
+        "number": 23,
+        "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/23",
+        "title": "[INT-ASAP][CATALOG] Habilitar consultas de producto, slug y código de barras",
+        "state": "OPEN",
+        "assignees": [
+          "GabrielPGu"
+        ],
+        "updated_at": "2026-10-16T06:27:27Z",
+        "body_sha256": "5e3a1ea9cc8fff9275ffabf621fa0e59971acdeccc1624eadd3bcd85968837ef"
+      },
+      {
+        "number": 22,
+        "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/22",
+        "title": "[INT-ASAP][TAXONOMY] Habilitar consultas HTTP de categorías y marcas",
+        "state": "OPEN",
+        "assignees": [
+          "VicuzS"
+        ],
+        "updated_at": "2026-10-16T05:54:30Z",
+        "body_sha256": "982d7503a9ebe7e586dfe032e2a4a49d0706a61899d16365cecbf88177183732"
+      },
+      {
+        "number": 21,
+        "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/21",
+        "title": "[INT-ASAP][GATEWAY] Enrutar y autorizar el corte HTTP G1/G3/G4/G5",
+        "state": "OPEN",
+        "assignees": [
+          "mrcastilla8"
+        ],
+        "updated_at": "2026-10-16T06:26:05Z",
+        "body_sha256": "f049671001b46014a5753d47dc1171de0c9b125debc90f2b9e86e4ac62c22ee1"
+      },
+      {
+        "number": 20,
+        "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/20",
+        "title": "[INT-ASAP][INFRA] Asegurar endpoint HTTPS 443 para integraciones G6",
+        "state": "OPEN",
+        "assignees": [
+          "AXL031"
+        ],
+        "updated_at": "2026-10-16T06:26:02Z",
+        "body_sha256": "5d3b1ec244d3a7f9b21438ace85c32e0c90bcea4df79aa020c8352d6273da4fd"
+      },
+      {
+        "number": 19,
+        "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/19",
+        "title": "[INT-ASAP][EPIC] Integración HTTP/AMQP G6 con Marketplace (G1), Chatbot (G3), Retail (G4) y Ventas/Postventa (G5)",
+        "state": "OPEN",
+        "assignees": [
+          "mrcastilla8"
+        ],
+        "updated_at": "2026-10-16T06:56:02Z",
+        "body_sha256": "4f7a71d2a932e2b50d31fe576ce418f6079c759a8ceb22f01b46fd1af3ce50b5"
+      },
+      {
+        "number": 17,
+        "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/17",
+        "title": "[DATA-VAL-001] Validar consistencia y cierre de F1 sin modificar maestros",
+        "state": "OPEN",
+        "assignees": [],
+        "updated_at": "2026-10-16T05:41:03Z",
+        "body_sha256": "f948644e635958355f964b2a6b2cafde87c3fe4f4aadba3cc8f6fa174515fc71"
+      },
+      {
+        "number": 16,
+        "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/16",
+        "title": "[DATA-006] Preparar combos maestros con componentes SKU válidos",
+        "state": "OPEN",
+        "assignees": [
+          "mrcastilla8"
+        ],
+        "updated_at": "2026-10-16T05:41:02Z",
+        "body_sha256": "80b2f2a2a86018c230cf7e4e1beb4ec5d4a5bc50000f71857ebf290646185645"
+      },
+      {
+        "number": 15,
+        "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/15",
+        "title": "[DATA-005] Preparar maestros de promociones, cupones y recomendaciones",
+        "state": "OPEN",
+        "assignees": [
+          "AXL031"
+        ],
+        "updated_at": "2026-10-16T05:41:00Z",
+        "body_sha256": "58044ab9beba2e93fe34ff79a5119ad71493e9b0ab5d06618dea9a742dda24ce"
+      },
+      {
+        "number": 14,
+        "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/14",
+        "title": "[DATA-004] Preparar ubicaciones, configuración e inicio de stock trazable",
+        "state": "OPEN",
+        "assignees": [
+          "MiguelTacoZavala"
+        ],
+        "updated_at": "2026-10-16T05:50:13Z",
+        "body_sha256": "fbd30490fd73fd18eaaa3ca36fa37b6c2eef622d6d0509033f06bc0af115cb74"
+      },
+      {
+        "number": 13,
+        "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/13",
+        "title": "[DATA-003] Inicializar precios regulares, vigencias y canales para SKU aprobados",
+        "state": "OPEN",
+        "assignees": [
+          "LeonardoVera"
+        ],
+        "updated_at": "2026-10-16T05:50:12Z",
+        "body_sha256": "0525841cd2ded3d7dc754fe34555f6f3cf09d0ef90d7744f9fa2e6e2119f874a"
+      },
+      {
+        "number": 12,
+        "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/12",
+        "title": "[DATA-002] Completar catálogo maestro de productos, variantes y SKU",
+        "state": "OPEN",
+        "assignees": [
+          "GabrielPGu"
+        ],
+        "updated_at": "2026-10-16T05:50:10Z",
+        "body_sha256": "e0ae7deea89094be8966455f0f2600ec1bcb2470211772f9aa2215ed0959fc85"
+      },
+      {
+        "number": 11,
+        "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/11",
+        "title": "[DATA-001] Poblar y reconciliar maestros de Taxonomía",
+        "state": "OPEN",
+        "assignees": [
+          "VicuzS"
+        ],
+        "updated_at": "2026-10-16T05:50:08Z",
+        "body_sha256": "338d5f0e448c49bb89c26de26e1f6f61f0f6416efe6de0e4cbcfb4fe6efce1f7"
+      },
+      {
+        "number": 8,
+        "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/8",
+        "title": "[INFRA-002] Generalizar CD Oracle para los nueve microservicios sin romper Inventario",
+        "state": "OPEN",
+        "assignees": [],
+        "updated_at": "2026-10-16T05:50:06Z",
+        "body_sha256": "6a57b30a78925876a9c04d1e8ae312e2dc332f90ea1e86f2b39ee5874c469a0e"
+      },
+      {
+        "number": 6,
+        "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/6",
+        "title": "[INFRA-001]: CD de inventory-svc a Oracle Cloud",
+        "state": "CLOSED",
+        "assignees": [],
+        "updated_at": "2026-10-14T06:52:37Z",
+        "body_sha256": "352abe004d3e147e421af7c17d23f7ee4a33c59431e1a98f1237363b9dd2ce05"
+      },
+      {
+        "number": 3,
+        "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/3",
+        "title": "docs(governance): align backend with selective unblocking policy",
+        "state": "CLOSED",
+        "assignees": [],
+        "updated_at": "2026-10-13T08:52:29Z",
+        "body_sha256": "3d9c2543f87573176840863cd6c9f2c67e5cd9973b6ee80c3f72ddd175f37a9a"
+      },
+      {
+        "number": 1,
+        "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/1",
+        "title": "[INFRA][001] Preparar acceso seguro a Supabase y mecanismo reproducible de carga inicial de datos",
+        "state": "OPEN",
+        "assignees": [],
+        "updated_at": "2026-10-16T05:40:52Z",
+        "body_sha256": "3f24139f420ea2c3399b2300b659b2b1cc65b386e8b3a366496508b8e81681ba"
+      }
+    ],
+    "preflight_existing_prs": [
+      {
+        "number": 18,
+        "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/pull/18",
+        "title": "feat(taxonomy): [DATA-001] datos comerciales Inka Athletics via MCP SQL #11",
+        "state": "OPEN",
+        "updated_at": "2026-10-16T05:55:42Z"
+      },
+      {
+        "number": 10,
+        "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/pull/10",
+        "title": "[INVENTORY] Implementar reservas transaccionales, Drizzle ORM y Outbox para integración G5",
+        "state": "OPEN",
+        "updated_at": "2026-10-14T21:04:12Z"
+      },
+      {
+        "number": 9,
+        "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/pull/9",
+        "title": "[INFRA-002] Generalizar CD Oracle para nueve servicios",
+        "state": "MERGED",
+        "updated_at": "2026-10-14T18:19:10Z"
+      },
+      {
+        "number": 7,
+        "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/pull/7",
+        "title": "Infraestructura: CD de inventory-svc a Oracle Cloud",
+        "state": "MERGED",
+        "updated_at": "2026-10-14T06:52:36Z"
+      },
+      {
+        "number": 5,
+        "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/pull/5",
+        "title": "Cueva",
+        "state": "MERGED",
+        "updated_at": "2026-10-14T06:53:32Z"
+      },
+      {
+        "number": 4,
+        "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/pull/4",
+        "title": "docs(governance): align backend with selective unblocking policy",
+        "state": "MERGED",
+        "updated_at": "2026-10-13T08:52:28Z"
+      },
+      {
+        "number": 2,
+        "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/pull/2",
+        "title": "feat(backend): foundation NestJS monorepo",
+        "state": "MERGED",
+        "updated_at": "2026-10-13T03:03:55Z"
+      }
+    ],
+    "int_asap_snapshot": [
+      {
+        "number": 20,
+        "manifest_label": "Asegurar endpoint HTTPS 443 para integraciones G6",
+        "title": "[INT-ASAP][INFRA] Asegurar endpoint HTTPS 443 para integraciones G6",
+        "state": "OPEN",
+        "assignees": [
+          "AXL031"
+        ],
+        "updated_at": "2026-10-16T06:26:02Z",
+        "body_sha256": "5d3b1ec244d3a7f9b21438ace85c32e0c90bcea4df79aa020c8352d6273da4fd"
+      },
+      {
+        "number": 21,
+        "manifest_label": "Enrutar y autorizar el corte HTTP G1/G3/G4/G5",
+        "title": "[INT-ASAP][GATEWAY] Enrutar y autorizar el corte HTTP G1/G3/G4/G5",
+        "state": "OPEN",
+        "assignees": [
+          "mrcastilla8"
+        ],
+        "updated_at": "2026-10-16T06:26:05Z",
+        "body_sha256": "f049671001b46014a5753d47dc1171de0c9b125debc90f2b9e86e4ac62c22ee1"
+      },
+      {
+        "number": 22,
+        "manifest_label": "Habilitar consultas HTTP de categorías y marcas",
+        "title": "[INT-ASAP][TAXONOMY] Habilitar consultas HTTP de categorías y marcas",
+        "state": "OPEN",
+        "assignees": [
+          "VicuzS"
+        ],
+        "updated_at": "2026-10-16T05:54:30Z",
+        "body_sha256": "982d7503a9ebe7e586dfe032e2a4a49d0706a61899d16365cecbf88177183732"
+      },
+      {
+        "number": 23,
+        "manifest_label": "Habilitar consultas de producto, slug y código de barras",
+        "title": "[INT-ASAP][CATALOG] Habilitar consultas de producto, slug y código de barras",
+        "state": "OPEN",
+        "assignees": [
+          "GabrielPGu"
+        ],
+        "updated_at": "2026-10-16T06:27:27Z",
+        "body_sha256": "5e3a1ea9cc8fff9275ffabf621fa0e59971acdeccc1624eadd3bcd85968837ef"
+      },
+      {
+        "number": 24,
+        "manifest_label": "Habilitar consultas de precio por SKU y canal",
+        "title": "[INT-ASAP][PRICING] Habilitar consultas de precio por SKU y canal",
+        "state": "OPEN",
+        "assignees": [
+          "LeonardoVera"
+        ],
+        "updated_at": "2026-10-16T06:27:24Z",
+        "body_sha256": "a70385816e6a16600fb2937779644c76569eadbdadce2dd92a406ba57dcae082"
+      },
+      {
+        "number": 25,
+        "manifest_label": "Completar GET comercial y auditar verificador existente",
+        "title": "[INT-ASAP][INVENTORY] Completar GET comercial y auditar verificador existente",
+        "state": "OPEN",
+        "assignees": [
+          "MiguelTacoZavala"
+        ],
+        "updated_at": "2026-10-16T06:27:22Z",
+        "body_sha256": "877dc8393a061aba35ac5f504311b2d2336825b11da034731a4dc79dc6fc0bf9"
+      },
+      {
+        "number": 26,
+        "manifest_label": "Validar corte de lectura Marketplace (G1)",
+        "title": "[INT-ASAP][E2E] Validar corte de lectura Marketplace (G1)",
+        "state": "OPEN",
+        "assignees": [
+          "mrcastilla8"
+        ],
+        "updated_at": "2026-10-16T05:53:25Z",
+        "body_sha256": "fd5cb155407b43a9aea5d7b17a8e3eb2c7a89a1e3606b5856f98a8ba6c6a4d76"
+      },
+      {
+        "number": 27,
+        "manifest_label": "Validar corte inicial Chatbot (G3)",
+        "title": "[INT-ASAP][E2E] Validar corte inicial Chatbot (G3)",
+        "state": "OPEN",
+        "assignees": [
+          "mrcastilla8"
+        ],
+        "updated_at": "2026-10-16T05:53:56Z",
+        "body_sha256": "82985096979b56be2a1d4eb1c816c2e739216128559631257d456fb5e31a2c51"
+      },
+      {
+        "number": 28,
+        "manifest_label": "Validar consultas Retail (G4) y separar conciliación bloqueada",
+        "title": "[INT-ASAP][E2E] Validar consultas Retail (G4) y separar conciliación bloqueada",
+        "state": "OPEN",
+        "assignees": [
+          "mrcastilla8"
+        ],
+        "updated_at": "2026-10-16T06:52:53Z",
+        "body_sha256": "d203c878b1d0a47afcb99bbfb2f1722104efbf8554115de7beb0b8162b0750bc"
+      },
+      {
+        "number": 29,
+        "manifest_label": "Homologar y validar conectividad AMQP privada",
+        "title": "[INT-ASAP][G5][INFRA] INT-G5-01 — Homologar y validar conectividad AMQP privada",
+        "state": "OPEN",
+        "assignees": [
+          "mrcastilla8"
+        ],
+        "updated_at": "2026-10-16T06:57:30Z",
+        "body_sha256": "93a1fa9c3cc9eb043f4fe22cd6f0ff7610de4e99e389f37fb18d6ec56d6d8363"
+      },
+      {
+        "number": 30,
+        "manifest_label": "Verificar flujo HTTP de reservas de Ventas",
+        "title": "[INT-ASAP][G5][INVENTORY] INT-G5-02 — Verificar flujo HTTP de reservas de Ventas",
+        "state": "OPEN",
+        "assignees": [
+          "MiguelTacoZavala"
+        ],
+        "updated_at": "2026-10-16T06:52:55Z",
+        "body_sha256": "6e1f0f72231c6c75804024f67251e925d38f6b749c473a33067be053a712bb4d"
+      },
+      {
+        "number": 31,
+        "manifest_label": "Coordinar disponibilidad y reintegro físico M2",
+        "title": "[INT-ASAP][G5][POSTVENTA] INT-G5-04 — Coordinar disponibilidad y reintegro físico M2",
+        "state": "OPEN",
+        "assignees": [
+          "MiguelTacoZavala"
+        ],
+        "updated_at": "2026-10-16T06:27:14Z",
+        "body_sha256": "ca2a98588396e6b828424d8bdfd63bc606561b21b2c0ac451a04af5b23865c9a"
+      },
+      {
+        "number": 32,
+        "manifest_label": "Validar integración real G5–G6 (Ventas/Postventa)",
+        "title": "[INT-ASAP][E2E] INT-G5-05 — Validar integración real G5–G6 (Ventas/Postventa)",
+        "state": "OPEN",
+        "assignees": [
+          "mrcastilla8"
+        ],
+        "updated_at": "2026-10-16T06:57:33Z",
+        "body_sha256": "5efe1c2df50e8356735678a4291c6149ac6c9cd414266535ddf617fa43512ec2"
+      },
+      {
+        "number": 33,
+        "manifest_label": "Implementar consumo y restauración de cupones por AMQP",
+        "title": "[INT-ASAP][G5][PROMOTIONS] INT-G5-03 — Implementar consumo y restauración de cupones por AMQP",
+        "state": "OPEN",
+        "assignees": [
+          "AXL031"
+        ],
+        "updated_at": "2026-10-16T06:55:59Z",
+        "body_sha256": "f1a3748019c2bb04b772802fb037655bb5547b1cf3f5c6dc130524a4a35a6539"
+      }
+    ]
+  }
 }

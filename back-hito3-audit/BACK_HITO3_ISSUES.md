@@ -487,6 +487,8 @@ NO_INICIADO: UI/mock/unavailable existentes no acreditan adapter HTTP real ni in
 - **P0 — Solo llamadas userBearer que se pretenda habilitar en demo sin login.** Responsable de resolver: G7/Seguridad y Marco. Desbloqueo: Resolver autenticación/autorización por operationId; no tokens de servicio en navegador ni bypass. Seguir con operaciones ya autorizadas.
 - **P0 — Publicación de páginas/datos de esta feature en la demo.** Responsable de resolver: Marco y owner competente de Seguridad/Supabase. Desbloqueo: Revisar security por operationId y las capas efectivas de datos/rutas; la ausencia de userBearer en OpenAPI no acredita grants ni autorización de publicación.
 
+- **Dependencia condicional — Solo baja segura de categoría/característica/marca que espera verificación de Catálogo.** → CATALOG-SVC-BACK-06. Mantener el CRUD independiente; habilitar y probar esta secuencia cuando el consumer catalog.master.deactivation.check.requested y su respuesta estén disponibles. Responsable de resolver: Owners G6 de los servicios relacionados.
+
 ## Tareas
 - [ ] Conectar pantallas MK y flujos listados en Alcance al HTTP client compartido.
 - [ ] Quitar mock del composition mode api; conservar fixtures y mock exclusivamente en pruebas o modo mock explícito.
@@ -544,6 +546,7 @@ NO_INICIADO: no se acredita E2E real React→Gateway→servicio→dependencias.
 ## Dependencias bloqueantes
 - TAXONOMY-SVC-BACK-08 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 - SHARED-BACK-03 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
+- CATALOG-SVC-BACK-06 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 
 **Issues existentes relacionados:**
 - Sin issue externo previo identificado.
@@ -1064,6 +1067,9 @@ NO_INICIADO: UI/mock/unavailable existentes no acreditan adapter HTTP real ni in
 - **P0 — Solo llamadas userBearer que se pretenda habilitar en demo sin login.** Responsable de resolver: G7/Seguridad y Marco. Desbloqueo: Resolver autenticación/autorización por operationId; no tokens de servicio en navegador ni bypass. Seguir con operaciones ya autorizadas.
 - **P0 — Publicación de páginas/datos de esta feature en la demo.** Responsable de resolver: Marco y owner competente de Seguridad/Supabase. Desbloqueo: Revisar security por operationId y las capas efectivas de datos/rutas; la ausencia de userBearer en OpenAPI no acredita grants ni autorización de publicación.
 
+- **Dependencia condicional — Selectores de categoría, características y tipos en MK-003/004.** → TAXONOMY-SVC-BACK-04. Las otras operaciones se integran de forma independiente; probar la selección cuando las lecturas de Taxonomía estén disponibles. Responsable de resolver: Owners G6 de los servicios relacionados.
+- **Dependencia condicional — Preparación async de producto/variante y estado de inicialización.** → PRICING-SVC-BACK-06, INVENTORY-SVC-BACK-06. Probar el flujo completo solo cuando Pricing e Inventory procesen y respondan a los mensajes de inicialización; no ocultar fallo ni crear precio sintético. Responsable de resolver: Owners G6 de los servicios relacionados.
+
 ## Tareas
 - [ ] Conectar pantallas MK y flujos listados en Alcance al HTTP client compartido.
 - [ ] Quitar mock del composition mode api; conservar fixtures y mock exclusivamente en pruebas o modo mock explícito.
@@ -1121,6 +1127,9 @@ NO_INICIADO: no se acredita E2E real React→Gateway→servicio→dependencias.
 ## Dependencias bloqueantes
 - CATALOG-SVC-BACK-08 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 - SHARED-BACK-03 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
+- TAXONOMY-SVC-BACK-04 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
+- PRICING-SVC-BACK-06 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
+- INVENTORY-SVC-BACK-06 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 
 **Issues existentes relacionados:**
 - Sin issue externo previo identificado.
@@ -1638,6 +1647,8 @@ NO_INICIADO: UI/mock/unavailable existentes no acreditan adapter HTTP real ni in
 - **P0 — Solo llamadas userBearer que se pretenda habilitar en demo sin login.** Responsable de resolver: G7/Seguridad y Marco. Desbloqueo: Resolver autenticación/autorización por operationId; no tokens de servicio en navegador ni bypass. Seguir con operaciones ya autorizadas.
 - **P0 — Publicación de páginas/datos de esta feature en la demo.** Responsable de resolver: Marco y owner competente de Seguridad/Supabase. Desbloqueo: Revisar security por operationId y las capas efectivas de datos/rutas; la ausencia de userBearer en OpenAPI no acredita grants ni autorización de publicación.
 
+- **Dependencia condicional — Selección de producto/SKU en pantallas de precio si el flujo la requiere.** → CATALOG-SVC-BACK-04. Mantener consulta/edición por ID de SKU independiente y conectar el selector cuando Catalog exponga sus consultas. Responsable de resolver: Owners G6 de los servicios relacionados.
+
 ## Tareas
 - [ ] Conectar pantallas MK y flujos listados en Alcance al HTTP client compartido.
 - [ ] Quitar mock del composition mode api; conservar fixtures y mock exclusivamente en pruebas o modo mock explícito.
@@ -1695,6 +1706,7 @@ NO_INICIADO: no se acredita E2E real React→Gateway→servicio→dependencias.
 ## Dependencias bloqueantes
 - PRICING-SVC-BACK-08 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 - SHARED-BACK-03 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
+- CATALOG-SVC-BACK-06 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 
 **Issues existentes relacionados:**
 - Sin issue externo previo identificado.
@@ -2258,6 +2270,7 @@ NO_INICIADO: no se acredita E2E real React→Gateway→servicio→dependencias.
 ## Dependencias bloqueantes
 - PRICE-AUDIT-SVC-BACK-08 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 - SHARED-BACK-03 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
+- PRICING-SVC-BACK-06 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 
 **Issues existentes relacionados:**
 - Sin issue externo previo identificado.
@@ -2778,6 +2791,8 @@ NO_INICIADO: UI/mock/unavailable existentes no acreditan adapter HTTP real ni in
 - **P1 — Aprobación visual de MK-005..007.** Responsable de resolver: Owner UX correspondiente. Desbloqueo: Alinear los component-spec bajo revisión/no aprobados con pantallas y operación permitida; no bloquea API interna.
 - **P0 — Publicación de páginas/datos de esta feature en la demo.** Responsable de resolver: Marco y owner competente de Seguridad/Supabase. Desbloqueo: Revisar security por operationId y las capas efectivas de datos/rutas; la ausencia de userBearer en OpenAPI no acredita grants ni autorización de publicación.
 
+- **Dependencia condicional — Proyecciones vigentes usadas por promociones, precios y disponibilidad.** → CATALOG-SVC-BACK-06, PRICING-SVC-BACK-06, INVENTORY-SVC-BACK-06. CRUD y validación local continúan; probar elegibilidad contra los publishers/consumers reales al completar estas cadenas. Responsable de resolver: Owners G6 de los servicios relacionados.
+
 ## Tareas
 - [ ] Conectar pantallas MK y flujos listados en Alcance al HTTP client compartido.
 - [ ] Quitar mock del composition mode api; conservar fixtures y mock exclusivamente en pruebas o modo mock explícito.
@@ -2836,6 +2851,9 @@ NO_INICIADO: no se acredita E2E real React→Gateway→servicio→dependencias.
 ## Dependencias bloqueantes
 - PROMOTIONS-SVC-BACK-08 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 - SHARED-BACK-03 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
+- CATALOG-SVC-BACK-06 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
+- PRICING-SVC-BACK-06 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
+- INVENTORY-SVC-BACK-06 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 
 **Issues existentes relacionados:**
 - Sin issue externo previo identificado.
@@ -3345,6 +3363,8 @@ NO_INICIADO: UI/mock/unavailable existentes no acreditan adapter HTTP real ni in
 - **P0 — Solo llamadas userBearer que se pretenda habilitar en demo sin login.** Responsable de resolver: G7/Seguridad y Marco. Desbloqueo: Resolver autenticación/autorización por operationId; no tokens de servicio en navegador ni bypass. Seguir con operaciones ya autorizadas.
 - **P0 — Publicación de páginas/datos de esta feature en la demo.** Responsable de resolver: Marco y owner competente de Seguridad/Supabase. Desbloqueo: Revisar security por operationId y las capas efectivas de datos/rutas; la ausencia de userBearer en OpenAPI no acredita grants ni autorización de publicación.
 
+- **Dependencia condicional — Selector de componentes SKU, precio vigente y disponibilidad informativa.** → CATALOG-SVC-BACK-04, PRICING-SVC-BACK-04, INVENTORY-SVC-BACK-06. List/detail independientes continúan; aceptar creación/disponibilidad real cuando los providers necesarios estén listos. Responsable de resolver: Owners G6 de los servicios relacionados.
+
 ## Tareas
 - [ ] Conectar pantallas MK y flujos listados en Alcance al HTTP client compartido.
 - [ ] Quitar mock del composition mode api; conservar fixtures y mock exclusivamente en pruebas o modo mock explícito.
@@ -3402,6 +3422,9 @@ NO_INICIADO: no se acredita E2E real React→Gateway→servicio→dependencias.
 ## Dependencias bloqueantes
 - COMBOS-SVC-BACK-08 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 - SHARED-BACK-03 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
+- CATALOG-SVC-BACK-06 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
+- PRICING-SVC-BACK-04 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
+- INVENTORY-SVC-BACK-06 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 
 **Issues existentes relacionados:**
 - Sin issue externo previo identificado.
@@ -3911,6 +3934,8 @@ NO_INICIADO: UI/mock/unavailable existentes no acreditan adapter HTTP real ni in
 - **P0 — Solo llamadas userBearer que se pretenda habilitar en demo sin login.** Responsable de resolver: G7/Seguridad y Marco. Desbloqueo: Resolver autenticación/autorización por operationId; no tokens de servicio en navegador ni bypass. Seguir con operaciones ya autorizadas.
 - **P0 — Publicación de páginas/datos de esta feature en la demo.** Responsable de resolver: Marco y owner competente de Seguridad/Supabase. Desbloqueo: Revisar security por operationId y las capas efectivas de datos/rutas; la ausencia de userBearer en OpenAPI no acredita grants ni autorización de publicación.
 
+- **Dependencia condicional — Importación/reanudación que espera resultados async de los tres bounded contexts.** → CATALOG-SVC-BACK-06, PRICING-SVC-BACK-06, INVENTORY-SVC-BACK-06. Plantilla, preview y exportación pueden probarse por separado; el lote real no se declara E2E hasta que los tres handlers/resultados funcionen. Responsable de resolver: Owners G6 de los servicios relacionados.
+
 ## Tareas
 - [ ] Conectar pantallas MK y flujos listados en Alcance al HTTP client compartido.
 - [ ] Quitar mock del composition mode api; conservar fixtures y mock exclusivamente en pruebas o modo mock explícito.
@@ -3968,6 +3993,9 @@ NO_INICIADO: no se acredita E2E real React→Gateway→servicio→dependencias.
 ## Dependencias bloqueantes
 - BULK-SVC-BACK-08 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 - SHARED-BACK-03 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
+- CATALOG-SVC-BACK-06 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
+- PRICING-SVC-BACK-06 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
+- INVENTORY-SVC-BACK-06 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 
 **Issues existentes relacionados:**
 - Sin issue externo previo identificado.
@@ -4831,6 +4859,8 @@ NO_INICIADO: no se acredita consumer BFF; handlers y pruebas de contrato pueden 
 **Bloqueos específicos y condición de desbloqueo:**
 - **P1 — Provisioning de broker y garantías retry/DLX productivas.** Responsable de resolver: G5 y owner G6 de mensajería. Desbloqueo: Homologación del contrato/topología aplicable y evidencia provider/consumer; la lógica interna puede probarse con broker aislado.
 
+- **Dependencia condicional — Solo pruebas de integración con publishers reales para los eventos BFF declarados (no handlers ni contract tests aislados).** → TAXONOMY-SVC-BACK-06, CATALOG-SVC-BACK-06, PRICING-SVC-BACK-06, INVENTORY-SVC-BACK-06. Ejecutar integración real de cada evento cuando su publisher correspondiente esté implementado y validado. Hasta entonces, desarrollar y probar consumers con contrato y mensajes sintéticos en broker aislado; no llamar a esto E2E. Responsable de resolver: Owners G6 de Taxonomy, Catalog, Pricing e Inventory.
+
 ## Tareas
 - [ ] Implementar handlers y pruebas de contrato con mensajes fixtures en broker aislado; no esperar a publishers reales.
 - [ ] Correlacionar solo con destinos BFF existentes; si falta destino/retención aprobada, aislar ese consumer específico.
@@ -4922,6 +4952,7 @@ Unit tests del cliente: status/cuerpo Problem Details, timeout, cancelación, he
 
 ## Riesgos o bloqueos específicos
 - Contratos RC y restricciones de gobernanza: seguir la fuente/version indicada; contradicciones detienen solo la operación afectada y se elevan al owner competente.
+
 ---
 
 # [BACK][deploy][01] Componer demostración privada en Oracle
@@ -4989,6 +5020,7 @@ Validación estática de compose/manifests/secret refs y health; smoke solo en a
 
 ## Riesgos o bloqueos específicos
 - **P1 — Despliegue Oracle integrado.** Responsable de resolver: Owner Oracle pendiente y responsables de servicios habilitados. Desbloqueo: Aprobación de ambiente/ventana, secretos privados, TLS/red/readiness/rollback; no publicar si artefacto de servicio no está habilitado.
+
 ---
 
 # [BACK][deploy][02] Activar liberación integrada autorizada en Oracle
@@ -5030,6 +5062,11 @@ NO_INICIADO: no se encontró issue BACK vigente que autorice y detalle la activa
 - **P0 — Autorización y readiness Oracle.** Responsable de resolver: Marco y owner de Oracle aprobado. Registrar aprobación escrita con ambiente, ventana, SHA exacto, componentes habilitados y operador; confirmar prerequisites manuales, conectividad TLS/SSH validada y rollback probado. Sin esa evidencia, no activar el deploy.
 - **P0 — Artefactos/allowlist de cada componente.** Owner del servicio y responsable de INFRA #8. Desbloqueo por componente: imagen/artefacto inmutable identificado, allowlist activa, CI de master verde para el mismo SHA y health/readiness disponible. Omitir componentes que no satisfagan el gate; no habilitarlos en este ticket.
 - **P1 — Secreto o entrega Frontend no preparados.** Owners Frontend/Oracle. Usar solo proceso existente y aprobado; secretos se referencian desde el almacén autorizado, nunca se copian al repo, issue, logs ni comandos visibles. No crear credenciales ni cambiar permisos.
+
+- **Dependencia condicional — Readiness solo para el conjunto de microservicios elegido en la aprobación de ventana; no se exige desplegar los demás.** → TAXONOMY-SVC-BACK-01, CATALOG-SVC-BACK-01, PRICING-SVC-BACK-01, PRICE-AUDIT-SVC-BACK-01, PROMOTIONS-SVC-BACK-01, COMBOS-SVC-BACK-01, BULK-SVC-BACK-01, INVENTORY-SVC-BACK-01. Aplicar solo a un servicio incluido en el allowlist de INFRA #8 y en la aprobación escrita; SHA de artefacto inmutable, CI verde de master para ese SHA y readiness comprobada. Servicios no habilitados se excluyen sin bloquear el subconjunto autorizado. Responsable de resolver: Owner del servicio seleccionado e INFRA.
+
+- **Condición de operación (sin dependencia BACK) — Autorización de la ventana Oracle integrada.** Aprobación escrita que registre ambiente, ventana, operador, SHA y componentes permitidos; validar TLS/SSH, configuración, referencias a secretos existentes y rollback. No activar antes. Responsable de resolver: Marco y owner de Oracle aprobado.
+- **Condición de operación (sin dependencia BACK) — Entrega del Frontend integrado.** Reutilizar artefacto y proceso existente aprobado. Si no existen, bloquear solo Frontend y solicitar tarea separada al owner; no editar Frontend ni crear un pipeline paralelo. Responsable de resolver: Owner de Frontend y owner de Oracle.
 
 ## Relación complementaria INT-ASAP (no reduce el alcance BACK)
 
@@ -5139,6 +5176,7 @@ Dry-run/render y validaciones de manifest; fixture idempotente con transacción 
 
 ## Riesgos o bloqueos específicos
 - **P0 — Persistencia de dataset compartido/demo.** Responsable de resolver: Marco y owners de los schemas afectados. Desbloqueo: Aprobación expresa de fixture exacto, schema/tablas/destino y proceso de despliegue; hasta entonces solo dry-run/rollback aislado.
+
 ---
 
 # [BACK][shared][03] Harness transversal E2E y presentación
@@ -5201,6 +5239,7 @@ Playwright Chromium, feature-focused, workers=1 local; sin video, screenshot ni 
 
 ## Riesgos o bloqueos específicos
 - Contratos RC y restricciones de gobernanza: seguir la fuente/version indicada; contradicciones detienen solo la operación afectada y se elevan al owner competente.
+
 ---
 
 # [BACK][shared][04] Cerrar matriz de integración de las 16 MK
@@ -5284,6 +5323,7 @@ Verificar cobertura exacta MK-001..016, links y operationIds contra OpenAPI/árb
 
 ## Riesgos o bloqueos específicos
 - Contratos RC y restricciones de gobernanza: seguir la fuente/version indicada; contradicciones detienen solo la operación afectada y se elevan al owner competente.
+
 ---
 
 # [BACK][shared][05] Validar demo integrada real sin mocks
@@ -5322,6 +5362,7 @@ NO_INICIADO: no se acredita todavía una validación de demo integrada sin mocks
 - DEPLOY-BACK-01 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 - DATA-BACK-01 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 - SHARED-BACK-04 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
+- DEPLOY-BACK-02 (prerrequisito: completar pruebas y evidencia, y fusionar el PR antes de iniciar este bloque).
 
 **Issues existentes relacionados:**
 - Sin issue externo previo identificado.
@@ -5370,4 +5411,5 @@ Smoke HTTP y Playwright Chromium del flujo integrado real; mock mode prohibido. 
 
 ## Riesgos o bloqueos específicos
 - **P0 — Publicación de demo anónima.** Responsable de resolver: Marco y owner competente de Seguridad/Supabase. Desbloqueo: Evidencia separada de RLS, grants efectivos, schemas expuestos por API, credenciales DB directas y rutas públicas; el advisory de RLS no prueba exposición efectiva de las 84 tablas.
+
 ---

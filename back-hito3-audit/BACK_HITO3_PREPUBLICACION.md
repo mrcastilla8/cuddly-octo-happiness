@@ -1,3 +1,24 @@
+# Adenda de prepublicación y autorización — 2026-10-16
+
+Esta adenda actualiza el gate descrito en el informe histórico. La autorización expresa de Marco Castilla para publicar los 82 issues BACK fue comunicada en esta conversación y se registró por separado en [BACK_HITO3_AUTORIZACION_PUBLICACION.md](BACK_HITO3_AUTORIZACION_PUBLICACION.md), identificador `APPROVAL-BACK-HITO3-PUBLISH-20261016`. No se atribuye URL, firma ni evidencia externa. La aprobación de responsables `APPROVAL-BACK-HITO3-OWNERS-20261016` conserva su alcance independiente.
+
+## Preflight actualizado
+
+- Fuente: `mrcastilla8/cuddly-octo-happiness`, `main`, SHA `716503d70b7b0d5c855d8879c91ee98a8dae2d85`.
+- Identidad GitHub: `mrcastilla8` (Marco Castilla); Backend `Taller-SW-Web/G6-Productos-Ofertas-backend`, permiso `ADMIN`.
+- Logins asignables verificados: `AXL031`, `GabrielPGu`, `LeonardoVera`, `MiguelTacoZavala`, `mrcastilla8`, `VicuzS`.
+- Backend: 26 issues previos y 7 PRs; 0 títulos exactos duplicados y 0 marcadores BACK publicados. Las similitudes de título identificadas son alcance parcial intencional con INT-ASAP o DATA/INFRA con responsabilidades separadas; no se reutilizan como issues BACK.
+- INT-ASAP #19–#33: abiertos y verificados en lectura; los rótulos abreviados de la matriz están contenidos en los títulos actuales.
+- Contratos del repositorio Docs: OpenAPI SHA `f64bfe9a097b2a0f74c2600988305443d92f640e`; AsyncAPI SHA `a5552e51c651d1eabfcd6cbb9607abf8ab0573e9`; coinciden con el manifiesto.
+- Estructura: 82 IDs únicos, 158 aristas previstas, 0 ciclos, 16 MK, 51 referencias BACK ↔ INT-ASAP.
+- Reconciliación de cuerpos: 8 dependencias obligatorias ausentes y 8 issues con referencias condicionales ausentes en su sección humana; 42 menciones se sincronizaron en los cuerpos preservando el grafo. El validador ahora detecta divergencias obligatorias y condicionales y normaliza CRLF/LF.
+- Dry-run local: PASS en modo draft después de la reconciliación y antes de registrar autorización; PASS en modo authorized después del preflight. Pruebas negativas: 10 PASS, incluyendo divergencias obligatorias y condicionales. El preflight remoto de `BACK_HITO3_PUBLISH.mjs --preflight-only` también pasa.
+- Pizarrón: ledger autorizado con 0 registros; publicación aún no iniciada al crear esta adenda.
+
+El snapshot detallado de issues/PRs preexistentes está en `BACK_HITO3_PUBLICATION_LEDGER.json` para comprobar que permanecen intactos durante la publicación.
+
+---
+
 # Informe de prepublicación — BACK Hito 3
 
 ## Identificación del corte
