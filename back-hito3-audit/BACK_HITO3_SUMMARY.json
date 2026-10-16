@@ -4,12 +4,11 @@
   "manifest_records": 82,
   "by_responsible": {
     "Leonardo López": 9,
-    "Gabriel Poma": 9,
+    "Gabriel Poma": 11,
     "Leonardo Vera": 18,
-    "Axel Cueva": 12,
-    "Marco Castilla": 18,
-    "Miguel Taco": 9,
-    "OWNER_PENDIENTE": 7
+    "Axel Cueva": 14,
+    "Marco Castilla": 21,
+    "Miguel Taco": 9
   },
   "by_service": {
     "taxonomy-svc": 9,
@@ -25,8 +24,8 @@
     "deployment": 1
   },
   "by_initial_status": {
-    "PARCIAL": 16,
     "NO_INICIADO": 63,
+    "PARCIAL": 16,
     "IMPLEMENTADO_SIN_VALIDAR": 2,
     "BLOQUEADO_ESPECÍFICO": 1
   },
@@ -92,8 +91,17 @@
   "official_g6_repository_changes": 0,
   "secret_scan": {
     "status": "PASS",
-    "files_scanned": 13,
-    "findings": 0
+    "files_scanned": 16,
+    "findings": 0,
+    "patterns": [
+      "private key headers",
+      "GitHub/AWS/Slack token formats",
+      "credential-bearing URLs",
+      "email addresses",
+      "personal filesystem paths"
+    ],
+    "review_scope": "todos los archivos actuales de back-hito3-audit, incluidos BACK_HITO3_APROBACION_RESPONSABLES.md y BACK_HITO3_PREPUBLICACION.md",
+    "reviewed_at": "2026-10-16"
   },
   "audit_snapshots": {
     "frontend_inventory_branch": "taco@f01cb3146322cd546396a8fa73a8f07fcbc2fb93",
@@ -117,5 +125,6 @@
         "merged_at": "2026-10-14T18:19:10Z"
       }
     }
-  }
+  },
+  "generated_at": "2026-10-16"
 }

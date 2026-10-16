@@ -48,7 +48,7 @@ La lectura de metadatos mostró 84 tablas con RLS desactivado; el advisory de se
 - Contratos RC HTTP/AsyncAPI no prueban homologación externa; G5 debe confirmar provisioning/topología/retry-DLX; las pruebas aisladas no sustituyen eso.
 - Component specs de MK-005..007 están documentados en revisión/no aprobados, mientras issues/páginas frontend tienen su propio estado. La UI sigue sujeta a alineación UX; APIs internas pueden avanzar.
 - MK-016 aparece como plantilla sin instanciación en docs y MK-015/016 no tienen frontend inventory actual. Bloqueo acotado a UX/operación externa de esas pantallas.
-- Seis transversales conservan OWNER_PENDIENTE; el manifiesto propone candidatos sin asignar.
+- En el corte anterior a la aprobación formal, siete responsables transversales/deployment estaban pendientes. La aprobación de Marco del 2026-10-16 se registra en [BACK_HITO3_APROBACION_RESPONSABLES.md](BACK_HITO3_APROBACION_RESPONSABLES.md).
 
 ### P2
 
@@ -63,7 +63,7 @@ No se ejecutó gh issue create/edit/close, no se publicaron issues, no se modifi
 
 ## Revalidación final de owners y ramas
 
-La lectura actual de branches confirma `castilla`, `poma`, `cueva`, `lopez`, `vera` y `taco` en Backend y Frontend. Los seis logins oficiales —mrcastilla8, GabrielPGu, AXL031, VicuzS y LeonardoVera y MiguelTacoZavala— conservan el mapeo por servicio. La comprobación automatizada del paquete valida responsables, login y rama para los 75 issues asignados; los seis transversales siguen OWNER_PENDIENTE con login nulo, sin aprobación atribuida.
+La lectura actual de branches confirma `castilla`, `poma`, `cueva`, `lopez`, `vera` y `taco` en Backend y Frontend. Los seis logins oficiales —mrcastilla8, GabrielPGu, AXL031, VicuzS y LeonardoVera y MiguelTacoZavala— conservan el mapeo por servicio. La comprobación automatizada del corte anterior validaba 75 asignaciones existentes y siete pendientes; el corte del 2026-10-16 formaliza las siete asignaciones restantes con registro documental y conserva los repositorios de código.
 
 Las referencias Frontend reconsultadas muestran MK-001 issue #3 CLOSED, MK-002..016 #4..#18 OPEN. PR Frontend #21..#27 MERGED y #28 OPEN; PRs UI aportan estado de presentación solamente. No se usaron como evidencia API.
 
@@ -81,23 +81,23 @@ Las referencias Frontend reconsultadas muestran MK-001 issue #3 CLOSED, MK-002..
 - Backend PR #10 sigue OPEN/DRAFT en HEAD 2c4a18105c5e379edc8476b9d315aa6be1134b80; tiene 20 commits y 55 archivos. Las rutas de evidencia ahora usan la raíz correcta apps/inventory-svc/.
 - Excepción retrospectiva INVENTORY-PR10-RETROSPECTIVE: el PR histórico único puede aportar evidencia a varios bloques cuando cada bloque identifica commits, archivos y tests en el diff. No representa un PR por issue, no acredita merge/cierre ni exime los nuevos cambios de su PR.
 - OpenAPI RC1 en master: blob f64bfe9a097b2a0f74c2600988305443d92f640e, 135 operationIds. AsyncAPI RC2: blob a5552e51c651d1eabfcd6cbb9607abf8ab0573e9, 40 nombres de mensaje y 11 eventos declarados para api-gateway/bff.
-- Los seis logins conservan el mapeo oficial y las ramas castilla, poma, cueva, lopez, vera y taco existen en Backend y Frontend. Los seis transversales siguen OWNER_PENDIENTE.
+- Los seis logins conservan el mapeo oficial y las ramas castilla, poma, cueva, lopez, vera y taco existen en Backend y Frontend. Las siete asignaciones transversales/deployment aprobadas constan en el registro formal; OWNER_PENDIENTE queda en cero.
 - La revisión de secretos y exposición pública se resume en la sección de cierre de esta auditoría.
 
 ## Cierre de auditoría del paquete público
 
 - Conteos recalculados desde los registros y cruzados entre MANIFEST, SUMMARY, MATRIZ, ISSUES, CAMBIOS y DEPENDENCIAS: 82 registros, 63 NO_INICIADO, 16 PARCIAL, 2 IMPLEMENTADO_SIN_VALIDAR, 1 BLOQUEADO_ESPECÍFICO; 0 IMPLEMENTADO_VALIDADO y 0 NO_APLICA. El validador no fija el total; comprueba que las declaraciones coincidan.
-- Responsable, login, rama y repositorio de código verificados por registro. Los seis usuarios oficiales mantienen sus asignaciones; los seis transversales siguen OWNER_PENDIENTE.
+- Responsable, login, rama y repositorio de código verificados por registro. Las siete asignaciones aprobadas coinciden en manifiesto, matriz, cuerpos y registro de aprobación; los owners de servicios y Gateway no cambian.
 - Grafo acíclico: 158 aristas obligatorias y condicionales tras agregar DEPLOY-BACK-02, sin referencias rotas, autorreferencias ni divergencias de `blocks`.
 - Contratos auditados contra snapshots de OpenAPI RC1 (135 operationIds) y AsyncAPI RC2 (40 mensajes); los 11 eventos BFF del Gateway están presentes en AsyncAPI. No se añadieron operaciones ni mensajes.
 - Inventory Frontend: `taco` contiene adapter mock y 20 declaraciones Playwright; no se ejecutaron. No se hallaron componentes/páginas Inventory ni rutas registradas. PR #10 Backend sigue OPEN/DRAFT; su excepción retrospectiva conserva SHA, commits, archivos y pruebas como procedencia, no como PRs por issue ni como evidencia de merge.
 - Gateway BACK-03: pruebas de consumers y contrato pueden correr con broker aislado. Solo las integraciones con los cuatro publishers reales dependen de ellos; auth y límites de seguridad se conservan.
-- Escaneo de secretos y rutas locales en los 14 archivos del paquete: cero coincidencias de claves privadas, tokens GitHub/AWS/Slack, URLs con credenciales o rutas personales. Logins, ramas, SHA y URLs públicas se mantienen como evidencia intencional; no se exponen valores secretos.
-- Dry-run positivo; seis pruebas negativas y simulación de asignación formal aprobados. `git diff --check` aprobado. No se ejecutaron Playwright ni pruebas de aplicación; no se escribieron issues oficiales, no se ejecutó SQL ni se desplegó.
+- Escaneo de secretos y rutas locales en los 16 archivos actuales del paquete (incluido el registro de aprobación): cero coincidencias de claves privadas, tokens GitHub/AWS/Slack, URLs con credenciales o rutas personales. Logins, ramas, SHA y URLs públicas se mantienen como evidencia intencional; no se exponen valores secretos.
+- Dry-run positivo; ocho pruebas negativas y verificación de la asignación formal aprobada. `git diff --check` aprobado. No se ejecutaron Playwright ni pruebas de aplicación; no se escribieron issues oficiales, no se ejecutó SQL ni se desplegó.
 
 ### Pendientes
 
-- Los seis OWNER_PENDIENTE requieren aprobación expresa de Marco; no se asignaron candidatos.
+- Las siete asignaciones pendientes al corte anterior quedaron aprobadas por Marco el 2026-10-16 para preparación documental únicamente; publication_authorized sigue false y el ledger permanece vacío.
 - PR #10 y sus checks deben revalidarse si se actualiza el corte; permanece sin merge/cierre acreditados.
 - Los contratos RC no prueban homologación o implementación externa. Provisioning de broker, garantías retry/DLX y pruebas con publishers reales quedan con los owners correspondientes.
 - Esta auditoría documental no acredita runtime ni resuelve permisos de Seguridad, exposición efectiva de Supabase o autorización de demo pública.
@@ -109,11 +109,11 @@ Evidencia: INFRA #8 sigue OPEN y su criterio 5 limita la habilitación inicial a
 
 Se agrega **DEPLOY-BACK-02** como borrador: aprobación escrita por ventana/ambiente/SHA/conjunto, reutilización de CD vigente, secretos por referencias protegidas, readiness, smoke selectivo y rollback de artefactos. Solo alcanza componentes actualmente habilitados. Los no habilitados se omiten; no se crea pipeline ni se habilitan desde este issue. No autoriza ejecutar despliegue ahora. INFRA #8: https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/8. PR #9 está MERGED (head afbae4e66063898882f6586a07039d34facf2db8; 2026-10-14T18:19:10Z), pero INFRA #8 sigue OPEN.
 
-El validador mantiene OWNER_PENDIENTE y login nulo para los seis IDs transversales protegidos. Una asignación futura se acepta solo si se actualizan responsable/login/rama/repositorio y `assignee_status=APROBADO_FORMALMENTE`, y existe un registro concordante en `owner_assignment_approvals` con aprobador Marco Castilla, fecha y referencia de aprobación revisable (URL HTTPS o ID `APPROVAL-...`). Se probó esa transición sobre una copia de un issue transversal en memoria; el manifiesto publicado no se asignó.
+El validador comprueba las siete asignaciones aprobadas contra `owner_assignment_approvals` y el documento [BACK_HITO3_APROBACION_RESPONSABLES.md](BACK_HITO3_APROBACION_RESPONSABLES.md). La prueba usa este ID documental real, no una URL o referencia simulada; no modifica publicación ni permisos.
 
 
 ## Trazabilidad complementaria INT-ASAP ↔ BACK (corte 2026-10-16)
 
 Se revisaron en modo lectura #19–#33; el EPIC y los cortes permanecen OPEN. La matriz `BACK_HITO3_INT_ASAP_TRAZABILIDAD.md` enlaza cada corte con BACK, operaciones/mensajes, responsables, alcance restante, evidencia/crédito y gates externos. Se conservan los 82 borradores y no se añade un flujo INT para BACK-08.
 
-INT-ASAP puede priorizar cortes externos en paralelo con implementación BACK independiente. Se separan pruebas unit/contract, integración PostgreSQL/RabbitMQ, consumer externo, React→Gateway→servicio, E2E de 16 MK y demo Oracle. #21 delimita el corte HTTP de Marco; Axel retiene ownership general Gateway. Coordinar cambios en apps/api-gateway. Seis owners transversales siguen pendientes; siete total incluyen DEPLOY-BACK-02.
+INT-ASAP puede priorizar cortes externos en paralelo con implementación BACK independiente. Se separan pruebas unit/contract, integración PostgreSQL/RabbitMQ, consumer externo, React→Gateway→servicio, E2E de 16 MK y demo Oracle. #21 delimita el corte HTTP de Marco; Axel retiene ownership general Gateway. Coordinar cambios en apps/api-gateway. Las siete asignaciones transversales/deployment están aprobadas para preparación documental; no equivalen a autorización de publicación o despliegue.

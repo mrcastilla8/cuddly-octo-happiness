@@ -24,7 +24,7 @@ const canonical = value => Array.isArray(value) ? value.map(canonical) : value &
 const same = (a, b) => JSON.stringify(canonical(a)) === JSON.stringify(canonical(b));
 const allEdges = item => [...new Set([...(item.depends_on ?? []), ...(item.blocking_conditions ?? []).flatMap(c => c.dependency_ids ?? [])])];
 
-export function validatePackage({ manifest, summary, matrixText, issuesText, changesText, dependenciesText, intAsapMatrixText }) {
+export function validatePackage({ manifest, summary, matrixText, issuesText, changesText, dependenciesText, intAsapMatrixText, approvalText, publicationLedger }) {
   const errors = [];
   const fail = (category, message) => errors.push(`${category}: ${message}`);
   const items = manifest?.issues ?? [];
@@ -37,6 +37,7 @@ export function validatePackage({ manifest, summary, matrixText, issuesText, cha
   const count = items.length;
   if (manifest.issue_count !== count) fail("COUNT", "issue_count no coincide con MANIFEST");
   if (manifest.publication_authorized !== false) fail("SAFETY", "publication_authorized debe permanecer false");
+  if (publicationLedger?.authorized !== false || publicationLedger?.publication_started !== false || !Array.isArray(publicationLedger?.records) || publicationLedger.records.length !== 0) fail("SAFETY", "ledger debe conservar authorized=false, publication_started=false y records=[]");
 
   const statusCounts = Object.fromEntries(STATUSES.map(s => [s, 0]));
   const services = {}, owners = {};
@@ -110,6 +111,7 @@ export function validatePackage({ manifest, summary, matrixText, issuesText, cha
   const traceRows = trace?.issues ?? [];
   const traceByNumber = new Map();
   if (trace?.captured_at !== "2026-10-16" || trace?.epic?.number !== 19 || trace?.epic?.state !== "OPEN" || !trace?.matrix_file || !Array.isArray(traceRows)) fail("INT_ASAP", "snapshot/EPIC/matriz complementaria incompletos");
+  const intMatrixRows = intAsapMatrixText?.split(/\r?\n/).filter(line => /^\|/.test(line)) ?? [];
   for (const row of traceRows) {
     if (!Number.isInteger(row.number) || row.number < 20 || row.number > 33 || traceByNumber.has(row.number)) fail("INT_ASAP", `issue duplicado o número fuera de corte: ${row.number}`);
     else traceByNumber.set(row.number, row);
@@ -120,7 +122,11 @@ export function validatePackage({ manifest, summary, matrixText, issuesText, cha
   if (!intAsapMatrixText?.includes("ID lógico BACK relacionado") || !intAsapMatrixText.includes("Dependencias externas del escenario")) fail("INT_ASAP", "faltan columnas requeridas en la matriz complementaria");
   for (const row of traceRows) {
     if (!intAsapMatrixText.includes(`[#${row.number} ${row.title}](${row.url})`)) fail("INT_ASAP", `#${row.number} no aparece en la matriz complementaria`);
-    for (const id of row.back_ids) if (!intAsapMatrixText.includes(id)) fail("INT_ASAP", `la matriz no contiene ${id} para #${row.number}`);
+    const linkedRows = intMatrixRows.filter(line => line.includes(`[#${row.number} ${row.title}](${row.url})`));
+    if (linkedRows.length !== 1) { fail("INT_ASAP", `#${row.number} debe aparecer en exactamente una fila de matriz; encontradas ${linkedRows.length}`); continue; }
+    const cells = linkedRows[0].split("|").slice(1, -1).map(cell => cell.trim());
+    const matrixBackIds = (cells[0] ?? "").split(/,\s*/).filter(id => /^[A-Z][A-Z0-9-]+$/.test(id));
+    if (!same(sorted(matrixBackIds), sorted(row.back_ids))) fail("INT_ASAP", `la fila #${row.number} enlaza [${sorted(matrixBackIds).join(", " )}] pero el manifiesto declara [${sorted(row.back_ids).join(", " )}]`);
   }
   const reverseTrace = new Map();
   for (const row of traceRows) for (const id of row.back_ids) {
@@ -194,12 +200,26 @@ export function validatePackage({ manifest, summary, matrixText, issuesText, cha
   }
 
   const protectedIds = manifest.owner_assignment_policy?.protected_transversal_ids ?? [];
-  if (protectedIds.length !== manifest.review_metadata?.protected_transversal_owner_count || protectedIds.some(id => byId.get(id)?.service !== "transversal")) fail("OWNER", "la lista protegida de responsables transversales no coincide con los seis alcances declarados");
+  if (protectedIds.length !== manifest.review_metadata?.protected_transversal_owner_count || protectedIds.some(id => !["transversal", "deployment"].includes(byId.get(id)?.service))) fail("OWNER", "la lista protegida no coincide con los siete alcances transversales/deployment aprobados");
   const approvalIds = (manifest.owner_assignment_approvals ?? []).map(a => a.issue_id);
   if (new Set(approvalIds).size !== approvalIds.length) fail("OWNER", "hay registros de aprobación formal duplicados");
   const pendingOwners = protectedIds.map(id => byId.get(id)).filter(item => item?.owner === "OWNER_PENDIENTE");
   if (pendingOwners.length !== manifest.review_metadata?.pending_transversal_owner_count) fail("OWNER", "conteo de owners pendientes diverge de los metadatos del manifiesto");
   for (const id of protectedIds) if (!byId.has(id)) fail("OWNER", `falta alcance transversal protegido ${id}`);
+  const expectedApprovedIds = ["SHARED-BACK-01", "SHARED-BACK-03", "DEPLOY-BACK-01", "DEPLOY-BACK-02", "DATA-BACK-01", "SHARED-BACK-04", "SHARED-BACK-05"];
+  if (!same(sorted(protectedIds), sorted(expectedApprovedIds))) fail("OWNER", "IDs protegidos no coinciden con las siete asignaciones autorizadas");
+  const approvalReference = "APPROVAL-BACK-HITO3-OWNERS-20261016";
+  const approvalDocPath = "back-hito3-audit/BACK_HITO3_APROBACION_RESPONSABLES.md";
+  if (!approvalText?.startsWith("# Aprobación de responsables") || !approvalText.includes(approvalReference) || !approvalText.includes("2026-10-16") || !approvalText.includes("Marco Castilla") || !approvalText.includes("APROBADO PARA PREPARACIÓN, NO AUTORIZADO PARA PUBLICACIÓN") || !approvalText.includes("Fuente: aprobación comunicada expresamente por Marco en la conversación de coordinación")) fail("OWNER", `falta el documento verificable ${approvalDocPath}`);
+  if ((manifest.owner_assignment_approvals ?? []).length !== expectedApprovedIds.length) fail("OWNER", "el manifiesto debe registrar exactamente siete aprobaciones formales");
+  for (const id of expectedApprovedIds) {
+    const item = byId.get(id);
+    const approval = (manifest.owner_assignment_approvals ?? []).find(record => record.issue_id === id);
+    if (!item || item.owner === "OWNER_PENDIENTE" || !approval || approval.approval_reference !== approvalReference || approval.approved_at !== "2026-10-16" || approval.approved_by !== "Marco Castilla" || approval.owner !== item.owner || approval.github_user !== item.github_user || approval.branch !== item.branch || approval.code_repository !== item.code_repository || item.assignee_status !== "APROBADO_FORMALMENTE") fail("OWNER", `${id} no coincide con la aprobación formal y el registro documental`);
+    if (approvalText && !approvalText.includes(`| ${id} | ${item?.owner} | ${item?.github_user} | ${item?.branch} | ${item?.code_repository} |`)) fail("OWNER", `${id} no aparece con los valores aprobados en el documento formal`);
+  }
+  const deployCoordination = byId.get("DEPLOY-BACK-02")?.body ?? "";
+  if (!deployCoordination.includes("no autoriza operar Oracle") || !deployCoordination.includes("ni transferir permisos de infraestructura")) fail("OWNER", "DEPLOY-BACK-02 debe limitar a Marco a coordinación de liberación");
   const snapshot = manifest.retrospective_evidence_policy;
   if (snapshot?.policy_id !== "INVENTORY-PR10-RETROSPECTIVE" || !snapshot?.verification?.commit_shas?.length || !snapshot?.verification?.changed_files?.length || snapshot.verification.state !== "OPEN" || snapshot.verification.draft !== true || snapshot.verification.number !== 10) fail("PR10", "excepción retrospectiva carece de evidencia verificable");
   const evidenceFiles = snapshot?.verification?.changed_files ?? [];
@@ -214,7 +234,8 @@ export function validatePackage({ manifest, summary, matrixText, issuesText, cha
     }
   }
   const secretScan = manifest.review_metadata?.secret_scan;
-  if (secretScan?.status !== "PASS" || secretScan.findings !== 0) fail("SECURITY", "escaneo de secretos incompleto");
+  const packageFiles = manifest.review_metadata?.package_file_count;
+  if (secretScan?.status !== "PASS" || secretScan.findings !== 0 || !Number.isInteger(secretScan.files_scanned) || secretScan.files_scanned !== packageFiles || secretScan.reviewed_at !== "2026-10-16") fail("SECURITY", "escaneo de secretos incompleto o conteo/fecha no coincide con el paquete vigente");
 
   return { errors, metrics: { records: count, unique_ids: byId.size, statuses: statusCounts, services, owners, dependency_edges: [...edgesById.values()].reduce((n, es) => n + es.length, 0), dependency_cycles: errors.some(e => e.startsWith("CYCLE:")) ? "present" : 0, mk_covered: mkCovered.size, openapi_operations: operationMap.size, asyncapi_messages: messageNames.size, bff_events: asyncapi?.bff_consumed_events?.length ?? 0, owner_pending: pendingOwners.length, publishable: items.filter(i => i.publishable).length, int_asap_issues: traceByNumber.size, int_asap_backlinks: [...reverseTrace.values()].reduce((n, ids) => n + new Set(ids).size, 0) } };
 }

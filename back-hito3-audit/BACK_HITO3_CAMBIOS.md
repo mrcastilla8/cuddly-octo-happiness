@@ -59,8 +59,8 @@ Sin publicación, escritura GitHub, edición de repositorios, ejecución SQL, ca
 - GATEWAY-BACK-03 puede probar consumers con contratos en entorno aislado; publishers reales son dependencias condicionales únicamente para pruebas integradas.
 - La lista de eventos usa nombres completos de AsyncAPI. La excepción histórica PR #10 valida SHA, commits, paths y tests del diff; la evidencia no afirma merge.
 - Se sustituyeron frases de dependencias que aparentaban estar ya cerradas por condiciones futuras de prerrequisito.
-- El dry-run cruza los seis artefactos, valida asignaciones, grafo, contratos y cuerpos idénticos en manifiesto/markdown; las pruebas negativas son in-memory y dejan el manifiesto intacto.
-- La revisión de seguridad del paquete público no encontró secretos ni rutas locales en sus 13 archivos.
+- El dry-run cruza manifiesto, SUMMARY, matriz, issues, aprobaciones, ledger y documentos de soporte; valida asignaciones, grafo, contratos y cuerpos idénticos. Las pruebas negativas se hacen en memoria y dejan el manifiesto intacto.
+- La revisión de seguridad del paquete público no encontró secretos ni rutas locales en sus 16 archivos.
 
 
 ## Hallazgo de despliegue Oracle — FALTA_ISSUE
@@ -71,3 +71,13 @@ INFRA #8/PR #9 reutiliza CD, no autoriza activar la demo; DEPLOY-BACK-01 prepara
 ## Trazabilidad complementaria INT-ASAP
 
 Se añadió `BACK_HITO3_INT_ASAP_TRAZABILIDAD.md` para #19–#33. No cambia el total de 82 borradores ni sus estados. Las referencias abiertas no acreditan código; crédito futuro requiere evidencia exacta. Quedan documentados gates específicos, independencia del desarrollo local y colisión de ownership/código en apps/api-gateway.
+
+
+## Fase 2 — responsables y prepublicación (2026-10-16)
+
+- Se formalizaron exactamente siete asignaciones aprobadas por Marco Castilla en [BACK_HITO3_APROBACION_RESPONSABLES.md](BACK_HITO3_APROBACION_RESPONSABLES.md), referencia `APPROVAL-BACK-HITO3-OWNERS-20261016`.
+- Los responsables se sincronizaron desde el manifiesto en matriz e issues; se conservaron `code_repository`, objetivos, operaciones, dependencias, criterios y ownership de los ocho servicios/Gateway.
+- Conteos finales derivados del manifiesto: Marco 21, Gabriel 11, Axel 14, Leonardo López 9, Leonardo Vera 18, Miguel 9 y OWNER_PENDIENTE 0; total 82.
+- `publication_authorized=false`, `publication_started=false`, `authorized=false` y `records=[]` se mantienen.
+- Se reejecutó el escaneo sobre los 16 archivos del paquete; ver fecha, patrón y resultado exacto en `review_metadata.secret_scan` y `SUMMARY`.
+- El validador compara los IDs BACK en la celda de su fila INT-ASAP exacta, y una prueba negativa mueve referencias entre filas.

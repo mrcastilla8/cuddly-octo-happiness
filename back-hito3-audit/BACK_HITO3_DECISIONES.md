@@ -8,7 +8,7 @@
 - Supabase: se observaron 84 tablas con RLS desactivado y un advisory menciona anon/authenticated. Esto no prueba exposición pública efectiva de todas las tablas. Separar RLS, grants, schemas API, credenciales directas y rutas públicas; la demo pública espera esa revisión.
 - Mantener fixtures/mocks para pruebas aisladas; en VITE_DATA_MODE=api el error real no cae a mocks.
 - Cada issue tiene un PR en un repositorio de código. BACK-08 permanece centralizado en Backend y crea PR solo en Frontend. Ningún issue requiere un único PR que edite Backend y Frontend a la vez.
-- El trabajo sin owner transversal aprobado queda OWNER_PENDIENTE. Candidatos en el manifiesto son propuestas, no asignaciones.
+- Las siete asignaciones transversales/deployment indicadas en `BACK_HITO3_APROBACION_RESPONSABLES.md` fueron aprobadas por Marco el 2026-10-16 para registro y preparación documental. No autorizan publicación, despliegues, SQL, credenciales, contratos ni permisos. DEPLOY-BACK-02 significa coordinación de liberación.
 
 
 - Acreditación retrospectiva: INVENTORY-PR10-RETROSPECTIVE permite citar PR #10 OPEN/DRAFT a varios bloques solo con commits/files/tests verificables; mantiene un PR por issue para trabajo nuevo, no crea PRs ficticios ni duplica implementaciones.

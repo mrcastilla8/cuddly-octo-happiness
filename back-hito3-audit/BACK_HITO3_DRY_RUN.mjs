@@ -13,7 +13,9 @@ const result = validatePackage({
   issuesText: read("BACK_HITO3_ISSUES.md"),
   changesText: read("BACK_HITO3_CAMBIOS.md"),
   dependenciesText: read("BACK_HITO3_DEPENDENCIAS.md"),
-  intAsapMatrixText: read("BACK_HITO3_INT_ASAP_TRAZABILIDAD.md")
+  intAsapMatrixText: read("BACK_HITO3_INT_ASAP_TRAZABILIDAD.md"),
+  approvalText: read("BACK_HITO3_APROBACION_RESPONSABLES.md"),
+  publicationLedger: JSON.parse(read("BACK_HITO3_PUBLICATION_LEDGER.json"))
 });
 if (result.errors.length) {
   console.error(`DRY-RUN FAIL — ${result.errors.length} hallazgos`);

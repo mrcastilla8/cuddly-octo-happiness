@@ -4865,13 +4865,13 @@ Unit y contract tests de los 11 consumers con envelopes fixtures basados en Asyn
 
 # [BACK][shared][01] Cliente HTTP común de React para modo API
 
-**SHARED-BACK-01 · OWNER_PENDIENTE · NO_INICIADO**
+**SHARED-BACK-01 · Gabriel Poma · NO_INICIADO**
 
 ## Objetivo
 El frontend dispone de un cliente HTTP tipado y seguro para llamadas a Gateway con errores consistentes.
 
 ## Responsable
-**OWNER_PENDIENTE** (no asignar hasta autorización). Candidatos sugeridos, sin asignación: Gabriel Poma — contribución frontend/catalog observada; candidato técnico, no aprobación de ownership. ; Axel Cueva — Gateway/contrato HTTP; candidato de revisión, no asignación..
+**Gabriel Poma** (GabrielPGu) · rama poma.
 Issue central: Taller-SW-Web/G6-Productos-Ofertas-backend. PR/cambios de código esperados: Taller-SW-Web/G6-Productos-Ofertas-frontend.
 
 ## Alcance
@@ -4922,18 +4922,17 @@ Unit tests del cliente: status/cuerpo Problem Details, timeout, cancelación, he
 
 ## Riesgos o bloqueos específicos
 - Contratos RC y restricciones de gobernanza: seguir la fuente/version indicada; contradicciones detienen solo la operación afectada y se elevan al owner competente.
-
 ---
 
 # [BACK][deploy][01] Componer demostración privada en Oracle
 
-**DEPLOY-BACK-01 · OWNER_PENDIENTE · PARCIAL**
+**DEPLOY-BACK-01 · Axel Cueva · PARCIAL**
 
 ## Objetivo
 Queda preparada la composición de despliegue integrada para los componentes habilitados en Oracle, sin desplegarla.
 
 ## Responsable
-**OWNER_PENDIENTE** (no asignar hasta autorización). Candidatos sugeridos, sin asignación: Marco Castilla — coordinación de integración y rama backend observada; candidato, no asignación. ; Axel Cueva — owner aprobado de Gateway/infra transversal; candidato, no asignación..
+**Axel Cueva** (AXL031) · rama cueva.
 Issue central: Taller-SW-Web/G6-Productos-Ofertas-backend. PR/cambios de código esperados: Taller-SW-Web/G6-Productos-Ofertas-backend.
 
 ## Alcance
@@ -4990,18 +4989,17 @@ Validación estática de compose/manifests/secret refs y health; smoke solo en a
 
 ## Riesgos o bloqueos específicos
 - **P1 — Despliegue Oracle integrado.** Responsable de resolver: Owner Oracle pendiente y responsables de servicios habilitados. Desbloqueo: Aprobación de ambiente/ventana, secretos privados, TLS/red/readiness/rollback; no publicar si artefacto de servicio no está habilitado.
-
 ---
 
 # [BACK][deploy][02] Activar liberación integrada autorizada en Oracle
 
-**DEPLOY-BACK-02 · OWNER_PENDIENTE · NO_INICIADO**
+**DEPLOY-BACK-02 · Marco Castilla · NO_INICIADO**
 
 ## Objetivo
 Activar y ejecutar, bajo autorización explícita y con alcance acotado, una versión integrada de la demo G6 en Oracle usando los mecanismos de despliegue existentes.
 
 ## Responsable
-**OWNER_PENDIENTE** (no asignar hasta aprobación formal de Marco). Candidatos técnicos no asignados: Marco Castilla — coordinación de liberación; Axel Cueva — gateway/infra. La candidatura no equivale a aceptación.
+**Marco Castilla** (mrcastilla8) · rama castilla. Responsable de coordinación de la liberación; esta asignación no autoriza operar Oracle ni transferir permisos de infraestructura.
 Issue de coordinación en Backend. Cambios de código, si fueran necesarios y aprobados, se limitan a Taller-SW-Web/G6-Productos-Ofertas-backend; el issue no autoriza cambios en el repositorio Frontend.
 
 ## Alcance
@@ -5073,18 +5071,17 @@ Preflight estático, verificación de SHA/CI/allowlist/secret references y readi
 
 ## Riesgos o bloqueos específicos
 - Infra #8 restringe su habilitación inicial a Inventory y mantiene prohibición de deploy automático durante ese lote. No inferir permiso para ampliar servicios o desplegar demo pública. Resolver el alcance posterior con Marco/owner INFRA y los owners de cada servicio antes de activar otro componente.
-
 ---
 
 # [BACK][data][01] Restaurar dataset demo de forma controlada
 
-**DATA-BACK-01 · OWNER_PENDIENTE · NO_INICIADO**
+**DATA-BACK-01 · Axel Cueva · NO_INICIADO**
 
 ## Objetivo
 El dataset de demo autorizado se puede restaurar de forma repetible usando el mecanismo DATA existente.
 
 ## Responsable
-**OWNER_PENDIENTE** (no asignar hasta autorización). Candidatos sugeridos, sin asignación: Axel Cueva — owner del runner INFRA #1; candidato para orquestación de restauración, no para seeds ajenos. ; Owners de cada schema — aprobación de sus fixtures; candidatos colectivos sin asignación..
+**Axel Cueva** (AXL031) · rama cueva.
 Issue central: Taller-SW-Web/G6-Productos-Ofertas-backend. PR/cambios de código esperados: Taller-SW-Web/G6-Productos-Ofertas-backend.
 
 ## Alcance
@@ -5142,18 +5139,17 @@ Dry-run/render y validaciones de manifest; fixture idempotente con transacción 
 
 ## Riesgos o bloqueos específicos
 - **P0 — Persistencia de dataset compartido/demo.** Responsable de resolver: Marco y owners de los schemas afectados. Desbloqueo: Aprobación expresa de fixture exacto, schema/tablas/destino y proceso de despliegue; hasta entonces solo dry-run/rollback aislado.
-
 ---
 
 # [BACK][shared][03] Harness transversal E2E y presentación
 
-**SHARED-BACK-03 · OWNER_PENDIENTE · PARCIAL**
+**SHARED-BACK-03 · Gabriel Poma · PARCIAL**
 
 ## Objetivo
 El repositorio frontend tiene preparado un harness de navegador ligero para ejecutar escenarios reales por feature.
 
 ## Responsable
-**OWNER_PENDIENTE** (no asignar hasta autorización). Candidatos sugeridos, sin asignación: Gabriel Poma — frontend y Playwright observados; candidato técnico, no asignación. ; Axel Cueva — Gateway para destino real de pruebas; candidato de coordinación, no asignación..
+**Gabriel Poma** (GabrielPGu) · rama poma.
 Issue central: Taller-SW-Web/G6-Productos-Ofertas-backend. PR/cambios de código esperados: Taller-SW-Web/G6-Productos-Ofertas-frontend.
 
 ## Alcance
@@ -5205,18 +5201,17 @@ Playwright Chromium, feature-focused, workers=1 local; sin video, screenshot ni 
 
 ## Riesgos o bloqueos específicos
 - Contratos RC y restricciones de gobernanza: seguir la fuente/version indicada; contradicciones detienen solo la operación afectada y se elevan al owner competente.
-
 ---
 
 # [BACK][shared][04] Cerrar matriz de integración de las 16 MK
 
-**SHARED-BACK-04 · OWNER_PENDIENTE · NO_INICIADO**
+**SHARED-BACK-04 · Marco Castilla · NO_INICIADO**
 
 ## Objetivo
 Las 16 MK tienen trazabilidad verificable a sus pantallas, operationIds, adapters, estados de auth y pruebas.
 
 ## Responsable
-**OWNER_PENDIENTE** (no asignar hasta autorización). Candidatos sugeridos, sin asignación: Marco Castilla — coordinación de cobertura Hito 3; candidato, no asignación. ; Vera, Poma, Lopez, Cueva, Taco y Castilla — validar filas de su servicio; no implica asignar owner del artefacto..
+**Marco Castilla** (mrcastilla8) · rama castilla.
 Issue central: Taller-SW-Web/G6-Productos-Ofertas-backend. PR/cambios de código esperados: Taller-SW-Web/G6-Productos-Ofertas-frontend.
 
 ## Alcance
@@ -5289,18 +5284,17 @@ Verificar cobertura exacta MK-001..016, links y operationIds contra OpenAPI/árb
 
 ## Riesgos o bloqueos específicos
 - Contratos RC y restricciones de gobernanza: seguir la fuente/version indicada; contradicciones detienen solo la operación afectada y se elevan al owner competente.
-
 ---
 
 # [BACK][shared][05] Validar demo integrada real sin mocks
 
-**SHARED-BACK-05 · OWNER_PENDIENTE · NO_INICIADO**
+**SHARED-BACK-05 · Marco Castilla · NO_INICIADO**
 
 ## Objetivo
 Se acredita la demo integrada autorizada sin mocks funcionales, con incidencias y evidencias reproducibles.
 
 ## Responsable
-**OWNER_PENDIENTE** (no asignar hasta autorización). Candidatos sugeridos, sin asignación: Marco Castilla — coordinación de integración; candidato, no asignación. ; Axel Cueva — Gateway; candidato de validación de frontera, no asignación..
+**Marco Castilla** (mrcastilla8) · rama castilla.
 Issue central: Taller-SW-Web/G6-Productos-Ofertas-backend. PR/cambios de código esperados: Taller-SW-Web/G6-Productos-Ofertas-backend.
 
 ## Alcance
@@ -5376,5 +5370,4 @@ Smoke HTTP y Playwright Chromium del flujo integrado real; mock mode prohibido. 
 
 ## Riesgos o bloqueos específicos
 - **P0 — Publicación de demo anónima.** Responsable de resolver: Marco y owner competente de Seguridad/Supabase. Desbloqueo: Evidencia separada de RLS, grants efectivos, schemas expuestos por API, credenciales DB directas y rutas públicas; el advisory de RLS no prueba exposición efectiva de las 84 tablas.
-
 ---
