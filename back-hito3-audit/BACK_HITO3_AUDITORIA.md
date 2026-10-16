@@ -92,8 +92,8 @@ Las referencias Frontend reconsultadas muestran MK-001 issue #3 CLOSED, MK-002..
 - Contratos auditados contra snapshots de OpenAPI RC1 (135 operationIds) y AsyncAPI RC2 (40 mensajes); los 11 eventos BFF del Gateway están presentes en AsyncAPI. No se añadieron operaciones ni mensajes.
 - Inventory Frontend: `taco` contiene adapter mock y 20 declaraciones Playwright; no se ejecutaron. No se hallaron componentes/páginas Inventory ni rutas registradas. PR #10 Backend sigue OPEN/DRAFT; su excepción retrospectiva conserva SHA, commits, archivos y pruebas como procedencia, no como PRs por issue ni como evidencia de merge.
 - Gateway BACK-03: pruebas de consumers y contrato pueden correr con broker aislado. Solo las integraciones con los cuatro publishers reales dependen de ellos; auth y límites de seguridad se conservan.
-- Escaneo de secretos en los 13 archivos del paquete: cero coincidencias de claves privadas, tokens GitHub/AWS/Slack, URLs con credenciales, correos o rutas locales. Logins, ramas, SHA y URLs públicas se mantienen como evidencia intencional; el reporte no revela valores secretos.
-- Dry-run positivo y cinco pruebas negativas aprobados. `git diff --check` aprobado. No se ejecutaron Playwright ni pruebas de aplicación; no se escribieron issues oficiales, no se ejecutó SQL ni se desplegó.
+- Escaneo de secretos y rutas locales en los 14 archivos del paquete: cero coincidencias de claves privadas, tokens GitHub/AWS/Slack, URLs con credenciales o rutas personales. Logins, ramas, SHA y URLs públicas se mantienen como evidencia intencional; no se exponen valores secretos.
+- Dry-run positivo; seis pruebas negativas y simulación de asignación formal aprobados. `git diff --check` aprobado. No se ejecutaron Playwright ni pruebas de aplicación; no se escribieron issues oficiales, no se ejecutó SQL ni se desplegó.
 
 ### Pendientes
 
@@ -110,3 +110,10 @@ Evidencia: INFRA #8 sigue OPEN y su criterio 5 limita la habilitación inicial a
 Se agrega **DEPLOY-BACK-02** como borrador: aprobación escrita por ventana/ambiente/SHA/conjunto, reutilización de CD vigente, secretos por referencias protegidas, readiness, smoke selectivo y rollback de artefactos. Solo alcanza componentes actualmente habilitados. Los no habilitados se omiten; no se crea pipeline ni se habilitan desde este issue. No autoriza ejecutar despliegue ahora. INFRA #8: https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/8. PR #9 está MERGED (head afbae4e66063898882f6586a07039d34facf2db8; 2026-10-14T18:19:10Z), pero INFRA #8 sigue OPEN.
 
 El validador mantiene OWNER_PENDIENTE y login nulo para los seis IDs transversales protegidos. Una asignación futura se acepta solo si se actualizan responsable/login/rama/repositorio y `assignee_status=APROBADO_FORMALMENTE`, y existe un registro concordante en `owner_assignment_approvals` con aprobador Marco Castilla, fecha y referencia de aprobación revisable (URL HTTPS o ID `APPROVAL-...`). Se probó esa transición sobre una copia de un issue transversal en memoria; el manifiesto publicado no se asignó.
+
+
+## Trazabilidad complementaria INT-ASAP ↔ BACK (corte 2026-10-16)
+
+Se revisaron en modo lectura #19–#33; el EPIC y los cortes permanecen OPEN. La matriz `BACK_HITO3_INT_ASAP_TRAZABILIDAD.md` enlaza cada corte con BACK, operaciones/mensajes, responsables, alcance restante, evidencia/crédito y gates externos. Se conservan los 82 borradores y no se añade un flujo INT para BACK-08.
+
+INT-ASAP puede priorizar cortes externos en paralelo con implementación BACK independiente. Se separan pruebas unit/contract, integración PostgreSQL/RabbitMQ, consumer externo, React→Gateway→servicio, E2E de 16 MK y demo Oracle. #21 delimita el corte HTTP de Marco; Axel retiene ownership general Gateway. Coordinar cambios en apps/api-gateway. Seis owners transversales siguen pendientes; siete total incluyen DEPLOY-BACK-02.

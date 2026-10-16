@@ -8,7 +8,7 @@ const here = path.dirname(fileURLToPath(import.meta.url));
 const read = name => fs.readFileSync(path.join(here, name), "utf8");
 const original = JSON.parse(read("BACK_HITO3_MANIFEST.json"));
 const summary = JSON.parse(read("BACK_HITO3_SUMMARY.json"));
-const inputs = { summary, matrixText: read("BACK_HITO3_MATRIZ.md"), issuesText: read("BACK_HITO3_ISSUES.md"), changesText: read("BACK_HITO3_CAMBIOS.md"), dependenciesText: read("BACK_HITO3_DEPENDENCIAS.md") };
+const inputs = { summary, matrixText: read("BACK_HITO3_MATRIZ.md"), issuesText: read("BACK_HITO3_ISSUES.md"), changesText: read("BACK_HITO3_CAMBIOS.md"), dependenciesText: read("BACK_HITO3_DEPENDENCIAS.md"), intAsapMatrixText: read("BACK_HITO3_INT_ASAP_TRAZABILIDAD.md") };
 const base = validatePackage({ ...inputs, manifest: original });
 assert.deepEqual(base.errors, [], `El baseline debe validar antes de ejecutar mutaciones: ${base.errors.join("; ")}`);
 const baselineBytes = JSON.stringify(original);
@@ -17,7 +17,8 @@ const cases = [
   ["rama inválida", "OWNER", m => { m.issues[0].branch = "rama-inexistente"; }],
   ["dependencia circular", "CYCLE", m => { m.issues[0].depends_on.push(m.issues[1].id); m.issues[1].depends_on.push(m.issues[0].id); }],
   ["referencia inexistente", "MISSING_REFERENCE", m => { m.issues[0].depends_on.push("ISSUE-QUE-NO-EXISTE"); }],
-  ["ID duplicado", "DUPLICATE", m => { m.issues.push(structuredClone(m.issues[0])); m.issue_count++; }]
+  ["ID duplicado", "DUPLICATE", m => { m.issues.push(structuredClone(m.issues[0])); m.issue_count++; }],
+  ["referencia INT-ASAP hacia BACK inexistente", "INT_ASAP", m => { m.int_asap_traceability.issues[0].back_ids.push("BACK-INEXISTENTE"); }]
 ];
 for (const [label, category, mutate] of cases) {
   const mutated = structuredClone(original);

@@ -166,3 +166,8 @@
 - Supabase demo pública: Marco y owner competente verifican RLS, grants, schemas expuestos, credenciales PostgreSQL y rutas públicas por separado.
 - Retail/Postventa: G4/Retail y Postventa homologan conciliación offline y reintegro F3.
 - Oracle: owner Oracle pendiente con responsables de servicios.
+
+
+## Puertas INT-ASAP externas (no añaden bloqueos globales al grafo BACK)
+
+HTTP G1/G3/G4 y G5 M1 usan HTTPS (#20), corte Gateway (#21), grants/homologación y fixtures pertinentes; M1 no necesita Catalog/Pricing/Inventory comercial si no invoca esas operaciones. AMQP real desde G5 depende de #29 y su homologación, no consumers contractuales aislados; flujo de cupón añade #33, reserva confirmada y snapshot. M2 depende de #31, recepción/location/grants y no bloquea M1. Los pilotos #26–#28/#32 no bloquean desarrollo React, 16 MK, servicios locales u Oracle. Ver matriz `BACK_HITO3_INT_ASAP_TRAZABILIDAD.md`.

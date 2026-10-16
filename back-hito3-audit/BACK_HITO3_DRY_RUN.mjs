@@ -12,7 +12,8 @@ const result = validatePackage({
   matrixText: read("BACK_HITO3_MATRIZ.md"),
   issuesText: read("BACK_HITO3_ISSUES.md"),
   changesText: read("BACK_HITO3_CAMBIOS.md"),
-  dependenciesText: read("BACK_HITO3_DEPENDENCIAS.md")
+  dependenciesText: read("BACK_HITO3_DEPENDENCIAS.md"),
+  intAsapMatrixText: read("BACK_HITO3_INT_ASAP_TRAZABILIDAD.md")
 });
 if (result.errors.length) {
   console.error(`DRY-RUN FAIL — ${result.errors.length} hallazgos`);

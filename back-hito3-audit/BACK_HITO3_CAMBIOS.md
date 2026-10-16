@@ -66,3 +66,8 @@ Sin publicación, escritura GitHub, edición de repositorios, ejecución SQL, ca
 ## Hallazgo de despliegue Oracle — FALTA_ISSUE
 
 INFRA #8/PR #9 reutiliza CD, no autoriza activar la demo; DEPLOY-BACK-01 prepara sin desplegar; SHARED-BACK-05 valida después. Se agrega DEPLOY-BACK-02 para autorización, readiness, smoke y rollback, limitado al allowlist vigente y sin duplicar pipelines. Un servicio no habilitado se excluye y no bloquea el subconjunto autorizado. La ejecución sigue sin autorizarse en este paquete.
+
+
+## Trazabilidad complementaria INT-ASAP
+
+Se añadió `BACK_HITO3_INT_ASAP_TRAZABILIDAD.md` para #19–#33. No cambia el total de 82 borradores ni sus estados. Las referencias abiertas no acreditan código; crédito futuro requiere evidencia exacta. Quedan documentados gates específicos, independencia del desarrollo local y colisión de ownership/código en apps/api-gateway.

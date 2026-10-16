@@ -222,6 +222,13 @@ NO_INICIADO: GET /health no acredita operaciones de consulta de negocio.
 **Bloqueos específicos y condición de desbloqueo:**
 - No se identifica bloqueo externo específico para el alcance local.
 
+## Relación complementaria INT-ASAP (no reduce el alcance BACK)
+
+- [INT-ASAP #22](https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/22) (OPEN al corte): GET categorías (listarCategorias) y GET marcas (listarMarcas). Estado de evidencia: Nada de runtime acreditado.
+- [INT-ASAP #26](https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/26) (OPEN al corte): GET categorías, productos filtrados MARKETPLACE y producto por slug. Estado de evidencia: Nada runtime/E2E acreditado.
+
+El alcance integral de este issue BACK permanece vigente. La matriz complementaria INT-ASAP ↔ BACK detalla la coincidencia, el resto del alcance, evidencia reutilizable y puertas externas. No duplicar código: acreditar parcialmente solo con commit/PR, archivos y prueba para el mismo criterio; la existencia o apertura de issue/PR no acredita implementación o cierre. Los gates externos bloquean solo el escenario que los requiere.
+
 ## Tareas
 - [ ] Implementar los operationIds del Alcance; comprobar filtros, paginación, status y Problem.code.
 - [ ] Usar repositorios del bounded context; nada de lecturas cross-schema para sustituir APIs externas.
@@ -792,6 +799,15 @@ NO_INICIADO: GET /health no acredita operaciones de consulta de negocio.
 **Bloqueos específicos y condición de desbloqueo:**
 - No se identifica bloqueo externo específico para el alcance local.
 
+## Relación complementaria INT-ASAP (no reduce el alcance BACK)
+
+- [INT-ASAP #23](https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/23) (OPEN al corte): Lecturas productos/listado/detalle/slug y POST resolverCodigoBarras. Estado de evidencia: Nada de runtime acreditado.
+- [INT-ASAP #26](https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/26) (OPEN al corte): GET categorías, productos filtrados MARKETPLACE y producto por slug. Estado de evidencia: Nada runtime/E2E acreditado.
+- [INT-ASAP #27](https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/27) (OPEN al corte): GET productos; GET precios CHATBOT; GET disponibilidad comercial CHATBOT. Estado de evidencia: Nada runtime/E2E acreditado.
+- [INT-ASAP #28](https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/28) (OPEN al corte): Resolver barcode, consultar precio/disponibilidad RETAIL y verificar cantidad sin reserva. Estado de evidencia: Nada runtime/E2E acreditado.
+
+El alcance integral de este issue BACK permanece vigente. La matriz complementaria INT-ASAP ↔ BACK detalla la coincidencia, el resto del alcance, evidencia reutilizable y puertas externas. No duplicar código: acreditar parcialmente solo con commit/PR, archivos y prueba para el mismo criterio; la existencia o apertura de issue/PR no acredita implementación o cierre. Los gates externos bloquean solo el escenario que los requiere.
+
 ## Tareas
 - [ ] Implementar los operationIds del Alcance; comprobar filtros, paginación, status y Problem.code.
 - [ ] Usar repositorios del bounded context; nada de lecturas cross-schema para sustituir APIs externas.
@@ -1359,6 +1375,14 @@ NO_INICIADO: GET /health no acredita operaciones de consulta de negocio.
 
 **Bloqueos específicos y condición de desbloqueo:**
 - No se identifica bloqueo externo específico para el alcance local.
+
+## Relación complementaria INT-ASAP (no reduce el alcance BACK)
+
+- [INT-ASAP #24](https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/24) (OPEN al corte): GET precios por lista/SKU/canal: consultarPrecios, obtenerPrecioSku. Estado de evidencia: Nada de runtime acreditado.
+- [INT-ASAP #27](https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/27) (OPEN al corte): GET productos; GET precios CHATBOT; GET disponibilidad comercial CHATBOT. Estado de evidencia: Nada runtime/E2E acreditado.
+- [INT-ASAP #28](https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/28) (OPEN al corte): Resolver barcode, consultar precio/disponibilidad RETAIL y verificar cantidad sin reserva. Estado de evidencia: Nada runtime/E2E acreditado.
+
+El alcance integral de este issue BACK permanece vigente. La matriz complementaria INT-ASAP ↔ BACK detalla la coincidencia, el resto del alcance, evidencia reutilizable y puertas externas. No duplicar código: acreditar parcialmente solo con commit/PR, archivos y prueba para el mismo criterio; la existencia o apertura de issue/PR no acredita implementación o cierre. Los gates externos bloquean solo el escenario que los requiere.
 
 ## Tareas
 - [ ] Implementar los operationIds del Alcance; comprobar filtros, paginación, status y Problem.code.
@@ -2612,6 +2636,14 @@ NO_INICIADO: no se acredita productor/consumer del servicio.
 
 **Bloqueos específicos y condición de desbloqueo:**
 - **P1 — Provisioning de broker y garantías retry/DLX productivas.** Responsable de resolver: G5 y owner G6 de mensajería. Desbloqueo: Homologación del contrato/topología aplicable y evidencia provider/consumer; la lógica interna puede probarse con broker aislado.
+
+## Relación complementaria INT-ASAP (no reduce el alcance BACK)
+
+- [INT-ASAP #29](https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/29) (OPEN al corte): Vhost/identidad/ACL/túnel y smoke transporte G5 según AsyncAPI/topología. Estado de evidencia: Ningún consumer de negocio ni homologación acreditado.
+- [INT-ASAP #32](https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/32) (OPEN al corte): Coordinador de pilotos independientes: HTTP M1, AMQP/cupón, HTTP M2. Estado de evidencia: Nada runtime acreditado.
+- [INT-ASAP #33](https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/33) (OPEN al corte): Requests consumption/restoration y cuatro resultados contractuales; Outbox/idempotencia/ACK. Estado de evidencia: Nada implementado/probado acreditado.
+
+El alcance integral de este issue BACK permanece vigente. La matriz complementaria INT-ASAP ↔ BACK detalla la coincidencia, el resto del alcance, evidencia reutilizable y puertas externas. No duplicar código: acreditar parcialmente solo con commit/PR, archivos y prueba para el mismo criterio; la existencia o apertura de issue/PR no acredita implementación o cierre. Los gates externos bloquean solo el escenario que los requiere.
 
 ## Tareas
 - [ ] Implementar solo producer/consumer y routing keys asignados en AsyncAPI RC2 candidata.
@@ -4139,6 +4171,12 @@ PARCIAL: PR #10 implementa reservas/idempotencia, saldo/disponibilidad, operacio
 **Bloqueos específicos y condición de desbloqueo:**
 - No se identifica bloqueo externo específico para el alcance local.
 
+## Relación complementaria INT-ASAP (no reduce el alcance BACK)
+
+- [INT-ASAP #31](https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/31) (OPEN al corte): GET disponibilidad informativa y POST reintegrarInventario tras recepción; no reserva reemplazos. Estado de evidencia: Contrato solamente; sin handler, grant ni E2E.
+
+El alcance integral de este issue BACK permanece vigente. La matriz complementaria INT-ASAP ↔ BACK detalla la coincidencia, el resto del alcance, evidencia reutilizable y puertas externas. No duplicar código: acreditar parcialmente solo con commit/PR, archivos y prueba para el mismo criterio; la existencia o apertura de issue/PR no acredita implementación o cierre. Los gates externos bloquean solo el escenario que los requiere.
+
 ## Tareas
 - [ ] Convertir reglas de SPEC/HU en reglas puras o servicios del dominio.
 - [ ] Aplicar estados/versiones/idempotencia al límite definido por el modelo.
@@ -4204,6 +4242,15 @@ PARCIAL: PR #10 implementa GET disponibilidad/operación y POST verificar cantid
 
 **Bloqueos específicos y condición de desbloqueo:**
 - No se identifica bloqueo externo específico para el alcance local.
+
+## Relación complementaria INT-ASAP (no reduce el alcance BACK)
+
+- [INT-ASAP #25](https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/25) (OPEN al corte): GET disponibilidad comercial; POST verificarCantidadComercial. Estado de evidencia: Crédito provisional solo para POST exacto si auditado; no cierre. GET pendiente.
+- [INT-ASAP #27](https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/27) (OPEN al corte): GET productos; GET precios CHATBOT; GET disponibilidad comercial CHATBOT. Estado de evidencia: Nada runtime/E2E acreditado.
+- [INT-ASAP #28](https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/28) (OPEN al corte): Resolver barcode, consultar precio/disponibilidad RETAIL y verificar cantidad sin reserva. Estado de evidencia: Nada runtime/E2E acreditado.
+- [INT-ASAP #31](https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/31) (OPEN al corte): GET disponibilidad informativa y POST reintegrarInventario tras recepción; no reserva reemplazos. Estado de evidencia: Contrato solamente; sin handler, grant ni E2E.
+
+El alcance integral de este issue BACK permanece vigente. La matriz complementaria INT-ASAP ↔ BACK detalla la coincidencia, el resto del alcance, evidencia reutilizable y puertas externas. No duplicar código: acreditar parcialmente solo con commit/PR, archivos y prueba para el mismo criterio; la existencia o apertura de issue/PR no acredita implementación o cierre. Los gates externos bloquean solo el escenario que los requiere.
 
 ## Tareas
 - [ ] Implementar los operationIds del Alcance; comprobar filtros, paginación, status y Problem.code.
@@ -4271,6 +4318,14 @@ PARCIAL: PR #10 implementa comandos de reserva, confirmar y liberar; faltan vari
 **Bloqueos específicos y condición de desbloqueo:**
 - **P1 — Conciliación Retail y reintegro F3 de Postventa.** Responsable de resolver: G4/Retail y Postventa. Desbloqueo: Homologación de responsabilidades/sequence/permiso; el resto de writes internos puede implementarse.
 
+## Relación complementaria INT-ASAP (no reduce el alcance BACK)
+
+- [INT-ASAP #30](https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/30) (OPEN al corte): Solicitar/confirmar/liberar reserva; resultado final vía evento/recurso durable. Estado de evidencia: Crédito parcial provisional solo rutas/tests exactos; no cierre BACK.
+- [INT-ASAP #31](https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/31) (OPEN al corte): GET disponibilidad informativa y POST reintegrarInventario tras recepción; no reserva reemplazos. Estado de evidencia: Contrato solamente; sin handler, grant ni E2E.
+- [INT-ASAP #32](https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/32) (OPEN al corte): Coordinador de pilotos independientes: HTTP M1, AMQP/cupón, HTTP M2. Estado de evidencia: Nada runtime acreditado.
+
+El alcance integral de este issue BACK permanece vigente. La matriz complementaria INT-ASAP ↔ BACK detalla la coincidencia, el resto del alcance, evidencia reutilizable y puertas externas. No duplicar código: acreditar parcialmente solo con commit/PR, archivos y prueba para el mismo criterio; la existencia o apertura de issue/PR no acredita implementación o cierre. Los gates externos bloquean solo el escenario que los requiere.
+
 ## Tareas
 - [ ] Implementar las mutaciones operationIds del Alcance con validación y transacción propia.
 - [ ] Enlazar idempotency/concurrency/versionado donde SPEC/contrato lo exijan.
@@ -4336,6 +4391,13 @@ PARCIAL: PR #10 implementa outbox/publicación y workers. No acredita consumers 
 
 **Bloqueos específicos y condición de desbloqueo:**
 - **P1 — Provisioning de broker y garantías retry/DLX productivas.** Responsable de resolver: G5 y owner G6 de mensajería. Desbloqueo: Homologación del contrato/topología aplicable y evidencia provider/consumer; la lógica interna puede probarse con broker aislado.
+
+## Relación complementaria INT-ASAP (no reduce el alcance BACK)
+
+- [INT-ASAP #30](https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/30) (OPEN al corte): Solicitar/confirmar/liberar reserva; resultado final vía evento/recurso durable. Estado de evidencia: Crédito parcial provisional solo rutas/tests exactos; no cierre BACK.
+- [INT-ASAP #32](https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/32) (OPEN al corte): Coordinador de pilotos independientes: HTTP M1, AMQP/cupón, HTTP M2. Estado de evidencia: Nada runtime acreditado.
+
+El alcance integral de este issue BACK permanece vigente. La matriz complementaria INT-ASAP ↔ BACK detalla la coincidencia, el resto del alcance, evidencia reutilizable y puertas externas. No duplicar código: acreditar parcialmente solo con commit/PR, archivos y prueba para el mismo criterio; la existencia o apertura de issue/PR no acredita implementación o cierre. Los gates externos bloquean solo el escenario que los requiere.
 
 ## Tareas
 - [ ] Implementar solo producer/consumer y routing keys asignados en AsyncAPI RC2 candidata.
@@ -4609,6 +4671,20 @@ PARCIAL: checkout solo acredita GET /health; falta enrutamiento del API del mód
 **Bloqueos específicos y condición de desbloqueo:**
 - No se identifica bloqueo externo específico para el alcance local.
 
+## Relación complementaria INT-ASAP (no reduce el alcance BACK)
+
+- [INT-ASAP #21](https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/21) (OPEN al corte): Corte HTTP externo; rutas/auth existentes OpenAPI, solo Gateway. Estado de evidencia: Ningún código/test runtime acreditado.
+- [INT-ASAP #22](https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/22) (OPEN al corte): GET categorías (listarCategorias) y GET marcas (listarMarcas). Estado de evidencia: Nada de runtime acreditado.
+- [INT-ASAP #23](https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/23) (OPEN al corte): Lecturas productos/listado/detalle/slug y POST resolverCodigoBarras. Estado de evidencia: Nada de runtime acreditado.
+- [INT-ASAP #24](https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/24) (OPEN al corte): GET precios por lista/SKU/canal: consultarPrecios, obtenerPrecioSku. Estado de evidencia: Nada de runtime acreditado.
+- [INT-ASAP #26](https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/26) (OPEN al corte): GET categorías, productos filtrados MARKETPLACE y producto por slug. Estado de evidencia: Nada runtime/E2E acreditado.
+- [INT-ASAP #27](https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/27) (OPEN al corte): GET productos; GET precios CHATBOT; GET disponibilidad comercial CHATBOT. Estado de evidencia: Nada runtime/E2E acreditado.
+- [INT-ASAP #28](https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/28) (OPEN al corte): Resolver barcode, consultar precio/disponibilidad RETAIL y verificar cantidad sin reserva. Estado de evidencia: Nada runtime/E2E acreditado.
+- [INT-ASAP #30](https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/30) (OPEN al corte): Solicitar/confirmar/liberar reserva; resultado final vía evento/recurso durable. Estado de evidencia: Crédito parcial provisional solo rutas/tests exactos; no cierre BACK.
+- [INT-ASAP #31](https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/31) (OPEN al corte): GET disponibilidad informativa y POST reintegrarInventario tras recepción; no reserva reemplazos. Estado de evidencia: Contrato solamente; sin handler, grant ni E2E.
+
+El alcance integral de este issue BACK permanece vigente. La matriz complementaria INT-ASAP ↔ BACK detalla la coincidencia, el resto del alcance, evidencia reutilizable y puertas externas. No duplicar código: acreditar parcialmente solo con commit/PR, archivos y prueba para el mismo criterio; la existencia o apertura de issue/PR no acredita implementación o cierre. Los gates externos bloquean solo el escenario que los requiere.
+
 ## Tareas
 - [ ] Inventariar rutas OpenAPI existentes y bounded context propietario; conservar paths/métodos.
 - [ ] Implementar proxy, timeout, propagación contractual de headers y sanitización de error.
@@ -4671,6 +4747,20 @@ BLOQUEADO_ESPECÍFICO: no existe una decisión autorizada de acceso demo sin log
 **Bloqueos específicos y condición de desbloqueo:**
 - **P0 — Solo operación userBearer que se pretenda servir anónimamente.** Responsable de resolver: G7/Seguridad y Marco. Desbloqueo: Acuerdo de autorización por operationId registrado; conservar guards hasta entonces.
 - **P0 — Publicación de demo anónima.** Responsable de resolver: Marco y owner competente de Seguridad/Supabase. Desbloqueo: Evidencia separada de RLS, grants efectivos, schemas expuestos por API, credenciales DB directas y rutas públicas; el advisory de RLS no prueba exposición efectiva de las 84 tablas.
+
+## Relación complementaria INT-ASAP (no reduce el alcance BACK)
+
+- [INT-ASAP #21](https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/21) (OPEN al corte): Corte HTTP externo; rutas/auth existentes OpenAPI, solo Gateway. Estado de evidencia: Ningún código/test runtime acreditado.
+- [INT-ASAP #22](https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/22) (OPEN al corte): GET categorías (listarCategorias) y GET marcas (listarMarcas). Estado de evidencia: Nada de runtime acreditado.
+- [INT-ASAP #23](https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/23) (OPEN al corte): Lecturas productos/listado/detalle/slug y POST resolverCodigoBarras. Estado de evidencia: Nada de runtime acreditado.
+- [INT-ASAP #24](https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/24) (OPEN al corte): GET precios por lista/SKU/canal: consultarPrecios, obtenerPrecioSku. Estado de evidencia: Nada de runtime acreditado.
+- [INT-ASAP #26](https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/26) (OPEN al corte): GET categorías, productos filtrados MARKETPLACE y producto por slug. Estado de evidencia: Nada runtime/E2E acreditado.
+- [INT-ASAP #27](https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/27) (OPEN al corte): GET productos; GET precios CHATBOT; GET disponibilidad comercial CHATBOT. Estado de evidencia: Nada runtime/E2E acreditado.
+- [INT-ASAP #28](https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/28) (OPEN al corte): Resolver barcode, consultar precio/disponibilidad RETAIL y verificar cantidad sin reserva. Estado de evidencia: Nada runtime/E2E acreditado.
+- [INT-ASAP #30](https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/30) (OPEN al corte): Solicitar/confirmar/liberar reserva; resultado final vía evento/recurso durable. Estado de evidencia: Crédito parcial provisional solo rutas/tests exactos; no cierre BACK.
+- [INT-ASAP #31](https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/31) (OPEN al corte): GET disponibilidad informativa y POST reintegrarInventario tras recepción; no reserva reemplazos. Estado de evidencia: Contrato solamente; sin handler, grant ni E2E.
+
+El alcance integral de este issue BACK permanece vigente. La matriz complementaria INT-ASAP ↔ BACK detalla la coincidencia, el resto del alcance, evidencia reutilizable y puertas externas. No duplicar código: acreditar parcialmente solo con commit/PR, archivos y prueba para el mismo criterio; la existencia o apertura de issue/PR no acredita implementación o cierre. Los gates externos bloquean solo el escenario que los requiere.
 
 ## Tareas
 - [ ] Conservar JWT guards y validar issuer/audience/roles/scopes de la configuración acordada.
@@ -4867,6 +4957,12 @@ PARCIAL: Backend #8 sigue OPEN; PR #9 MERGED aporta CD reusable, pero no acredit
 **Bloqueos específicos y condición de desbloqueo:**
 - **P1 — Despliegue Oracle integrado.** Responsable de resolver: Owner Oracle pendiente y responsables de servicios habilitados. Desbloqueo: Aprobación de ambiente/ventana, secretos privados, TLS/red/readiness/rollback; no publicar si artefacto de servicio no está habilitado.
 
+## Relación complementaria INT-ASAP (no reduce el alcance BACK)
+
+- [INT-ASAP #20](https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/20) (OPEN al corte): HTTPS 443/TLS/DNS/proxy hacia Gateway; sin AMQP ni puertos internos. Estado de evidencia: Nada runtime acreditado.
+
+El alcance integral de este issue BACK permanece vigente. La matriz complementaria INT-ASAP ↔ BACK detalla la coincidencia, el resto del alcance, evidencia reutilizable y puertas externas. No duplicar código: acreditar parcialmente solo con commit/PR, archivos y prueba para el mismo criterio; la existencia o apertura de issue/PR no acredita implementación o cierre. Los gates externos bloquean solo el escenario que los requiere.
+
 ## Tareas
 - [ ] Comparar el pipeline reusable INFRA #8/PR #9 con requisitos del demo.
 - [ ] Preparar composición y configuración únicamente para servicios habilitados; health/readiness y rollback documentados.
@@ -4894,8 +4990,6 @@ Validación estática de compose/manifests/secret refs y health; smoke solo en a
 
 ## Riesgos o bloqueos específicos
 - **P1 — Despliegue Oracle integrado.** Responsable de resolver: Owner Oracle pendiente y responsables de servicios habilitados. Desbloqueo: Aprobación de ambiente/ventana, secretos privados, TLS/red/readiness/rollback; no publicar si artefacto de servicio no está habilitado.
-
----
 
 ---
 
@@ -4938,6 +5032,12 @@ NO_INICIADO: no se encontró issue BACK vigente que autorice y detalle la activa
 - **P0 — Autorización y readiness Oracle.** Responsable de resolver: Marco y owner de Oracle aprobado. Registrar aprobación escrita con ambiente, ventana, SHA exacto, componentes habilitados y operador; confirmar prerequisites manuales, conectividad TLS/SSH validada y rollback probado. Sin esa evidencia, no activar el deploy.
 - **P0 — Artefactos/allowlist de cada componente.** Owner del servicio y responsable de INFRA #8. Desbloqueo por componente: imagen/artefacto inmutable identificado, allowlist activa, CI de master verde para el mismo SHA y health/readiness disponible. Omitir componentes que no satisfagan el gate; no habilitarlos en este ticket.
 - **P1 — Secreto o entrega Frontend no preparados.** Owners Frontend/Oracle. Usar solo proceso existente y aprobado; secretos se referencian desde el almacén autorizado, nunca se copian al repo, issue, logs ni comandos visibles. No crear credenciales ni cambiar permisos.
+
+## Relación complementaria INT-ASAP (no reduce el alcance BACK)
+
+- [INT-ASAP #20](https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/20) (OPEN al corte): HTTPS 443/TLS/DNS/proxy hacia Gateway; sin AMQP ni puertos internos. Estado de evidencia: Nada runtime acreditado.
+
+El alcance integral de este issue BACK permanece vigente. La matriz complementaria INT-ASAP ↔ BACK detalla la coincidencia, el resto del alcance, evidencia reutilizable y puertas externas. No duplicar código: acreditar parcialmente solo con commit/PR, archivos y prueba para el mismo criterio; la existencia o apertura de issue/PR no acredita implementación o cierre. Los gates externos bloquean solo el escenario que los requiere.
 
 ## Tareas
 - [ ] Revisar aprobación y alcance de una ventana; fijar SHA/artefactos y lista allowlisted, inicialmente limitada al servicio habilitado por INFRA #8.
@@ -5235,6 +5335,20 @@ NO_INICIADO: no se acredita todavía una validación de demo integrada sin mocks
 **Bloqueos específicos y condición de desbloqueo:**
 - **P0 — Publicación de demo anónima.** Responsable de resolver: Marco y owner competente de Seguridad/Supabase. Desbloqueo: Evidencia separada de RLS, grants efectivos, schemas expuestos por API, credenciales DB directas y rutas públicas; el advisory de RLS no prueba exposición efectiva de las 84 tablas.
 
+## Relación complementaria INT-ASAP (no reduce el alcance BACK)
+
+- [INT-ASAP #20](https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/20) (OPEN al corte): HTTPS 443/TLS/DNS/proxy hacia Gateway; sin AMQP ni puertos internos. Estado de evidencia: Nada runtime acreditado.
+- [INT-ASAP #21](https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/21) (OPEN al corte): Corte HTTP externo; rutas/auth existentes OpenAPI, solo Gateway. Estado de evidencia: Ningún código/test runtime acreditado.
+- [INT-ASAP #22](https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/22) (OPEN al corte): GET categorías (listarCategorias) y GET marcas (listarMarcas). Estado de evidencia: Nada de runtime acreditado.
+- [INT-ASAP #23](https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/23) (OPEN al corte): Lecturas productos/listado/detalle/slug y POST resolverCodigoBarras. Estado de evidencia: Nada de runtime acreditado.
+- [INT-ASAP #24](https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/24) (OPEN al corte): GET precios por lista/SKU/canal: consultarPrecios, obtenerPrecioSku. Estado de evidencia: Nada de runtime acreditado.
+- [INT-ASAP #26](https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/26) (OPEN al corte): GET categorías, productos filtrados MARKETPLACE y producto por slug. Estado de evidencia: Nada runtime/E2E acreditado.
+- [INT-ASAP #27](https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/27) (OPEN al corte): GET productos; GET precios CHATBOT; GET disponibilidad comercial CHATBOT. Estado de evidencia: Nada runtime/E2E acreditado.
+- [INT-ASAP #28](https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/28) (OPEN al corte): Resolver barcode, consultar precio/disponibilidad RETAIL y verificar cantidad sin reserva. Estado de evidencia: Nada runtime/E2E acreditado.
+- [INT-ASAP #32](https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/32) (OPEN al corte): Coordinador de pilotos independientes: HTTP M1, AMQP/cupón, HTTP M2. Estado de evidencia: Nada runtime acreditado.
+
+El alcance integral de este issue BACK permanece vigente. La matriz complementaria INT-ASAP ↔ BACK detalla la coincidencia, el resto del alcance, evidencia reutilizable y puertas externas. No duplicar código: acreditar parcialmente solo con commit/PR, archivos y prueba para el mismo criterio; la existencia o apertura de issue/PR no acredita implementación o cierre. Los gates externos bloquean solo el escenario que los requiere.
+
 ## Tareas
 - [ ] Ejecutar la matriz MK completa contra versión SHA/deployment identificada.
 - [ ] Registrar por operación lectura/escritura, errores, seguridad y estado de integración.
@@ -5262,3 +5376,5 @@ Smoke HTTP y Playwright Chromium del flujo integrado real; mock mode prohibido. 
 
 ## Riesgos o bloqueos específicos
 - **P0 — Publicación de demo anónima.** Responsable de resolver: Marco y owner competente de Seguridad/Supabase. Desbloqueo: Evidencia separada de RLS, grants efectivos, schemas expuestos por API, credenciales DB directas y rutas públicas; el advisory de RLS no prueba exposición efectiva de las 84 tablas.
+
+---

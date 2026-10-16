@@ -24,7 +24,7 @@ const canonical = value => Array.isArray(value) ? value.map(canonical) : value &
 const same = (a, b) => JSON.stringify(canonical(a)) === JSON.stringify(canonical(b));
 const allEdges = item => [...new Set([...(item.depends_on ?? []), ...(item.blocking_conditions ?? []).flatMap(c => c.dependency_ids ?? [])])];
 
-export function validatePackage({ manifest, summary, matrixText, issuesText, changesText, dependenciesText }) {
+export function validatePackage({ manifest, summary, matrixText, issuesText, changesText, dependenciesText, intAsapMatrixText }) {
   const errors = [];
   const fail = (category, message) => errors.push(`${category}: ${message}`);
   const items = manifest?.issues ?? [];
@@ -106,6 +106,36 @@ export function validatePackage({ manifest, summary, matrixText, issuesText, cha
   const declared = changesText.match(/Total de registros:\s*(\d+)/i);
   if (!declared || Number(declared[1]) !== count) fail("CAMBIOS", "total declarado no coincide con MANIFEST");
 
+  const trace = manifest.int_asap_traceability;
+  const traceRows = trace?.issues ?? [];
+  const traceByNumber = new Map();
+  if (trace?.captured_at !== "2026-10-16" || trace?.epic?.number !== 19 || trace?.epic?.state !== "OPEN" || !trace?.matrix_file || !Array.isArray(traceRows)) fail("INT_ASAP", "snapshot/EPIC/matriz complementaria incompletos");
+  for (const row of traceRows) {
+    if (!Number.isInteger(row.number) || row.number < 20 || row.number > 33 || traceByNumber.has(row.number)) fail("INT_ASAP", `issue duplicado o número fuera de corte: ${row.number}`);
+    else traceByNumber.set(row.number, row);
+    if (row.state !== "OPEN" || !row.url?.endsWith(`/issues/${row.number}`) || !row.title || !row.operation || !row.responsible || !row.int_scope || !row.back_remaining || !row.evidence || !row.credited || !row.external || !Array.isArray(row.back_ids) || !row.back_ids.length) fail("INT_ASAP", `campos incompletos en #${row.number}`);
+    for (const id of row.back_ids ?? []) if (!byId.has(id)) fail("INT_ASAP", `#${row.number} referencia BACK inexistente ${id}`);
+  }
+  if (traceByNumber.size !== 14 || Array.from({length:14}, (_,i) => i + 20).some(n => !traceByNumber.has(n))) fail("INT_ASAP", "deben existir exactamente los issues #20–#33");
+  if (!intAsapMatrixText?.includes("ID lógico BACK relacionado") || !intAsapMatrixText.includes("Dependencias externas del escenario")) fail("INT_ASAP", "faltan columnas requeridas en la matriz complementaria");
+  for (const row of traceRows) {
+    if (!intAsapMatrixText.includes(`[#${row.number} ${row.title}](${row.url})`)) fail("INT_ASAP", `#${row.number} no aparece en la matriz complementaria`);
+    for (const id of row.back_ids) if (!intAsapMatrixText.includes(id)) fail("INT_ASAP", `la matriz no contiene ${id} para #${row.number}`);
+  }
+  const reverseTrace = new Map();
+  for (const row of traceRows) for (const id of row.back_ids) {
+    if (!reverseTrace.has(id)) reverseTrace.set(id, []);
+    reverseTrace.get(id).push(row.number);
+  }
+  for (const item of items) {
+    const expected = sorted([...new Set(reverseTrace.get(item.id) ?? [])]);
+    if (!same(sorted(item.related_int_asap ?? []), expected)) fail("INT_ASAP", `backlink related_int_asap diverge en ${item.id}`);
+    for (const number of expected) if (!item.body.includes(`INT-ASAP #${number}`)) fail("INT_ASAP", `${item.id} no enlaza #${number} en su borrador`);
+  }
+  for (const [file, content] of [["CAMBIOS", changesText], ["DEPENDENCIAS", dependenciesText]]) {
+    if (file !== "DEPENDENCIAS" && !content.includes("BACK_HITO3_INT_ASAP_TRAZABILIDAD.md")) fail("INT_ASAP", `${file} no referencia la matriz complementaria`);
+  }
+
   const edgesById = new Map(items.map(item => [item.id, allEdges(item)]));
   for (const item of items) for (const dep of edgesById.get(item.id)) {
     if (dep === item.id) fail("CYCLE", `autorreferencia ${item.id}`);
@@ -186,5 +216,5 @@ export function validatePackage({ manifest, summary, matrixText, issuesText, cha
   const secretScan = manifest.review_metadata?.secret_scan;
   if (secretScan?.status !== "PASS" || secretScan.findings !== 0) fail("SECURITY", "escaneo de secretos incompleto");
 
-  return { errors, metrics: { records: count, unique_ids: byId.size, statuses: statusCounts, services, owners, dependency_edges: [...edgesById.values()].reduce((n, es) => n + es.length, 0), dependency_cycles: errors.some(e => e.startsWith("CYCLE:")) ? "present" : 0, mk_covered: mkCovered.size, openapi_operations: operationMap.size, asyncapi_messages: messageNames.size, bff_events: asyncapi?.bff_consumed_events?.length ?? 0, owner_pending: pendingOwners.length, publishable: items.filter(i => i.publishable).length } };
+  return { errors, metrics: { records: count, unique_ids: byId.size, statuses: statusCounts, services, owners, dependency_edges: [...edgesById.values()].reduce((n, es) => n + es.length, 0), dependency_cycles: errors.some(e => e.startsWith("CYCLE:")) ? "present" : 0, mk_covered: mkCovered.size, openapi_operations: operationMap.size, asyncapi_messages: messageNames.size, bff_events: asyncapi?.bff_consumed_events?.length ?? 0, owner_pending: pendingOwners.length, publishable: items.filter(i => i.publishable).length, int_asap_issues: traceByNumber.size, int_asap_backlinks: [...reverseTrace.values()].reduce((n, ids) => n + new Set(ids).size, 0) } };
 }
