@@ -8,7 +8,7 @@
   "repository": "Taller-SW-Web/G6-Productos-Ofertas-backend",
   "source_sha": "716503d70b7b0d5c855d8879c91ee98a8dae2d85",
   "publication_started": true,
-  "publication_completed": false,
+  "publication_completed": true,
   "native_dependency_relations": "NOT_CONFIGURED; se verificaron enlaces Markdown bidireccionales para obligatorias; condicionales separadas",
   "created_at": "2026-10-16T08:29:06.285Z",
   "records": [
@@ -3776,5 +3776,21 @@
       }
     ]
   },
-  "updated_at": "2026-10-16T08:41:10.999Z"
+  "updated_at": "2026-10-16T08:41:59.755Z",
+  "completed_at": "2026-10-16T08:41:59.735Z",
+  "post_publication_verification": {
+    "status": "PASS",
+    "verified_at": "2026-10-16T08:41:59.735Z",
+    "issues_verified": 82,
+    "unique_logical_ids": 82,
+    "duplicates": 0,
+    "open_issues": 82,
+    "assignments_verified": 82,
+    "mandatory_edges_resolved": 132,
+    "total_graph_edges_resolved": 158,
+    "int_asap_issues_unchanged": 14,
+    "preexisting_issues_unchanged": 26,
+    "preexisting_prs_unchanged": 7,
+    "native_dependency_relations": "NOT_CONFIGURED; se verificaron enlaces Markdown bidireccionales para obligatorias; condicionales separadas"
+  }
 }
