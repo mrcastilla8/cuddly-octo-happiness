@@ -9,7 +9,7 @@
   "source_sha": "716503d70b7b0d5c855d8879c91ee98a8dae2d85",
   "publication_started": true,
   "publication_completed": false,
-  "native_dependency_relations": "NOT_CONFIGURED; se documentarán enlaces Markdown bidireccionales verificados",
+  "native_dependency_relations": "NOT_CONFIGURED; se verificaron enlaces Markdown bidireccionales para obligatorias; condicionales separadas",
   "created_at": "2026-10-16T08:29:06.285Z",
   "records": [
     {
@@ -27,6 +27,13 @@
       "state": "OPEN",
       "dependency_references": {
         "mandatory": [],
+        "mandatory_inverse": [
+          {
+            "logical_id": "TAXONOMY-SVC-BACK-02",
+            "number": 35,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/35"
+          }
+        ],
         "conditional": []
       },
       "errors": []
@@ -45,7 +52,20 @@
       "verification_status": "VERIFIED",
       "state": "OPEN",
       "dependency_references": {
-        "mandatory": [],
+        "mandatory": [
+          {
+            "logical_id": "TAXONOMY-SVC-BACK-01",
+            "number": 34,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/34"
+          }
+        ],
+        "mandatory_inverse": [
+          {
+            "logical_id": "TAXONOMY-SVC-BACK-03",
+            "number": 36,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/36"
+          }
+        ],
         "conditional": []
       },
       "errors": []
@@ -64,7 +84,20 @@
       "verification_status": "VERIFIED",
       "state": "OPEN",
       "dependency_references": {
-        "mandatory": [],
+        "mandatory": [
+          {
+            "logical_id": "TAXONOMY-SVC-BACK-02",
+            "number": 35,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/35"
+          }
+        ],
+        "mandatory_inverse": [
+          {
+            "logical_id": "TAXONOMY-SVC-BACK-04",
+            "number": 37,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/37"
+          }
+        ],
         "conditional": []
       },
       "errors": []
@@ -83,7 +116,25 @@
       "verification_status": "VERIFIED",
       "state": "OPEN",
       "dependency_references": {
-        "mandatory": [],
+        "mandatory": [
+          {
+            "logical_id": "TAXONOMY-SVC-BACK-03",
+            "number": 36,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/36"
+          }
+        ],
+        "mandatory_inverse": [
+          {
+            "logical_id": "TAXONOMY-SVC-BACK-05",
+            "number": 38,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/38"
+          },
+          {
+            "logical_id": "CATALOG-SVC-BACK-09",
+            "number": 51,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/51"
+          }
+        ],
         "conditional": []
       },
       "errors": []
@@ -102,7 +153,20 @@
       "verification_status": "VERIFIED",
       "state": "OPEN",
       "dependency_references": {
-        "mandatory": [],
+        "mandatory": [
+          {
+            "logical_id": "TAXONOMY-SVC-BACK-04",
+            "number": 37,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/37"
+          }
+        ],
+        "mandatory_inverse": [
+          {
+            "logical_id": "TAXONOMY-SVC-BACK-06",
+            "number": 39,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/39"
+          }
+        ],
         "conditional": []
       },
       "errors": []
@@ -121,7 +185,20 @@
       "verification_status": "VERIFIED",
       "state": "OPEN",
       "dependency_references": {
-        "mandatory": [],
+        "mandatory": [
+          {
+            "logical_id": "TAXONOMY-SVC-BACK-05",
+            "number": 38,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/38"
+          }
+        ],
+        "mandatory_inverse": [
+          {
+            "logical_id": "TAXONOMY-SVC-BACK-07",
+            "number": 40,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/40"
+          }
+        ],
         "conditional": []
       },
       "errors": []
@@ -140,7 +217,20 @@
       "verification_status": "VERIFIED",
       "state": "OPEN",
       "dependency_references": {
-        "mandatory": [],
+        "mandatory": [
+          {
+            "logical_id": "TAXONOMY-SVC-BACK-06",
+            "number": 39,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/39"
+          }
+        ],
+        "mandatory_inverse": [
+          {
+            "logical_id": "TAXONOMY-SVC-BACK-08",
+            "number": 41,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/41"
+          }
+        ],
         "conditional": []
       },
       "errors": []
@@ -159,8 +249,43 @@
       "verification_status": "VERIFIED",
       "state": "OPEN",
       "dependency_references": {
-        "mandatory": [],
-        "conditional": []
+        "mandatory": [
+          {
+            "logical_id": "TAXONOMY-SVC-BACK-07",
+            "number": 40,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/40"
+          },
+          {
+            "logical_id": "GATEWAY-BACK-01",
+            "number": 106,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/106"
+          },
+          {
+            "logical_id": "SHARED-BACK-01",
+            "number": 109,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/109"
+          }
+        ],
+        "mandatory_inverse": [
+          {
+            "logical_id": "TAXONOMY-SVC-BACK-09",
+            "number": 42,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/42"
+          },
+          {
+            "logical_id": "SHARED-BACK-04",
+            "number": 114,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/114"
+          }
+        ],
+        "conditional": [
+          {
+            "logical_id": "CATALOG-SVC-BACK-06",
+            "number": 48,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/48",
+            "scope": "Solo baja segura de categoría/característica/marca que espera verificación de Catálogo."
+          }
+        ]
       },
       "errors": []
     },
@@ -178,7 +303,30 @@
       "verification_status": "VERIFIED",
       "state": "OPEN",
       "dependency_references": {
-        "mandatory": [],
+        "mandatory": [
+          {
+            "logical_id": "TAXONOMY-SVC-BACK-08",
+            "number": 41,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/41"
+          },
+          {
+            "logical_id": "SHARED-BACK-03",
+            "number": 113,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/113"
+          },
+          {
+            "logical_id": "CATALOG-SVC-BACK-06",
+            "number": 48,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/48"
+          }
+        ],
+        "mandatory_inverse": [
+          {
+            "logical_id": "SHARED-BACK-05",
+            "number": 115,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/115"
+          }
+        ],
         "conditional": []
       },
       "errors": []
@@ -198,6 +346,13 @@
       "state": "OPEN",
       "dependency_references": {
         "mandatory": [],
+        "mandatory_inverse": [
+          {
+            "logical_id": "CATALOG-SVC-BACK-02",
+            "number": 44,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/44"
+          }
+        ],
         "conditional": []
       },
       "errors": []
@@ -216,7 +371,20 @@
       "verification_status": "VERIFIED",
       "state": "OPEN",
       "dependency_references": {
-        "mandatory": [],
+        "mandatory": [
+          {
+            "logical_id": "CATALOG-SVC-BACK-01",
+            "number": 43,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/43"
+          }
+        ],
+        "mandatory_inverse": [
+          {
+            "logical_id": "CATALOG-SVC-BACK-03",
+            "number": 45,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/45"
+          }
+        ],
         "conditional": []
       },
       "errors": []
@@ -235,7 +403,20 @@
       "verification_status": "VERIFIED",
       "state": "OPEN",
       "dependency_references": {
-        "mandatory": [],
+        "mandatory": [
+          {
+            "logical_id": "CATALOG-SVC-BACK-02",
+            "number": 44,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/44"
+          }
+        ],
+        "mandatory_inverse": [
+          {
+            "logical_id": "CATALOG-SVC-BACK-04",
+            "number": 46,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/46"
+          }
+        ],
         "conditional": []
       },
       "errors": []
@@ -254,7 +435,20 @@
       "verification_status": "VERIFIED",
       "state": "OPEN",
       "dependency_references": {
-        "mandatory": [],
+        "mandatory": [
+          {
+            "logical_id": "CATALOG-SVC-BACK-03",
+            "number": 45,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/45"
+          }
+        ],
+        "mandatory_inverse": [
+          {
+            "logical_id": "CATALOG-SVC-BACK-05",
+            "number": 47,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/47"
+          }
+        ],
         "conditional": []
       },
       "errors": []
@@ -273,7 +467,20 @@
       "verification_status": "VERIFIED",
       "state": "OPEN",
       "dependency_references": {
-        "mandatory": [],
+        "mandatory": [
+          {
+            "logical_id": "CATALOG-SVC-BACK-04",
+            "number": 46,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/46"
+          }
+        ],
+        "mandatory_inverse": [
+          {
+            "logical_id": "CATALOG-SVC-BACK-06",
+            "number": 48,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/48"
+          }
+        ],
         "conditional": []
       },
       "errors": []
@@ -292,7 +499,45 @@
       "verification_status": "VERIFIED",
       "state": "OPEN",
       "dependency_references": {
-        "mandatory": [],
+        "mandatory": [
+          {
+            "logical_id": "CATALOG-SVC-BACK-05",
+            "number": 47,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/47"
+          }
+        ],
+        "mandatory_inverse": [
+          {
+            "logical_id": "TAXONOMY-SVC-BACK-09",
+            "number": 42,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/42"
+          },
+          {
+            "logical_id": "CATALOG-SVC-BACK-07",
+            "number": 49,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/49"
+          },
+          {
+            "logical_id": "PRICING-SVC-BACK-09",
+            "number": 60,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/60"
+          },
+          {
+            "logical_id": "PROMOTIONS-SVC-BACK-09",
+            "number": 78,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/78"
+          },
+          {
+            "logical_id": "COMBOS-SVC-BACK-09",
+            "number": 87,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/87"
+          },
+          {
+            "logical_id": "BULK-SVC-BACK-09",
+            "number": 96,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/96"
+          }
+        ],
         "conditional": []
       },
       "errors": []
@@ -311,7 +556,20 @@
       "verification_status": "VERIFIED",
       "state": "OPEN",
       "dependency_references": {
-        "mandatory": [],
+        "mandatory": [
+          {
+            "logical_id": "CATALOG-SVC-BACK-06",
+            "number": 48,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/48"
+          }
+        ],
+        "mandatory_inverse": [
+          {
+            "logical_id": "CATALOG-SVC-BACK-08",
+            "number": 50,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/50"
+          }
+        ],
         "conditional": []
       },
       "errors": []
@@ -330,8 +588,55 @@
       "verification_status": "VERIFIED",
       "state": "OPEN",
       "dependency_references": {
-        "mandatory": [],
-        "conditional": []
+        "mandatory": [
+          {
+            "logical_id": "CATALOG-SVC-BACK-07",
+            "number": 49,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/49"
+          },
+          {
+            "logical_id": "GATEWAY-BACK-01",
+            "number": 106,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/106"
+          },
+          {
+            "logical_id": "SHARED-BACK-01",
+            "number": 109,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/109"
+          }
+        ],
+        "mandatory_inverse": [
+          {
+            "logical_id": "CATALOG-SVC-BACK-09",
+            "number": 51,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/51"
+          },
+          {
+            "logical_id": "SHARED-BACK-04",
+            "number": 114,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/114"
+          }
+        ],
+        "conditional": [
+          {
+            "logical_id": "TAXONOMY-SVC-BACK-04",
+            "number": 37,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/37",
+            "scope": "Selectores de categoría, características y tipos en MK-003/004."
+          },
+          {
+            "logical_id": "PRICING-SVC-BACK-06",
+            "number": 57,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/57",
+            "scope": "Preparación async de producto/variante y estado de inicialización."
+          },
+          {
+            "logical_id": "INVENTORY-SVC-BACK-06",
+            "number": 102,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/102",
+            "scope": "Preparación async de producto/variante y estado de inicialización."
+          }
+        ]
       },
       "errors": []
     },
@@ -349,7 +654,40 @@
       "verification_status": "VERIFIED",
       "state": "OPEN",
       "dependency_references": {
-        "mandatory": [],
+        "mandatory": [
+          {
+            "logical_id": "CATALOG-SVC-BACK-08",
+            "number": 50,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/50"
+          },
+          {
+            "logical_id": "SHARED-BACK-03",
+            "number": 113,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/113"
+          },
+          {
+            "logical_id": "TAXONOMY-SVC-BACK-04",
+            "number": 37,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/37"
+          },
+          {
+            "logical_id": "PRICING-SVC-BACK-06",
+            "number": 57,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/57"
+          },
+          {
+            "logical_id": "INVENTORY-SVC-BACK-06",
+            "number": 102,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/102"
+          }
+        ],
+        "mandatory_inverse": [
+          {
+            "logical_id": "SHARED-BACK-05",
+            "number": 115,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/115"
+          }
+        ],
         "conditional": []
       },
       "errors": []
@@ -369,6 +707,13 @@
       "state": "OPEN",
       "dependency_references": {
         "mandatory": [],
+        "mandatory_inverse": [
+          {
+            "logical_id": "PRICING-SVC-BACK-02",
+            "number": 53,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/53"
+          }
+        ],
         "conditional": []
       },
       "errors": []
@@ -387,7 +732,20 @@
       "verification_status": "VERIFIED",
       "state": "OPEN",
       "dependency_references": {
-        "mandatory": [],
+        "mandatory": [
+          {
+            "logical_id": "PRICING-SVC-BACK-01",
+            "number": 52,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/52"
+          }
+        ],
+        "mandatory_inverse": [
+          {
+            "logical_id": "PRICING-SVC-BACK-03",
+            "number": 54,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/54"
+          }
+        ],
         "conditional": []
       },
       "errors": []
@@ -406,7 +764,20 @@
       "verification_status": "VERIFIED",
       "state": "OPEN",
       "dependency_references": {
-        "mandatory": [],
+        "mandatory": [
+          {
+            "logical_id": "PRICING-SVC-BACK-02",
+            "number": 53,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/53"
+          }
+        ],
+        "mandatory_inverse": [
+          {
+            "logical_id": "PRICING-SVC-BACK-04",
+            "number": 55,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/55"
+          }
+        ],
         "conditional": []
       },
       "errors": []
@@ -425,7 +796,25 @@
       "verification_status": "VERIFIED",
       "state": "OPEN",
       "dependency_references": {
-        "mandatory": [],
+        "mandatory": [
+          {
+            "logical_id": "PRICING-SVC-BACK-03",
+            "number": 54,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/54"
+          }
+        ],
+        "mandatory_inverse": [
+          {
+            "logical_id": "PRICING-SVC-BACK-05",
+            "number": 56,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/56"
+          },
+          {
+            "logical_id": "COMBOS-SVC-BACK-09",
+            "number": 87,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/87"
+          }
+        ],
         "conditional": []
       },
       "errors": []
@@ -444,7 +833,20 @@
       "verification_status": "VERIFIED",
       "state": "OPEN",
       "dependency_references": {
-        "mandatory": [],
+        "mandatory": [
+          {
+            "logical_id": "PRICING-SVC-BACK-04",
+            "number": 55,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/55"
+          }
+        ],
+        "mandatory_inverse": [
+          {
+            "logical_id": "PRICING-SVC-BACK-06",
+            "number": 57,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/57"
+          }
+        ],
         "conditional": []
       },
       "errors": []
@@ -463,7 +865,40 @@
       "verification_status": "VERIFIED",
       "state": "OPEN",
       "dependency_references": {
-        "mandatory": [],
+        "mandatory": [
+          {
+            "logical_id": "PRICING-SVC-BACK-05",
+            "number": 56,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/56"
+          }
+        ],
+        "mandatory_inverse": [
+          {
+            "logical_id": "CATALOG-SVC-BACK-09",
+            "number": 51,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/51"
+          },
+          {
+            "logical_id": "PRICING-SVC-BACK-07",
+            "number": 58,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/58"
+          },
+          {
+            "logical_id": "PRICE-AUDIT-SVC-BACK-09",
+            "number": 69,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/69"
+          },
+          {
+            "logical_id": "PROMOTIONS-SVC-BACK-09",
+            "number": 78,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/78"
+          },
+          {
+            "logical_id": "BULK-SVC-BACK-09",
+            "number": 96,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/96"
+          }
+        ],
         "conditional": []
       },
       "errors": []
@@ -482,7 +917,20 @@
       "verification_status": "VERIFIED",
       "state": "OPEN",
       "dependency_references": {
-        "mandatory": [],
+        "mandatory": [
+          {
+            "logical_id": "PRICING-SVC-BACK-06",
+            "number": 57,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/57"
+          }
+        ],
+        "mandatory_inverse": [
+          {
+            "logical_id": "PRICING-SVC-BACK-08",
+            "number": 59,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/59"
+          }
+        ],
         "conditional": []
       },
       "errors": []
@@ -501,8 +949,43 @@
       "verification_status": "VERIFIED",
       "state": "OPEN",
       "dependency_references": {
-        "mandatory": [],
-        "conditional": []
+        "mandatory": [
+          {
+            "logical_id": "PRICING-SVC-BACK-07",
+            "number": 58,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/58"
+          },
+          {
+            "logical_id": "GATEWAY-BACK-01",
+            "number": 106,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/106"
+          },
+          {
+            "logical_id": "SHARED-BACK-01",
+            "number": 109,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/109"
+          }
+        ],
+        "mandatory_inverse": [
+          {
+            "logical_id": "PRICING-SVC-BACK-09",
+            "number": 60,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/60"
+          },
+          {
+            "logical_id": "SHARED-BACK-04",
+            "number": 114,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/114"
+          }
+        ],
+        "conditional": [
+          {
+            "logical_id": "CATALOG-SVC-BACK-04",
+            "number": 46,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/46",
+            "scope": "Selección de producto/SKU en pantallas de precio si el flujo la requiere."
+          }
+        ]
       },
       "errors": []
     },
@@ -520,7 +1003,30 @@
       "verification_status": "VERIFIED",
       "state": "OPEN",
       "dependency_references": {
-        "mandatory": [],
+        "mandatory": [
+          {
+            "logical_id": "PRICING-SVC-BACK-08",
+            "number": 59,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/59"
+          },
+          {
+            "logical_id": "SHARED-BACK-03",
+            "number": 113,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/113"
+          },
+          {
+            "logical_id": "CATALOG-SVC-BACK-06",
+            "number": 48,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/48"
+          }
+        ],
+        "mandatory_inverse": [
+          {
+            "logical_id": "SHARED-BACK-05",
+            "number": 115,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/115"
+          }
+        ],
         "conditional": []
       },
       "errors": []
@@ -540,6 +1046,13 @@
       "state": "OPEN",
       "dependency_references": {
         "mandatory": [],
+        "mandatory_inverse": [
+          {
+            "logical_id": "PRICE-AUDIT-SVC-BACK-02",
+            "number": 62,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/62"
+          }
+        ],
         "conditional": []
       },
       "errors": []
@@ -558,7 +1071,20 @@
       "verification_status": "VERIFIED",
       "state": "OPEN",
       "dependency_references": {
-        "mandatory": [],
+        "mandatory": [
+          {
+            "logical_id": "PRICE-AUDIT-SVC-BACK-01",
+            "number": 61,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/61"
+          }
+        ],
+        "mandatory_inverse": [
+          {
+            "logical_id": "PRICE-AUDIT-SVC-BACK-03",
+            "number": 63,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/63"
+          }
+        ],
         "conditional": []
       },
       "errors": []
@@ -577,7 +1103,20 @@
       "verification_status": "VERIFIED",
       "state": "OPEN",
       "dependency_references": {
-        "mandatory": [],
+        "mandatory": [
+          {
+            "logical_id": "PRICE-AUDIT-SVC-BACK-02",
+            "number": 62,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/62"
+          }
+        ],
+        "mandatory_inverse": [
+          {
+            "logical_id": "PRICE-AUDIT-SVC-BACK-04",
+            "number": 64,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/64"
+          }
+        ],
         "conditional": []
       },
       "errors": []
@@ -596,7 +1135,20 @@
       "verification_status": "VERIFIED",
       "state": "OPEN",
       "dependency_references": {
-        "mandatory": [],
+        "mandatory": [
+          {
+            "logical_id": "PRICE-AUDIT-SVC-BACK-03",
+            "number": 63,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/63"
+          }
+        ],
+        "mandatory_inverse": [
+          {
+            "logical_id": "PRICE-AUDIT-SVC-BACK-05",
+            "number": 65,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/65"
+          }
+        ],
         "conditional": []
       },
       "errors": []
@@ -615,7 +1167,20 @@
       "verification_status": "VERIFIED",
       "state": "OPEN",
       "dependency_references": {
-        "mandatory": [],
+        "mandatory": [
+          {
+            "logical_id": "PRICE-AUDIT-SVC-BACK-04",
+            "number": 64,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/64"
+          }
+        ],
+        "mandatory_inverse": [
+          {
+            "logical_id": "PRICE-AUDIT-SVC-BACK-06",
+            "number": 66,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/66"
+          }
+        ],
         "conditional": []
       },
       "errors": []
@@ -634,7 +1199,20 @@
       "verification_status": "VERIFIED",
       "state": "OPEN",
       "dependency_references": {
-        "mandatory": [],
+        "mandatory": [
+          {
+            "logical_id": "PRICE-AUDIT-SVC-BACK-05",
+            "number": 65,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/65"
+          }
+        ],
+        "mandatory_inverse": [
+          {
+            "logical_id": "PRICE-AUDIT-SVC-BACK-07",
+            "number": 67,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/67"
+          }
+        ],
         "conditional": []
       },
       "errors": []
@@ -653,7 +1231,20 @@
       "verification_status": "VERIFIED",
       "state": "OPEN",
       "dependency_references": {
-        "mandatory": [],
+        "mandatory": [
+          {
+            "logical_id": "PRICE-AUDIT-SVC-BACK-06",
+            "number": 66,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/66"
+          }
+        ],
+        "mandatory_inverse": [
+          {
+            "logical_id": "PRICE-AUDIT-SVC-BACK-08",
+            "number": 68,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/68"
+          }
+        ],
         "conditional": []
       },
       "errors": []
@@ -672,7 +1263,35 @@
       "verification_status": "VERIFIED",
       "state": "OPEN",
       "dependency_references": {
-        "mandatory": [],
+        "mandatory": [
+          {
+            "logical_id": "PRICE-AUDIT-SVC-BACK-07",
+            "number": 67,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/67"
+          },
+          {
+            "logical_id": "GATEWAY-BACK-01",
+            "number": 106,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/106"
+          },
+          {
+            "logical_id": "SHARED-BACK-01",
+            "number": 109,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/109"
+          }
+        ],
+        "mandatory_inverse": [
+          {
+            "logical_id": "PRICE-AUDIT-SVC-BACK-09",
+            "number": 69,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/69"
+          },
+          {
+            "logical_id": "SHARED-BACK-04",
+            "number": 114,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/114"
+          }
+        ],
         "conditional": []
       },
       "errors": []
@@ -691,7 +1310,30 @@
       "verification_status": "VERIFIED",
       "state": "OPEN",
       "dependency_references": {
-        "mandatory": [],
+        "mandatory": [
+          {
+            "logical_id": "PRICE-AUDIT-SVC-BACK-08",
+            "number": 68,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/68"
+          },
+          {
+            "logical_id": "SHARED-BACK-03",
+            "number": 113,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/113"
+          },
+          {
+            "logical_id": "PRICING-SVC-BACK-06",
+            "number": 57,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/57"
+          }
+        ],
+        "mandatory_inverse": [
+          {
+            "logical_id": "SHARED-BACK-05",
+            "number": 115,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/115"
+          }
+        ],
         "conditional": []
       },
       "errors": []
@@ -711,6 +1353,13 @@
       "state": "OPEN",
       "dependency_references": {
         "mandatory": [],
+        "mandatory_inverse": [
+          {
+            "logical_id": "PROMOTIONS-SVC-BACK-02",
+            "number": 71,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/71"
+          }
+        ],
         "conditional": []
       },
       "errors": []
@@ -729,7 +1378,20 @@
       "verification_status": "VERIFIED",
       "state": "OPEN",
       "dependency_references": {
-        "mandatory": [],
+        "mandatory": [
+          {
+            "logical_id": "PROMOTIONS-SVC-BACK-01",
+            "number": 70,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/70"
+          }
+        ],
+        "mandatory_inverse": [
+          {
+            "logical_id": "PROMOTIONS-SVC-BACK-03",
+            "number": 72,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/72"
+          }
+        ],
         "conditional": []
       },
       "errors": []
@@ -748,7 +1410,20 @@
       "verification_status": "VERIFIED",
       "state": "OPEN",
       "dependency_references": {
-        "mandatory": [],
+        "mandatory": [
+          {
+            "logical_id": "PROMOTIONS-SVC-BACK-02",
+            "number": 71,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/71"
+          }
+        ],
+        "mandatory_inverse": [
+          {
+            "logical_id": "PROMOTIONS-SVC-BACK-04",
+            "number": 73,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/73"
+          }
+        ],
         "conditional": []
       },
       "errors": []
@@ -767,7 +1442,20 @@
       "verification_status": "VERIFIED",
       "state": "OPEN",
       "dependency_references": {
-        "mandatory": [],
+        "mandatory": [
+          {
+            "logical_id": "PROMOTIONS-SVC-BACK-03",
+            "number": 72,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/72"
+          }
+        ],
+        "mandatory_inverse": [
+          {
+            "logical_id": "PROMOTIONS-SVC-BACK-05",
+            "number": 74,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/74"
+          }
+        ],
         "conditional": []
       },
       "errors": []
@@ -786,7 +1474,20 @@
       "verification_status": "VERIFIED",
       "state": "OPEN",
       "dependency_references": {
-        "mandatory": [],
+        "mandatory": [
+          {
+            "logical_id": "PROMOTIONS-SVC-BACK-04",
+            "number": 73,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/73"
+          }
+        ],
+        "mandatory_inverse": [
+          {
+            "logical_id": "PROMOTIONS-SVC-BACK-06",
+            "number": 75,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/75"
+          }
+        ],
         "conditional": []
       },
       "errors": []
@@ -805,7 +1506,20 @@
       "verification_status": "VERIFIED",
       "state": "OPEN",
       "dependency_references": {
-        "mandatory": [],
+        "mandatory": [
+          {
+            "logical_id": "PROMOTIONS-SVC-BACK-05",
+            "number": 74,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/74"
+          }
+        ],
+        "mandatory_inverse": [
+          {
+            "logical_id": "PROMOTIONS-SVC-BACK-07",
+            "number": 76,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/76"
+          }
+        ],
         "conditional": []
       },
       "errors": []
@@ -824,7 +1538,20 @@
       "verification_status": "VERIFIED",
       "state": "OPEN",
       "dependency_references": {
-        "mandatory": [],
+        "mandatory": [
+          {
+            "logical_id": "PROMOTIONS-SVC-BACK-06",
+            "number": 75,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/75"
+          }
+        ],
+        "mandatory_inverse": [
+          {
+            "logical_id": "PROMOTIONS-SVC-BACK-08",
+            "number": 77,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/77"
+          }
+        ],
         "conditional": []
       },
       "errors": []
@@ -843,8 +1570,55 @@
       "verification_status": "VERIFIED",
       "state": "OPEN",
       "dependency_references": {
-        "mandatory": [],
-        "conditional": []
+        "mandatory": [
+          {
+            "logical_id": "PROMOTIONS-SVC-BACK-07",
+            "number": 76,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/76"
+          },
+          {
+            "logical_id": "GATEWAY-BACK-01",
+            "number": 106,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/106"
+          },
+          {
+            "logical_id": "SHARED-BACK-01",
+            "number": 109,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/109"
+          }
+        ],
+        "mandatory_inverse": [
+          {
+            "logical_id": "PROMOTIONS-SVC-BACK-09",
+            "number": 78,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/78"
+          },
+          {
+            "logical_id": "SHARED-BACK-04",
+            "number": 114,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/114"
+          }
+        ],
+        "conditional": [
+          {
+            "logical_id": "CATALOG-SVC-BACK-06",
+            "number": 48,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/48",
+            "scope": "Proyecciones vigentes usadas por promociones, precios y disponibilidad."
+          },
+          {
+            "logical_id": "PRICING-SVC-BACK-06",
+            "number": 57,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/57",
+            "scope": "Proyecciones vigentes usadas por promociones, precios y disponibilidad."
+          },
+          {
+            "logical_id": "INVENTORY-SVC-BACK-06",
+            "number": 102,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/102",
+            "scope": "Proyecciones vigentes usadas por promociones, precios y disponibilidad."
+          }
+        ]
       },
       "errors": []
     },
@@ -862,7 +1636,40 @@
       "verification_status": "VERIFIED",
       "state": "OPEN",
       "dependency_references": {
-        "mandatory": [],
+        "mandatory": [
+          {
+            "logical_id": "PROMOTIONS-SVC-BACK-08",
+            "number": 77,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/77"
+          },
+          {
+            "logical_id": "SHARED-BACK-03",
+            "number": 113,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/113"
+          },
+          {
+            "logical_id": "CATALOG-SVC-BACK-06",
+            "number": 48,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/48"
+          },
+          {
+            "logical_id": "PRICING-SVC-BACK-06",
+            "number": 57,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/57"
+          },
+          {
+            "logical_id": "INVENTORY-SVC-BACK-06",
+            "number": 102,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/102"
+          }
+        ],
+        "mandatory_inverse": [
+          {
+            "logical_id": "SHARED-BACK-05",
+            "number": 115,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/115"
+          }
+        ],
         "conditional": []
       },
       "errors": []
@@ -882,6 +1689,13 @@
       "state": "OPEN",
       "dependency_references": {
         "mandatory": [],
+        "mandatory_inverse": [
+          {
+            "logical_id": "COMBOS-SVC-BACK-02",
+            "number": 80,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/80"
+          }
+        ],
         "conditional": []
       },
       "errors": []
@@ -900,7 +1714,20 @@
       "verification_status": "VERIFIED",
       "state": "OPEN",
       "dependency_references": {
-        "mandatory": [],
+        "mandatory": [
+          {
+            "logical_id": "COMBOS-SVC-BACK-01",
+            "number": 79,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/79"
+          }
+        ],
+        "mandatory_inverse": [
+          {
+            "logical_id": "COMBOS-SVC-BACK-03",
+            "number": 81,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/81"
+          }
+        ],
         "conditional": []
       },
       "errors": []
@@ -919,7 +1746,20 @@
       "verification_status": "VERIFIED",
       "state": "OPEN",
       "dependency_references": {
-        "mandatory": [],
+        "mandatory": [
+          {
+            "logical_id": "COMBOS-SVC-BACK-02",
+            "number": 80,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/80"
+          }
+        ],
+        "mandatory_inverse": [
+          {
+            "logical_id": "COMBOS-SVC-BACK-04",
+            "number": 82,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/82"
+          }
+        ],
         "conditional": []
       },
       "errors": []
@@ -938,7 +1778,20 @@
       "verification_status": "VERIFIED",
       "state": "OPEN",
       "dependency_references": {
-        "mandatory": [],
+        "mandatory": [
+          {
+            "logical_id": "COMBOS-SVC-BACK-03",
+            "number": 81,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/81"
+          }
+        ],
+        "mandatory_inverse": [
+          {
+            "logical_id": "COMBOS-SVC-BACK-05",
+            "number": 83,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/83"
+          }
+        ],
         "conditional": []
       },
       "errors": []
@@ -957,7 +1810,20 @@
       "verification_status": "VERIFIED",
       "state": "OPEN",
       "dependency_references": {
-        "mandatory": [],
+        "mandatory": [
+          {
+            "logical_id": "COMBOS-SVC-BACK-04",
+            "number": 82,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/82"
+          }
+        ],
+        "mandatory_inverse": [
+          {
+            "logical_id": "COMBOS-SVC-BACK-06",
+            "number": 84,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/84"
+          }
+        ],
         "conditional": []
       },
       "errors": []
@@ -976,7 +1842,20 @@
       "verification_status": "VERIFIED",
       "state": "OPEN",
       "dependency_references": {
-        "mandatory": [],
+        "mandatory": [
+          {
+            "logical_id": "COMBOS-SVC-BACK-05",
+            "number": 83,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/83"
+          }
+        ],
+        "mandatory_inverse": [
+          {
+            "logical_id": "COMBOS-SVC-BACK-07",
+            "number": 85,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/85"
+          }
+        ],
         "conditional": []
       },
       "errors": []
@@ -995,7 +1874,20 @@
       "verification_status": "VERIFIED",
       "state": "OPEN",
       "dependency_references": {
-        "mandatory": [],
+        "mandatory": [
+          {
+            "logical_id": "COMBOS-SVC-BACK-06",
+            "number": 84,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/84"
+          }
+        ],
+        "mandatory_inverse": [
+          {
+            "logical_id": "COMBOS-SVC-BACK-08",
+            "number": 86,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/86"
+          }
+        ],
         "conditional": []
       },
       "errors": []
@@ -1014,8 +1906,55 @@
       "verification_status": "VERIFIED",
       "state": "OPEN",
       "dependency_references": {
-        "mandatory": [],
-        "conditional": []
+        "mandatory": [
+          {
+            "logical_id": "COMBOS-SVC-BACK-07",
+            "number": 85,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/85"
+          },
+          {
+            "logical_id": "GATEWAY-BACK-01",
+            "number": 106,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/106"
+          },
+          {
+            "logical_id": "SHARED-BACK-01",
+            "number": 109,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/109"
+          }
+        ],
+        "mandatory_inverse": [
+          {
+            "logical_id": "COMBOS-SVC-BACK-09",
+            "number": 87,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/87"
+          },
+          {
+            "logical_id": "SHARED-BACK-04",
+            "number": 114,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/114"
+          }
+        ],
+        "conditional": [
+          {
+            "logical_id": "CATALOG-SVC-BACK-04",
+            "number": 46,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/46",
+            "scope": "Selector de componentes SKU, precio vigente y disponibilidad informativa."
+          },
+          {
+            "logical_id": "PRICING-SVC-BACK-04",
+            "number": 55,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/55",
+            "scope": "Selector de componentes SKU, precio vigente y disponibilidad informativa."
+          },
+          {
+            "logical_id": "INVENTORY-SVC-BACK-06",
+            "number": 102,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/102",
+            "scope": "Selector de componentes SKU, precio vigente y disponibilidad informativa."
+          }
+        ]
       },
       "errors": []
     },
@@ -1033,7 +1972,40 @@
       "verification_status": "VERIFIED",
       "state": "OPEN",
       "dependency_references": {
-        "mandatory": [],
+        "mandatory": [
+          {
+            "logical_id": "COMBOS-SVC-BACK-08",
+            "number": 86,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/86"
+          },
+          {
+            "logical_id": "SHARED-BACK-03",
+            "number": 113,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/113"
+          },
+          {
+            "logical_id": "CATALOG-SVC-BACK-06",
+            "number": 48,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/48"
+          },
+          {
+            "logical_id": "PRICING-SVC-BACK-04",
+            "number": 55,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/55"
+          },
+          {
+            "logical_id": "INVENTORY-SVC-BACK-06",
+            "number": 102,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/102"
+          }
+        ],
+        "mandatory_inverse": [
+          {
+            "logical_id": "SHARED-BACK-05",
+            "number": 115,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/115"
+          }
+        ],
         "conditional": []
       },
       "errors": []
@@ -1053,6 +2025,13 @@
       "state": "OPEN",
       "dependency_references": {
         "mandatory": [],
+        "mandatory_inverse": [
+          {
+            "logical_id": "BULK-SVC-BACK-02",
+            "number": 89,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/89"
+          }
+        ],
         "conditional": []
       },
       "errors": []
@@ -1071,7 +2050,20 @@
       "verification_status": "VERIFIED",
       "state": "OPEN",
       "dependency_references": {
-        "mandatory": [],
+        "mandatory": [
+          {
+            "logical_id": "BULK-SVC-BACK-01",
+            "number": 88,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/88"
+          }
+        ],
+        "mandatory_inverse": [
+          {
+            "logical_id": "BULK-SVC-BACK-03",
+            "number": 90,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/90"
+          }
+        ],
         "conditional": []
       },
       "errors": []
@@ -1090,7 +2082,20 @@
       "verification_status": "VERIFIED",
       "state": "OPEN",
       "dependency_references": {
-        "mandatory": [],
+        "mandatory": [
+          {
+            "logical_id": "BULK-SVC-BACK-02",
+            "number": 89,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/89"
+          }
+        ],
+        "mandatory_inverse": [
+          {
+            "logical_id": "BULK-SVC-BACK-04",
+            "number": 91,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/91"
+          }
+        ],
         "conditional": []
       },
       "errors": []
@@ -1109,7 +2114,20 @@
       "verification_status": "VERIFIED",
       "state": "OPEN",
       "dependency_references": {
-        "mandatory": [],
+        "mandatory": [
+          {
+            "logical_id": "BULK-SVC-BACK-03",
+            "number": 90,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/90"
+          }
+        ],
+        "mandatory_inverse": [
+          {
+            "logical_id": "BULK-SVC-BACK-05",
+            "number": 92,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/92"
+          }
+        ],
         "conditional": []
       },
       "errors": []
@@ -1128,7 +2146,20 @@
       "verification_status": "VERIFIED",
       "state": "OPEN",
       "dependency_references": {
-        "mandatory": [],
+        "mandatory": [
+          {
+            "logical_id": "BULK-SVC-BACK-04",
+            "number": 91,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/91"
+          }
+        ],
+        "mandatory_inverse": [
+          {
+            "logical_id": "BULK-SVC-BACK-06",
+            "number": 93,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/93"
+          }
+        ],
         "conditional": []
       },
       "errors": []
@@ -1147,7 +2178,20 @@
       "verification_status": "VERIFIED",
       "state": "OPEN",
       "dependency_references": {
-        "mandatory": [],
+        "mandatory": [
+          {
+            "logical_id": "BULK-SVC-BACK-05",
+            "number": 92,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/92"
+          }
+        ],
+        "mandatory_inverse": [
+          {
+            "logical_id": "BULK-SVC-BACK-07",
+            "number": 94,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/94"
+          }
+        ],
         "conditional": []
       },
       "errors": []
@@ -1166,7 +2210,20 @@
       "verification_status": "VERIFIED",
       "state": "OPEN",
       "dependency_references": {
-        "mandatory": [],
+        "mandatory": [
+          {
+            "logical_id": "BULK-SVC-BACK-06",
+            "number": 93,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/93"
+          }
+        ],
+        "mandatory_inverse": [
+          {
+            "logical_id": "BULK-SVC-BACK-08",
+            "number": 95,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/95"
+          }
+        ],
         "conditional": []
       },
       "errors": []
@@ -1185,8 +2242,55 @@
       "verification_status": "VERIFIED",
       "state": "OPEN",
       "dependency_references": {
-        "mandatory": [],
-        "conditional": []
+        "mandatory": [
+          {
+            "logical_id": "BULK-SVC-BACK-07",
+            "number": 94,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/94"
+          },
+          {
+            "logical_id": "GATEWAY-BACK-01",
+            "number": 106,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/106"
+          },
+          {
+            "logical_id": "SHARED-BACK-01",
+            "number": 109,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/109"
+          }
+        ],
+        "mandatory_inverse": [
+          {
+            "logical_id": "BULK-SVC-BACK-09",
+            "number": 96,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/96"
+          },
+          {
+            "logical_id": "SHARED-BACK-04",
+            "number": 114,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/114"
+          }
+        ],
+        "conditional": [
+          {
+            "logical_id": "CATALOG-SVC-BACK-06",
+            "number": 48,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/48",
+            "scope": "Importación/reanudación que espera resultados async de los tres bounded contexts."
+          },
+          {
+            "logical_id": "PRICING-SVC-BACK-06",
+            "number": 57,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/57",
+            "scope": "Importación/reanudación que espera resultados async de los tres bounded contexts."
+          },
+          {
+            "logical_id": "INVENTORY-SVC-BACK-06",
+            "number": 102,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/102",
+            "scope": "Importación/reanudación que espera resultados async de los tres bounded contexts."
+          }
+        ]
       },
       "errors": []
     },
@@ -1204,7 +2308,40 @@
       "verification_status": "VERIFIED",
       "state": "OPEN",
       "dependency_references": {
-        "mandatory": [],
+        "mandatory": [
+          {
+            "logical_id": "BULK-SVC-BACK-08",
+            "number": 95,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/95"
+          },
+          {
+            "logical_id": "SHARED-BACK-03",
+            "number": 113,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/113"
+          },
+          {
+            "logical_id": "CATALOG-SVC-BACK-06",
+            "number": 48,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/48"
+          },
+          {
+            "logical_id": "PRICING-SVC-BACK-06",
+            "number": 57,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/57"
+          },
+          {
+            "logical_id": "INVENTORY-SVC-BACK-06",
+            "number": 102,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/102"
+          }
+        ],
+        "mandatory_inverse": [
+          {
+            "logical_id": "SHARED-BACK-05",
+            "number": 115,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/115"
+          }
+        ],
         "conditional": []
       },
       "errors": []
@@ -1224,6 +2361,13 @@
       "state": "OPEN",
       "dependency_references": {
         "mandatory": [],
+        "mandatory_inverse": [
+          {
+            "logical_id": "INVENTORY-SVC-BACK-02",
+            "number": 98,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/98"
+          }
+        ],
         "conditional": []
       },
       "errors": []
@@ -1242,7 +2386,20 @@
       "verification_status": "VERIFIED",
       "state": "OPEN",
       "dependency_references": {
-        "mandatory": [],
+        "mandatory": [
+          {
+            "logical_id": "INVENTORY-SVC-BACK-01",
+            "number": 97,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/97"
+          }
+        ],
+        "mandatory_inverse": [
+          {
+            "logical_id": "INVENTORY-SVC-BACK-03",
+            "number": 99,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/99"
+          }
+        ],
         "conditional": []
       },
       "errors": []
@@ -1261,7 +2418,20 @@
       "verification_status": "VERIFIED",
       "state": "OPEN",
       "dependency_references": {
-        "mandatory": [],
+        "mandatory": [
+          {
+            "logical_id": "INVENTORY-SVC-BACK-02",
+            "number": 98,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/98"
+          }
+        ],
+        "mandatory_inverse": [
+          {
+            "logical_id": "INVENTORY-SVC-BACK-04",
+            "number": 100,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/100"
+          }
+        ],
         "conditional": []
       },
       "errors": []
@@ -1280,7 +2450,20 @@
       "verification_status": "VERIFIED",
       "state": "OPEN",
       "dependency_references": {
-        "mandatory": [],
+        "mandatory": [
+          {
+            "logical_id": "INVENTORY-SVC-BACK-03",
+            "number": 99,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/99"
+          }
+        ],
+        "mandatory_inverse": [
+          {
+            "logical_id": "INVENTORY-SVC-BACK-05",
+            "number": 101,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/101"
+          }
+        ],
         "conditional": []
       },
       "errors": []
@@ -1299,7 +2482,20 @@
       "verification_status": "VERIFIED",
       "state": "OPEN",
       "dependency_references": {
-        "mandatory": [],
+        "mandatory": [
+          {
+            "logical_id": "INVENTORY-SVC-BACK-04",
+            "number": 100,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/100"
+          }
+        ],
+        "mandatory_inverse": [
+          {
+            "logical_id": "INVENTORY-SVC-BACK-06",
+            "number": 102,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/102"
+          }
+        ],
         "conditional": []
       },
       "errors": []
@@ -1318,7 +2514,40 @@
       "verification_status": "VERIFIED",
       "state": "OPEN",
       "dependency_references": {
-        "mandatory": [],
+        "mandatory": [
+          {
+            "logical_id": "INVENTORY-SVC-BACK-05",
+            "number": 101,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/101"
+          }
+        ],
+        "mandatory_inverse": [
+          {
+            "logical_id": "CATALOG-SVC-BACK-09",
+            "number": 51,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/51"
+          },
+          {
+            "logical_id": "PROMOTIONS-SVC-BACK-09",
+            "number": 78,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/78"
+          },
+          {
+            "logical_id": "COMBOS-SVC-BACK-09",
+            "number": 87,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/87"
+          },
+          {
+            "logical_id": "BULK-SVC-BACK-09",
+            "number": 96,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/96"
+          },
+          {
+            "logical_id": "INVENTORY-SVC-BACK-07",
+            "number": 103,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/103"
+          }
+        ],
         "conditional": []
       },
       "errors": []
@@ -1337,7 +2566,20 @@
       "verification_status": "VERIFIED",
       "state": "OPEN",
       "dependency_references": {
-        "mandatory": [],
+        "mandatory": [
+          {
+            "logical_id": "INVENTORY-SVC-BACK-06",
+            "number": 102,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/102"
+          }
+        ],
+        "mandatory_inverse": [
+          {
+            "logical_id": "INVENTORY-SVC-BACK-08",
+            "number": 104,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/104"
+          }
+        ],
         "conditional": []
       },
       "errors": []
@@ -1356,7 +2598,35 @@
       "verification_status": "VERIFIED",
       "state": "OPEN",
       "dependency_references": {
-        "mandatory": [],
+        "mandatory": [
+          {
+            "logical_id": "INVENTORY-SVC-BACK-07",
+            "number": 103,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/103"
+          },
+          {
+            "logical_id": "GATEWAY-BACK-01",
+            "number": 106,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/106"
+          },
+          {
+            "logical_id": "SHARED-BACK-01",
+            "number": 109,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/109"
+          }
+        ],
+        "mandatory_inverse": [
+          {
+            "logical_id": "INVENTORY-SVC-BACK-09",
+            "number": 105,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/105"
+          },
+          {
+            "logical_id": "SHARED-BACK-04",
+            "number": 114,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/114"
+          }
+        ],
         "conditional": []
       },
       "errors": []
@@ -1375,7 +2645,25 @@
       "verification_status": "VERIFIED",
       "state": "OPEN",
       "dependency_references": {
-        "mandatory": [],
+        "mandatory": [
+          {
+            "logical_id": "INVENTORY-SVC-BACK-08",
+            "number": 104,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/104"
+          },
+          {
+            "logical_id": "SHARED-BACK-03",
+            "number": 113,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/113"
+          }
+        ],
+        "mandatory_inverse": [
+          {
+            "logical_id": "SHARED-BACK-05",
+            "number": 115,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/115"
+          }
+        ],
         "conditional": []
       },
       "errors": []
@@ -1395,6 +2683,73 @@
       "state": "OPEN",
       "dependency_references": {
         "mandatory": [],
+        "mandatory_inverse": [
+          {
+            "logical_id": "TAXONOMY-SVC-BACK-08",
+            "number": 41,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/41"
+          },
+          {
+            "logical_id": "CATALOG-SVC-BACK-08",
+            "number": 50,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/50"
+          },
+          {
+            "logical_id": "PRICING-SVC-BACK-08",
+            "number": 59,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/59"
+          },
+          {
+            "logical_id": "PRICE-AUDIT-SVC-BACK-08",
+            "number": 68,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/68"
+          },
+          {
+            "logical_id": "PROMOTIONS-SVC-BACK-08",
+            "number": 77,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/77"
+          },
+          {
+            "logical_id": "COMBOS-SVC-BACK-08",
+            "number": 86,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/86"
+          },
+          {
+            "logical_id": "BULK-SVC-BACK-08",
+            "number": 95,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/95"
+          },
+          {
+            "logical_id": "INVENTORY-SVC-BACK-08",
+            "number": 104,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/104"
+          },
+          {
+            "logical_id": "GATEWAY-BACK-02",
+            "number": 107,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/107"
+          },
+          {
+            "logical_id": "GATEWAY-BACK-03",
+            "number": 108,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/108"
+          },
+          {
+            "logical_id": "DEPLOY-BACK-01",
+            "number": 110,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/110"
+          },
+          {
+            "logical_id": "DEPLOY-BACK-02",
+            "number": 111,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/111"
+          },
+          {
+            "logical_id": "SHARED-BACK-03",
+            "number": 113,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/113"
+          }
+        ],
         "conditional": []
       },
       "errors": []
@@ -1413,7 +2768,14 @@
       "verification_status": "VERIFIED",
       "state": "OPEN",
       "dependency_references": {
-        "mandatory": [],
+        "mandatory": [
+          {
+            "logical_id": "GATEWAY-BACK-01",
+            "number": 106,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/106"
+          }
+        ],
+        "mandatory_inverse": [],
         "conditional": []
       },
       "errors": []
@@ -1432,8 +2794,46 @@
       "verification_status": "VERIFIED",
       "state": "OPEN",
       "dependency_references": {
-        "mandatory": [],
-        "conditional": []
+        "mandatory": [
+          {
+            "logical_id": "GATEWAY-BACK-01",
+            "number": 106,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/106"
+          }
+        ],
+        "mandatory_inverse": [
+          {
+            "logical_id": "SHARED-BACK-05",
+            "number": 115,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/115"
+          }
+        ],
+        "conditional": [
+          {
+            "logical_id": "TAXONOMY-SVC-BACK-06",
+            "number": 39,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/39",
+            "scope": "Solo pruebas de integración con publishers reales para los eventos BFF declarados (no handlers ni contract tests aislados)."
+          },
+          {
+            "logical_id": "CATALOG-SVC-BACK-06",
+            "number": 48,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/48",
+            "scope": "Solo pruebas de integración con publishers reales para los eventos BFF declarados (no handlers ni contract tests aislados)."
+          },
+          {
+            "logical_id": "PRICING-SVC-BACK-06",
+            "number": 57,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/57",
+            "scope": "Solo pruebas de integración con publishers reales para los eventos BFF declarados (no handlers ni contract tests aislados)."
+          },
+          {
+            "logical_id": "INVENTORY-SVC-BACK-06",
+            "number": 102,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/102",
+            "scope": "Solo pruebas de integración con publishers reales para los eventos BFF declarados (no handlers ni contract tests aislados)."
+          }
+        ]
       },
       "errors": []
     },
@@ -1452,6 +2852,53 @@
       "state": "OPEN",
       "dependency_references": {
         "mandatory": [],
+        "mandatory_inverse": [
+          {
+            "logical_id": "TAXONOMY-SVC-BACK-08",
+            "number": 41,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/41"
+          },
+          {
+            "logical_id": "CATALOG-SVC-BACK-08",
+            "number": 50,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/50"
+          },
+          {
+            "logical_id": "PRICING-SVC-BACK-08",
+            "number": 59,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/59"
+          },
+          {
+            "logical_id": "PRICE-AUDIT-SVC-BACK-08",
+            "number": 68,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/68"
+          },
+          {
+            "logical_id": "PROMOTIONS-SVC-BACK-08",
+            "number": 77,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/77"
+          },
+          {
+            "logical_id": "COMBOS-SVC-BACK-08",
+            "number": 86,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/86"
+          },
+          {
+            "logical_id": "BULK-SVC-BACK-08",
+            "number": 95,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/95"
+          },
+          {
+            "logical_id": "INVENTORY-SVC-BACK-08",
+            "number": 104,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/104"
+          },
+          {
+            "logical_id": "SHARED-BACK-03",
+            "number": 113,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/113"
+          }
+        ],
         "conditional": []
       },
       "errors": []
@@ -1470,7 +2917,25 @@
       "verification_status": "VERIFIED",
       "state": "OPEN",
       "dependency_references": {
-        "mandatory": [],
+        "mandatory": [
+          {
+            "logical_id": "GATEWAY-BACK-01",
+            "number": 106,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/106"
+          }
+        ],
+        "mandatory_inverse": [
+          {
+            "logical_id": "DEPLOY-BACK-02",
+            "number": 111,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/111"
+          },
+          {
+            "logical_id": "SHARED-BACK-05",
+            "number": 115,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/115"
+          }
+        ],
         "conditional": []
       },
       "errors": []
@@ -1489,8 +2954,80 @@
       "verification_status": "VERIFIED",
       "state": "OPEN",
       "dependency_references": {
-        "mandatory": [],
-        "conditional": []
+        "mandatory": [
+          {
+            "logical_id": "DEPLOY-BACK-01",
+            "number": 110,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/110"
+          },
+          {
+            "logical_id": "GATEWAY-BACK-01",
+            "number": 106,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/106"
+          },
+          {
+            "logical_id": "SHARED-BACK-03",
+            "number": 113,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/113"
+          }
+        ],
+        "mandatory_inverse": [
+          {
+            "logical_id": "SHARED-BACK-05",
+            "number": 115,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/115"
+          }
+        ],
+        "conditional": [
+          {
+            "logical_id": "TAXONOMY-SVC-BACK-01",
+            "number": 34,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/34",
+            "scope": "Readiness solo para el conjunto de microservicios elegido en la aprobación de ventana; no se exige desplegar los demás."
+          },
+          {
+            "logical_id": "CATALOG-SVC-BACK-01",
+            "number": 43,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/43",
+            "scope": "Readiness solo para el conjunto de microservicios elegido en la aprobación de ventana; no se exige desplegar los demás."
+          },
+          {
+            "logical_id": "PRICING-SVC-BACK-01",
+            "number": 52,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/52",
+            "scope": "Readiness solo para el conjunto de microservicios elegido en la aprobación de ventana; no se exige desplegar los demás."
+          },
+          {
+            "logical_id": "PRICE-AUDIT-SVC-BACK-01",
+            "number": 61,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/61",
+            "scope": "Readiness solo para el conjunto de microservicios elegido en la aprobación de ventana; no se exige desplegar los demás."
+          },
+          {
+            "logical_id": "PROMOTIONS-SVC-BACK-01",
+            "number": 70,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/70",
+            "scope": "Readiness solo para el conjunto de microservicios elegido en la aprobación de ventana; no se exige desplegar los demás."
+          },
+          {
+            "logical_id": "COMBOS-SVC-BACK-01",
+            "number": 79,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/79",
+            "scope": "Readiness solo para el conjunto de microservicios elegido en la aprobación de ventana; no se exige desplegar los demás."
+          },
+          {
+            "logical_id": "BULK-SVC-BACK-01",
+            "number": 88,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/88",
+            "scope": "Readiness solo para el conjunto de microservicios elegido en la aprobación de ventana; no se exige desplegar los demás."
+          },
+          {
+            "logical_id": "INVENTORY-SVC-BACK-01",
+            "number": 97,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/97",
+            "scope": "Readiness solo para el conjunto de microservicios elegido en la aprobación de ventana; no se exige desplegar los demás."
+          }
+        ]
       },
       "errors": []
     },
@@ -1509,6 +3046,13 @@
       "state": "OPEN",
       "dependency_references": {
         "mandatory": [],
+        "mandatory_inverse": [
+          {
+            "logical_id": "SHARED-BACK-05",
+            "number": 115,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/115"
+          }
+        ],
         "conditional": []
       },
       "errors": []
@@ -1527,7 +3071,65 @@
       "verification_status": "VERIFIED",
       "state": "OPEN",
       "dependency_references": {
-        "mandatory": [],
+        "mandatory": [
+          {
+            "logical_id": "GATEWAY-BACK-01",
+            "number": 106,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/106"
+          },
+          {
+            "logical_id": "SHARED-BACK-01",
+            "number": 109,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/109"
+          }
+        ],
+        "mandatory_inverse": [
+          {
+            "logical_id": "TAXONOMY-SVC-BACK-09",
+            "number": 42,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/42"
+          },
+          {
+            "logical_id": "CATALOG-SVC-BACK-09",
+            "number": 51,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/51"
+          },
+          {
+            "logical_id": "PRICING-SVC-BACK-09",
+            "number": 60,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/60"
+          },
+          {
+            "logical_id": "PRICE-AUDIT-SVC-BACK-09",
+            "number": 69,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/69"
+          },
+          {
+            "logical_id": "PROMOTIONS-SVC-BACK-09",
+            "number": 78,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/78"
+          },
+          {
+            "logical_id": "COMBOS-SVC-BACK-09",
+            "number": 87,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/87"
+          },
+          {
+            "logical_id": "BULK-SVC-BACK-09",
+            "number": 96,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/96"
+          },
+          {
+            "logical_id": "INVENTORY-SVC-BACK-09",
+            "number": 105,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/105"
+          },
+          {
+            "logical_id": "DEPLOY-BACK-02",
+            "number": 111,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/111"
+          }
+        ],
         "conditional": []
       },
       "errors": []
@@ -1546,7 +3148,55 @@
       "verification_status": "VERIFIED",
       "state": "OPEN",
       "dependency_references": {
-        "mandatory": [],
+        "mandatory": [
+          {
+            "logical_id": "BULK-SVC-BACK-08",
+            "number": 95,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/95"
+          },
+          {
+            "logical_id": "COMBOS-SVC-BACK-08",
+            "number": 86,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/86"
+          },
+          {
+            "logical_id": "CATALOG-SVC-BACK-08",
+            "number": 50,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/50"
+          },
+          {
+            "logical_id": "PROMOTIONS-SVC-BACK-08",
+            "number": 77,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/77"
+          },
+          {
+            "logical_id": "TAXONOMY-SVC-BACK-08",
+            "number": 41,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/41"
+          },
+          {
+            "logical_id": "PRICING-SVC-BACK-08",
+            "number": 59,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/59"
+          },
+          {
+            "logical_id": "PRICE-AUDIT-SVC-BACK-08",
+            "number": 68,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/68"
+          },
+          {
+            "logical_id": "INVENTORY-SVC-BACK-08",
+            "number": 104,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/104"
+          }
+        ],
+        "mandatory_inverse": [
+          {
+            "logical_id": "SHARED-BACK-05",
+            "number": 115,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/115"
+          }
+        ],
         "conditional": []
       },
       "errors": []
@@ -1565,7 +3215,74 @@
       "verification_status": "VERIFIED",
       "state": "OPEN",
       "dependency_references": {
-        "mandatory": [],
+        "mandatory": [
+          {
+            "logical_id": "TAXONOMY-SVC-BACK-09",
+            "number": 42,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/42"
+          },
+          {
+            "logical_id": "CATALOG-SVC-BACK-09",
+            "number": 51,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/51"
+          },
+          {
+            "logical_id": "PRICING-SVC-BACK-09",
+            "number": 60,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/60"
+          },
+          {
+            "logical_id": "PRICE-AUDIT-SVC-BACK-09",
+            "number": 69,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/69"
+          },
+          {
+            "logical_id": "PROMOTIONS-SVC-BACK-09",
+            "number": 78,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/78"
+          },
+          {
+            "logical_id": "COMBOS-SVC-BACK-09",
+            "number": 87,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/87"
+          },
+          {
+            "logical_id": "BULK-SVC-BACK-09",
+            "number": 96,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/96"
+          },
+          {
+            "logical_id": "INVENTORY-SVC-BACK-09",
+            "number": 105,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/105"
+          },
+          {
+            "logical_id": "GATEWAY-BACK-03",
+            "number": 108,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/108"
+          },
+          {
+            "logical_id": "DEPLOY-BACK-01",
+            "number": 110,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/110"
+          },
+          {
+            "logical_id": "DATA-BACK-01",
+            "number": 112,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/112"
+          },
+          {
+            "logical_id": "SHARED-BACK-04",
+            "number": 114,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/114"
+          },
+          {
+            "logical_id": "DEPLOY-BACK-02",
+            "number": 111,
+            "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend/issues/111"
+          }
+        ],
+        "mandatory_inverse": [],
         "conditional": []
       },
       "errors": []
@@ -2059,5 +3776,5 @@
       }
     ]
   },
-  "updated_at": "2026-10-16T08:37:21.580Z"
+  "updated_at": "2026-10-16T08:41:10.999Z"
 }
