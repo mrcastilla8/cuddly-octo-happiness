@@ -103,4 +103,3 @@ async function main() {
   console.log(JSON.stringify(summary,null,2));
 }
 main().catch(e=>{ console.error(`diagnostic runner failed: ${e.name}`); process.exitCode=1; });
-
