@@ -1,0 +1,21 @@
+
+[WebServer] (node:29668) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 6 tests using 2 workers
+
+
+(node:14272) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+(node:28304) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1/6] tests\catalog-final-review.spec.ts:23:1 › LISTA create sends option ID separately from its display label
+[2/6] tests\catalog-final-review.spec.ts:3:1 › LISTA edit survives provider renaming and sends stable ID with current label
+[3/6] tests\catalog-final-review.spec.ts:37:1 › LISTA with only a historical label requires explicit ID confirmation
+[4/6] tests\catalog-final-review.spec.ts:49:3 › type correction requires known publication preconditions and resolved Q-06: true
+[5/6] tests\catalog-final-review.spec.ts:49:3 › type correction requires known publication preconditions and resolved Q-06: false
+[6/6] tests\catalog-final-review.spec.ts:49:3 › type correction requires known publication preconditions and resolved Q-06: unknown
+  6 passed (10.8s)

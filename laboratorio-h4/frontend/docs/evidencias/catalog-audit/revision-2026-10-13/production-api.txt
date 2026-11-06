@@ -1,0 +1,1 @@
+PASS producción api: 39 vistas de Catálogo, Promotions, Pricing S01 y Taxonomía, 1440 px, sin errores; providers ausentes explícitos, reintento y persistencia del error de Pricing, taxonomía bloqueada y cero carga de mocks/bundles.

@@ -1,0 +1,11 @@
+
+> productos-ofertas-frontend@0.1.0 typecheck
+> tsc --noEmit
+
+
+> productos-ofertas-frontend@0.1.0 lint
+> eslint .
+
+PASS VER-01 producción: edición → asiento simulado, sin herramientas DEV
+PASS producción mock: 58 vistas de Catálogo, Promotions, Pricing S01, Auditoría S01–S05, Taxonomía, Inventario y Combos S01–S03, 1440 px, sin errores; módulos presentes, tablas comerciales verificadas y controles de revisión ausentes.
+PASS producción api: 53 vistas de Catálogo, Promotions, Pricing S01, Auditoría S01–S05, Taxonomía, Inventario y Combos S01–S03, 1440 px, sin errores; providers ausentes explícitos, reintento y persistencia del error de Pricing, taxonomía, inventario y combos bloqueados y cero carga de mocks/bundles.

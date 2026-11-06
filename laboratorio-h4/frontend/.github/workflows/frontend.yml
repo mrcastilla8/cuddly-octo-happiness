@@ -1,0 +1,179 @@
+name: Frontend Foundation
+
+on:
+  pull_request:
+    branches: [master]
+  push:
+    branches: [master]
+
+concurrency:
+  group: frontend-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  quick:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      VITE_DATA_MODE: mock
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-node@v7.1.0
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run test
+      - run: npm run build
+
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      VITE_DATA_MODE: mock
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-node@v7.1.0
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - name: Ejecutar smoke Playwright
+        run: npx playwright test --grep "@smoke" --workers=1
+      - name: Conservar evidencias smoke
+        if: always()
+        uses: actions/upload-artifact@v7.0.2
+        with:
+          name: playwright-smoke
+          path: |
+            test-results/
+            playwright-report/
+          if-no-files-found: ignore
+          retention-days: 7
+
+  e2e:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      VITE_DATA_MODE: mock
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [1, 2, 3]
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-node@v7.1.0
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - name: Ejecutar shard ${{ matrix.shard }} de 3
+        run: npx playwright test --shard=${{ matrix.shard }}/3 --workers=1 --reporter=blob
+      - name: Conservar evidencias del shard
+        if: always()
+        uses: actions/upload-artifact@v7.0.2
+        with:
+          name: playwright-shard-${{ matrix.shard }}
+          path: |
+            blob-report/
+            test-results/
+            playwright-report/
+            docs/evidencias/
+          if-no-files-found: ignore
+          retention-days: 7
+
+  modes:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-node@v7.1.0
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - name: Instalar Chromium para verificaciones de preview
+        run: npx playwright install --with-deps chromium
+      - name: Compilar modo mock
+        env:
+          VITE_DATA_MODE: mock
+        run: npm run build
+      - name: Verificar build y preview mock
+        env:
+          VITE_DATA_MODE: mock
+        run: |
+          node node_modules/vite/bin/vite.js preview --host 127.0.0.1 --port 5174 --strictPort > preview-mock.log 2>&1 &
+          preview_pid=$!
+          cleanup() {
+            kill "$preview_pid" 2>/dev/null || true
+            wait "$preview_pid" 2>/dev/null || true
+          }
+          trap cleanup EXIT
+          ready=false
+          for attempt in $(seq 1 30); do
+            if curl --fail --silent http://127.0.0.1:5174/ > /dev/null; then ready=true; break; fi
+            sleep 1
+          done
+          test "$ready" = true
+          node scripts/verify-production.mjs mock
+          node scripts/vercel-smoke.mjs http://127.0.0.1:5174
+      - name: Compilar modo API
+        env:
+          VITE_DATA_MODE: api
+        run: npm run build
+      - name: Verificar build y preview API sin fallback a mocks
+        env:
+          VITE_DATA_MODE: api
+        run: |
+          node node_modules/vite/bin/vite.js preview --host 127.0.0.1 --port 5174 --strictPort > preview-api.log 2>&1 &
+          preview_pid=$!
+          cleanup() {
+            kill "$preview_pid" 2>/dev/null || true
+            wait "$preview_pid" 2>/dev/null || true
+          }
+          trap cleanup EXIT
+          ready=false
+          for attempt in $(seq 1 30); do
+            if curl --fail --silent http://127.0.0.1:5174/ > /dev/null; then ready=true; break; fi
+            sleep 1
+          done
+          test "$ready" = true
+          node scripts/verify-production.mjs api
+      - name: Conservar logs de modos
+        if: always()
+        uses: actions/upload-artifact@v7.0.2
+        with:
+          name: frontend-modes-evidence
+          path: |
+            preview-mock.log
+            preview-api.log
+            docs/evidencias/
+          if-no-files-found: ignore
+          retention-days: 7
+
+  validate:
+    if: always()
+    needs: [quick, smoke, e2e, modes]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Exigir éxito de todas las validaciones
+        env:
+          QUICK_RESULT: ${{ needs.quick.result }}
+          SMOKE_RESULT: ${{ needs.smoke.result }}
+          E2E_RESULT: ${{ needs.e2e.result }}
+          MODES_RESULT: ${{ needs.modes.result }}
+        run: |
+          for job in QUICK SMOKE E2E MODES; do
+            result_var="${job}_RESULT"
+            result="${!result_var}"
+            echo "$job: $result"
+            if [ "$result" != "success" ]; then
+              exit 1
+            fi
+          done

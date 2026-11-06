@@ -1,0 +1,1 @@
+﻿PASS producci├│n mock: 52 vistas de Cat├ílogo, Promotions, Pricing S01, Auditor├¡a S01ÔÇôS05, Taxonom├¡a e Inventario, 1440 px, sin errores; m├│dulos presentes, tablas comerciales verificadas y controles de revisi├│n ausentes.

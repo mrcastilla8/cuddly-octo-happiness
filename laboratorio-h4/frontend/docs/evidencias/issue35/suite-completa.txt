@@ -1,0 +1,651 @@
+
+> productos-ofertas-frontend@0.1.0 test
+> playwright test --workers=4 --reporter=line
+
+[WebServer] (node:33232) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 259 tests using 4 workers
+
+
+(node:24672) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+(node:5732) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+(node:29644) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+(node:14248) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[1/259] tests\bulk.spec.ts:39:3 › MK-001 — Carga y exportación masiva de productos (Regresión C01-C24) › C03: Advance simulation explicitly transitions QUEUED -> PROCESSING -> COMPLETED
+[2/259] tests\bulk.spec.ts:28:3 › MK-001 — Carga y exportación masiva de productos (Regresión C01-C24) › C02: New import starts in QUEUED and reads remain QUEUED until explicitly advanced
+[3/259] tests\bulk.spec.ts:51:3 › MK-001 — Carga y exportación masiva de productos (Regresión C01-C24) › C04 & C05: Resume batch-partial preserves same batch_id and confirmed completed rows
+[4/259] tests\bulk.spec.ts:11:3 › MK-001 — Carga y exportación masiva de productos (Regresión C01-C24) › C01: Multiple queries to batch-queued return immutable state without side-effects
+[5/259] tests\bulk.spec.ts:64:3 › MK-001 — Carga y exportación masiva de productos (Regresión C01-C24) › C06: Resume batch without pending/reconciliation items is rejected
+[6/259] tests\bulk.spec.ts:71:3 › MK-001 — Carga y exportación masiva de productos (Regresión C01-C24) › C07: Download partial report contains 6 failed rows with correct error codes
+[7/259] tests\bulk.spec.ts:91:3 › MK-001 — Carga y exportación masiva de productos (Regresión C01-C24) › C09: Download pricing-failed report contains only pricing domain errors
+[8/259] tests\bulk.spec.ts:81:3 › MK-001 — Carga y exportación masiva de productos (Regresión C01-C24) › C08: Download inventory-failed report contains only inventory domain errors
+[9/259] tests\bulk.spec.ts:101:3 › MK-001 — Carga y exportación masiva de productos (Regresión C01-C24) › C10 & C11: Request CSV export and download completed file
+[10/259] tests\bulk.spec.ts:110:3 › MK-001 — Carga y exportación masiva de productos (Regresión C01-C24) › C12 & C13: XLSX export does not return pseudo-csv file and download is null
+[11/259] tests\bulk.spec.ts:116:3 › MK-001 — Carga y exportación masiva de productos (Regresión C01-C24) › C14: Querying export job is idempotent and does not mutate status
+[12/259] tests\bulk.spec.ts:124:3 › MK-001 — Carga y exportación masiva de productos (Regresión C01-C24) › C15: S01 quickly selecting A then B applies only review B
+[13/259] tests\bulk.spec.ts:145:3 › MK-001 — Carga y exportación masiva de productos (Regresión C01-C24) › C16: Clear file invalidates selection and disables continue
+[14/259] tests\bulk.spec.ts:159:3 › MK-001 — Carga y exportación masiva de productos (Regresión C01-C24) › C17: CSV with quoted fields and linebreaks parses without error
+[15/259] tests\bulk.spec.ts:172:3 › MK-001 — Carga y exportación masiva de productos (Regresión C01-C24) › C18: Malformed CSV with unclosed quotes displays structural error
+  1) tests\bulk.spec.ts:145:3 › MK-001 — Carga y exportación masiva de productos (Regresión C01-C24) › C16: Clear file invalidates selection and disables continue
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.setInputFiles: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('input[type="file"]')
+
+
+      146 |     await page.goto("/carga-masiva");
+      147 |     const fileInput = page.locator('input[type="file"]');
+    > 148 |     await fileInput.setInputFiles({
+          |     ^
+      149 |       name: "prueba.csv",
+      150 |       mimeType: "text/csv",
+      151 |       buffer: Buffer.from("sku,nombre\nSKU-1,Prod 1\n"),
+        at C:\Users\Gabriel\Desktop\Web Front\G6-Productos-Ofertas-frontend\tests\bulk.spec.ts:148:5
+
+    Error Context: test-results\bulk-MK-001-—-Carga-y-expo-e0f5b-ction-and-disables-continue\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\bulk-MK-001-—-Carga-y-expo-e0f5b-ction-and-disables-continue\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\bulk-MK-001-—-Carga-y-expo-e0f5b-ction-and-disables-continue\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+  2) tests\bulk.spec.ts:124:3 › MK-001 — Carga y exportación masiva de productos (Regresión C01-C24) › C15: S01 quickly selecting A then B applies only review B
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.setInputFiles: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('input[type="file"]')
+
+
+      125 |     await page.goto("/carga-masiva");
+      126 |     const fileInput = page.locator('input[type="file"]');
+    > 127 |     await fileInput.setInputFiles({
+          |     ^
+      128 |       name: "archivo_a.csv",
+      129 |       mimeType: "text/csv",
+      130 |       buffer: Buffer.from("sku,nombre\nSKU-A,Producto A\n"),
+        at C:\Users\Gabriel\Desktop\Web Front\G6-Productos-Ofertas-frontend\tests\bulk.spec.ts:127:5
+
+    Error Context: test-results\bulk-MK-001-—-Carga-y-expo-8ad39-hen-B-applies-only-review-B\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\bulk-MK-001-—-Carga-y-expo-8ad39-hen-B-applies-only-review-B\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\bulk-MK-001-—-Carga-y-expo-8ad39-hen-B-applies-only-review-B\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+  3) tests\bulk.spec.ts:172:3 › MK-001 — Carga y exportación masiva de productos (Regresión C01-C24) › C18: Malformed CSV with unclosed quotes displays structural error
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.setInputFiles: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for locator('input[type="file"]')
+
+
+      174 |     const fileInput = page.locator('input[type="file"]');
+      175 |     const malformedCsv = 'sku,nombre\n"SKU-UNCLOSED,Prod\n';
+    > 176 |     await fileInput.setInputFiles({
+          |     ^
+      177 |       name: "malformado.csv",
+      178 |       mimeType: "text/csv",
+      179 |       buffer: Buffer.from(malformedCsv),
+        at C:\Users\Gabriel\Desktop\Web Front\G6-Productos-Ofertas-frontend\tests\bulk.spec.ts:176:5
+
+    Error Context: test-results\bulk-MK-001-—-Carga-y-expo-9ed70-s-displays-structural-error\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\bulk-MK-001-—-Carga-y-expo-9ed70-s-displays-structural-error\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\bulk-MK-001-—-Carga-y-expo-9ed70-s-displays-structural-error\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+  4) tests\bulk.spec.ts:159:3 › MK-001 — Carga y exportación masiva de productos (Regresión C01-C24) › C17: CSV with quoted fields and linebreaks parses without error
+
+    Test timeout of 30000ms exceeded.
+
+    Error: page.goto: Test timeout of 30000ms exceeded.
+    Call log:
+      - navigating to "http://127.0.0.1:5173/carga-masiva", waiting until "load"
+
+
+      158 |   // C17: CSV con comillas y saltos de línea se parsea correctamente
+      159 |   test("C17: CSV with quoted fields and linebreaks parses without error", async ({ page }) => {
+    > 160 |     await page.goto("/carga-masiva");
+          |                ^
+      161 |     const fileInput = page.locator('input[type="file"]');
+      162 |     const complexCsv = 'sku,nombre,descripcion\nSKU-1,"Zapatilla, Pro","Descripcion\nmultilinea"\n';
+      163 |     await fileInput.setInputFiles({
+        at C:\Users\Gabriel\Desktop\Web Front\G6-Productos-Ofertas-frontend\tests\bulk.spec.ts:160:16
+
+    Error Context: test-results\bulk-MK-001-—-Carga-y-expo-5bac1-breaks-parses-without-error\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\bulk-MK-001-—-Carga-y-expo-5bac1-breaks-parses-without-error\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\bulk-MK-001-—-Carga-y-expo-5bac1-breaks-parses-without-error\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+
+(node:11428) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+(node:21344) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+(node:15880) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+(node:32168) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[16/259] tests\bulk.spec.ts:244:3 › MK-001 — Carga y exportación masiva de productos (Regresión C01-C24) › C21: Unknown batch ID shows graceful not found state
+[17/259] tests\bulk.spec.ts:186:3 › MK-001 — Carga y exportación masiva de productos (Regresión C01-C24) › C19: Direct navigation to S02 without file shows recovery state
+[18/259] tests\bulk.spec.ts:195:3 › MK-001 — Carga y exportación masiva de productos (Regresión C01-C24) › C20: S02 double click on confirm import generates only one batch
+[19/259] tests\bulk.spec.ts:250:3 › MK-001 — Carga y exportación masiva de productos (Regresión C01-C24) › C22: Existing /precios page continues working normally
+[20/259] tests\bulk.spec.ts:256:3 › MK-001 — Carga y exportación masiva de productos (Regresión C01-C24) › C23: Bulk downloads page header provides return link to /carga-masiva
+[21/259] tests\bulk.spec.ts:266:3 › MK-001 — Carga y exportación masiva de productos (Regresión C01-C24) › C24: Failed export job displays error alert and disables download button
+[22/259] tests\bulk.spec.ts:276:3 › MK-001 — Carga y exportación masiva de productos (Regresión C01-C24) › R04: File with 3 data rows sets total_rows to 3
+[23/259] tests\bulk.spec.ts:283:3 › MK-001 — Carga y exportación masiva de productos (Regresión C01-C24) › R16: Consecutive IDs are unique and do not collide
+[24/259] tests\bulk.spec.ts:295:3 › MK-001 — Carga y exportación masiva de productos (Regresión C01-C24) › R20: Nueva carga masiva resets file selection context
+[25/259] tests\bulk.spec.ts:316:3 › MK-001 — Carga y exportación masiva de productos (Regresión C01-C24) › R22 & R24: Root redirects to /precios and commercial nav excludes Demostraciones
+[26/259] tests\bulk.spec.ts:326:3 › MK-001 — Carga y exportación masiva de productos (Regresión C01-C24) › H02 & H03: Valid CSV produces valid structure with detected rows and columns
+[27/259] tests\bulk.spec.ts:338:3 › MK-001 — Carga y exportación masiva de productos (Regresión C01-C24) › H02 & H03: Malformed CSV with mismatched columns reports error
+[28/259] tests\bulk.spec.ts:346:3 › MK-001 — Carga y exportación masiva de productos (Regresión C01-C24) › H02 & H03: Empty file (0 bytes) is rejected
+[29/259] tests\bulk.spec.ts:354:3 › MK-001 — Carga y exportación masiva de productos (Regresión C01-C24) › H02 & H03 & H15: Genuine minimal OOXML XLSX workbook is preliminarily valid
+[30/259] tests\bulk.spec.ts:424:3 › MK-001 — Carga y exportación masiva de productos (Regresión C01-C24) › H15: ZIP file without OOXML entries is rejected as invalid XLSX
+[31/259] tests\bulk.spec.ts:436:3 › MK-001 — Carga y exportación masiva de productos (Regresión C01-C24) › H18: ZIP with only [Content_Types].xml (missing xl/workbook.xml) is rejected
+[32/259] tests\bulk.spec.ts:448:3 › MK-001 — Carga y exportación masiva de productos (Regresión C01-C24) › H18: ZIP with only xl/archivo.txt (arbitrary xl/ path) is rejected
+[33/259] tests\bulk.spec.ts:460:3 › MK-001 — Carga y exportación masiva de productos (Regresión C01-C24) › H18: Incoherent or truncated central directory is rejected
+[34/259] tests\bulk.spec.ts:473:3 › MK-001 — Carga y exportación masiva de productos (Regresión C01-C24) › H17: Production bundle does not leak window.__bulkService
+[35/259] tests\bulk.spec.ts:497:3 › MK-001 — Carga y exportación masiva de productos (Regresión C01-C24) › H15: Forged/fake ZIP signatures with corrupt internal directory are rejected
+[36/259] tests\bulk.spec.ts:520:3 › MK-001 — Carga y exportación masiva de productos (Regresión C01-C24) › H02 & H03: Truncated XLSX without EOCD record is rejected
+[37/259] tests\bulk.spec.ts:537:3 › MK-001 — Carga y exportación masiva de productos (Regresión C01-C24) › H02 & H03: Corrupt XLSX without PK ZIP container header is rejected
+[38/259] tests\bulk.spec.ts:553:3 › MK-001 — Carga y exportación masiva de productos (Regresión C01-C24) › H13: XLSX batch without verified count displays explicit unconfirmed notice and safe recovery
+[39/259] tests\bulk.spec.ts:582:3 › MK-001 — Carga y exportación masiva de productos (Regresión C01-C24) › H13: XLSX batch remains in PROCESSING state after simulation delay
+[40/259] tests\bulk.spec.ts:603:3 › MK-001 — Carga y exportación masiva de productos (Regresión C01-C24) › H11 & H12: S03 shows queued and processing states with domain breakdown
+[41/259] tests\bulk.spec.ts:620:3 › MK-001 — Carga y exportación masiva de productos (Regresión C01-C24) › H11 & H12: S04 non-terminal batch displays warning and does not render table
+[42/259] tests\bulk.spec.ts:630:3 › MK-001 — Carga y exportación masiva de productos (Regresión C01-C24) › H11 & H12: S04 completed with observations shows download error report and resume button
+[43/259] tests\bulk.spec.ts:640:3 › MK-001 — Carga y exportación masiva de productos (Regresión C01-C24) › H11 & H12: S05 export handles CSV ready download vs XLSX provider notice
+[44/259] tests\bulk.spec.ts:654:3 › MK-001 — Carga y exportación masiva de productos (Regresión C01-C24) › H01: Lateral menu highlights active navigation for S01-S05
+[45/259] tests\bulk.spec.ts:676:3 › MK-001 — Carga y exportación masiva de productos (Regresión C01-C24) › Desktop 1440x900 visual captures and horizontal scroll check for S01-S05
+[46/259] tests\campaigns.spec.ts:41:1 › MK-006 S01/S05: typed filters and detail retain list context
+[47/259] tests\campaigns.spec.ts:75:1 › MK-006 S02/S04: validate discount/channels and preserve draft and typed scope across selector cancellation
+[48/259] tests\campaigns.spec.ts:139:1 › MK-006 S03/S06: allowed modality is revalidated and activation history survives deactivation
+[49/259] tests\campaigns.spec.ts:201:1 › MK-005/MK-006: coupon selection reads created coupon-mode campaign and association locks modality
+[50/259] tests\campaigns.spec.ts:241:1 › MK-006: read, selection, save, conflict and state failure conserve context
+[51/259] tests\campaigns.spec.ts:302:1 › MK-006: desktop evidence for all six views
+[52/259] tests\catalog-adapters.spec.ts:12:1 › missing DataModeContext fails explicitly
+[53/259] tests\catalog-adapters.spec.ts:17:1 › uninitialized async factories are rejected instead of casting promises
+[54/259] tests\catalog-adapters.spec.ts:24:1 › API injection replaces cached unavailable providers without mock fallback
+[55/259] tests\catalog-adapters.spec.ts:40:1 › LISTA preserves stable IDs, NUMERO accepts negatives when permitted, TEXTO respects metadata
+[56/259] tests\catalog-adapters.spec.ts:59:1 › complete variant starts BORRADOR/PENDING, waits for confirmation and only retries when authorized
+[57/259] tests\catalog-adapters.spec.ts:81:1 › simple product retry requires permission independently in Pricing and Inventory
+[58/259] tests\catalog-final-review.spec.ts:3:1 › LISTA edit survives provider renaming and sends stable ID with current label
+[59/259] tests\catalog-final-review.spec.ts:23:1 › LISTA create sends option ID separately from its display label
+[60/259] tests\catalog-final-review.spec.ts:37:1 › LISTA with only a historical label requires explicit ID confirmation
+[61/259] tests\catalog-final-review.spec.ts:49:3 › type correction requires known publication preconditions and resolved Q-06: true
+[62/259] tests\catalog-final-review.spec.ts:49:3 › type correction requires known publication preconditions and resolved Q-06: false
+[63/259] tests\catalog-final-review.spec.ts:49:3 › type correction requires known publication preconditions and resolved Q-06: unknown
+[64/259] tests\catalog-injection.spec.ts:3:1 › same pages consume alternate adapters in API mode, preserve IDs and accept negative numbers
+[65/259] tests\catalog-injection.spec.ts:21:1 › schema errors block saving and API filters come from the alternate repository
+[66/259] tests\catalog-issue35.spec.ts:9:1 › POM-01: create and rename masters preserve their IDs and refresh Catalog names
+[67/259] tests\catalog-issue35.spec.ts:24:1 › POM-01/POM-04: official roles stay unknown and unknown IDs do not become empty schemas
+[68/259] tests\catalog-issue35.spec.ts:30:1 › POM-01/POM-04: real category creation flows into product selector and persisted names
+[69/259] tests\catalog-issue35.spec.ts:60:1 › POM-02: product SKU cannot reuse an existing variant SKU
+[70/259] tests\catalog-issue35.spec.ts:65:1 › POM-02: variant SKU cannot reuse a simple product sellable SKU
+[71/259] tests\catalog-issue35.spec.ts:70:1 › POM-01/POM-04: a brand created in the real app is selectable in Catalog
+[72/259] tests\catalog-issue35.spec.ts:81:1 › POM-03: Pricing reads the current Catalog identity and state
+[73/259] tests\catalog-issue35.spec.ts:94:1 › POM-03: Promotions preserves Catalog IDs/SKU and excludes inactive parent
+[74/259] tests\catalog-issue35.spec.ts:104:1 › POM-03: real Promotions selector follows Catalog parent deactivation
+[75/259] tests\catalog-regressions.spec.ts:7:1 › failed physical validation leaves every product field and version unchanged
+[76/259] tests\catalog-regressions.spec.ts:17:1 › consecutive product and variant creates remain unique with a frozen clock
+[77/259] tests\catalog-regressions.spec.ts:30:1 › official Taxonomy adapter preserves provider IDs, limits and missing roles
+[78/259] tests\catalog-regressions.spec.ts:46:1 › product edit blocks loading and schema errors, including programmatic submits
+[79/259] tests\catalog-regressions.spec.ts:61:1 › confirmed empty schema permits edit and preserves historical attributes
+[80/259] tests\catalog-regressions.spec.ts:70:1 › client navigation resets variant fields, hides previous parent during load and handles errors
+[81/259] tests\catalog.spec.ts:13:3 › MK-003 Gestión de productos (CRUD principal) › S01: listado, búsqueda, filtros combinados y conservación de contexto
+[82/259] tests\catalog.spec.ts:55:3 › MK-003 Gestión de productos (CRUD principal) › S01: estados deterministas de revisión (empty, no-results, error)
+[83/259] tests\catalog.spec.ts:77:3 › MK-003 Gestión de productos (CRUD principal) › S02: crear producto simple en BORRADOR y navegación inmediata a S06
+[84/259] tests\catalog.spec.ts:115:3 › MK-003 Gestión de productos (CRUD principal) › S02: validación de SKU duplicado conserva datos
+[85/259] tests\catalog.spec.ts:133:3 › MK-003 Gestión de productos (CRUD principal) › S03: editar producto conserva SKU y modelo inmutables
+[86/259] tests\catalog.spec.ts:159:3 › MK-003 Gestión de productos (CRUD principal) › S03: conflicto de versión (409) conserva la propuesta del usuario
+[87/259] tests\catalog.spec.ts:177:3 › MK-003 Gestión de productos (CRUD principal) › S04: detalle de producto simple y variante muestra acciones correspondientes
+[88/259] tests\catalog.spec.ts:210:3 › MK-003 Gestión de productos (CRUD principal) › S05: diálogo de confirmación de activación y checklist de requisitos
+[89/259] tests\catalog.spec.ts:242:3 › MK-003 Gestión de productos (CRUD principal) › S06: preparación técnica con estados independientes de Pricing e Inventario
+[90/259] tests\catalog.spec.ts:272:3 › MK-003 Gestión de productos (CRUD principal) › S07: confirmación de desactivación (baja lógica) y preservación de variantes
+[91/259] tests\catalog.spec.ts:302:3 › MK-003 Gestión de productos (CRUD principal) › Capturas de evidencia desktop a 1440x900 para las 7 vistas
+[92/259] tests\coupon-write.spec.ts:17:1 › MK-005 S02: crear cupón no consulta repository.read sin identificador
+[93/259] tests\coupon-write.spec.ts:59:1 › MK-005 S02: create normalized coupon only after valid data and preserve list context
+[94/259] tests\coupon-write.spec.ts:98:1 › MK-005 S02/S03: normalized duplicate fails; own code edit succeeds and recorded usage remains intact
+[95/259] tests\coupon-write.spec.ts:129:1 › MK-005: dirty draft survives menu and Back navigation until explicit discard
+[96/259] tests\coupon-write.spec.ts:163:1 › MK-005 S06: cancellation and rejection retain state/usage; confirmation changes only state
+[97/259] tests\coupon-write.spec.ts:210:1 › MK-005: failed save conserves entries; unknown result is reconciled without a second save
+[98/259] tests\coupon-write.spec.ts:244:1 › MK-005 S02/S03/S06: desktop evidence and pending submission protection
+[99/259] tests\coupons.spec.ts:12:1 › MK-005 S01/S04/S05: pagination, detail and limits retain the selected coupon and list context
+[100/259] tests\coupons.spec.ts:61:1 › MK-005 S01: filters reset the page, browser history restores it and ordinary states stay neutral
+[101/259] tests\coupons.spec.ts:94:1 › MK-005: unavailable usage is not zero or unlimited; known exhausted capacity remains zero
+[102/259] tests\coupons.spec.ts:125:1 › MK-005: empty, filtered empty, read error, pending and access failure are distinct
+[103/259] tests\coupons.spec.ts:179:1 › MK-005: deep-link error recovery retains identity and production-like URLs do not enable review fixtures
+[104/259] tests\coupons.spec.ts:203:1 › MK-005: desktop evidence for all three read views
+[105/259] tests\foundation-review.spec.ts:5:1 › FND-01: ordinary active state is neutral and focus remains signal
+[106/259] tests\foundation-review.spec.ts:40:1 › FND-05: long content scrolls inside the table and preserves identifiers and controls
+[107/259] tests\foundation-review.spec.ts:94:1 › FND-06: Back and Forward restore applied filters and discard an unapplied draft
+[108/259] tests\foundation.spec.ts:4:1 › filters reset pagination, details preserve context and stale loading cannot replace results
+[109/259] tests\foundation.spec.ts:43:1 › empty, no matches and recoverable error remain distinct
+[110/259] tests\foundation.spec.ts:84:1 › form validation, safe dialog focus, cancellation and failure preserve entries
+[111/259] tests\foundation.spec.ts:137:1 › desktop geometry, fonts, tokens, focus and screenshots
+[112/259] tests\foundation.spec.ts:196:1 › unknown routes give a working return link
+[113/259] tests\foundation.spec.ts:207:1 › commercial shell and navigation do not display foundation copy or demo groups
+[114/259] tests\integration.spec.ts:4:1 › N03: production requires an explicit mode, development alone defaults to mock
+[115/259] tests\integration.spec.ts:13:1 › N05: catalog retry preserves the adapter and document without reloading the application
+[116/259] tests\integration.spec.ts:44:1 › N03: API mode blocks mock-only modules and never loads their adapters
+[117/259] tests\integration.spec.ts:120:3 › Integrated router: direct Pricing S01–S06, grouped sidebar and one active destination
+[118/259] tests\integration.spec.ts:120:3 › Integrated router: direct Cupones S01–S06, grouped sidebar and one active destination
+[119/259] tests\integration.spec.ts:120:3 › Integrated router: direct Promociones S01–S06, grouped sidebar and one active destination
+[120/259] tests\integration.spec.ts:120:3 › Integrated router: direct Recomendaciones S01–S07, grouped sidebar and one active destination
+[121/259] tests\integration.spec.ts:156:1 › Integrated sidebar: all modules remain reachable after form returns
+[122/259] tests\integration.spec.ts:179:1 › N03: Catálogo y Taxonomía en modo API operan fail-closed y nunca recurren a mocks
+[123/259] tests\price-audit.spec.ts:56:1 › MK-014 S01/S02: ordered pages, readonly semantics, all fields, modal width and focus return
+[124/259] tests\price-audit.spec.ts:83:1 › MK-014 S03: direct 404 preserves filters/page and never fabricates record data
+[125/259] tests\price-audit.spec.ts:112:1 › MK-014: null, zero, absent actor and unknown origins remain distinct without inferred currency
+[126/259] tests\price-audit.spec.ts:141:1 › MK-014: filters apply explicitly, dates keep timezone, reset page and browser history restores context
+[127/259] tests\price-audit.spec.ts:187:1 › MK-014: invalid range blocks a request; empty, loading and service failures differ
+[128/259] tests\price-audit.spec.ts:230:1 › MK-014: access denial removes both detail and background protected data; errors are not 404
+[129/259] tests\price-audit.spec.ts:255:1 › MK-014 MOCK_REPLACEABLE: alternate catalog, applied filters only and pending-to-ready CSV report
+[130/259] tests\price-audit.spec.ts:314:3 › MK-014 CSV: inclusive limit, server revalidation rejection and compatible CSV option
+[131/259] tests\price-audit.spec.ts:314:3 › MK-014 PDF: inclusive limit, server revalidation rejection and compatible CSV option
+[132/259] tests\price-audit.spec.ts:363:1 › MK-014: CSV above 100000 and PDF above 500 refuse creation before submission
+[133/259] tests\price-audit.spec.ts:388:1 › MK-014: unknown POST cannot be resubmitted; known job GET retries without a second POST
+[134/259] tests\price-audit.spec.ts:427:1 › MK-014: generation failure, missing file and download failure are distinct; permission blocks export
+[135/259] tests\price-audit.spec.ts:475:1 › MK-014 S01–S05: 1440px screenshots, keyboard modal and prepared CSV/PDF sample downloads
+[136/259] tests\price-audit.spec.ts:526:1 › MK-014: missing API and failed factories never fall back; ports and consumers are fixture-free
+[137/259] tests\price-audit.spec.ts:561:1 › MK-014: stale filter results are ignored and refresh failure retains only safe marked data
+[138/259] tests\price-audit.spec.ts:619:1 › MK-014: a direct unknown export reference only queries and never creates a job
+[139/259] tests\price-audit.spec.ts:632:1 › MK-014: malformed dates in direct export URLs show validation without requests or render errors
+[140/259] tests\price-audit.spec.ts:650:1 › MK-014: an admitted job remains admitted when a later list count grows beyond the format limit
+[141/259] tests\price-audit.spec.ts:673:1 › MK-014 regression: detail denial stays hidden until fresh access succeeds and recovers without reload
+[142/259] tests\price-audit.spec.ts:715:1 › MK-014 regression: exportId changes, back/forward, stale reads and downloads cannot expose a prior job
+[143/259] tests\price-audit.spec.ts:794:1 › MK-014 regression: mismatched export response cannot be displayed or downloaded
+[144/259] tests\price-audit.spec.ts:810:1 › MK-014 strict dates: impossible calendar dates and invalid time/zone never query from direct URLs
+[145/259] tests\pricing-audit.spec.ts:40:1 › MOCK_REPLACEABLE: another catalog, currency and Retail quote use unchanged S01/S02 pages
+[146/259] tests\pricing-audit.spec.ts:100:1 › MOCK_REPLACEABLE: S03 uses the regular price at the future instant and keeps target identity
+[147/259] tests\pricing-audit.spec.ts:154:1 › MOCK_REPLACEABLE: S04 forwards the actual file and explicit policy; new input invalidates review
+[148/259] tests\pricing-audit.spec.ts:249:1 › MOCK_REPLACEABLE: S06 preserves a different SKU/context and renders normalized historical data
+[149/259] tests\pricing-audit.spec.ts:218:1 › MOCK_REPLACEABLE: S05 downloads adapter bytes/name and retains confirmed rows on report failure
+[150/259] tests\pricing-audit.spec.ts:281:1 › H12: missing API and failed alternate reads never fall back to the mock
+[151/259] tests\pricing-audit.spec.ts:312:1 › H01: Retail summary and its breakdown row agree after a channel-specific update
+[152/259] tests\pricing-audit.spec.ts:345:1 › H02/H13: offer validation uses its regular reference and the injected clock
+[153/259] tests\pricing-audit.spec.ts:379:1 › H03/H06: arbitrary currencies and inherited offers cannot be silently converted
+[154/259] tests\pricing-audit.spec.ts:399:1 › H04/H05: schedules remain scoped and regular/offer overlaps are rejected across kinds
+[155/259] tests\pricing-audit.spec.ts:440:1 › H08/H16: October 17 data is temporally applicable and contains no display labels
+[156/259] tests\pricing-audit.spec.ts:464:1 › H11: default mock prevalidation stays blocked instead of pretending to parse the file
+[157/259] tests\pricing-audit.spec.ts:474:1 › H12: API factory failures propagate and production defaults to a system clock
+[158/259] tests\pricing-audit.spec.ts:495:1 › H09/H10/H15: product source and ports are free of fixture IDs and artificial scenarios
+[159/259] tests\pricing-workflows.spec.ts:83:1 › MK-013-S02: validation, focus, dialog cancellation, offer removal and inherited update
+[160/259] tests\pricing-workflows.spec.ts:60:1 › MK-013-S01: fresh readings enable contextual actions; stale/empty readings do not
+[161/259] tests\pricing-workflows.spec.ts:175:1 › MK-013-S02: version conflict preserves draft and requires reread and explicit review
+[162/259] tests\pricing-workflows.spec.ts:217:3 › MK-013-S02: Rechazo de servicio preserves proposal and prevents false success
+[163/259] tests\pricing-workflows.spec.ts:217:3 › MK-013-S02: Sesión no válida preserves proposal and prevents false success
+[164/259] tests\pricing-workflows.spec.ts:217:3 › MK-013-S02: Sin autorización preserves proposal and prevents false success
+[165/259] tests\pricing-workflows.spec.ts:217:3 › MK-013-S02: Resultado desconocido preserves proposal and prevents false success
+[166/259] tests\pricing-workflows.spec.ts:217:3 › MK-013-S02: Vigencia superpuesta preserves proposal and prevents false success
+[167/259] tests\pricing-workflows.spec.ts:247:1 › MK-013-S02: scope, sidebar and browser Back protect unsaved proposal
+[168/259] tests\pricing-workflows.spec.ts:278:1 › MK-013-S03: date validation, pagination and future creation preserve current price
+[169/259] tests\pricing-workflows.spec.ts:350:3 › MK-013-S03: Vigencia superpuesta keeps date fields and does not create a vigency
+[170/259] tests\pricing-workflows.spec.ts:350:3 › MK-013-S03: Rechazo de servicio keeps date fields and does not create a vigency
+[171/259] tests\pricing-workflows.spec.ts:350:3 › MK-013-S03: Resultado desconocido keeps date fields and does not create a vigency
+[172/259] tests\pricing-workflows.spec.ts:384:1 › MK-013-S04: changing file or policy invalidates simulated preview; import remains blocked
+[173/259] tests\pricing-workflows.spec.ts:461:1 › MK-013-S05: queued, processing, partial, missing rows, failed refresh and report
+[174/259] tests\pricing-workflows.spec.ts:524:1 › MK-013-S06: as-of, fallback, error, absence and applied history retain context
+[175/259] tests\pricing-workflows.spec.ts:586:1 › MK-013: six direct views, desktop geometry, screenshots and no runtime errors
+[176/259] tests\pricing-workflows.spec.ts:634:1 › MK-013: invalid objective and unknown batch never create defaults for mutation
+[177/259] tests\pricing-workflows.spec.ts:650:1 › MK-013: decimal precision, temporal boundaries and stale writes are checked exactly
+[178/259] tests\pricing-workflows.spec.ts:712:1 › MK-013-S02: browser Back from confirmation shows one dialog and retains proposal
+[179/259] tests\pricing-workflows.spec.ts:736:1 › MK-013-S03/S06: loading, absence and errors are distinct and cancel stale reads
+[180/259] tests\pricing.spec.ts:4:1 › S01 applies selection explicitly, distinguishes inheritance/override and retains context on return
+[181/259] tests\pricing.spec.ts:78:1 › S01 distinguishes absence from error and marks previous readings without enabling mutation
+[182/259] tests\pricing.spec.ts:142:1 › Pricing component examples preserve form inputs and do not infer CSV validity or admit imports
+[183/259] tests\pricing.spec.ts:221:1 › Pricing desktop captures and tab keyboard navigation
+[184/259] tests\promotions-adapters.spec.ts:41:1 › composición global: los cuatro puertos API se inyectan juntos sin escenarios DEV
+[185/259] tests\promotions-adapters.spec.ts:28:1 › composición global: api sin provider falla y no sustituye fallos por mocks
+[186/259] tests\promotions-adapters.spec.ts:109:1 › composición: sustituir Catálogo cambia las referencias de ambos adaptadores sin fixtures cruzados
+[187/259] tests\promotions-adapters.spec.ts:139:1 › composición: sustituir Promociones alimenta las opciones y validación de Cupones
+[188/259] tests\promotions-adapters.spec.ts:182:3 › composición: Cupones sustituido gobierna asociaciones vigentes e historial de uso 2
+[189/259] tests\promotions-adapters.spec.ts:182:3 › composición: Cupones sustituido gobierna asociaciones vigentes e historial de uso 0
+[190/259] tests\promotions-adapters.spec.ts:182:3 › composición: Cupones sustituido gobierna asociaciones vigentes e historial de uso undefined
+[191/259] tests\promotions-adapters.spec.ts:250:1 › composición: sustituir Recomendaciones no modifica los otros servicios; instancias aisladas
+[192/259] tests\promotions-adapters.spec.ts:270:1 › reasignar el último cupón sin uso libera la modalidad anterior y bloquea la nueva
+[193/259] tests\promotions-adapters.spec.ts:301:1 › varios cupones, incluso inactivos, mantienen el bloqueo hasta la última reasignación
+[194/259] tests\promotions-adapters.spec.ts:315:1 › una reasignación rechazada conserva la asociación y no libera la modalidad
+[195/259] tests\promotions-adapters.spec.ts:329:1 › activación seguida de desactivación y reasignación no borra el historial
+[196/259] tests\promotions-adapters.spec.ts:347:1 › editar datos generales conserva capacidad desconocida y bloquea un cambio de modalidad
+[197/259] tests\promotions-adapters.spec.ts:403:3 › validación directa: alta y edición rechazan monto cero sin alterar registros
+[198/259] tests\promotions-adapters.spec.ts:403:3 › validación directa: alta y edición rechazan monto negativo sin alterar registros
+[199/259] tests\promotions-adapters.spec.ts:403:3 › validación directa: alta y edición rechazan monto no numérico sin alterar registros
+[200/259] tests\promotions-adapters.spec.ts:403:3 › validación directa: alta y edición rechazan política ausente sin alterar registros
+[201/259] tests\promotions-adapters.spec.ts:403:3 › validación directa: alta y edición rechazan política ajena sin alterar registros
+[202/259] tests\promotions-adapters.spec.ts:403:3 › validación directa: alta y edición rechazan límite negativo sin alterar registros
+[203/259] tests\promotions-adapters.spec.ts:403:3 › validación directa: alta y edición rechazan límite decimal sin alterar registros
+[204/259] tests\promotions-adapters.spec.ts:442:1 › formulario y adaptador comparten la validación de monto y restitución; normalización y unicidad
+[205/259] tests\promotions-adapters.spec.ts:477:1 › adaptadores rechazan estados, modalidad, beneficio, combinación y criterio inválidos
+[206/259] tests\promotions-adapters.spec.ts:530:1 › DEV: rechazo/conflicto no escriben; resultado incierto puede consultarse; base independiente
+[207/259] tests\promotions-adapters.spec.ts:578:1 › cancelación de consultas y guardados no produce mutaciones
+[208/259] tests\promotions-states.spec.ts:2:1 › MK-006/MK-007: access guards apply to list, direct creation, edit and state routes
+[209/259] tests\promotions-states.spec.ts:37:1 › MK-006/MK-007: loading, empty, missing and retry are distinct and preserve list filters
+[210/259] tests\promotions-states.spec.ts:78:1 › MK-006: unknown normalized edit and state reconcile without a duplicate write; saving prevents departure
+[211/259] tests\promotions-states.spec.ts:151:1 › MK-007: self-origin correction and conflict resolution retain typed candidates and return focus
+[212/259] tests\promotions-visual.spec.ts:26:1 › 19 vistas desktop: geometría, tipografía y diálogo según DESIGN 1.1; capturas para revisión UX
+  5) tests\promotions-states.spec.ts:151:1 › MK-007: self-origin correction and conflict resolution retain typed candidates and return focus
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('heading', { name: 'Regla revisada', exact: true })
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByRole('heading', { name: 'Regla revisada', exact: true }) with timeout 5000ms
+      - waiting for getByRole('heading', { name: 'Regla revisada', exact: true })
+
+
+      194 |   await expect(
+      195 |     page.getByRole("heading", { name: "Regla revisada", exact: true }),
+    > 196 |   ).toBeVisible();
+          |     ^
+      197 |   await page
+      198 |     .getByRole("main")
+      199 |     .getByRole("button", { name: "Desactivar regla", exact: true })
+        at C:\Users\Gabriel\Desktop\Web Front\G6-Productos-Ofertas-frontend\tests\promotions-states.spec.ts:196:5
+
+    Error Context: test-results\promotions-states-MK-007-s-837c5-candidates-and-return-focus\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\promotions-states-MK-007-s-837c5-candidates-and-return-focus\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\promotions-states-MK-007-s-837c5-candidates-and-return-focus\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+  6) tests\promotions-states.spec.ts:78:1 › MK-006: unknown normalized edit and state reconcile without a duplicate write; saving prevents departure
+
+    Error: expect(locator).toBeDisabled() failed
+
+    Locator:  getByRole('button', { name: 'Guardar cambios', exact: true })
+    Expected: disabled
+    Received: enabled
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeDisabled" getByRole('button', { name: 'Guardar cambios', exact: true }) with timeout 5000ms
+      - waiting for getByRole('button', { name: 'Guardar cambios', exact: true })
+        - waiting for navigation to finish...
+        - navigated to "http://127.0.0.1:5173/promociones/carrera/editar?modoRevision=1&escenario=saving"
+        4 × locator resolved to <button type="submit" data-size="md" data-variant="filled" class="mantine-focus-auto mantine-active _button_30y56_1  m_77c9d27d mantine-Button-root m_87cf2631 mantine-UnstyledButton-root">…</button>
+          - unexpected value "enabled"
+
+
+      138 |   await expect(
+      139 |     page.getByRole("button", { name: "Guardar cambios", exact: true }),
+    > 140 |   ).toBeDisabled();
+          |     ^
+      141 |   await page
+      142 |     .getByRole("navigation", { name: "Navegación de la aplicación" })
+      143 |     .getByRole("link", { name: "Cupones de descuento" })
+        at C:\Users\Gabriel\Desktop\Web Front\G6-Productos-Ofertas-frontend\tests\promotions-states.spec.ts:140:5
+
+    Error Context: test-results\promotions-states-MK-006-u-bd767-e-saving-prevents-departure\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\promotions-states-MK-006-u-bd767-e-saving-prevents-departure\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\promotions-states-MK-006-u-bd767-e-saving-prevents-departure\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+
+
+(node:32332) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:32348) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[213/259] tests\promotions-visual.spec.ts:106:1 › el modo API global bloquea las 19 vistas sin cargar datos ni adapters mock
+[214/259] tests\recommendations.spec.ts:36:1 › MK-007 S01/S06: filters, origins, pagination and read-only enrichments retain context
+[215/259] tests\recommendations.spec.ts:70:1 › MK-007 S02/S05: selector excludes origin/duplicates, cancellation preserves draft, order persists
+[216/259] tests\recommendations.spec.ts:109:1 › MK-007 S03/S04: upselling requires explicit criterion, valid order/period and bounded justification
+[217/259] tests\recommendations.spec.ts:179:1 › MK-007: changing origin and discarding require confirmation without erasing candidates
+[218/259] tests\recommendations.spec.ts:216:1 › MK-007 S07: canceled/rejected state preserves candidates; uncertain state reconciles without resend
+[219/259] tests\recommendations.spec.ts:260:1 › MK-007: failure preserves proposed configuration; unknown edit reconciles and selector errors stay distinct
+[220/259] tests\recommendations.spec.ts:310:1 › MK-007: seven desktop views and pending submission protection
+  7) tests\recommendations.spec.ts:109:1 › MK-007 S03/S04: upselling requires explicit criterion, valid order/period and bounded justification
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for getByRole('combobox', { name: 'Criterio para Running Pro', exact: true })
+        - waiting for "http://127.0.0.1:5173/recomendaciones/nueva/upselling" navigation to finish...
+        - navigated to "http://127.0.0.1:5173/recomendaciones/nueva/upselling"
+
+
+      2 | import { expect, test, type Page } from "@playwright/test";
+      3 | async function choose(page: Page, label: string, option: string) {
+    > 4 |   await page.getByRole("combobox", { name: label, exact: true }).click();
+        |                                                                  ^
+      5 |   await page.getByRole("option", { name: option, exact: true }).click();
+      6 | }
+      7 | async function fillRule(page: Page, name: string) {
+        at choose (C:\Users\Gabriel\Desktop\Web Front\G6-Productos-Ofertas-frontend\tests\recommendations.spec.ts:4:66)
+        at C:\Users\Gabriel\Desktop\Web Front\G6-Productos-Ofertas-frontend\tests\recommendations.spec.ts:141:9
+
+    Error Context: test-results\recommendations-MK-007-S03-f2437-d-and-bounded-justification\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\recommendations-MK-007-S03-f2437-d-and-bounded-justification\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\recommendations-MK-007-S03-f2437-d-and-bounded-justification\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+
+
+(node:35828) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[221/259] tests\taxonomy-ui.spec.ts:52:3 › Direct MK-008 categorías: section renders, grouped sidebar with one active destination and no console errors
+[222/259] tests\taxonomy-ui.spec.ts:52:3 › Direct MK-009 características y valores: section renders, grouped sidebar with one active destination and no console errors
+[223/259] tests\taxonomy-ui.spec.ts:52:3 › Direct MK-010 tipos de producto: section renders, grouped sidebar with one active destination and no console errors
+[224/259] tests\taxonomy-ui.spec.ts:52:3 › Direct MK-011 marcas: section renders, grouped sidebar with one active destination and no console errors
+[225/259] tests\taxonomy-ui.spec.ts:52:3 › Direct MK-012 SEO y metadatos: section renders, grouped sidebar with one active destination and no console errors
+[226/259] tests\taxonomy-ui.spec.ts:93:1 › MK-008: category creation and edit forms expose the expected fields
+[227/259] tests\taxonomy-ui.spec.ts:118:1 › MK-008: deactivation is rejected when active subcategories exist
+[228/259] tests\taxonomy-ui.spec.ts:139:1 › MK-008: deactivation moves from pending verification to confirmed
+[229/259] tests\taxonomy-ui.spec.ts:159:1 › MK-009: characteristic creation form exposes the expected fields
+[230/259] tests\taxonomy-ui.spec.ts:176:1 › MK-009: a value referenced by an active schema is not deactivated (SPEC-010)
+[231/259] tests\taxonomy-ui.spec.ts:195:1 › MK-009: a free value accepts 202 and confirms its deactivation on poll
+[232/259] tests\taxonomy-ui.spec.ts:214:1 › MK-010: product type creation and association forms load
+[233/259] tests\taxonomy-ui.spec.ts:239:1 › MK-010: required disassociation polls 202 and confirms on consult
+[234/259] tests\taxonomy-ui.spec.ts:259:1 › MK-010: deactivation is rejected for types still referenced by active products
+[235/259] tests\taxonomy-ui.spec.ts:273:1 › MK-010: deactivation accepts 202 and completes on poll
+[236/259] tests\taxonomy-ui.spec.ts:293:1 › MK-011: brand edit form loads and saves into the detail page
+[237/259] tests\taxonomy-ui.spec.ts:314:1 › MK-012: saving a duplicate slug reports 409 SLUG_DUPLICADO and keeps the form
+[238/259] tests\taxonomy-ui.spec.ts:330:1 › Flow screens stay inside the 1440 px viewport with no console errors
+[239/259] tests\taxonomy.spec.ts:23:1 › crea un tipo de producto y permite consultar su detalle de inmediato
+[240/259] tests\taxonomy.spec.ts:41:1 › asocia y desasocia una característica incrementando la versión del esquema
+[241/259] tests\taxonomy.spec.ts:68:1 › mantiene la desasociación en verificación y la confirma al consultar el estado
+[242/259] tests\taxonomy.spec.ts:102:1 › conserva las asociaciones cuando la característica asociada pasa a inactiva
+[243/259] tests\taxonomy.spec.ts:126:1 › crea y edita una marca y devuelve null al guardar una marca inexistente
+[244/259] tests\taxonomy.spec.ts:152:1 › edita el slug SEO, registra historial y rechaza un slug con conflicto 409
+[245/259] tests\taxonomy.spec.ts:185:1 › sigue el ciclo de baja de una categoría mediante la consulta de estado
+[246/259] tests\taxonomy.spec.ts:198:1 › los contratos de repositorio no aceptan parámetros de escenario mock
+[247/259] tests\variants.spec.ts:31:3 › MK-004 Gestión avanzada de variantes (SKU) › S01: Listado de variantes por producto padre, filtros y alerta para producto simple (CA-01)
+[248/259] tests\variants.spec.ts:72:3 › MK-004 Gestión avanzada de variantes (SKU) › S02: Crear nueva variante en BORRADOR y navegación inmediata a S04 (CA-02, CA-03, CA-04)
+[249/259] tests\variants.spec.ts:113:3 › MK-004 Gestión avanzada de variantes (SKU) › S03: Ficha de detalle de variante, herencia de precio e inmutabilidad (CA-05, CA-07, CA-11)
+[250/259] tests\variants.spec.ts:139:3 › MK-004 Gestión avanzada de variantes (SKU) › S02 Edición: SKU y atributos identificadores son inmutables (CA-11)
+[251/259] tests\variants.spec.ts:169:3 › MK-004 Gestión avanzada de variantes (SKU) › S04: Preparación de Inventario y reintento atómico (CA-19, CA-21)
+[252/259] tests\variants.spec.ts:186:3 › MK-004 Gestión avanzada de variantes (SKU) › S05: Desactivación de variante y regla de impacto en producto padre (CA-12, FLOW-004 §4.4)
+[253/259] tests\variants.spec.ts:213:3 › MK-004 Gestión avanzada de variantes (SKU) › S06: Reactivación de variante inactiva con independencia del padre (CA-14)
+[254/259] tests\variants.spec.ts:244:3 › MK-004 Gestión avanzada de variantes (SKU) › Regla de Negocio: Creación con SKU generado automáticamente
+[255/259] tests\variants.spec.ts:268:3 › MK-004 Gestión avanzada de variantes (SKU) › Regla de Negocio: Rechazo de combinación identificadora duplicada (CA-03)
+[256/259] tests\variants.spec.ts:285:3 › MK-004 Gestión avanzada de variantes (SKU) › Regla de Negocio: Rechazo de medidas físicas inválidas (<= 0)
+[257/259] tests\variants.spec.ts:297:3 › MK-004 Gestión avanzada de variantes (SKU) › Flujo B: Desactivar la última variante activa inactiva al producto padre ACTIVO (SPEC-004 CA-12)
+[258/259] tests\variants.spec.ts:318:3 › MK-004 Gestión avanzada de variantes (SKU) › Flujo C: Reactivación de variante inactiva preserva estado del padre (CA-14)
+[259/259] tests\variants.spec.ts:331:3 › MK-004 Gestión avanzada de variantes (SKU) › Flujo D: Preservación de medidas y perfil físico tras edición
+  8) tests\variants.spec.ts:244:3 › MK-004 Gestión avanzada de variantes (SKU) › Regla de Negocio: Creación con SKU generado automáticamente
+
+    Error: expect(page).toHaveURL(expected) failed
+
+    Expected pattern: /\/productos\/PROD-OXF-001\/variantes\/.+\/preparacion/
+    Received string:  "http://127.0.0.1:5173/productos/PROD-OXF-001/variantes/nueva"
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "toHaveURL" with timeout 5000ms
+        - waiting for navigation to finish...
+        - navigated to "http://127.0.0.1:5173/productos/PROD-OXF-001/variantes/nueva"
+        - locator resolved to <html lang="es">…</html>
+        9 × unexpected value "http://127.0.0.1:5173/productos/PROD-OXF-001/variantes/nueva"
+          - locator resolved to <html lang="es" data-mantine-color-scheme="light" data-respect-reduced-motion="true">…</html>
+        - unexpected value "http://127.0.0.1:5173/productos/PROD-OXF-001/variantes/nueva"
+
+
+      262 |
+      263 |     // Should navigate to preparation with auto-generated SKU
+    > 264 |     await expect(page).toHaveURL(/\/productos\/PROD-OXF-001\/variantes\/.+\/preparacion/);
+          |                        ^
+      265 |     await expect(page.getByRole("heading", { name: /Preparación de Inventario: CAM-OXF-V\d+/ })).toBeVisible();
+      266 |   });
+      267 |
+        at C:\Users\Gabriel\Desktop\Web Front\G6-Productos-Ofertas-frontend\tests\variants.spec.ts:264:24
+
+    Error Context: test-results\variants-MK-004-Gestión-av-37420-KU-generado-automáticamente\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\variants-MK-004-Gestión-av-37420-KU-generado-automáticamente\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\variants-MK-004-Gestión-av-37420-KU-generado-automáticamente\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+  9) tests\variants.spec.ts:297:3 › MK-004 Gestión avanzada de variantes (SKU) › Flujo B: Desactivar la última variante activa inactiva al producto padre ACTIVO (SPEC-004 CA-12)
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByText('Inactivo')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByText('Inactivo') with timeout 5000ms
+      - waiting for getByText('Inactivo')
+
+
+      313 |     // Navigate to parent product using breadcrumb link (client-side transition)
+      314 |     await page.getByRole("link", { name: "Camisa Oxford Manga Larga" }).first().click();
+    > 315 |     await expect(page.getByText("Inactivo")).toBeVisible();
+          |                                              ^
+      316 |   });
+      317 |
+      318 |   test("Flujo C: Reactivación de variante inactiva preserva estado del padre (CA-14)", async ({
+        at C:\Users\Gabriel\Desktop\Web Front\G6-Productos-Ofertas-frontend\tests\variants.spec.ts:315:46
+
+    Error Context: test-results\variants-MK-004-Gestión-av-67ad0-adre-ACTIVO-SPEC-004-CA-12-\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\variants-MK-004-Gestión-av-67ad0-adre-ACTIVO-SPEC-004-CA-12-\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\variants-MK-004-Gestión-av-67ad0-adre-ACTIVO-SPEC-004-CA-12-\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+  10) tests\variants.spec.ts:285:3 › MK-004 Gestión avanzada de variantes (SKU) › Regla de Negocio: Rechazo de medidas físicas inválidas (<= 0)
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByText('El peso debe ser mayor que cero.')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByText('El peso debe ser mayor que cero.') with timeout 5000ms
+      - waiting for getByText('El peso debe ser mayor que cero.')
+
+
+      292 |     await page.getByRole("button", { name: "Guardar Variante" }).first().click();
+      293 |
+    > 294 |     await expect(page.getByText("El peso debe ser mayor que cero.")).toBeVisible();
+          |                                                                      ^
+      295 |   });
+      296 |
+      297 |   test("Flujo B: Desactivar la última variante activa inactiva al producto padre ACTIVO (SPEC-004 CA-12)", async ({
+        at C:\Users\Gabriel\Desktop\Web Front\G6-Productos-Ofertas-frontend\tests\variants.spec.ts:294:70
+
+    Error Context: test-results\variants-MK-004-Gestión-av-22439-edidas-físicas-inválidas-0-\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\variants-MK-004-Gestión-av-22439-edidas-físicas-inválidas-0-\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\variants-MK-004-Gestión-av-22439-edidas-físicas-inválidas-0-\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+  10 failed
+    tests\bulk.spec.ts:124:3 › MK-001 — Carga y exportación masiva de productos (Regresión C01-C24) › C15: S01 quickly selecting A then B applies only review B
+    tests\bulk.spec.ts:145:3 › MK-001 — Carga y exportación masiva de productos (Regresión C01-C24) › C16: Clear file invalidates selection and disables continue
+    tests\bulk.spec.ts:159:3 › MK-001 — Carga y exportación masiva de productos (Regresión C01-C24) › C17: CSV with quoted fields and linebreaks parses without error
+    tests\bulk.spec.ts:172:3 › MK-001 — Carga y exportación masiva de productos (Regresión C01-C24) › C18: Malformed CSV with unclosed quotes displays structural error
+    tests\promotions-states.spec.ts:78:1 › MK-006: unknown normalized edit and state reconcile without a duplicate write; saving prevents departure
+    tests\promotions-states.spec.ts:151:1 › MK-007: self-origin correction and conflict resolution retain typed candidates and return focus
+    tests\recommendations.spec.ts:109:1 › MK-007 S03/S04: upselling requires explicit criterion, valid order/period and bounded justification
+    tests\variants.spec.ts:244:3 › MK-004 Gestión avanzada de variantes (SKU) › Regla de Negocio: Creación con SKU generado automáticamente
+    tests\variants.spec.ts:285:3 › MK-004 Gestión avanzada de variantes (SKU) › Regla de Negocio: Rechazo de medidas físicas inválidas (<= 0)
+    tests\variants.spec.ts:297:3 › MK-004 Gestión avanzada de variantes (SKU) › Flujo B: Desactivar la última variante activa inactiva al producto padre ACTIVO (SPEC-004 CA-12)
+  249 passed (8.6m)

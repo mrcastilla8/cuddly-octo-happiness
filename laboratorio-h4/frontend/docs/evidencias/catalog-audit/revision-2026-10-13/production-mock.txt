@@ -1,0 +1,1 @@
+PASS producción mock: 43 vistas de Catálogo, Promotions, Pricing S01 y Taxonomía, 1440 px, sin errores; módulos presentes, tablas comerciales verificadas y controles de revisión ausentes.

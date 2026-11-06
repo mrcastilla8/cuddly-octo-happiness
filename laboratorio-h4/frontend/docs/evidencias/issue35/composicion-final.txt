@@ -1,0 +1,10 @@
+
+Running 2 tests using 1 worker
+
+
+
+(node:31556) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[1/2] tests\catalog-issue35.spec.ts:12:1 › POM-04: explicit mock Taxonomy injection also governs Catalog writes
+[2/2] tests\catalog-issue35.spec.ts:25:1 › POM-02: asynchronous activation cannot overwrite a concurrent state change
+  2 passed (3.6s)

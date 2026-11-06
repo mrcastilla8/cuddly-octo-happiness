@@ -1,0 +1,32 @@
+Catálogo H4 — 01/11/2026, Lima
+Rama: poma. Node 22.23.4. Windows. Chromium 1440x900.
+
+PASS npm ci --no-audit --no-fund: 255 paquetes, lockfile sin cambios.
+PASS TypeScript: tsc --noEmit (también ejecutado por ambos npm run build).
+PASS ESLint: eslint .; archivos afectados revisados nuevamente tras ajustes.
+PASS npm test final: 370 (Combos 56, Bulk 51, Inventory 104+4, Pricing 155).
+PASS build mock y build api con VITE_DATA_MODE explícito.
+PASS Catálogo/Variantes: 78/78, nueve archivos del alcance.
+PASS HTTP/UI final: 23/23, dos archivos de pruebas con transporte simulado.
+PASS arranque: 8/8, Gateway válido con lecturas simuladas sin exigir G7.
+SUITE COMPLETA: 538 PASS / 8 FAIL / 6 SKIP; 26,6 minutos.
+PASS repetición aislada: 30/30; incluye los ocho fallos originales y regresiones.
+PASS preview API final: 53 vistas a 1440px, sin errores ni carga de mocks.
+PASS preview mock final: 58 vistas a 1440px y recorrido de edición/auditoría simulado.
+PASS inspección de dos capturas de HTTP/UI a 1440px.
+PASS git diff --check al preparar los commits.
+
+Los fallos originales y sus correcciones/repeticiones se detallan en
+docs/INTEGRACION_CATALOGO_H4.md. No se declara verde la corrida completa original.
+Las seis pruebas SKIP no se presentan como ejecutadas.
+
+NO EJECUTADO: Gateway/BD reales, fase 1 restringida, JWT real G7, Oracle y AMQP.
+La prueba real quedó pendiente por instrucción expresa del usuario.
+Las respuestas HTTP de las pruebas locales son simuladas y están etiquetadas.
+
+Frontend inicial: ed5eaafe0603b0ba797fe9b61d6e888df547bb61.
+Primer commit de código: d4a5769b09a4f7acbbc814b2dda838fb789eb7dd.
+La revisión final incluye el ajuste de aislamiento de Pricing y las pruebas de arranque.
+SHA final y CI exacta: consultar el PR #40 y la entrega de este chat.
+Docs: 599c34f4e677c8792532e2cc31ac372473a10710.
+Backend consultado, sin modificaciones: 83c474189b0b7278fdd06ce40d6abb581158c819.

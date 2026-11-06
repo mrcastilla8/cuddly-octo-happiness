@@ -1,0 +1,41 @@
+
+[WebServer] (node:30452) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 26 tests using 2 workers
+
+(node:22960) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+(node:25148) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1/26] tests\catalog-injection.spec.ts:3:1 › same pages consume alternate adapters in API mode, preserve IDs and accept negative numbers
+[2/26] tests\catalog-injection.spec.ts:21:1 › schema errors block saving and API filters come from the alternate repository
+[3/26] tests\catalog-issue35.spec.ts:7:1 › POM-02: product SKU cannot reuse an existing variant SKU
+[4/26] tests\catalog-issue35.spec.ts:17:1 › POM-01/POM-04: a brand created in the real app is selectable in Catalog
+[5/26] tests\catalog-issue35.spec.ts:12:1 › POM-02: variant SKU cannot reuse a simple product sellable SKU
+[6/26] tests\catalog-issue35.spec.ts:28:1 › POM-03: Pricing reads the current Catalog identity and state
+[7/26] tests\catalog-issue35.spec.ts:41:1 › POM-03: Promotions preserves Catalog IDs/SKU and excludes inactive parent
+[8/26] tests\catalog-regressions.spec.ts:7:1 › failed physical validation leaves every product field and version unchanged
+[9/26] tests\catalog-regressions.spec.ts:17:1 › consecutive product and variant creates remain unique with a frozen clock
+[10/26] tests\catalog-regressions.spec.ts:30:1 › official Taxonomy adapter preserves provider IDs, limits and missing roles
+[11/26] tests\catalog-regressions.spec.ts:46:1 › product edit blocks loading and schema errors, including programmatic submits
+[12/26] tests\catalog-regressions.spec.ts:61:1 › confirmed empty schema permits edit and preserves historical attributes
+[13/26] tests\catalog-regressions.spec.ts:70:1 › client navigation resets variant fields, hides previous parent during load and handles errors
+[14/26] tests\variants.spec.ts:31:3 › MK-004 Gestión avanzada de variantes (SKU) › S01: Listado de variantes por producto padre, filtros y alerta para producto simple (CA-01)
+[15/26] tests\variants.spec.ts:72:3 › MK-004 Gestión avanzada de variantes (SKU) › S02: Crear nueva variante en BORRADOR y navegación inmediata a S04 (CA-02, CA-03, CA-04)
+[16/26] tests\variants.spec.ts:113:3 › MK-004 Gestión avanzada de variantes (SKU) › S03: Ficha de detalle de variante, herencia de precio e inmutabilidad (CA-05, CA-07, CA-11)
+[17/26] tests\variants.spec.ts:139:3 › MK-004 Gestión avanzada de variantes (SKU) › S02 Edición: SKU y atributos identificadores son inmutables (CA-11)
+[18/26] tests\variants.spec.ts:169:3 › MK-004 Gestión avanzada de variantes (SKU) › S04: Preparación de Inventario y reintento atómico (CA-19, CA-21)
+[19/26] tests\variants.spec.ts:186:3 › MK-004 Gestión avanzada de variantes (SKU) › S05: Desactivación de variante y regla de impacto en producto padre (CA-12, FLOW-004 §4.4)
+[20/26] tests\variants.spec.ts:213:3 › MK-004 Gestión avanzada de variantes (SKU) › S06: Reactivación de variante inactiva con independencia del padre (CA-14)
+[21/26] tests\variants.spec.ts:244:3 › MK-004 Gestión avanzada de variantes (SKU) › Regla de Negocio: Creación con SKU generado automáticamente
+[22/26] tests\variants.spec.ts:268:3 › MK-004 Gestión avanzada de variantes (SKU) › Regla de Negocio: Rechazo de combinación identificadora duplicada (CA-03)
+[23/26] tests\variants.spec.ts:285:3 › MK-004 Gestión avanzada de variantes (SKU) › Regla de Negocio: Rechazo de medidas físicas inválidas (<= 0)
+[24/26] tests\variants.spec.ts:297:3 › MK-004 Gestión avanzada de variantes (SKU) › Flujo B: Desactivar la última variante activa inactiva al producto padre ACTIVO (SPEC-004 CA-12)
+[25/26] tests\variants.spec.ts:318:3 › MK-004 Gestión avanzada de variantes (SKU) › Flujo C: Reactivación de variante inactiva preserva estado del padre (CA-14)
+[26/26] tests\variants.spec.ts:331:3 › MK-004 Gestión avanzada de variantes (SKU) › Flujo D: Preservación de medidas y perfil físico tras edición
+  26 passed (50.8s)

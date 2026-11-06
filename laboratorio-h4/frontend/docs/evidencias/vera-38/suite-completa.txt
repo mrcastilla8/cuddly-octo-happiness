@@ -1,0 +1,354 @@
+
+> productos-ofertas-frontend@0.1.0 test:ci
+> npm run test && npm run test:e2e -- --reporter=line
+
+
+> productos-ofertas-frontend@0.1.0 test
+> npm run test:unit:combos && npm run test:unit:bulk
+
+
+> productos-ofertas-frontend@0.1.0 test:unit:combos
+> vitest run --config vitest.config.ts
+
+
+ RUN  v5.0.5 C:/Users/User/workspace/G6-Productos-Ofertas-frontend
+
+
+ Test Files  1 passed (1)
+      Tests  36 passed (36)
+   Start at  01:41:23
+   Duration  563ms (transform 65%, import 17%, tests 16%, worker 2%)
+
+
+> productos-ofertas-frontend@0.1.0 test:unit:bulk
+> vitest run --config vitest.bulk.config.ts
+
+
+ RUN  v5.0.5 C:/Users/User/workspace/G6-Productos-Ofertas-frontend
+
+
+ Test Files  1 passed (1)
+      Tests  24 passed (24)
+   Start at  01:41:25
+   Duration  614ms (transform 49%, tests 35%, import 13%, worker 2%)
+
+
+> productos-ofertas-frontend@0.1.0 test:e2e
+> playwright test --reporter=line
+
+
+[WebServer] (node:18288) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (node:25748) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+
+Running 290 tests using 1 worker
+
+
+(node:20684) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[1/290] tests\bulk.regression.spec.ts:25:3 › MK-001 — regresión de UI de Carga masiva › C16: limpiar el archivo invalida la selección y deshabilita continuar
+[2/290] tests\bulk.regression.spec.ts:39:3 › MK-001 — regresión de UI de Carga masiva › C17: CSV con campos entrecomillados y saltos de línea se acepta
+[3/290] tests\bulk.regression.spec.ts:50:3 › MK-001 — regresión de UI de Carga masiva › C18: CSV malformado con comillas sin cerrar muestra error estructural
+[4/290] tests\bulk.regression.spec.ts:62:3 › MK-001 — regresión de UI de Carga masiva › C19: acceso directo a la revisión sin archivo ofrece retorno seguro
+[5/290] tests\bulk.regression.spec.ts:70:3 › MK-001 — regresión de UI de Carga masiva › C22: la pantalla existente /precios permanece intacta
+[6/290] tests\bulk.regression.spec.ts:75:3 › MK-001 — regresión de UI de Carga masiva › C23: descargas ofrece retorno a la carga de archivo
+[7/290] tests\bulk.regression.spec.ts:85:3 › MK-001 — regresión de UI de Carga masiva › R20: una nueva carga masiva reinicia el contexto de selección
+[8/290] tests\bulk.regression.spec.ts:103:3 › MK-001 — regresión de UI de Carga masiva › H13: XLSX sin recuento verificado informa dependencia del proveedor
+[9/290] tests\bulk.regression.spec.ts:126:3 › MK-001 — regresión de UI de Carga masiva › H11/H12: S03 presenta los estados en cola y en procesamiento
+[10/290] tests\bulk.regression.spec.ts:141:3 › MK-001 — regresión de UI de Carga masiva › H11/H12: S04 protege un lote no terminal y no renderiza tabla
+[11/290] tests\bulk.regression.spec.ts:154:3 › MK-001 — regresión de UI de Carga masiva › C24: una exportación fallida muestra error y deshabilita la descarga
+[12/290] tests\bulk.regression.spec.ts:168:3 › MK-001 — regresión de UI de Carga masiva › H01: el menú lateral resalta la navegación activa en S01-S05
+[13/290] tests\bulk.spec.ts:9:1 › Bulk smoke: selección, revisión local, admisión y seguimiento
+[14/290] tests\bulk.spec.ts:60:1 › Bulk smoke: conserva la nueva operación ante una admisión tardía
+[15/290] tests\bulk.spec.ts:96:1 › Bulk smoke: resultado parcial y acciones compatibles con el lote
+[16/290] tests\bulk.spec.ts:119:1 › Bulk smoke: exportación completa CSV con estados asíncronos
+[17/290] tests\campaigns.spec.ts:41:1 › MK-006 S01/S05: typed filters and detail retain list context
+[18/290] tests\campaigns.spec.ts:75:1 › MK-006 S02/S04: validate discount/channels and preserve draft and typed scope across selector cancellation
+[19/290] tests\campaigns.spec.ts:139:1 › MK-006 S03/S06: allowed modality is revalidated and activation history survives deactivation
+[20/290] tests\campaigns.spec.ts:201:1 › MK-005/MK-006: coupon selection reads created coupon-mode campaign and association locks modality
+[21/290] tests\campaigns.spec.ts:241:1 › MK-006: read, selection, save, conflict and state failure conserve context
+[22/290] tests\campaigns.spec.ts:302:1 › MK-006: desktop evidence for all six views
+[23/290] tests\catalog-adapters.spec.ts:12:1 › missing DataModeContext fails explicitly
+[24/290] tests\catalog-adapters.spec.ts:17:1 › uninitialized async factories are rejected instead of casting promises
+[25/290] tests\catalog-adapters.spec.ts:24:1 › API injection replaces cached unavailable providers without mock fallback
+[26/290] tests\catalog-adapters.spec.ts:40:1 › LISTA preserves stable IDs, NUMERO accepts negatives when permitted, TEXTO respects metadata
+[27/290] tests\catalog-adapters.spec.ts:59:1 › complete variant starts BORRADOR/PENDING, waits for confirmation and only retries when authorized
+[28/290] tests\catalog-adapters.spec.ts:81:1 › simple product retry requires permission independently in Pricing and Inventory
+[29/290] tests\catalog-final-review.spec.ts:3:1 › LISTA edit survives provider renaming and sends stable ID with current label
+[30/290] tests\catalog-final-review.spec.ts:23:1 › LISTA create sends option ID separately from its display label
+[31/290] tests\catalog-final-review.spec.ts:37:1 › LISTA with only a historical label requires explicit ID confirmation
+[32/290] tests\catalog-final-review.spec.ts:49:3 › type correction requires known publication preconditions and resolved Q-06: true
+[33/290] tests\catalog-final-review.spec.ts:49:3 › type correction requires known publication preconditions and resolved Q-06: false
+[34/290] tests\catalog-final-review.spec.ts:49:3 › type correction requires known publication preconditions and resolved Q-06: unknown
+[35/290] tests\catalog-injection.spec.ts:3:1 › same pages consume alternate adapters in API mode, preserve IDs and accept negative numbers
+[36/290] tests\catalog-injection.spec.ts:21:1 › schema errors block saving and API filters come from the alternate repository
+[37/290] tests\catalog-regressions.spec.ts:7:1 › failed physical validation leaves every product field and version unchanged
+[38/290] tests\catalog-regressions.spec.ts:17:1 › consecutive product and variant creates remain unique with a frozen clock
+[39/290] tests\catalog-regressions.spec.ts:30:1 › official Taxonomy adapter preserves provider IDs, limits and missing roles
+[40/290] tests\catalog-regressions.spec.ts:46:1 › product edit blocks loading and schema errors, including programmatic submits
+[41/290] tests\catalog-regressions.spec.ts:61:1 › confirmed empty schema permits edit and preserves historical attributes
+[42/290] tests\catalog-regressions.spec.ts:70:1 › client navigation resets variant fields, hides previous parent during load and handles errors
+[43/290] tests\catalog.spec.ts:13:3 › MK-003 Gestión de productos (CRUD principal) › S01: listado, búsqueda, filtros combinados y conservación de contexto
+[44/290] tests\catalog.spec.ts:55:3 › MK-003 Gestión de productos (CRUD principal) › S01: estados deterministas de revisión (empty, no-results, error)
+[45/290] tests\catalog.spec.ts:77:3 › MK-003 Gestión de productos (CRUD principal) › S02: crear producto simple en BORRADOR y navegación inmediata a S06
+[46/290] tests\catalog.spec.ts:115:3 › MK-003 Gestión de productos (CRUD principal) › S02: validación de SKU duplicado conserva datos
+[47/290] tests\catalog.spec.ts:133:3 › MK-003 Gestión de productos (CRUD principal) › S03: editar producto conserva SKU y modelo inmutables
+[48/290] tests\catalog.spec.ts:159:3 › MK-003 Gestión de productos (CRUD principal) › S03: conflicto de versión (409) conserva la propuesta del usuario
+[49/290] tests\catalog.spec.ts:177:3 › MK-003 Gestión de productos (CRUD principal) › S04: detalle de producto simple y variante muestra acciones correspondientes
+[50/290] tests\catalog.spec.ts:210:3 › MK-003 Gestión de productos (CRUD principal) › S05: diálogo de confirmación de activación y checklist de requisitos
+[51/290] tests\catalog.spec.ts:242:3 › MK-003 Gestión de productos (CRUD principal) › S06: preparación técnica con estados independientes de Pricing e Inventario
+[52/290] tests\catalog.spec.ts:272:3 › MK-003 Gestión de productos (CRUD principal) › S07: confirmación de desactivación (baja lógica) y preservación de variantes
+[53/290] tests\catalog.spec.ts:302:3 › MK-003 Gestión de productos (CRUD principal) › Capturas de evidencia desktop a 1440x900 para las 7 vistas
+[54/290] tests\combos\combos.smoke.spec.ts:6:1 › listado, navegación y detalle con disponibilidad informativa
+[55/290] tests\combos\combos.smoke.spec.ts:30:1 › creación de un combo directo y desactivación conservando el histórico
+[56/290] tests\combos\combos.smoke.spec.ts:65:1 › error de listado con reintento sin mostrar un estado vacío
+[57/290] tests\combos\combos.smoke.spec.ts:74:1 › COM-04: protege los cambios sin guardar y no bloquea la navegación tras guardar
+[58/290] tests\combos\combos.smoke.spec.ts:104:1 › COM-05: conflicto de versión, diff, conservación del borrador y segundo guardado
+[59/290] tests\coupon-write.spec.ts:17:1 › MK-005 S02: crear cupón no consulta repository.read sin identificador
+[60/290] tests\coupon-write.spec.ts:59:1 › MK-005 S02: create normalized coupon only after valid data and preserve list context
+[61/290] tests\coupon-write.spec.ts:98:1 › MK-005 S02/S03: normalized duplicate fails; own code edit succeeds and recorded usage remains intact
+[62/290] tests\coupon-write.spec.ts:129:1 › MK-005: dirty draft survives menu and Back navigation until explicit discard
+[63/290] tests\coupon-write.spec.ts:163:1 › MK-005 S06: cancellation and rejection retain state/usage; confirmation changes only state
+[64/290] tests\coupon-write.spec.ts:210:1 › MK-005: failed save conserves entries; unknown result is reconciled without a second save
+[65/290] tests\coupon-write.spec.ts:244:1 › MK-005 S02/S03/S06: desktop evidence and pending submission protection
+[66/290] tests\coupons.spec.ts:12:1 › MK-005 S01/S04/S05: pagination, detail and limits retain the selected coupon and list context
+[67/290] tests\coupons.spec.ts:61:1 › MK-005 S01: filters reset the page, browser history restores it and ordinary states stay neutral
+[68/290] tests\coupons.spec.ts:94:1 › MK-005: unavailable usage is not zero or unlimited; known exhausted capacity remains zero
+[69/290] tests\coupons.spec.ts:125:1 › MK-005: empty, filtered empty, read error, pending and access failure are distinct
+[70/290] tests\coupons.spec.ts:179:1 › MK-005: deep-link error recovery retains identity and production-like URLs do not enable review fixtures
+[71/290] tests\coupons.spec.ts:203:1 › MK-005: desktop evidence for all three read views
+[72/290] tests\foundation-review.spec.ts:5:1 › FND-01: ordinary active state is neutral and focus remains signal
+[73/290] tests\foundation-review.spec.ts:40:1 › FND-05: long content scrolls inside the table and preserves identifiers and controls
+[74/290] tests\foundation-review.spec.ts:94:1 › FND-06: Back and Forward restore applied filters and discard an unapplied draft
+[75/290] tests\foundation.spec.ts:4:1 › filters reset pagination, details preserve context and stale loading cannot replace results
+[76/290] tests\foundation.spec.ts:43:1 › empty, no matches and recoverable error remain distinct
+[77/290] tests\foundation.spec.ts:84:1 › form validation, safe dialog focus, cancellation and failure preserve entries
+[78/290] tests\foundation.spec.ts:137:1 › desktop geometry, fonts, tokens, focus and screenshots
+[79/290] tests\foundation.spec.ts:196:1 › unknown routes give a working return link
+[80/290] tests\foundation.spec.ts:207:1 › commercial shell and navigation do not display foundation copy or demo groups
+[81/290] tests\integration.spec.ts:4:1 › N03: production requires an explicit mode, development alone defaults to mock
+[82/290] tests\integration.spec.ts:13:1 › N05: catalog retry preserves the adapter and document without reloading the application
+[83/290] tests\integration.spec.ts:44:1 › N03: API mode blocks mock-only modules and never loads their adapters
+[84/290] tests\integration.spec.ts:120:3 › Integrated router: direct Pricing S01–S06, grouped sidebar and one active destination
+[85/290] tests\integration.spec.ts:120:3 › Integrated router: direct Cupones S01–S06, grouped sidebar and one active destination
+[86/290] tests\integration.spec.ts:120:3 › Integrated router: direct Promociones S01–S06, grouped sidebar and one active destination
+[87/290] tests\integration.spec.ts:120:3 › Integrated router: direct Recomendaciones S01–S07, grouped sidebar and one active destination
+[88/290] tests\integration.spec.ts:164:1 › Integrated sidebar: all modules remain reachable after form returns
+[89/290] tests\integration.spec.ts:187:1 › N03: Catálogo y Taxonomía en modo API operan fail-closed y nunca recurren a mocks
+[90/290] tests\inventory-adapter.spec.ts:20:3 › P2: Independencia de mocks con AlternateInventoryRepository › Lectura de stock autoritativo desde repositorio alternativo (sin mocks)
+[91/290] tests\inventory-adapter.spec.ts:38:3 › P2: Independencia de mocks con AlternateInventoryRepository › Filtros de busqueda y estado funcionan sobre el repositorio alternativo
+[92/290] tests\inventory-adapter.spec.ts:56:3 › P2: Independencia de mocks con AlternateInventoryRepository › Resultados vacios renderizan estado amigable
+[93/290] tests\inventory-adapter.spec.ts:66:3 › P2: Independencia de mocks con AlternateInventoryRepository › Manejo de errores del repositorio alternativo muestra reintento
+[94/290] tests\inventory-adapter.spec.ts:78:3 › P2: Independencia de mocks con AlternateInventoryRepository › Recepcion de traslados acredita stock y refresca vistas
+[95/290] tests\inventory-adapter.spec.ts:113:3 › P2: Independencia de mocks con AlternateInventoryRepository › Dashboard analitico procesa metricas y alertas con repositorio alternativo
+[96/290] tests\inventory-adapter.spec.ts:137:3 › P1: Reintentos reales, idempotencia y estado del modal › El reintento de stock vuelve a consultar sin cambiar los filtros
+[97/290] tests\inventory-adapter.spec.ts:156:3 › P1: Reintentos reales, idempotencia y estado del modal › El reintento de traslados vuelve a consultar sin cambiar los filtros
+[98/290] tests\inventory-adapter.spec.ts:171:3 › P1: Reintentos reales, idempotencia y estado del modal › El reintento del dashboard recarga KPIs, alertas y distribucion
+[99/290] tests\inventory-adapter.spec.ts:191:3 › P1: Reintentos reales, idempotencia y estado del modal › La identidad de recepcion cambia solo cuando cambia la intencion
+[100/290] tests\inventory-adapter.spec.ts:235:3 › P1: Reintentos reales, idempotencia y estado del modal › El error de una recepcion previa se limpia al cerrar y reabrir el modal
+[101/290] tests\inventory-adapter.spec.ts:263:3 › P1: Reintentos reales, idempotencia y estado del modal › Las alertas por ubicacion conservan el locationId en el enlace al saldo
+[102/290] tests\inventory-dashboard.spec.ts:47:5 › Auditoría MK-016 · regresiones TAC-06…TAC-14 › TAC-06 (P1) · KPI por SKU en varias ubicaciones › cuenta como stock bajo al SKU con una ubicación bajo umbral aunque otra tenga excedente
+[103/290] tests\inventory-dashboard.spec.ts:78:5 › Auditoría MK-016 · regresiones TAC-06…TAC-14 › TAC-10 (P1) · KPI por ubicación: agotado en una, disponible en otra › cuenta el SKU como agotado donde no tiene saldo sin ocultar su disponibilidad en otra
+[104/290] tests\inventory-dashboard.spec.ts:109:5 › Auditoría MK-016 · regresiones TAC-06…TAC-14 › TAC-07 (P1) · Alerta de discrepancia filtrada por destino › muestra la discrepancia al filtrar por el destino aunque la merma no deje saldo allí
+[105/290] tests\inventory-dashboard.spec.ts:135:5 › Auditoría MK-016 · regresiones TAC-06…TAC-14 › TAC-11 (P1) · Coherencia entre alerta y contador de discrepancias › el contador coincide con la alerta al filtrar por el destino, sin 0 ni 'sin datos'
+[106/290] tests\inventory-dashboard.spec.ts:167:5 › Auditoría MK-016 · regresiones TAC-06…TAC-14 › TAC-08 (P2) · KPI sin datos vs valor real cero › devuelve null (sin datos) en los saldos cuando no hay datos para la selección
+[107/290] tests\inventory-dashboard.spec.ts:177:5 › Auditoría MK-016 · regresiones TAC-06…TAC-14 › TAC-08 (P2) · KPI sin datos vs valor real cero › devuelve 0 (cero real) cuando el dato existe y vale cero
+[108/290] tests\inventory-dashboard.spec.ts:185:5 › Auditoría MK-016 · regresiones TAC-06…TAC-14 › TAC-08 (P2) · KPI sin datos vs valor real cero › la UI muestra 'Sin datos' (no 0) cuando el dashboard no tiene datos
+[109/290] tests\inventory-dashboard.spec.ts:202:5 › Auditoría MK-016 · regresiones TAC-06…TAC-14 › TAC-09 (P2) · Errores parciales de categorías y marcas › muestra un aviso parcial sin ocultar los filtros que sí cargaron
+[110/290] tests\inventory-dashboard.spec.ts:230:5 › Auditoría MK-016 · regresiones TAC-06…TAC-14 › TAC-12 (P2) · Reintento de filtros sin recargar › permite reintentar categorías/marcas y recupera las opciones conservando los filtros
+[111/290] tests\inventory-dashboard.spec.ts:273:5 › Auditoría MK-016 · regresiones TAC-06…TAC-14 › TAC-13 (P2) · Estados por SKU no excluyentes › aclara que un SKU puede contarse en varios estados y superar los SKU únicos
+[112/290] tests\inventory-dashboard.spec.ts:294:5 › Auditoría MK-016 · regresiones TAC-06…TAC-14 › TAC-14 (P2) · Error de ubicaciones en el aviso parcial › incluye ubicaciones en el aviso y las recupera al reintentar
+
+[WebServer] 1:46:36 AM [vite] (client) [console.warn] [inventory] Catálogo de ubicaciones en BLOCKED_CONTRACT: Error: Error controlado en AlternateInventoryRepository.getLocations
+[WebServer]     at AlternateInventoryRepository.getLocations (http://127.0.0.1:5173/tests/adapters/alternateInventoryRepository.ts:555:10)
+[WebServer]     at loadOptions (http://127.0.0.1:5173/src/features/inventory/hooks/useInventoryFilterOptions.ts:32:25)
+[WebServer]     at http://127.0.0.1:5173/src/features/inventory/hooks/useInventoryFilterOptions.ts:74:8
+[WebServer]     at Object.react_stack_bottom_frame (http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=25745f26:14178:13)
+[WebServer]     at runWithFiberInDEV (http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=25745f26:944:66)
+[WebServer]     at commitHookEffectListMount (http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=25745f26:6901:153)
+[WebServer]     at commitHookPassiveMountEffects (http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=25745f26:6936:55)
+[WebServer]     at reconnectPassiveEffects (http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=25745f26:8401:6)
+[WebServer]     at recursivelyTraverseReconnectPassiveEffects (http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=25745f26:8388:5)
+[WebServer]     at reconnectPassiveEffects (http://127.0.0.1:5173/node_modules/.vite/deps/react-dom_client.js?v=25745f26:8413:14)
+[113/290] tests\inventory-idempotency.spec.ts:20:5 › P1: Idempotencia y validaciones de operaciones › MockInventoryAdapter › operation_id con formato UUID inválido lanza VALIDACION
+[114/290] tests\inventory-idempotency.spec.ts:36:5 › P1: Idempotencia y validaciones de operaciones › MockInventoryAdapter › operation_id con formato UUID inválido lanza código VALIDACION (no IDEMPOTENCY_CONFLICT)
+[115/290] tests\inventory-idempotency.spec.ts:57:5 › P1: Idempotencia y validaciones de operaciones › MockInventoryAdapter › Nota superior a 500 caracteres lanza VALIDACION
+[116/290] tests\inventory-idempotency.spec.ts:73:5 › P1: Idempotencia y validaciones de operaciones › MockInventoryAdapter › Nota > 500 caracteres lanza código VALIDACION (no IDEMPOTENCY_CONFLICT)
+[117/290] tests\inventory-idempotency.spec.ts:95:5 › P1: Idempotencia y validaciones de operaciones › MockInventoryAdapter › Retry con misma operation_id y misma intención es idempotente (stock físico y disponible no se duplican)
+[118/290] tests\inventory-idempotency.spec.ts:174:5 › P1: Idempotencia y validaciones de operaciones › MockInventoryAdapter › Disposición REINGRESAR_BLOQUEADO acredita saldo bloqueado y reintento es idempotente
+[119/290] tests\inventory-idempotency.spec.ts:218:5 › P1: Idempotencia y validaciones de operaciones › MockInventoryAdapter › Reutilización de operation_id con intención diferente lanza IDEMPOTENCY_CONFLICT
+[120/290] tests\inventory-idempotency.spec.ts:259:5 › P1: Idempotencia y validaciones de operaciones › MockInventoryAdapter › Traslado cerrado no permite nueva recepción y lanza TRASLADO_NO_RECIBIBLE
+[121/290] tests\inventory-idempotency.spec.ts:301:5 › P1: Idempotencia y validaciones de operaciones › AlternateInventoryRepository (mock-independiente) › operation_id con formato UUID inválido lanza VALIDACION
+[122/290] tests\inventory-idempotency.spec.ts:330:5 › P1: Idempotencia y validaciones de operaciones › AlternateInventoryRepository (mock-independiente) › nota superior a 500 caracteres lanza VALIDACION
+[123/290] tests\inventory-idempotency.spec.ts:361:5 › P1: Idempotencia y validaciones de operaciones › AlternateInventoryRepository (mock-independiente) › Retry con misma operation_id y misma intención es idempotente (stock físico y disponible no se duplican)
+[124/290] tests\inventory-idempotency.spec.ts:439:5 › P1: Idempotencia y validaciones de operaciones › AlternateInventoryRepository (mock-independiente) › Disposición REINGRESAR_BLOQUEADO acredita saldo bloqueado y reintento es idempotente
+[125/290] tests\inventory-idempotency.spec.ts:483:5 › P1: Idempotencia y validaciones de operaciones › AlternateInventoryRepository (mock-independiente) › reutilización con intención diferente lanza IDEMPOTENCY_CONFLICT
+[126/290] tests\inventory-idempotency.spec.ts:522:5 › P1: Idempotencia y validaciones de operaciones › AlternateInventoryRepository (mock-independiente) › Traslado cerrado no admite nueva recepción y lanza TRASLADO_NO_RECIBIBLE
+[127/290] tests\inventory.spec.ts:17:3 › MK-015: Control de stock, umbrales y traslados (Issue #17) › MK-015-S01: Muestra tabla de saldos autoritativos con cálculo y estado
+[128/290] tests\inventory.spec.ts:53:3 › MK-015: Control de stock, umbrales y traslados (Issue #17) › MK-015-S03: Drawer de detalle muestra desglose de magnitudes del SKU
+[129/290] tests\inventory.spec.ts:74:3 › MK-015: Control de stock, umbrales y traslados (Issue #17) › MK-015-S02: Configuración de umbrales global y por SKU
+[130/290] tests\inventory.spec.ts:97:3 › MK-015: Control de stock, umbrales y traslados (Issue #17) › MK-015-S04 y S05: Bandeja de traslados y modal de recepción con aviso de discrepancia
+[131/290] tests\inventory.spec.ts:135:3 › MK-015: Control de stock, umbrales y traslados (Issue #17) › MK-015/P0: Un traslado en estado terminal no admite nuevas recepciones
+[132/290] tests\inventory.spec.ts:145:3 › MK-015: Control de stock, umbrales y traslados (Issue #17) › MK-015/P0: Recepción completa acredita saldo creando el registro de destino inexistente
+[133/290] tests\inventory.spec.ts:176:3 › MK-015: Control de stock, umbrales y traslados (Issue #17) › MK-015/P0: Recepción con disposición REINGRESAR_BLOQUEADO incrementa el bloqueado
+[134/290] tests\inventory.spec.ts:207:3 › MK-015: Control de stock, umbrales y traslados (Issue #17) › MK-015/P0: Recepción con CONFIRMAR_MERMA no acredita saldo de destino
+[135/290] tests\inventory.spec.ts:236:3 › MK-015: Control de stock, umbrales y traslados (Issue #17) › MK-015/P0: Recepción parcial sin cierre y posterior finalización completan el traslado
+[136/290] tests\inventory.spec.ts:274:3 › MK-015: Control de stock, umbrales y traslados (Issue #17) › MK-015/P0: La recepción final con faltante genera una alerta con discrepancia
+[137/290] tests\inventory.spec.ts:304:3 › MK-015: Control de stock, umbrales y traslados (Issue #17) › MK-015: Deshabilitar la marca de recepción final evita el aviso de discrepancia
+[138/290] tests\inventory.spec.ts:328:3 › MK-015: Control de stock, umbrales y traslados (Issue #17) › MK-015: Navegación entre vistas de inventario
+[139/290] tests\inventory.spec.ts:359:3 › MK-016: Dashboard analítico y alertas de inventario (Issue #18) › MK-016-S01: Dashboard con KPIs, alertas, distribución y tabla analítica
+[140/290] tests\inventory.spec.ts:403:3 › MK-016: Dashboard analítico y alertas de inventario (Issue #18) › MK-016/P0: Los filtros de categoría y marca alinean KPIs, alertas, distribución y tabla
+[141/290] tests\inventory.spec.ts:429:3 › MK-016: Dashboard analítico y alertas de inventario (Issue #18) › MK-016/P1: Estados de error y vacío del dashboard son explícitos
+[142/290] tests\inventory.spec.ts:448:3 › MK-016: Dashboard analítico y alertas de inventario (Issue #18) › MK-016/P1: El enlace de la alerta conserva SKU y ubicación específica
+[143/290] tests\inventory.spec.ts:481:3 › NAV-INV: Navegación lateral de Inventario (Issue #24) › NAV-INV-01: El menú lateral muestra el grupo Inventario con sus tres rutas
+[144/290] tests\inventory.spec.ts:501:5 › NAV-INV: Navegación lateral de Inventario (Issue #24) › NAV-INV-02: Acceso directo a Control de stock marca la opción activa
+[145/290] tests\inventory.spec.ts:501:5 › NAV-INV: Navegación lateral de Inventario (Issue #24) › NAV-INV-02: Acceso directo a Traslados de stock marca la opción activa
+[146/290] tests\inventory.spec.ts:501:5 › NAV-INV: Navegación lateral de Inventario (Issue #24) › NAV-INV-02: Acceso directo a Dashboard analítico marca la opción activa
+[147/290] tests\inventory.spec.ts:526:3 › NAV-INV: Navegación lateral de Inventario (Issue #24) › NAV-INV-03: /inventario/umbrales es alcanzable desde Control de stock y queda activo en nav
+[148/290] tests\inventory.spec.ts:552:3 › NAV-INV: Navegación lateral de Inventario (Issue #24) › NAV-INV-04: Pricing y Promociones siguen accesibles después de visitar Inventario
+[149/290] tests\inventory.spec.ts:579:3 › MK-016/P1: Alertas por ubicación - deduplicación correcta › Genera alertas independientes por SKU+ubicación y respeta filtros
+[150/290] tests\price-audit.spec.ts:56:1 › MK-014 S01/S02: ordered pages, readonly semantics, all fields, modal width and focus return
+[151/290] tests\price-audit.spec.ts:83:1 › MK-014 S03: direct 404 preserves filters/page and never fabricates record data
+[152/290] tests\price-audit.spec.ts:112:1 › MK-014: null, zero, absent actor and unknown origins remain distinct without inferred currency
+[153/290] tests\price-audit.spec.ts:141:1 › MK-014: filters apply explicitly, dates keep timezone, reset page and browser history restores context
+[154/290] tests\price-audit.spec.ts:187:1 › MK-014: invalid range blocks a request; empty, loading and service failures differ
+[155/290] tests\price-audit.spec.ts:230:1 › MK-014: access denial removes both detail and background protected data; errors are not 404
+[156/290] tests\price-audit.spec.ts:255:1 › MK-014 MOCK_REPLACEABLE: alternate catalog, applied filters only and pending-to-ready CSV report
+[157/290] tests\price-audit.spec.ts:314:3 › MK-014 CSV: inclusive limit, server revalidation rejection and compatible CSV option
+[158/290] tests\price-audit.spec.ts:314:3 › MK-014 PDF: inclusive limit, server revalidation rejection and compatible CSV option
+[159/290] tests\price-audit.spec.ts:363:1 › MK-014: CSV above 100000 and PDF above 500 refuse creation before submission
+[160/290] tests\price-audit.spec.ts:388:1 › MK-014: unknown POST cannot be resubmitted; known job GET retries without a second POST
+[161/290] tests\price-audit.spec.ts:427:1 › MK-014: generation failure, missing file and download failure are distinct; permission blocks export
+[162/290] tests\price-audit.spec.ts:475:1 › MK-014 S01–S05: 1440px screenshots, keyboard modal and prepared CSV/PDF sample downloads
+[163/290] tests\price-audit.spec.ts:526:1 › MK-014: missing API and failed factories never fall back; ports and consumers are fixture-free
+[164/290] tests\price-audit.spec.ts:561:1 › MK-014: stale filter results are ignored and refresh failure retains only safe marked data
+[165/290] tests\price-audit.spec.ts:619:1 › MK-014: a direct unknown export reference only queries and never creates a job
+[166/290] tests\price-audit.spec.ts:632:1 › MK-014: malformed dates in direct export URLs show validation without requests or render errors
+[167/290] tests\price-audit.spec.ts:650:1 › MK-014: an admitted job remains admitted when a later list count grows beyond the format limit
+[168/290] tests\price-audit.spec.ts:673:1 › MK-014 regression: detail denial stays hidden until fresh access succeeds and recovers without reload
+[169/290] tests\price-audit.spec.ts:715:1 › MK-014 regression: exportId changes, back/forward, stale reads and downloads cannot expose a prior job
+[170/290] tests\price-audit.spec.ts:794:1 › MK-014 regression: mismatched export response cannot be displayed or downloaded
+[171/290] tests\price-audit.spec.ts:810:1 › MK-014 strict dates: impossible calendar dates and invalid time/zone never query from direct URLs
+[172/290] tests\pricing-audit.spec.ts:40:1 › MOCK_REPLACEABLE: another catalog, currency and Retail quote use unchanged S01/S02 pages
+[173/290] tests\pricing-audit.spec.ts:100:1 › MOCK_REPLACEABLE: S03 uses the regular price at the future instant and keeps target identity
+[174/290] tests\pricing-audit.spec.ts:154:1 › MOCK_REPLACEABLE: S04 forwards the actual file and explicit policy; new input invalidates review
+[175/290] tests\pricing-audit.spec.ts:218:1 › MOCK_REPLACEABLE: S05 downloads adapter bytes/name and retains confirmed rows on report failure
+[176/290] tests\pricing-audit.spec.ts:249:1 › MOCK_REPLACEABLE: S06 preserves a different SKU/context and renders normalized historical data
+[177/290] tests\pricing-audit.spec.ts:281:1 › H12: missing API and failed alternate reads never fall back to the mock
+[178/290] tests\pricing-audit.spec.ts:312:1 › H01: Retail summary and its breakdown row agree after a channel-specific update
+[179/290] tests\pricing-audit.spec.ts:345:1 › H02/H13: offer validation uses its regular reference and the injected clock
+[180/290] tests\pricing-audit.spec.ts:379:1 › H03/H06: arbitrary currencies and inherited offers cannot be silently converted
+[181/290] tests\pricing-audit.spec.ts:399:1 › H04/H05: schedules remain scoped and regular/offer overlaps are rejected across kinds
+[182/290] tests\pricing-audit.spec.ts:440:1 › H08/H16: October 17 data is temporally applicable and contains no display labels
+[183/290] tests\pricing-audit.spec.ts:464:1 › H11: default mock prevalidation stays blocked instead of pretending to parse the file
+[184/290] tests\pricing-audit.spec.ts:474:1 › H12: API factory failures propagate and production defaults to a system clock
+[185/290] tests\pricing-audit.spec.ts:495:1 › H09/H10/H15: product source and ports are free of fixture IDs and artificial scenarios
+[186/290] tests\pricing-workflows.spec.ts:60:1 › MK-013-S01: fresh readings enable contextual actions; stale/empty readings do not
+[187/290] tests\pricing-workflows.spec.ts:83:1 › MK-013-S02: validation, focus, dialog cancellation, offer removal and inherited update
+[188/290] tests\pricing-workflows.spec.ts:175:1 › MK-013-S02: version conflict preserves draft and requires reread and explicit review
+[189/290] tests\pricing-workflows.spec.ts:217:3 › MK-013-S02: Rechazo de servicio preserves proposal and prevents false success
+[190/290] tests\pricing-workflows.spec.ts:217:3 › MK-013-S02: Sesión no válida preserves proposal and prevents false success
+[191/290] tests\pricing-workflows.spec.ts:217:3 › MK-013-S02: Sin autorización preserves proposal and prevents false success
+[192/290] tests\pricing-workflows.spec.ts:217:3 › MK-013-S02: Resultado desconocido preserves proposal and prevents false success
+[193/290] tests\pricing-workflows.spec.ts:217:3 › MK-013-S02: Vigencia superpuesta preserves proposal and prevents false success
+[194/290] tests\pricing-workflows.spec.ts:247:1 › MK-013-S02: scope, sidebar and browser Back protect unsaved proposal
+[195/290] tests\pricing-workflows.spec.ts:278:1 › MK-013-S03: date validation, pagination and future creation preserve current price
+[196/290] tests\pricing-workflows.spec.ts:350:3 › MK-013-S03: Vigencia superpuesta keeps date fields and does not create a vigency
+[197/290] tests\pricing-workflows.spec.ts:350:3 › MK-013-S03: Rechazo de servicio keeps date fields and does not create a vigency
+[198/290] tests\pricing-workflows.spec.ts:350:3 › MK-013-S03: Resultado desconocido keeps date fields and does not create a vigency
+[199/290] tests\pricing-workflows.spec.ts:384:1 › MK-013-S04: changing file or policy invalidates simulated preview; import remains blocked
+[200/290] tests\pricing-workflows.spec.ts:461:1 › MK-013-S05: queued, processing, partial, missing rows, failed refresh and report
+[201/290] tests\pricing-workflows.spec.ts:524:1 › MK-013-S06: as-of, fallback, error, absence and applied history retain context
+[202/290] tests\pricing-workflows.spec.ts:586:1 › MK-013: six direct views, desktop geometry, screenshots and no runtime errors
+[203/290] tests\pricing-workflows.spec.ts:634:1 › MK-013: invalid objective and unknown batch never create defaults for mutation
+[204/290] tests\pricing-workflows.spec.ts:650:1 › MK-013: decimal precision, temporal boundaries and stale writes are checked exactly
+[205/290] tests\pricing-workflows.spec.ts:712:1 › MK-013-S02: browser Back from confirmation shows one dialog and retains proposal
+[206/290] tests\pricing-workflows.spec.ts:736:1 › MK-013-S03/S06: loading, absence and errors are distinct and cancel stale reads
+[207/290] tests\pricing.spec.ts:4:1 › S01 applies selection explicitly, distinguishes inheritance/override and retains context on return
+[208/290] tests\pricing.spec.ts:78:1 › S01 distinguishes absence from error and marks previous readings without enabling mutation
+[209/290] tests\pricing.spec.ts:142:1 › Pricing component examples preserve form inputs and do not infer CSV validity or admit imports
+[210/290] tests\pricing.spec.ts:221:1 › Pricing desktop captures and tab keyboard navigation
+[211/290] tests\promotions-adapters.spec.ts:28:1 › composición global: api sin provider falla y no sustituye fallos por mocks
+[212/290] tests\promotions-adapters.spec.ts:41:1 › composición global: los cuatro puertos API se inyectan juntos sin escenarios DEV
+[213/290] tests\promotions-adapters.spec.ts:109:1 › composición: sustituir Catálogo cambia las referencias de ambos adaptadores sin fixtures cruzados
+[214/290] tests\promotions-adapters.spec.ts:139:1 › composición: sustituir Promociones alimenta las opciones y validación de Cupones
+[215/290] tests\promotions-adapters.spec.ts:182:3 › composición: Cupones sustituido gobierna asociaciones vigentes e historial de uso 0
+[216/290] tests\promotions-adapters.spec.ts:182:3 › composición: Cupones sustituido gobierna asociaciones vigentes e historial de uso 2
+[217/290] tests\promotions-adapters.spec.ts:182:3 › composición: Cupones sustituido gobierna asociaciones vigentes e historial de uso undefined
+[218/290] tests\promotions-adapters.spec.ts:250:1 › composición: sustituir Recomendaciones no modifica los otros servicios; instancias aisladas
+[219/290] tests\promotions-adapters.spec.ts:270:1 › reasignar el último cupón sin uso libera la modalidad anterior y bloquea la nueva
+[220/290] tests\promotions-adapters.spec.ts:301:1 › varios cupones, incluso inactivos, mantienen el bloqueo hasta la última reasignación
+[221/290] tests\promotions-adapters.spec.ts:315:1 › una reasignación rechazada conserva la asociación y no libera la modalidad
+[222/290] tests\promotions-adapters.spec.ts:329:1 › activación seguida de desactivación y reasignación no borra el historial
+[223/290] tests\promotions-adapters.spec.ts:347:1 › editar datos generales conserva capacidad desconocida y bloquea un cambio de modalidad
+[224/290] tests\promotions-adapters.spec.ts:403:3 › validación directa: alta y edición rechazan monto cero sin alterar registros
+[225/290] tests\promotions-adapters.spec.ts:403:3 › validación directa: alta y edición rechazan monto negativo sin alterar registros
+[226/290] tests\promotions-adapters.spec.ts:403:3 › validación directa: alta y edición rechazan monto no numérico sin alterar registros
+[227/290] tests\promotions-adapters.spec.ts:403:3 › validación directa: alta y edición rechazan política ausente sin alterar registros
+[228/290] tests\promotions-adapters.spec.ts:403:3 › validación directa: alta y edición rechazan política ajena sin alterar registros
+[229/290] tests\promotions-adapters.spec.ts:403:3 › validación directa: alta y edición rechazan límite negativo sin alterar registros
+[230/290] tests\promotions-adapters.spec.ts:403:3 › validación directa: alta y edición rechazan límite decimal sin alterar registros
+[231/290] tests\promotions-adapters.spec.ts:442:1 › formulario y adaptador comparten la validación de monto y restitución; normalización y unicidad
+[232/290] tests\promotions-adapters.spec.ts:477:1 › adaptadores rechazan estados, modalidad, beneficio, combinación y criterio inválidos
+[233/290] tests\promotions-adapters.spec.ts:530:1 › DEV: rechazo/conflicto no escriben; resultado incierto puede consultarse; base independiente
+[234/290] tests\promotions-adapters.spec.ts:578:1 › cancelación de consultas y guardados no produce mutaciones
+[235/290] tests\promotions-states.spec.ts:2:1 › MK-006/MK-007: access guards apply to list, direct creation, edit and state routes
+[236/290] tests\promotions-states.spec.ts:37:1 › MK-006/MK-007: loading, empty, missing and retry are distinct and preserve list filters
+[237/290] tests\promotions-states.spec.ts:78:1 › MK-006: unknown normalized edit and state reconcile without a duplicate write; saving prevents departure
+[238/290] tests\promotions-states.spec.ts:151:1 › MK-007: self-origin correction and conflict resolution retain typed candidates and return focus
+[239/290] tests\promotions-visual.spec.ts:26:1 › 19 vistas desktop: geometría, tipografía y diálogo según DESIGN 1.1; capturas para revisión UX
+[240/290] tests\promotions-visual.spec.ts:106:1 › el modo API global bloquea las 19 vistas sin cargar datos ni adapters mock
+[241/290] tests\recommendations.spec.ts:36:1 › MK-007 S01/S06: filters, origins, pagination and read-only enrichments retain context
+[242/290] tests\recommendations.spec.ts:70:1 › MK-007 S02/S05: selector excludes origin/duplicates, cancellation preserves draft, order persists
+[243/290] tests\recommendations.spec.ts:109:1 › MK-007 S03/S04: upselling requires explicit criterion, valid order/period and bounded justification
+[244/290] tests\recommendations.spec.ts:179:1 › MK-007: changing origin and discarding require confirmation without erasing candidates
+[245/290] tests\recommendations.spec.ts:216:1 › MK-007 S07: canceled/rejected state preserves candidates; uncertain state reconciles without resend
+[246/290] tests\recommendations.spec.ts:260:1 › MK-007: failure preserves proposed configuration; unknown edit reconciles and selector errors stay distinct
+[247/290] tests\recommendations.spec.ts:310:1 › MK-007: seven desktop views and pending submission protection
+[248/290] tests\taxonomy-ui.spec.ts:52:3 › Direct MK-008 categorías: section renders, grouped sidebar with one active destination and no console errors
+[249/290] tests\taxonomy-ui.spec.ts:52:3 › Direct MK-009 características y valores: section renders, grouped sidebar with one active destination and no console errors
+[250/290] tests\taxonomy-ui.spec.ts:52:3 › Direct MK-010 tipos de producto: section renders, grouped sidebar with one active destination and no console errors
+[251/290] tests\taxonomy-ui.spec.ts:52:3 › Direct MK-011 marcas: section renders, grouped sidebar with one active destination and no console errors
+[252/290] tests\taxonomy-ui.spec.ts:52:3 › Direct MK-012 SEO y metadatos: section renders, grouped sidebar with one active destination and no console errors
+[253/290] tests\taxonomy-ui.spec.ts:96:1 › MK-008: category creation and edit forms expose the expected fields
+[254/290] tests\taxonomy-ui.spec.ts:121:1 › MK-008: deactivation is rejected when active subcategories exist
+[255/290] tests\taxonomy-ui.spec.ts:142:1 › MK-008: deactivation moves from pending verification to confirmed
+[256/290] tests\taxonomy-ui.spec.ts:162:1 › MK-009: characteristic creation form exposes the expected fields
+[257/290] tests\taxonomy-ui.spec.ts:179:1 › MK-009: a value referenced by an active schema is not deactivated (SPEC-010)
+[258/290] tests\taxonomy-ui.spec.ts:198:1 › MK-009: a free value accepts 202 and confirms its deactivation on poll
+[259/290] tests\taxonomy-ui.spec.ts:217:1 › MK-010: product type creation and association forms load
+[260/290] tests\taxonomy-ui.spec.ts:242:1 › MK-010: required disassociation polls 202 and confirms on consult
+[261/290] tests\taxonomy-ui.spec.ts:262:1 › MK-010: deactivation is rejected for types still referenced by active products
+[262/290] tests\taxonomy-ui.spec.ts:276:1 › MK-010: deactivation accepts 202 and completes on poll
+[263/290] tests\taxonomy-ui.spec.ts:296:1 › MK-011: brand edit form loads and saves into the detail page
+[264/290] tests\taxonomy-ui.spec.ts:317:1 › MK-012: saving a duplicate slug reports 409 SLUG_DUPLICADO and keeps the form
+[265/290] tests\taxonomy-ui.spec.ts:333:1 › Flow screens stay inside the 1440 px viewport with no console errors
+[266/290] tests\taxonomy.spec.ts:23:1 › crea un tipo de producto y permite consultar su detalle de inmediato
+[267/290] tests\taxonomy.spec.ts:41:1 › asocia y desasocia una característica incrementando la versión del esquema
+[268/290] tests\taxonomy.spec.ts:68:1 › mantiene la desasociación en verificación y la confirma al consultar el estado
+[269/290] tests\taxonomy.spec.ts:102:1 › conserva las asociaciones cuando la característica asociada pasa a inactiva
+[270/290] tests\taxonomy.spec.ts:126:1 › crea y edita una marca y devuelve null al guardar una marca inexistente
+[271/290] tests\taxonomy.spec.ts:152:1 › edita el slug SEO, registra historial y rechaza un slug con conflicto 409
+[272/290] tests\taxonomy.spec.ts:185:1 › sigue el ciclo de baja de una categoría mediante la consulta de estado
+[273/290] tests\taxonomy.spec.ts:198:1 › los contratos de repositorio no aceptan parámetros de escenario mock
+[274/290] tests\variants.spec.ts:31:3 › MK-004 Gestión avanzada de variantes (SKU) › S01: Listado de variantes por producto padre, filtros y alerta para producto simple (CA-01)
+[275/290] tests\variants.spec.ts:72:3 › MK-004 Gestión avanzada de variantes (SKU) › S02: Crear nueva variante en BORRADOR y navegación inmediata a S04 (CA-02, CA-03, CA-04)
+[276/290] tests\variants.spec.ts:113:3 › MK-004 Gestión avanzada de variantes (SKU) › S03: Ficha de detalle de variante, herencia de precio e inmutabilidad (CA-05, CA-07, CA-11)
+[277/290] tests\variants.spec.ts:139:3 › MK-004 Gestión avanzada de variantes (SKU) › S02 Edición: SKU y atributos identificadores son inmutables (CA-11)
+[278/290] tests\variants.spec.ts:169:3 › MK-004 Gestión avanzada de variantes (SKU) › S04: Preparación de Inventario y reintento atómico (CA-19, CA-21)
+[279/290] tests\variants.spec.ts:186:3 › MK-004 Gestión avanzada de variantes (SKU) › S05: Desactivación de variante y regla de impacto en producto padre (CA-12, FLOW-004 §4.4)
+[280/290] tests\variants.spec.ts:213:3 › MK-004 Gestión avanzada de variantes (SKU) › S06: Reactivación de variante inactiva con independencia del padre (CA-14)
+[281/290] tests\variants.spec.ts:244:3 › MK-004 Gestión avanzada de variantes (SKU) › Regla de Negocio: Creación con SKU generado automáticamente
+[282/290] tests\variants.spec.ts:268:3 › MK-004 Gestión avanzada de variantes (SKU) › Regla de Negocio: Rechazo de combinación identificadora duplicada (CA-03)
+[283/290] tests\variants.spec.ts:285:3 › MK-004 Gestión avanzada de variantes (SKU) › Regla de Negocio: Rechazo de medidas físicas inválidas (<= 0)
+[284/290] tests\variants.spec.ts:297:3 › MK-004 Gestión avanzada de variantes (SKU) › Flujo B: Desactivar la última variante activa inactiva al producto padre ACTIVO (SPEC-004 CA-12)
+[285/290] tests\variants.spec.ts:318:3 › MK-004 Gestión avanzada de variantes (SKU) › Flujo C: Reactivación de variante inactiva preserva estado del padre (CA-14)
+[286/290] tests\variants.spec.ts:331:3 › MK-004 Gestión avanzada de variantes (SKU) › Flujo D: Preservación de medidas y perfil físico tras edición
+[287/290] tests\vera-integration.spec.ts:13:1 › VER-01/04: confirmed mock edit survives module navigation and appears in audit
+[288/290] tests\vera-integration.spec.ts:33:1 › VER-01/03: provider-consumer contract preserves decimals, nulls, filters, rejected writes and isolation
+[289/290] tests\vera-integration.spec.ts:69:1 › VER-02: isolated Pricing targets do not fabricate prices for Catalog/Combos SKUs
+[290/290] tests\vera-integration.spec.ts:82:1 › VER-03: missing API providers fail closed for both features
+  290 passed (12.9m)

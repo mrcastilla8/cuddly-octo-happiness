@@ -1,0 +1,21 @@
+{
+  "repositories": [
+    {
+      "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-frontend.git",
+      "sha": "4d8152708fae736a8ac2ca88b71f2e9b4e175e1a",
+      "path": "laboratorio-h4/frontend",
+      "name": "G6-Productos-Ofertas-frontend",
+      "branch": "feat/bulk-api-h4",
+      "import_method": "git archive tracked files"
+    },
+    {
+      "url": "https://github.com/Taller-SW-Web/G6-Productos-Ofertas-backend.git",
+      "sha": "ca1c5a6fd0bf304267007f9b017f5780fb25f538",
+      "path": "laboratorio-h4/backend",
+      "name": "G6-Productos-Ofertas-backend",
+      "branch": "feat/bulk-h4-cierre-http",
+      "import_method": "git archive tracked files"
+    }
+  ],
+  "imported_at": "2026-11-06"
+}

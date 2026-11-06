@@ -1,0 +1,14 @@
+﻿
+Running 10 tests using 10 workers
+
+[1/10] tests\inventory.spec.ts:325:3 ÔÇ║ MK-015: Control de stock, umbrales y traslados (Issue #17) ÔÇ║ MK-015: Navegaci├│n entre vistas de inventario
+[2/10] tests\inventory.spec.ts:325:3 ÔÇ║ MK-015: Control de stock, umbrales y traslados (Issue #17) ÔÇ║ MK-015: Navegaci├│n entre vistas de inventario
+[3/10] tests\inventory.spec.ts:325:3 ÔÇ║ MK-015: Control de stock, umbrales y traslados (Issue #17) ÔÇ║ MK-015: Navegaci├│n entre vistas de inventario
+[4/10] tests\inventory.spec.ts:325:3 ÔÇ║ MK-015: Control de stock, umbrales y traslados (Issue #17) ÔÇ║ MK-015: Navegaci├│n entre vistas de inventario
+[5/10] tests\inventory.spec.ts:325:3 ÔÇ║ MK-015: Control de stock, umbrales y traslados (Issue #17) ÔÇ║ MK-015: Navegaci├│n entre vistas de inventario
+[6/10] tests\inventory.spec.ts:325:3 ÔÇ║ MK-015: Control de stock, umbrales y traslados (Issue #17) ÔÇ║ MK-015: Navegaci├│n entre vistas de inventario
+[7/10] tests\inventory.spec.ts:325:3 ÔÇ║ MK-015: Control de stock, umbrales y traslados (Issue #17) ÔÇ║ MK-015: Navegaci├│n entre vistas de inventario
+[8/10] tests\inventory.spec.ts:325:3 ÔÇ║ MK-015: Control de stock, umbrales y traslados (Issue #17) ÔÇ║ MK-015: Navegaci├│n entre vistas de inventario
+[9/10] tests\inventory.spec.ts:325:3 ÔÇ║ MK-015: Control de stock, umbrales y traslados (Issue #17) ÔÇ║ MK-015: Navegaci├│n entre vistas de inventario
+[10/10] tests\inventory.spec.ts:325:3 ÔÇ║ MK-015: Control de stock, umbrales y traslados (Issue #17) ÔÇ║ MK-015: Navegaci├│n entre vistas de inventario
+  10 passed (28.8s)

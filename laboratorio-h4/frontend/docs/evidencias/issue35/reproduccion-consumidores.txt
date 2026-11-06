@@ -1,0 +1,74 @@
+
+[WebServer] (node:6576) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 2 tests using 1 worker
+
+(node:28120) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[1/2] tests\catalog-issue35.spec.ts:28:1 › POM-03: Pricing reads the current Catalog identity and state
+  1) tests\catalog-issue35.spec.ts:28:1 › POM-03: Pricing reads the current Catalog identity and state
+
+    Error: expect(received).toMatchObject(expected)
+
+    Matcher error: received value must be a non-null object
+
+    Received has value: undefined
+
+      34 |   await mockCatalogRepository.deactivate(product.id);
+      35 |   const target = (await prices.listTargets(signal)).find(row => row.productId === product.id);
+    > 36 |   expect(target).toMatchObject({ id: product.id, referenceSku: product.skuBase });
+         |                  ^
+      37 |   expect(target?.label).toContain("Mochila transversal");
+      38 |   expect(target?.label).toContain("INACTIVO");
+      39 | });
+        at C:\Users\Gabriel\Desktop\Web Front\G6-Productos-Ofertas-frontend\tests\catalog-issue35.spec.ts:36:18
+
+    Error Context: test-results\catalog-issue35-POM-03-Pri-9ca06--Catalog-identity-and-state\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\catalog-issue35-POM-03-Pri-9ca06--Catalog-identity-and-state\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\catalog-issue35-POM-03-Pri-9ca06--Catalog-identity-and-state\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+
+(node:29872) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[2/2] tests\catalog-issue35.spec.ts:41:1 › POM-03: Promotions preserves Catalog IDs/SKU and excludes inactive parent
+  2) tests\catalog-issue35.spec.ts:41:1 › POM-03: Promotions preserves Catalog IDs/SKU and excludes inactive parent
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    Expected: ArrayContaining [ObjectContaining {"active": true, "sku": "CAM-OXF-BLA-M"}]
+    Received: undefined
+
+      44 |   const consumer = createMockPromotionCatalogRepository();
+      45 |   const before = (await consumer.products(signal)).find(row => row.id === "PROD-OXF-001");
+    > 46 |   expect(before?.skus).toEqual(expect.arrayContaining([expect.objectContaining({ sku: "CAM-OXF-BLA-M", active: true })]));
+         |                        ^
+      47 |   await mockCatalogRepository.deactivate("PROD-OXF-001");
+      48 |   expect((await consumer.products(signal)).some(row => row.id === "PROD-OXF-001")).toBe(false);
+      49 | });
+        at C:\Users\Gabriel\Desktop\Web Front\G6-Productos-Ofertas-frontend\tests\catalog-issue35.spec.ts:46:24
+
+    Error Context: test-results\catalog-issue35-POM-03-Pro-4ad16-nd-excludes-inactive-parent\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\catalog-issue35-POM-03-Pro-4ad16-nd-excludes-inactive-parent\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\catalog-issue35-POM-03-Pro-4ad16-nd-excludes-inactive-parent\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+  2 failed
+    tests\catalog-issue35.spec.ts:28:1 › POM-03: Pricing reads the current Catalog identity and state
+    tests\catalog-issue35.spec.ts:41:1 › POM-03: Promotions preserves Catalog IDs/SKU and excludes inactive parent

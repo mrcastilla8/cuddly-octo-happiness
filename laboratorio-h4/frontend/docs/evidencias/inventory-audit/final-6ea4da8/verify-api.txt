@@ -1,0 +1,1 @@
+﻿PASS producci├│n api: 48 vistas de Cat├ílogo, Promotions, Pricing S01, Auditor├¡a S01ÔÇôS05, Taxonom├¡a e Inventario, 1440 px, sin errores; providers ausentes expl├¡citos, reintento y persistencia del error de Pricing, taxonom├¡a e inventario bloqueados y cero carga de mocks/bundles.

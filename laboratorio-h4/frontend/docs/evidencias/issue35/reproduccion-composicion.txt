@@ -1,0 +1,70 @@
+
+Running 2 tests using 1 worker
+
+
+
+(node:31356) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[1/2] tests\catalog-issue35.spec.ts:12:1 › POM-04: explicit mock Taxonomy injection also governs Catalog writes
+  1) tests\catalog-issue35.spec.ts:12:1 › POM-04: explicit mock Taxonomy injection also governs Catalog writes
+
+    CatalogError: Selecciona categoría, marca y tipo activos en Taxonomía.
+
+       at ..\src\features\catalog\adapters\mockCatalogRepository.ts:317
+
+      315 |     const pType = types.find(t => t.id === payload.tipoProductoId);
+      316 |     if (!category?.activo || !brand?.activo || !pType?.activo) {
+    > 317 |       throw new CatalogError("invalid_master", "Selecciona categoría, marca y tipo activos en Taxonomía.");
+          |             ^
+      318 |     }
+      319 |     // Check after all awaits: concurrent creates share one global SKU namespace.
+      320 |     if (this.products.some(p => p.skuBase.toUpperCase() === payload.skuBase.trim().toUpperCase()) ||
+        at MockCatalogRepository.create (C:\Users\Gabriel\Desktop\Web Front\G6-Productos-Ofertas-frontend\src\features\catalog\adapters\mockCatalogRepository.ts:317:13)
+        at C:\Users\Gabriel\Desktop\Web Front\G6-Productos-Ofertas-frontend\tests\catalog-issue35.spec.ts:20:19
+
+    Error Context: test-results-additional\catalog-issue35-POM-04-exp-86e86-also-governs-Catalog-writes\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results-additional\catalog-issue35-POM-04-exp-86e86-also-governs-Catalog-writes\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results-additional\catalog-issue35-POM-04-exp-86e86-also-governs-Catalog-writes\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+(node:9452) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[2/2] tests\catalog-issue35.spec.ts:25:1 › POM-02: asynchronous activation cannot overwrite a concurrent state change
+  2) tests\catalog-issue35.spec.ts:25:1 › POM-02: asynchronous activation cannot overwrite a concurrent state change
+
+    Error: expect(received).rejects.toMatchObject()
+
+    Received promise resolved instead of rejected
+    Resolved to value: {"attributes": [{"caracteristicaId": "CAR-CAP", "nombre": "Capacidad", "tipo": "NUMERO", "unidad": "litros", "valor": 30}, {"caracteristicaId": "CAR-COMP", "nombre": "Compartimento para laptop", "tipo": "LISTA", "valor": "VAL-SI"}], "brandId": "BRD-ANDES", "brandName": "Andean Peak", "catalogVersion": 3, "categoryId": "CAT-ACC", "categoryName": "Accesorios", "description": "Mochila técnica impermeable con soporte ergonómico para montaña y gimnasio.", "hasVariants": false, "id": "PROD-MOCH-001", "imageUrl": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400&auto=format&fit=crop&q=60", "images": [{"principal": true, "url": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400&auto=format&fit=crop&q=60"}], "name": "Mochila Deportiva Endurance", "physicalProfile": {"altoCm": 10, "anchoCm": 20, "largoCm": 30, "pesoKg": 0.45}, "preparation": {"hasVariants": false, "inventario": {"code": null, "manualRetryAllowed": false, "status": "COMPLETED"}, "pricing": {"code": null, "manualRetryAllowed": false, "status": "COMPLETED"}, "productId": "PROD-MOCH-001", "variantes": []}, "preparationSummary": "COMPLETED", "priceInitial": 89.9, "publishedCommercially": false, "skuBase": "MOCH-ENT-001", "status": "ACTIVO", "typeId": "TIP-MOCHILA", "typeName": "Mochila", "variants": []}
+
+      32 |   await catalog.deactivate("PROD-MOCH-001");
+      33 |   confirmSchema([]);
+    > 34 |   await expect(activation).rejects.toMatchObject({ kind: "version_conflict" });
+         |                                    ^
+      35 |   expect((await catalog.getById("PROD-MOCH-001"))?.status).toBe("INACTIVO");
+      36 | });
+      37 |
+        at C:\Users\Gabriel\Desktop\Web Front\G6-Productos-Ofertas-frontend\tests\catalog-issue35.spec.ts:34:36
+
+    Error Context: test-results-additional\catalog-issue35-POM-02-asy-0d5b5-e-a-concurrent-state-change\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results-additional\catalog-issue35-POM-02-asy-0d5b5-e-a-concurrent-state-change\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results-additional\catalog-issue35-POM-02-asy-0d5b5-e-a-concurrent-state-change\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+  2 failed
+    tests\catalog-issue35.spec.ts:12:1 › POM-04: explicit mock Taxonomy injection also governs Catalog writes
+    tests\catalog-issue35.spec.ts:25:1 › POM-02: asynchronous activation cannot overwrite a concurrent state change
