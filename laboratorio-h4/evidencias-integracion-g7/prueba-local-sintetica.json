@@ -1,0 +1,215 @@
+{
+  "exit_code": 0,
+  "status": "PASS",
+  "requests": [
+    {
+      "correlation_id": "7092475f-e96a-4c6f-b4ad-cbc934e0cd49",
+      "contract_code": null,
+      "confidence": "OBSERVED",
+      "operation_id": "listarPromociones",
+      "http_status": 200,
+      "result": "PASS",
+      "classification": null,
+      "path": "/api/v1/promociones?canal=MARKETPLACE"
+    },
+    {
+      "correlation_id": "0b795497-caa8-4ab1-b7f6-996265dab98f",
+      "contract_code": null,
+      "confidence": "OBSERVED",
+      "operation_id": "evaluarPromociones",
+      "http_status": 200,
+      "result": "PASS",
+      "classification": null,
+      "path": "/api/v1/promociones/evaluar"
+    },
+    {
+      "correlation_id": "ef0993b9-890e-4027-9037-11f8194af3be",
+      "contract_code": null,
+      "confidence": "OBSERVED",
+      "operation_id": "validarCupon",
+      "http_status": 200,
+      "result": "PASS",
+      "classification": null,
+      "path": "/api/v1/cupones/validar"
+    },
+    {
+      "correlation_id": "c9305575-c27f-439d-9f58-5054c70b6e63",
+      "contract_code": null,
+      "confidence": "OBSERVED",
+      "operation_id": "evaluarPromociones",
+      "http_status": 200,
+      "result": "PASS",
+      "classification": null,
+      "path": "/api/v1/promociones/evaluar"
+    },
+    {
+      "correlation_id": "6ed30313-3461-4da9-a1b5-10352ba092bc",
+      "contract_code": null,
+      "confidence": "OBSERVED",
+      "operation_id": "validarCupon",
+      "http_status": 200,
+      "result": "PASS",
+      "classification": null,
+      "path": "/api/v1/cupones/validar"
+    },
+    {
+      "correlation_id": "9d12f744-8d31-428f-9251-7e71369e52ac",
+      "contract_code": null,
+      "confidence": "OBSERVED",
+      "operation_id": "evaluarPromociones",
+      "http_status": 200,
+      "result": "PASS",
+      "classification": null,
+      "path": "/api/v1/promociones/evaluar"
+    },
+    {
+      "correlation_id": "9dc4449a-a24d-488d-80e2-114f6cf0267f",
+      "contract_code": null,
+      "confidence": "OBSERVED",
+      "operation_id": "validarCupon",
+      "http_status": 200,
+      "result": "PASS",
+      "classification": null,
+      "path": "/api/v1/cupones/validar"
+    },
+    {
+      "correlation_id": "82c63594-dc0e-4a91-b044-c4f1d4352764",
+      "contract_code": "CUPON_NO_ENCONTRADO",
+      "confidence": "OBSERVED",
+      "operation_id": "validarCupon",
+      "http_status": 200,
+      "result": "PASS",
+      "classification": null,
+      "path": "/api/v1/cupones/validar"
+    },
+    {
+      "correlation_id": "a0cf794c-f113-4419-9a42-c7929a14b094",
+      "contract_code": null,
+      "confidence": "OBSERVED",
+      "operation_id": "obtenerRecomendaciones",
+      "http_status": 200,
+      "result": "PASS",
+      "classification": null,
+      "path": "/api/v1/recomendaciones?productoId=WIRING-P&canal=MARKETPLACE"
+    },
+    {
+      "correlation_id": "b18fbe46-fad3-489d-8640-53970b5e223b",
+      "contract_code": null,
+      "confidence": "OBSERVED",
+      "operation_id": "obtenerRecomendaciones",
+      "http_status": 200,
+      "result": "PASS",
+      "classification": null,
+      "path": "/api/v1/recomendaciones?productoId=WIRING-P&canal=MARKETPLACE"
+    },
+    {
+      "correlation_id": "06f10ffd-064b-4366-bec0-2c3b1b8d7468",
+      "contract_code": null,
+      "confidence": "OBSERVED",
+      "operation_id": "obtenerRecomendaciones",
+      "http_status": 200,
+      "result": "PASS",
+      "classification": null,
+      "path": "/api/v1/recomendaciones?productoId=WIRING-P&canal=MARKETPLACE"
+    },
+    {
+      "correlation_id": "769541fe-f57e-4092-b2e7-c351c405a64f",
+      "contract_code": "SERVICIO_NO_DISPONIBLE",
+      "confidence": "OBSERVED",
+      "operation_id": "evaluarPromociones",
+      "http_status": 503,
+      "result": "EXPECTED_FAIL_CLOSED",
+      "classification": "G6_SERVICE",
+      "path": "/api/v1/promociones/evaluar"
+    },
+    {
+      "correlation_id": "a60963ef-8c80-40b6-89ba-15f6a3d27430",
+      "contract_code": "SERVICIO_NO_DISPONIBLE",
+      "confidence": "OBSERVED",
+      "operation_id": "evaluarPromociones",
+      "http_status": 503,
+      "result": "EXPECTED_FAIL_CLOSED",
+      "classification": "G6_SERVICE",
+      "path": "/api/v1/promociones/evaluar"
+    },
+    {
+      "correlation_id": "86b88cb8-387d-4ccd-a385-034f43af08e1",
+      "contract_code": "SERVICIO_NO_DISPONIBLE",
+      "confidence": "OBSERVED",
+      "operation_id": "validarCupon",
+      "http_status": 503,
+      "result": "EXPECTED_FAIL_CLOSED",
+      "classification": "G6_SERVICE",
+      "path": "/api/v1/cupones/validar"
+    },
+    {
+      "correlation_id": "74d35ee9-061c-4fda-8707-aa53ce4bf36e",
+      "contract_code": "SERVICIO_NO_DISPONIBLE",
+      "confidence": "OBSERVED",
+      "operation_id": "obtenerRecomendaciones",
+      "http_status": 503,
+      "result": "EXPECTED_FAIL_CLOSED",
+      "classification": "G6_SERVICE",
+      "path": "/api/v1/recomendaciones?productoId=WIRING-P&canal=MARKETPLACE"
+    },
+    {
+      "correlation_id": "2e0f447a-5eea-4da2-9cbc-9cf850359929",
+      "contract_code": "SERVICIO_NO_DISPONIBLE",
+      "confidence": "OBSERVED",
+      "operation_id": "obtenerRecomendaciones",
+      "http_status": 503,
+      "result": "EXPECTED_FAIL_CLOSED",
+      "classification": "G6_SERVICE",
+      "path": "/api/v1/recomendaciones?productoId=WIRING-P&canal=MARKETPLACE"
+    },
+    {
+      "correlation_id": "0ad66fbd-80eb-47b1-a7ee-d55a3915b155",
+      "contract_code": "VALIDACION",
+      "confidence": "OBSERVED",
+      "operation_id": "evaluarPromociones",
+      "http_status": 400,
+      "result": "EXPECTED_NEGATIVE",
+      "classification": "G6_CONTRACT",
+      "path": "/api/v1/promociones/evaluar"
+    },
+    {
+      "correlation_id": "bc839006-f940-4626-a383-fbc37852c782",
+      "contract_code": "VALIDACION",
+      "confidence": "OBSERVED",
+      "operation_id": "evaluarPromociones",
+      "http_status": 400,
+      "result": "EXPECTED_NEGATIVE",
+      "classification": "G6_CONTRACT",
+      "path": "/api/v1/promociones/evaluar"
+    },
+    {
+      "correlation_id": "93475b59-d4d6-4973-a341-bd0ac8d26c7e",
+      "contract_code": null,
+      "confidence": "OBSERVED",
+      "operation_id": "evaluarPromociones",
+      "http_status": 200,
+      "result": "PASS",
+      "classification": null,
+      "path": "/api/v1/promociones/evaluar"
+    }
+  ],
+  "diagnosis": "503 outcomes are fail-closed responses for unavailable commercial dependencies in isolated scenarios. They are not evidence of a G7 failure. This run is separate from the real G7 discovery/CORS test.",
+  "schema_version": 1,
+  "scope": "native Promotions module + disposable PostgreSQL/TLS; commercial and G7 facts are EXPLICIT FIXTURES, not real provider or G7 integration",
+  "sanitization": "Only operation IDs, paths, statuses, contract codes, timings, and correlation IDs retained. No raw output, credentials, JWTs, cookies, or bodies.",
+  "kind": "LOCAL_SYNTHETIC_PROVIDER_TEST",
+  "runtime": "Node 22.22.3",
+  "executed_from": "2026-11-06T12:23:02.4120000+00:00",
+  "facts": {
+    "service": "real copied Promotions service",
+    "jwt": "locally signed RS256 fixture only",
+    "gateway": "real copied G6 Gateway",
+    "http_400": 2,
+    "g7": "synthetic local fixture only",
+    "database": "disposable PostgreSQL with TLS",
+    "http_200": 12,
+    "http_503": 5
+  },
+  "command": "node apps/promotions-svc/test/gateway.isolated.smoke.mjs",
+  "executed_to": "2026-11-06T12:23:41.4440000+00:00"
+}

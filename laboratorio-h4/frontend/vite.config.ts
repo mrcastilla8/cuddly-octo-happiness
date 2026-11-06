@@ -17,5 +17,23 @@ export default defineConfig(({ command, mode }) => {
     throw new Error("La demo de lectura real requiere VITE_DATA_MODE=api.");
   if (demo === "true" && !(process.env.VITE_GATEWAY_ORIGIN ?? env.VITE_GATEWAY_ORIGIN))
     throw new Error("La demo requiere VITE_GATEWAY_ORIGIN explícito y CORS aprobado por Gateway.");
-  return { plugins: [react()] };
+  const labProxy =
+    (process.env.VITE_H4_LAB_PROXY ?? env.VITE_H4_LAB_PROXY) === "true";
+  if (labProxy && (process.env.VITE_DATA_MODE ?? env.VITE_DATA_MODE) !== "api")
+    throw new Error("El proxy H4 solo admite VITE_DATA_MODE=api.");
+  return {
+    plugins: [react()],
+    ...(labProxy
+      ? {
+          server: {
+            proxy: {
+              "/api/v1": {
+                target: "http://127.0.0.1:3000",
+                changeOrigin: false,
+              },
+            },
+          },
+        }
+      : {}),
+  };
 });

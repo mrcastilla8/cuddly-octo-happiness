@@ -1,0 +1,75 @@
+{
+  "generated_at": "2026-11-06T13:00:56.537Z",
+  "scenario_id": "interactive-2026-11-06T13-00-56.352Z-ad0db87c",
+  "overall": "BLOCKED",
+  "e2e_authenticated": "BLOCKED_HUMAN_G7_LOGIN_PENDING",
+  "database": {
+    "result": "PASS",
+    "mode": "disposable-postgresql",
+    "tls": "verify-full",
+    "official_migrations": 4
+  },
+  "browser": {
+    "route": "/cupones",
+    "form_verified": "Iniciar sesión",
+    "login_provider": "real-G7-G7Session"
+  },
+  "gateway_cors": {
+    "direct": "NOT_HOMOLOGATED",
+    "local_vite_proxy": "ACTIVE",
+    "rationale": "Gateway does not expose browser CORS; the lab proxy preserves real JWT validation."
+  },
+  "events": [
+    {
+      "timestamp": "2026-11-06T13:00:56.365Z",
+      "scenario_id": "interactive-2026-11-06T13-00-56.352Z-ad0db87c",
+      "stage": "GATEWAY_HEALTH",
+      "method": "GET",
+      "target": "http://127.0.0.1:3000",
+      "route": "/health",
+      "http_status": 200,
+      "duration_ms": 90,
+      "result": "PASS",
+      "content_type": "application/json; charset=utf-8"
+    },
+    {
+      "timestamp": "2026-11-06T13:00:56.455Z",
+      "scenario_id": "interactive-2026-11-06T13-00-56.352Z-ad0db87c",
+      "stage": "PROMOTIONS_HEALTH",
+      "method": "GET",
+      "target": "http://127.0.0.1:3004",
+      "route": "/health",
+      "http_status": 200,
+      "duration_ms": 23,
+      "result": "PASS",
+      "content_type": "application/json; charset=utf-8"
+    },
+    {
+      "timestamp": "2026-11-06T13:00:56.477Z",
+      "scenario_id": "interactive-2026-11-06T13-00-56.352Z-ad0db87c",
+      "stage": "REACT_ROUTE",
+      "method": "GET",
+      "target": "http://127.0.0.1:5173",
+      "route": "/cupones",
+      "http_status": 200,
+      "duration_ms": 30,
+      "result": "PASS",
+      "content_type": "text/html"
+    },
+    {
+      "timestamp": "2026-11-06T13:00:56.508Z",
+      "scenario_id": "interactive-2026-11-06T13-00-56.352Z-ad0db87c",
+      "stage": "GATEWAY_ANONYMOUS_PROTECTED_GET",
+      "method": "GET",
+      "target": "http://127.0.0.1:5173",
+      "route": "/api/v1/cupones",
+      "http_status": 401,
+      "duration_ms": 27,
+      "result": "PASS",
+      "content_type": "application/problem+json; charset=utf-8",
+      "contract_code": "TOKEN_INVALIDO",
+      "correlation_id": "2578c1fc-3f96-45be-ae92-7f88b4953876"
+    }
+  ],
+  "security": "No authorization header, token, credentials, OTP, response body, or personal claims were recorded."
+}

@@ -1,0 +1,81 @@
+﻿{
+    "generated_at":  "2026-11-06T13:08:38.8062270Z",
+    "scenario":  "human-g7-authenticated-list-coupons",
+    "overall":  "PASS",
+    "e2e":  "PASS",
+    "boundaries":  {
+                       "g7_login_mfa":  {
+                                            "result":  "PASS",
+                                            "source":  "user-confirmed; authenticated React state observed",
+                                            "http_status":  "not retained; credentials and token intentionally not inspected"
+                                        },
+                       "react_session":  {
+                                             "result":  "PASS",
+                                             "source":  "G7Session session state rendered; private in-memory token path used by API adapter; no token value read"
+                                         },
+                       "gateway_jwt":  {
+                                           "result":  "PASS",
+                                           "source":  "GET passed protected G7_AUTHENTICATED Gateway; local environment uses G7 Render issuer/JWKS; no demo bypass"
+                                       },
+                       "gateway_routing":  {
+                                               "result":  "PASS",
+                                               "source":  "correlation IDs propagated into Promotions operation logs",
+                                               "gateway_direct_cors":  "NOT_HOMOLOGATED",
+                                               "lab_proxy":  "Vite same-origin proxy active"
+                                           },
+                       "promotions":  {
+                                          "result":  "PASS",
+                                          "operationId":  "listarCupones",
+                                          "responses":  [
+                                                            {
+                                                                "timestamp":  "2026-11-06T13:04:17.828Z",
+                                                                "service":  "promotions-svc",
+                                                                "operationId":  "listarCupones",
+                                                                "http_status":  200,
+                                                                "correlation_id":  "e9d9c7aa-2cbe-4302-a72c-fa1b66af4172",
+                                                                "duration_ms":  267
+                                                            },
+                                                            {
+                                                                "timestamp":  "2026-11-06T13:04:46.018Z",
+                                                                "service":  "promotions-svc",
+                                                                "operationId":  "listarCupones",
+                                                                "http_status":  200,
+                                                                "correlation_id":  "fd8f61be-e512-4f65-81c1-6c6217474cc9",
+                                                                "duration_ms":  159
+                                                            },
+                                                            {
+                                                                "timestamp":  "2026-11-06T13:04:48.594Z",
+                                                                "service":  "promotions-svc",
+                                                                "operationId":  "listarCupones",
+                                                                "http_status":  200,
+                                                                "correlation_id":  "24cdc57a-c4d7-4907-831c-cd64511e34c5",
+                                                                "duration_ms":  39
+                                                            },
+                                                            {
+                                                                "timestamp":  "2026-11-06T13:04:50.462Z",
+                                                                "service":  "promotions-svc",
+                                                                "operationId":  "listarCupones",
+                                                                "http_status":  200,
+                                                                "correlation_id":  "dfb2e50f-8959-4adb-a355-885ab1a57ff9",
+                                                                "duration_ms":  30
+                                                            }
+                                                        ]
+                                      },
+                       "postgresql":  {
+                                          "result":  "PASS",
+                                          "source":  "Promotions returned HTTP 200 after persistence read; disposable PostgreSQL TLS verify-full; 4 official migrations"
+                                      },
+                       "react_response":  {
+                                              "result":  "PASS",
+                                              "visible_result":  "0 cupones encontrados para el filtro Inactivo",
+                                              "source":  "React rendered API-backed response"
+                                          }
+                   },
+    "listeners":  {
+                      "3000":  true,
+                      "5173":  true,
+                      "3004":  true,
+                      "15432":  true
+                  },
+    "security":  "No JWT, refresh token, Authorization header, credentials, OTP, personal claims, or response payload retained."
+}

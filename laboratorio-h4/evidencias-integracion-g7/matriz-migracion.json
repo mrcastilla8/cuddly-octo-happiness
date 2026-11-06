@@ -1,0 +1,49 @@
+{
+  "base_branch": "laboratorio/h4-base-actualizada",
+  "summary": "No frontend/backend product source files were changed. Every experimental file in the PR is lab-only and has no official migration target.",
+  "generated_at": "2026-11-06T12:33:16.7666005Z",
+  "patches": {
+    "backend": "NOT_APPLICABLE_NO_PRODUCT_DIFF",
+    "frontend": "NOT_APPLICABLE_NO_PRODUCT_DIFF"
+  },
+  "schema_version": 1,
+  "files": [
+    {
+      "source_sha": "4d1b85969816f2879a6f6f17b3553cccba0ab764 + f00448279210b33125484773069f466b39c37ee4",
+      "path": "laboratorio-h4/README.md",
+      "reason": "PowerShell reproduction, manual login procedure, test boundaries",
+      "tests": "documentation reviewed; CORS and local smoke commands listed",
+      "official_target": "NONE (lab-only)"
+    },
+    {
+      "source_sha": "4d1b85969816f2879a6f6f17b3553cccba0ab764 + f00448279210b33125484773069f466b39c37ee4",
+      "path": "laboratorio-h4/scripts/diagnostico-http.mjs",
+      "reason": "F0/F1/F2 real HTTP diagnostics with allowlisted sanitized evidence",
+      "tests": "executed Node 22.22.3; G7 discovery/JWKS and CORS probes PASS/FAIL recorded",
+      "official_target": "NONE (experimental only)"
+    },
+    {
+      "source_sha": "4d1b85969816f2879a6f6f17b3553cccba0ab764 + f00448279210b33125484773069f466b39c37ee4",
+      "path": "laboratorio-h4/scripts/validate-evidence.mjs",
+      "reason": "Lab evidence secret-pattern and ignored-env check",
+      "tests": "PASS: 7 evidence files scanned; private env ignored",
+      "official_target": "NONE (experimental only)"
+    },
+    {
+      "source_sha": "4d1b85969816f2879a6f6f17b3553cccba0ab764 + f00448279210b33125484773069f466b39c37ee4",
+      "path": "laboratorio-h4/scripts/verify-protected-operation.mjs",
+      "reason": "Contract-to-Gateway-to-Promotions operation verification",
+      "tests": "PASS: listarCupones GET userBearer",
+      "official_target": "NONE (experimental only)"
+    },
+    {
+      "source_sha": "4d1b85969816f2879a6f6f17b3553cccba0ab764 + f00448279210b33125484773069f466b39c37ee4",
+      "path": "laboratorio-h4/evidencias-integracion-g7/*",
+      "reason": "Runtime F0/F1/F2 + isolated fixture run outputs; no source patch",
+      "tests": "real G7 HTTP checks; synthetic local stack exit 0; evidence validator PASS",
+      "official_target": "NONE (sanitized evidence only)"
+    }
+  ],
+  "backend_base_sha": "f00448279210b33125484773069f466b39c37ee4",
+  "frontend_base_sha": "4d1b85969816f2879a6f6f17b3553cccba0ab764"
+}
