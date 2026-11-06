@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-11-06T12:29:32.593Z",
+  "scenario_id": "diag-2026-11-06T12-29-29.650Z-080f6745",
+  "source_shas": {
+    "frontend": "4d1b85969816f2879a6f6f17b3553cccba0ab764",
+    "backend": "f00448279210b33125484773069f466b39c37ee4"
+  },
+  "overall": "PARTIAL",
+  "phases": [
+    {
+      "phase": "F0",
+      "timestamp": "2026-11-06T12:29:31.170Z",
+      "status": "PARTIAL",
+      "toolchain_status": "PASS",
+      "runtime_config_status": "PARTIAL",
+      "node": "22.22.3",
+      "npm_version": "11.4.2",
+      "docker_cli": true,
+      "docker_daemon": true,
+      "frontend_node_compatible": true,
+      "backend_node_compatible": true,
+      "origin": "http://127.0.0.1:5173",
+      "g7_origin": "https://g7-auth-service.onrender.com",
+      "gateway_origin": "http://127.0.0.1:3000",
+      "secret_presence": {
+        "G7_CLIENT_SECRET": false,
+        "G7_TEST_USERNAME": false,
+        "G7_TEST_PASSWORD": false,
+        "DATABASE_URL": false,
+        "JWT_PUBLIC_KEY": false
+      },
+      "private_env_files": {
+        "frontend": true,
+        "backend": false
+      },
+      "config_keys": {
+        "frontend": [
+          "VITE_DATA_MODE",
+          "VITE_GATEWAY_ORIGIN",
+          "VITE_G7_API_BASE"
+        ],
+        "backend": []
+      },
+      "source_dirs_present": true
+    },
+    {
+      "phase": "F1_DISCOVERY",
+      "timestamp": "2026-11-06T12:29:32.078Z",
+      "status": "PASS",
+      "http_status": 200,
+      "duration_ms": 698,
+      "issuer_https": true,
+      "issuer_origin": "https://g7-auth-service.onrender.com",
+      "jwks_uri_https": true,
+      "jwks_http_status": 200,
+      "jwks_duration_ms": 206,
+      "jwks_has_rs256_rsa_key": true,
+      "correlation_id": "1f55fc2a-16fa-44e1-8ed1-e9d2a6d6ad98",
+      "jwks_correlation_id": "5dee4329-9881-4e7d-9440-7f65675e86da"
+    },
+    {
+      "phase": "G7_CORS_LOGIN",
+      "timestamp": "2026-11-06T12:29:32.279Z",
+      "status": "PASS",
+      "classification": null,
+      "http_status": 200,
+      "correlation_id": "29a2a348-f5e6-4a84-8f09-36b3e9ed7ce2",
+      "cors": {
+        "access-control-allow-origin": "http://127.0.0.1:5173",
+        "access-control-allow-methods": "GET,POST,PATCH,PUT,DELETE",
+        "access-control-allow-headers": "content-type"
+      },
+      "preflight": {
+        "requested_method": "POST",
+        "requested_headers": [
+          "content-type"
+        ],
+        "method_allowed": true,
+        "headers_allowed": true
+      }
+    },
+    {
+      "phase": "G7_CORS_CORRELATION",
+      "timestamp": "2026-11-06T12:29:32.586Z",
+      "status": "FAIL",
+      "classification": "G7_CORS",
+      "http_status": 200,
+      "correlation_id": "13d7faf5-075d-4853-9f76-190c36a0e258",
+      "cors": {
+        "access-control-allow-origin": "http://127.0.0.1:5173",
+        "access-control-allow-methods": "GET,POST,PATCH,PUT,DELETE",
+        "access-control-allow-headers": "authorization, content-type"
+      },
+      "preflight": {
+        "requested_method": "GET",
+        "requested_headers": [
+          "authorization",
+          "content-type",
+          "x-correlation-id"
+        ],
+        "method_allowed": true,
+        "headers_allowed": false
+      }
+    },
+    {
+      "phase": "G6_GATEWAY_CORS",
+      "timestamp": "2026-11-06T12:29:32.593Z",
+      "status": "FAIL",
+      "classification": "G6_GATEWAY_NETWORK",
+      "http_status": null,
+      "correlation_id": "beeef19c-d691-4f01-b938-6a175dd16677",
+      "error_type": "ECONNREFUSED"
+    }
+  ],
+  "note": "No human login, JWT-protected API call, or database write is attempted by this diagnostic runner."
+}
