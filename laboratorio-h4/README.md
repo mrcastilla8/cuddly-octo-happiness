@@ -1,10 +1,13 @@
-# Laboratorio H4 G6 ↔ G7
+# Ejecución de integración H4 G6 ↔ G7
 
-Copia aislada de los repositorios fuente indicada en `MANIFIESTO-SHAS.json`.
+## Estado
 
-- `frontend/`: aplicación React.
-- `backend/`: monorepo NestJS.
-- No contiene `.git` anidado, dependencias instaladas ni builds.
-- La procedencia se obtiene contrastando cada SHA contra su URL Git original.
+Laboratorio base importado desde las ramas y SHAs de `MANIFIESTO-SHAS.json`. El E2E combinado permanece `BLOCKED`: en este punto no se ejecutó login real G7 con MFA ni cadena React → Gateway → Promotions → PostgreSQL. Ver `evidencias-integracion-g7/resumen.json`.
 
-Importada el 2026-11-06 desde las ramas oficiales listadas en el manifiesto.
+## Seguridad
+
+No guardar `.env` reales, tokens, OTP, cookies, HAR, capturas de sesión o cuerpos confidenciales en Git. Usar configuración local ignorada. El secreto M2M nunca va al frontend.
+
+## Reproducción pendiente
+
+Los repositorios fuente traen instrucciones propias. Antes de una ejecución completa, confirmar el runner existente para Promotions, usar PostgreSQL descartable y validar el OpenAPI para seleccionar la operación. La evidencia debe actualizarse con timestamp y correlation IDs reales, además de separar pruebas G7, G6 local y E2E combinado.
