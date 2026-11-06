@@ -1,0 +1,98 @@
+name: Auditar sincronizacion de desarrolladores
+
+on:
+  workflow_dispatch:
+    inputs:
+      target_branch:
+        description: "Rama que se desea auditar"
+        required: true
+        type: choice
+        options:
+          - vera
+          - lopez
+          - poma
+          - cueva
+          - taco
+          - castilla
+
+permissions:
+  contents: read
+
+concurrency:
+  group: audit-sync-${{ inputs.target_branch }}
+  cancel-in-progress: false
+
+jobs:
+  audit:
+    name: Auditar integracion con master
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    env:
+      VITE_DATA_MODE: mock
+      CI: "true"
+      TARGET_BRANCH: ${{ inputs.target_branch }}
+
+    steps:
+      - name: Obtener repositorio
+        uses: actions/checkout@v4
+        with:
+          ref: master
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Configurar Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - name: Preparar integracion temporal
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          case "$TARGET_BRANCH" in
+            vera|lopez|poma|cueva|taco|castilla) ;;
+            *) echo "::error::Rama no autorizada"; exit 1 ;;
+          esac
+
+          git fetch origin --prune
+          git checkout --detach "origin/$TARGET_BRANCH"
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          if ! git merge --no-ff --no-commit origin/master; then
+            echo "::error::Conflicto de integración"
+            git diff --name-only --diff-filter=U
+            exit 1
+          fi
+
+          echo "Integración temporal preparada."
+          echo "No se hará commit ni push."
+
+      - name: Instalar dependencias
+        run: npm ci --no-audit --no-fund
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Build mock
+        run: npm run build
+
+      - name: Instalar Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Pruebas completas
+        run: npm run test:ci
+
+      - name: Resumen
+        if: success()
+        run: |
+          echo "### Integración temporal validada" >> "$GITHUB_STEP_SUMMARY"
+          echo "Rama: $TARGET_BRANCH" >> "$GITHUB_STEP_SUMMARY"
+          echo "Sin commit, push ni merge remoto." >> "$GITHUB_STEP_SUMMARY"

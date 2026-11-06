@@ -1,0 +1,349 @@
+.button {
+  min-height: 40px;
+  height: auto;
+  min-width: 96px;
+  padding: 8px 24px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  letter-spacing: 0;
+  border: 1px solid var(--po-primaryHover);
+  transition:
+    background 120ms ease-out,
+    border-color 120ms ease-out;
+  /* xs is legacy; it maps visually to the normative compact sm size. */
+  &[data-size="sm"],
+  &[data-size="xs"] {
+    min-height: 32px;
+    padding: 4px 16px;
+  }
+  &[data-size="lg"] {
+    min-height: 48px;
+    padding: 12px 24px;
+  }
+  /* Primary: filled with ink text, never white on orange. */
+  &[data-variant="filled"] {
+    background: var(--po-primary);
+    color: var(--po-ink);
+  }
+  &[data-variant="filled"]:not(:disabled):not([data-disabled]):hover,
+  &[data-variant="filled"]:not(:disabled):not([data-disabled]):active {
+    background: var(--po-primaryHover);
+    color: var(--po-cloud);
+  }
+  /* Secondary: white surface with primary-hover text/border, never filled. */
+  &[data-variant="outline"] {
+    background: var(--po-surface);
+    color: var(--po-primaryHover);
+  }
+  /* Tertiary: no visible background/border, primary-hover text. */
+  &[data-variant="subtle"],
+  &[data-variant="light"] {
+    background: transparent;
+    color: var(--po-primaryHover);
+    border-color: transparent;
+  }
+  &[data-variant="outline"]:not(:disabled):not([data-disabled]):hover,
+  &[data-variant="subtle"]:not(:disabled):not([data-disabled]):hover,
+  &[data-variant="light"]:not(:disabled):not([data-disabled]):hover,
+  &[data-variant="outline"]:not(:disabled):not([data-disabled]):active,
+  &[data-variant="subtle"]:not(:disabled):not([data-disabled]):active,
+  &[data-variant="light"]:not(:disabled):not([data-disabled]):active {
+    background: var(--po-subtle);
+  }
+  /* Destructive is a distinct treatment only when it is the filled action. */
+  &.destructive[data-variant="filled"] {
+    background: var(--po-errorText);
+    color: var(--po-surface);
+    border-color: var(--po-errorText);
+  }
+  &.destructive[data-variant="filled"]:not(:disabled):not([data-disabled]):hover,
+  &.destructive[data-variant="filled"]:not(:disabled):not([data-disabled]):active {
+    background: var(--po-errorText);
+    color: var(--po-surface);
+    border-color: var(--po-ink);
+  }
+  /* Destructive outline stays secondary: neutral surface, red text/border. */
+  &.destructive[data-variant="outline"] {
+    color: var(--po-errorText);
+    border-color: var(--po-errorText);
+  }
+  /* Destructive subtle/light stays tertiary: no fill, red text. */
+  &.destructive[data-variant="subtle"],
+  &.destructive[data-variant="light"] {
+    background: transparent;
+    color: var(--po-errorText);
+    border-color: transparent;
+  }
+  &:disabled,
+  &[data-disabled] {
+    background: var(--po-subtle);
+    color: var(--po-disabled);
+    border-color: var(--po-border);
+  }
+}
+.buttonLabel {
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+.skeleton {
+  &::before {
+    background: var(--po-subtle);
+  }
+  &::after {
+    background: var(--po-border);
+  }
+}
+.actionIcon {
+  color: var(--po-secondary);
+  border-radius: 8px;
+  &:not(:disabled):hover {
+    background: var(--po-subtle);
+    color: var(--po-ink);
+  }
+}
+.input {
+  --input-size: 40px;
+  min-height: 40px;
+  padding-inline: 12px;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--po-ink);
+  background: var(--po-surface);
+  border: 1px solid var(--po-control);
+  border-radius: 8px;
+  &::placeholder {
+    color: var(--po-secondary);
+  }
+  &:not(:disabled):hover {
+    border-color: var(--po-secondary);
+  }
+  &:focus {
+    border-color: var(--po-control);
+  }
+  &[data-error] {
+    border-color: var(--po-error);
+    color: var(--po-ink);
+  }
+  &:disabled {
+    background: var(--po-subtle);
+    border-color: var(--po-border);
+    color: var(--po-disabled);
+    opacity: 1;
+  }
+}
+.inputWrapper {
+  --input-height: 40px;
+  &[data-with-left-section] .input {
+    padding-inline-start: 40px;
+  }
+  &[data-with-right-section] .input {
+    padding-inline-end: 40px;
+  }
+  &[data-size="sm"] .input {
+    min-height: 32px;
+    height: 32px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+.textarea {
+  min-height: 104px;
+  padding: 12px;
+  resize: vertical;
+}
+.label {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.help {
+  font-size: 14px;
+  line-height: 20px;
+  margin-top: 4px;
+}
+.dropdown {
+  border: 1px solid var(--po-control);
+  box-shadow: var(--mantine-shadow-sm);
+}
+.option {
+  min-height: 36px;
+  font-size: 14px;
+  &[data-checked] {
+    background: var(--po-selection);
+    color: var(--po-ink);
+  }
+}
+.choice {
+  border-color: var(--po-control);
+  &:checked {
+    background: var(--po-selection);
+    border-color: var(--po-primaryHover);
+  }
+}
+.choiceIcon {
+  color: var(--po-ink);
+}
+.choiceBody {
+  min-height: 32px;
+  align-items: center;
+}
+.choiceLabel {
+  font-size: 14px;
+  line-height: 20px;
+  padding-inline-start: 8px;
+}
+.title {
+  letter-spacing: 0;
+  &:is(h1, h2, h3) {
+    text-transform: uppercase;
+  }
+  &:is(h4, h5, h6) {
+    font-family: var(--mantine-font-family);
+  }
+}
+/* Card heading: keeps the semantic heading level but renders Inter 20/28 700,
+   overriding the Oswald uppercase page-heading treatment. */
+.title.cardTitle {
+  font-family: var(--mantine-font-family);
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 700;
+  text-transform: none;
+}
+.badge {
+  height: auto;
+  min-height: 24px;
+  padding: 1px 8px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  text-transform: none;
+  letter-spacing: 0;
+  overflow: visible;
+}
+.table {
+  table-layout: fixed;
+  width: 100%;
+  font-size: 14px;
+  line-height: 20px;
+}
+.th {
+  min-height: 40px;
+  height: 40px;
+  background: var(--po-subtle);
+  font-weight: 600;
+  color: var(--po-ink);
+}
+.td {
+  height: 48px;
+  overflow-wrap: anywhere;
+  border-color: var(--po-border);
+}
+.pagination {
+  border: 1px solid var(--po-control);
+  font-size: 14px;
+  &[data-active] {
+    background: var(--po-selection);
+    color: var(--po-ink);
+    border-color: var(--po-primaryHover);
+  }
+}
+.dialog {
+  max-height: calc(100dvh - 64px);
+  box-shadow: var(--mantine-shadow-lg);
+}
+.dialogHeader {
+  background: var(--po-surface);
+  border-bottom: 1px solid var(--po-border);
+  margin-bottom: 24px;
+}
+.dialogTitle {
+  font-family: var(--mantine-font-family);
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 700;
+}
+.navLink {
+  min-height: 40px;
+  padding: 8px 16px;
+  border-left: 2px solid transparent;
+  border-radius: 8px;
+  color: var(--po-secondary);
+  &:hover {
+    background: var(--po-subtle);
+  }
+  &[data-active] {
+    background: var(--po-selection);
+    border-left-color: var(--po-primaryHover);
+    color: var(--po-ink);
+  }
+}
+.navLabel {
+  font-size: 14px;
+  line-height: 20px;
+}
+.radioCard {
+  padding: 16px;
+  border: 1px solid var(--po-control);
+  border-radius: 12px;
+  &[data-checked] {
+    background: var(--po-selection);
+    border-color: var(--po-primaryHover);
+  }
+  &:hover {
+    border-color: var(--po-secondary);
+  }
+}
+.tab {
+  min-height: 40px;
+  padding: 8px 16px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  color: var(--po-secondary);
+  border-bottom: 2px solid transparent;
+  &[data-active] {
+    color: var(--po-ink);
+    border-bottom-color: var(--po-primaryHover);
+  }
+  &:hover {
+    background: var(--po-subtle);
+  }
+}
+.tabList {
+  flex-wrap: wrap;
+  &::before {
+    border-color: var(--po-border);
+  }
+}
+.stepIcon {
+  width: 32px;
+  height: 32px;
+  color: var(--po-ink);
+  border-color: var(--po-control);
+  background: var(--po-surface);
+  &[data-progress],
+  &[data-completed] {
+    border-color: var(--po-primaryHover);
+    background: var(--po-selection);
+    color: var(--po-ink);
+  }
+}
+.stepLabel {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+}
+.stepDescription {
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--po-secondary);
+}
+.stepSeparator {
+  background: var(--po-border);
+  &[data-active] {
+    background: var(--po-primaryHover);
+  }
+}

@@ -1,0 +1,140 @@
+
+[WebServer] (node:6988) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 17 tests using 2 workers
+
+
+(node:28316) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+(node:23252) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[1/17] tests\catalog-final-review.spec.ts:3:1 › LISTA edit survives provider renaming and sends stable ID with current label
+[2/17] tests\catalog-final-review.spec.ts:22:1 › LISTA create sends option ID separately from its display label
+  1) tests\catalog-final-review.spec.ts:3:1 › LISTA edit survives provider renaming and sends stable ID with current label
+
+    Error: expect(locator).toHaveValue(expected) failed
+
+    Locator: getByRole('combobox', { name: 'Opción externa', exact: true })
+    Expected: "Etiqueta vigente"
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toHaveValue" getByRole('combobox', { name: 'Opción externa', exact: true }) with timeout 5000ms
+      - waiting for getByRole('combobox', { name: 'Opción externa', exact: true })
+
+
+      4 |   await page.goto("/tests/harness/catalog-adapter.html?lista-edit=1&path=/productos/external-product/editar");
+      5 |   const selection = page.getByRole("combobox", { name: "Opción externa", exact: true });
+    > 6 |   await expect(selection).toHaveValue("Etiqueta vigente");
+        |                           ^
+      7 |   await page.getByRole("button", { name: "Guardar cambios", exact: true }).click();
+      8 |   await expect.poll(() => page.evaluate(() => window.productPayload?.atributos?.[0])).toMatchObject({
+      9 |     valorId: "external-value", valor: "Etiqueta vigente",
+        at C:\Users\Gabriel\Desktop\Web Front\G6-Productos-Ofertas-frontend\tests\catalog-final-review.spec.ts:6:27
+
+    Error Context: test-results\catalog-final-review-LISTA-8f817-table-ID-with-current-label\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\catalog-final-review-LISTA-8f817-table-ID-with-current-label\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\catalog-final-review-LISTA-8f817-table-ID-with-current-label\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+(node:5352) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[3/17] tests\catalog-final-review.spec.ts:36:1 › LISTA with only a historical label requires explicit ID confirmation
+  2) tests\catalog-final-review.spec.ts:22:1 › LISTA create sends option ID separately from its display label
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.fill: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for getByLabel('SKU Base', { exact: true })
+
+
+      24 |   await page.getByLabel("Nombre del producto").fill("Producto LISTA");
+      25 |   await page.getByLabel("Descripción comercial").fill("Regresión de opción estable");
+    > 26 |   await page.getByLabel("SKU Base", { exact: true }).fill("LISTA-CREATE");
+         |                                                      ^
+      27 |   await page.getByLabel("Precio base inicial (S/.)").fill("20");
+      28 |   await page.getByRole("combobox", { name: "Opción externa", exact: true }).click();
+      29 |   await page.getByRole("option", { name: "Etiqueta vigente", exact: true }).click();
+        at C:\Users\Gabriel\Desktop\Web Front\G6-Productos-Ofertas-frontend\tests\catalog-final-review.spec.ts:26:54
+
+    Error Context: test-results\catalog-final-review-LISTA-0ffe2-tely-from-its-display-label\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\catalog-final-review-LISTA-0ffe2-tely-from-its-display-label\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\catalog-final-review-LISTA-0ffe2-tely-from-its-display-label\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+
+(node:3248) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[4/17] tests\catalog-final-review.spec.ts:48:3 › type correction requires known publication preconditions and resolved Q-06: true
+[5/17] tests\catalog-final-review.spec.ts:48:3 › type correction requires known publication preconditions and resolved Q-06: false
+[6/17] tests\catalog-final-review.spec.ts:48:3 › type correction requires known publication preconditions and resolved Q-06: unknown
+[7/17] tests\catalog.spec.ts:13:3 › MK-003 Gestión de productos (CRUD principal) › S01: listado, búsqueda, filtros combinados y conservación de contexto
+  3) tests\catalog-final-review.spec.ts:36:1 › LISTA with only a historical label requires explicit ID confirmation
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for getByRole('combobox', { name: 'Opción externa', exact: true })
+
+
+      39 |   await expect(page.getByText("Selecciona una opción vigente de Taxonomía para confirmar su identificador.")).toBeVisible();
+      40 |   expect(await page.evaluate(() => window.productPayload)).toBeUndefined();
+    > 41 |   await page.getByRole("combobox", { name: "Opción externa", exact: true }).click();
+         |                                                                             ^
+      42 |   await page.getByRole("option", { name: "Etiqueta vigente", exact: true }).click();
+      43 |   await page.getByRole("button", { name: "Guardar cambios", exact: true }).click();
+      44 |   await expect.poll(() => page.evaluate(() => window.productPayload?.atributos?.[0]?.valorId)).toBe("external-value");
+        at C:\Users\Gabriel\Desktop\Web Front\G6-Productos-Ofertas-frontend\tests\catalog-final-review.spec.ts:41:77
+
+    Error Context: test-results\catalog-final-review-LISTA-6480f-es-explicit-ID-confirmation\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\catalog-final-review-LISTA-6480f-es-explicit-ID-confirmation\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\catalog-final-review-LISTA-6480f-es-explicit-ID-confirmation\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+[8/17] tests\catalog.spec.ts:77:3 › MK-003 Gestión de productos (CRUD principal) › S02: crear producto simple en BORRADOR y navegación inmediata a S06
+
+(node:15344) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[9/17] tests\catalog.spec.ts:55:3 › MK-003 Gestión de productos (CRUD principal) › S01: estados deterministas de revisión (empty, no-results, error)
+[10/17] tests\catalog.spec.ts:115:3 › MK-003 Gestión de productos (CRUD principal) › S02: validación de SKU duplicado conserva datos
+[11/17] tests\catalog.spec.ts:133:3 › MK-003 Gestión de productos (CRUD principal) › S03: editar producto conserva SKU y modelo inmutables
+[12/17] tests\catalog.spec.ts:159:3 › MK-003 Gestión de productos (CRUD principal) › S03: conflicto de versión (409) conserva la propuesta del usuario
+[13/17] tests\catalog.spec.ts:177:3 › MK-003 Gestión de productos (CRUD principal) › S04: detalle de producto simple y variante muestra acciones correspondientes
+[14/17] tests\catalog.spec.ts:210:3 › MK-003 Gestión de productos (CRUD principal) › S05: diálogo de confirmación de activación y checklist de requisitos
+[15/17] tests\catalog.spec.ts:242:3 › MK-003 Gestión de productos (CRUD principal) › S06: preparación técnica con estados independientes de Pricing e Inventario
+[16/17] tests\catalog.spec.ts:272:3 › MK-003 Gestión de productos (CRUD principal) › S07: confirmación de desactivación (baja lógica) y preservación de variantes
+[17/17] tests\catalog.spec.ts:302:3 › MK-003 Gestión de productos (CRUD principal) › Capturas de evidencia desktop a 1440x900 para las 7 vistas
+  3 failed
+    tests\catalog-final-review.spec.ts:3:1 › LISTA edit survives provider renaming and sends stable ID with current label
+    tests\catalog-final-review.spec.ts:22:1 › LISTA create sends option ID separately from its display label
+    tests\catalog-final-review.spec.ts:36:1 › LISTA with only a historical label requires explicit ID confirmation
+  14 passed (1.2m)

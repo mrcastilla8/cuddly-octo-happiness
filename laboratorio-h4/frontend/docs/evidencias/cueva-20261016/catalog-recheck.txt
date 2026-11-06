@@ -1,0 +1,84 @@
+
+Running 3 tests using 1 worker
+
+(node:25572) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  1 tests\catalog.spec.ts:13:3 › MK-003 Gestión de productos (CRUD principal) › S01: listado, búsqueda, filtros combinados y conservación de contexto (11.4s)
+(node:31456) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ok 2 tests\catalog.spec.ts:13:3 › MK-003 Gestión de productos (CRUD principal) › S01: listado, búsqueda, filtros combinados y conservación de contexto (5.4s)
+(node:30560) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  x  3 tests\catalog.spec.ts:13:3 › MK-003 Gestión de productos (CRUD principal) › S01: listado, búsqueda, filtros combinados y conservación de contexto (12.3s)
+
+
+  1) tests\catalog.spec.ts:13:3 › MK-003 Gestión de productos (CRUD principal) › S01: listado, búsqueda, filtros combinados y conservación de contexto
+
+    Error: expect(page).toHaveURL(expected) failed
+
+    Expected pattern: /modelo=variants/
+    Received string:  "http://127.0.0.1:5173/productos?q=Oxford"
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "toHaveURL" with timeout 5000ms
+        12 × locator resolved to <html lang="es" data-mantine-color-scheme="light" data-respect-reduced-motion="true">…</html>
+           - unexpected value "http://127.0.0.1:5173/productos?q=Oxford"
+
+
+      49 |     // Return to list
+      50 |     await page.getByRole("link", { name: "Volver a la lista" }).click();
+    > 51 |     await expect(page).toHaveURL(/modelo=variants/);
+         |                        ^
+      52 |     await noPageOverflow(page);
+      53 |   });
+      54 |
+        at C:\Users\axel.cueva\Desktop\uni\G6-Productos-Ofertas-frontend\tests\catalog.spec.ts:51:24
+
+    Error Context: test-results\catalog-recheck\catalog-MK-003-Gestión-de--d75ff--y-conservación-de-contexto\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\catalog-recheck\catalog-MK-003-Gestión-de--d75ff--y-conservación-de-contexto\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\catalog-recheck\catalog-MK-003-Gestión-de--d75ff--y-conservación-de-contexto\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) tests\catalog.spec.ts:13:3 › MK-003 Gestión de productos (CRUD principal) › S01: listado, búsqueda, filtros combinados y conservación de contexto
+
+    Error: expect(page).toHaveURL(expected) failed
+
+    Expected pattern: /modelo=variants/
+    Received string:  "http://127.0.0.1:5173/productos?q=Oxford"
+    Timeout: 5000ms
+
+    Call log:
+      - Expect "toHaveURL" with timeout 5000ms
+        13 × locator resolved to <html lang="es" data-mantine-color-scheme="light" data-respect-reduced-motion="true">…</html>
+           - unexpected value "http://127.0.0.1:5173/productos?q=Oxford"
+
+
+      49 |     // Return to list
+      50 |     await page.getByRole("link", { name: "Volver a la lista" }).click();
+    > 51 |     await expect(page).toHaveURL(/modelo=variants/);
+         |                        ^
+      52 |     await noPageOverflow(page);
+      53 |   });
+      54 |
+        at C:\Users\axel.cueva\Desktop\uni\G6-Productos-Ofertas-frontend\tests\catalog.spec.ts:51:24
+
+    Error Context: test-results\catalog-recheck\catalog-MK-003-Gestión-de--d75ff--y-conservación-de-contexto-repeat2\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\catalog-recheck\catalog-MK-003-Gestión-de--d75ff--y-conservación-de-contexto-repeat2\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\catalog-recheck\catalog-MK-003-Gestión-de--d75ff--y-conservación-de-contexto-repeat2\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2 failed
+    tests\catalog.spec.ts:13:3 › MK-003 Gestión de productos (CRUD principal) › S01: listado, búsqueda, filtros combinados y conservación de contexto
+    tests\catalog.spec.ts:13:3 › MK-003 Gestión de productos (CRUD principal) › S01: listado, búsqueda, filtros combinados y conservación de contexto
+  1 passed (37.5s)

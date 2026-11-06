@@ -1,0 +1,21 @@
+.header {
+  background: var(--po-ink);
+  color: var(--po-cloud);
+  border: 0;
+}
+.brand {
+  border-right: 1px solid var(--po-secondary);
+  padding-right: 24px;
+}
+.brandLogo {
+  display: block;
+  width: 59px;
+  height: 44px;
+  object-fit: contain;
+}
+.navbar {
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  overscroll-behavior-y: contain;
+}

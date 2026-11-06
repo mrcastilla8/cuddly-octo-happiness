@@ -1,0 +1,19 @@
+.scrollRegion {
+  max-width: 100%;
+  min-width: 0;
+  overflow-x: auto;
+  &:focus-visible {
+    outline: 2px solid var(--po-focus);
+    outline-offset: -2px;
+  }
+}
+.cellContent {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  & > * {
+    max-width: 100%;
+  }
+  & :where(input, select, textarea, button) {
+    max-width: 100%;
+  }
+}

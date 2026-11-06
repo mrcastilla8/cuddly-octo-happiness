@@ -1,0 +1,178 @@
+
+> productos-ofertas-frontend@0.1.0 build
+> tsc --noEmit && vite build
+
+vite v8.3.4 building client environment for production...
+transforming...
+✓ 7395 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                         0.79 kB │ gzip:   0.39 kB
+dist/assets/oswald-latin-700-normal-vy6hmKSr.woff2     12.67 kB
+dist/assets/oswald-latin-700-normal-UmC9Ev9x.woff      16.07 kB
+dist/assets/audit-demo-DbWgmnPV.pdf                    21.15 kB
+dist/assets/inter-latin-400-normal-C38fXH4l.woff2      23.66 kB
+dist/assets/inter-latin-500-normal-Cerq10X2.woff2      24.27 kB
+dist/assets/inter-latin-700-normal-Yt3aPRUw.woff2      24.35 kB
+dist/assets/inter-latin-600-normal-LgqL8muc.woff2      24.45 kB
+dist/assets/inter-latin-400-normal-CyCys3Eg.woff       30.69 kB
+dist/assets/inter-latin-600-normal-CiBQ2DWP.woff       31.26 kB
+dist/assets/inter-latin-500-normal-BL9OpVg8.woff       31.28 kB
+dist/assets/inter-latin-700-normal-BLAVimhd.woff       31.32 kB
+dist/assets/INKA_ATHLETICS-DdMK35Jn.svg               232.29 kB │ gzip: 174.64 kB
+dist/assets/shared-CvvZIUL4.css                         0.31 kB │ gzip:   0.20 kB
+dist/assets/index-CQP9rIx0.css                        256.62 kB │ gzip:  37.66 kB
+dist/assets/seoService-BfRPBGvY.js                      0.07 kB │ gzip:   0.09 kB
+dist/assets/brandService-rFxDRE45.js                    0.07 kB │ gzip:   0.09 kB
+dist/assets/categoryService-1gFlSqgO.js                 0.08 kB │ gzip:   0.09 kB
+dist/assets/productTypeService-DYL9_HkP.js              0.08 kB │ gzip:   0.10 kB
+dist/assets/get-base-value-BuqEGh75.js                  0.08 kB │ gzip:   0.09 kB
+dist/assets/characteristicService-DK_Uvl-y.js           0.08 kB │ gzip:   0.10 kB
+dist/assets/estadoSemantic-BYgpoRf5.js                  0.13 kB │ gzip:   0.10 kB
+dist/assets/IconCheck-B2oxlx-c.js                       0.13 kB │ gzip:   0.14 kB
+dist/assets/IconPlus-CfTM0Dbd.js                        0.16 kB │ gzip:   0.15 kB
+dist/assets/IconPower-CDYpoZIu.js                       0.17 kB │ gzip:   0.16 kB
+dist/assets/IconClock-B_ceaN1T.js                       0.19 kB │ gzip:   0.16 kB
+dist/assets/BulkLayout-UgVPMffH.js                      0.20 kB │ gzip:   0.17 kB
+dist/assets/IconArrowLeft-DJ-8gGv-.js                   0.21 kB │ gzip:   0.16 kB
+dist/assets/IconArrowRight-Cx2oa67v.js                  0.21 kB │ gzip:   0.17 kB
+dist/assets/IconPencil-CFe640Kx.js                      0.21 kB │ gzip:   0.18 kB
+dist/assets/IconRefresh-Bh1ATUQ4.js                     0.22 kB │ gzip:   0.18 kB
+dist/assets/pricePresentation-C2RL8dg9.js               0.24 kB │ gzip:   0.20 kB
+dist/assets/IconDownload-CIN3se8c.js                    0.24 kB │ gzip:   0.18 kB
+dist/assets/useCatalogServices-CNaWgtUX.js              0.25 kB │ gzip:   0.20 kB
+dist/assets/IconEye-CNJpp2mf.js                         0.25 kB │ gzip:   0.20 kB
+dist/assets/auditRepository-D75iqwzf.js                 0.28 kB │ gzip:   0.23 kB
+dist/assets/IconEdit-BgvQdcYE.js                        0.30 kB │ gzip:   0.21 kB
+dist/assets/ListaBloqueos-BIZ2AE1b.js                   0.30 kB │ gzip:   0.25 kB
+dist/assets/CampoDato-Cw4TpMZQ.js                       0.34 kB │ gzip:   0.24 kB
+dist/assets/campaignRepository-DejOfggY.js              0.34 kB │ gzip:   0.22 kB
+dist/assets/IconTrash-DbarAVad.js                       0.34 kB │ gzip:   0.20 kB
+dist/assets/IconPhoto-C372MHsV.js                       0.37 kB │ gzip:   0.22 kB
+dist/assets/IconListDetails-C2lBtPDJ.js                 0.45 kB │ gzip:   0.20 kB
+dist/assets/TaxonomyDataNotice-DH0Xazix.js              0.45 kB │ gzip:   0.34 kB
+dist/assets/slug-ByBqyvac.js                            0.46 kB │ gzip:   0.33 kB
+dist/assets/useCategoryTree-Ca9gTlE3.js                 0.47 kB │ gzip:   0.32 kB
+dist/assets/recommendationRepository-BQPsu4z9.js        0.47 kB │ gzip:   0.32 kB
+dist/assets/characteristicPresentation-BD0-_qjN.js      0.49 kB │ gzip:   0.29 kB
+dist/assets/usePromotionCommand-SVhc7WNL.js             0.52 kB │ gzip:   0.32 kB
+dist/assets/useCategoryDetail-C8Zk8ufX.js               0.53 kB │ gzip:   0.35 kB
+dist/assets/useCharacteristicDetail-B-EXGYjF.js         0.54 kB │ gzip:   0.36 kB
+dist/assets/IconCoins-WkzwnPQE.js                       0.55 kB │ gzip:   0.29 kB
+dist/assets/useAdministrationRead-DFo4KPV-.js           0.56 kB │ gzip:   0.36 kB
+dist/assets/useUnsavedPriceNavigation-DQoAWlhV.js       0.68 kB │ gzip:   0.44 kB
+dist/assets/couponPresentation-BydNvMWK.js              0.70 kB │ gzip:   0.39 kB
+dist/assets/CampaignScope-leqUKhR-.js                   0.74 kB │ gzip:   0.41 kB
+dist/assets/EditorMessage-b3IDWNsl.js                   0.81 kB │ gzip:   0.47 kB
+dist/assets/useCoupons-Cm3mBJpf.js                      0.85 kB │ gzip:   0.48 kB
+dist/assets/ThemeIcon-CMBT1UjO.js                       0.92 kB │ gzip:   0.51 kB
+dist/assets/ImportRowsTable-DIlMEqnN.js                 0.92 kB │ gzip:   0.54 kB
+dist/assets/Image-Dmo0iE5t.js                           0.93 kB │ gzip:   0.55 kB
+dist/assets/useVariantDetail-DTpBTTYP.js                0.94 kB │ gzip:   0.51 kB
+dist/assets/BulkUploadContext-CdbxhnXL.js               0.97 kB │ gzip:   0.52 kB
+dist/assets/AuditDataNotice-Dg583JyM.js                 1.00 kB │ gzip:   0.62 kB
+dist/assets/useProductDetail-CKNpNIcW.js                1.06 kB │ gzip:   0.51 kB
+dist/assets/usePriceEdit-C_rIj0-9.js                    1.26 kB │ gzip:   0.69 kB
+dist/assets/UnsavedChangesDialog-Dp0yJ27Y.js            1.27 kB │ gzip:   0.73 kB
+dist/assets/PromotionDataNotice-BMLCXfWp.js             1.28 kB │ gzip:   0.63 kB
+dist/assets/PriceSummary-C22ZPWoq.js                    1.28 kB │ gzip:   0.67 kB
+dist/assets/demoService-BqHAthvs.js                     1.42 kB │ gzip:   0.68 kB
+dist/assets/mockCatalogConsumers-ClzmycER.js            1.54 kB │ gzip:   0.62 kB
+dist/assets/List-rKK_Otc1.js                            1.58 kB │ gzip:   0.78 kB
+dist/assets/useAdministrationEditor-B8f31w8j.js         1.62 kB │ gzip:   0.89 kB
+dist/assets/AuditLayout-BJYWCVNO.js                     1.68 kB │ gzip:   0.91 kB
+dist/assets/AdministrationStateDialog-BIlYvDyf.js       1.69 kB │ gzip:   0.93 kB
+dist/assets/catalogPresentation-CytqpRca.js             1.71 kB │ gzip:   0.71 kB
+dist/assets/ProductTypeCreatePage-CKntIUay.js           1.74 kB │ gzip:   0.90 kB
+dist/assets/CampaignEditorLayout-DCchwbtZ.js            2.11 kB │ gzip:   1.09 kB
+dist/assets/prices-CiPN0FMY.js                          2.11 kB │ gzip:   0.68 kB
+dist/assets/VariantEditPage-DnXY70xl.js                 2.27 kB │ gzip:   0.93 kB
+dist/assets/PricingPageFrame-C28yYewN.js                2.34 kB │ gzip:   1.07 kB
+dist/assets/RecommendationEditorLayout-BXIzur0y.js      2.36 kB │ gzip:   1.16 kB
+dist/assets/ProductCreatePage-Bn8NfKbF.js               2.37 kB │ gzip:   1.19 kB
+dist/assets/BulkProgressPage-DgR9zuyJ.js                2.40 kB │ gzip:   1.12 kB
+dist/assets/RecommendationSelectorPage-DjP00Bcy.js      2.40 kB │ gzip:   1.21 kB
+dist/assets/CampaignScopePage-OfONWuTg.js               2.43 kB │ gzip:   1.22 kB
+dist/assets/BulkUploadPage-NfPLSlrE.js                  2.47 kB │ gzip:   1.17 kB
+dist/assets/pricingValidation-BaFHJz0I.js               2.56 kB │ gzip:   1.17 kB
+dist/assets/BrandListPage-T-Z1P1e4.js                   2.64 kB │ gzip:   1.33 kB
+dist/assets/RecommendationCandidates-DsNoQzmQ.js        2.69 kB │ gzip:   1.14 kB
+dist/assets/SeoListPage-DdTrTfDR.js                     2.71 kB │ gzip:   1.29 kB
+dist/assets/SimpleGrid-D7wGfj11.js                      2.80 kB │ gzip:   1.14 kB
+dist/assets/VariantCreatePage-BbpdhMQJ.js               2.88 kB │ gzip:   1.21 kB
+dist/assets/ProductTypeListPage-fjtyAOBf.js             2.96 kB │ gzip:   1.40 kB
+dist/assets/AuditDetailPage-kUZ0m7S4.js                 2.96 kB │ gzip:   1.49 kB
+dist/assets/FeedbackDemo-CruCZQai.js                    3.05 kB │ gzip:   1.28 kB
+dist/assets/ProductEditPage-CVLcFNXy.js                 3.30 kB │ gzip:   1.47 kB
+dist/assets/useAuditRead-Ccex4jqv.js                    3.46 kB │ gzip:   1.78 kB
+dist/assets/CouponsPage-D3w2SXDN.js                     3.50 kB │ gzip:   1.57 kB
+dist/assets/CharacteristicStatePage-UnxZjEKm.js         3.58 kB │ gzip:   1.33 kB
+dist/assets/useBulkFlow-DtilyG3P.js                     3.58 kB │ gzip:   1.31 kB
+dist/assets/CharacteristicDetailPage-BbvxgeFT.js        3.64 kB │ gzip:   1.40 kB
+dist/assets/CharacteristicCreatePage-CeEJzYGV.js        3.65 kB │ gzip:   1.57 kB
+dist/assets/CharacteristicListPage-D4Hdz3ML.js          3.66 kB │ gzip:   1.60 kB
+dist/assets/CategoryTreePage-BEq5bJ3G.js                3.69 kB │ gzip:   1.55 kB
+dist/assets/RecommendationDetailPage-CyVNiOB3.js        3.70 kB │ gzip:   1.62 kB
+dist/assets/PriceImportResultPage-C5U5XJFb.js           3.71 kB │ gzip:   1.74 kB
+dist/assets/CampaignsPage-BTNipTSU.js                   3.80 kB │ gzip:   1.63 kB
+dist/assets/Avatar-ldjOZi75.js                          3.86 kB │ gzip:   1.81 kB
+dist/assets/BulkResultPage-qKjfDv8G.js                  3.94 kB │ gzip:   1.69 kB
+dist/assets/CharacteristicEditPage-BkkY_QJD.js          4.08 kB │ gzip:   1.64 kB
+dist/assets/Grid-DvSU6dGK.js                            4.08 kB │ gzip:   1.56 kB
+dist/assets/HistoricalPricePage-C4T60pyc.js             4.09 kB │ gzip:   1.86 kB
+dist/assets/BrandFormPage-CRpwYZNn.js                   4.11 kB │ gzip:   1.72 kB
+dist/assets/CampaignDetailPage--j9pGkvf.js              4.13 kB │ gzip:   1.75 kB
+dist/assets/createMockAuditRuntime-sKUcgulB.js          4.24 kB │ gzip:   2.20 kB
+dist/assets/RecommendationsPage-BW8cKh4t.js             4.33 kB │ gzip:   1.81 kB
+dist/assets/ImportPricesPage-CG6qQdv_.js                4.44 kB │ gzip:   1.82 kB
+dist/assets/FormDemo-BHu8gbeL.js                        4.46 kB │ gzip:   1.90 kB
+dist/assets/ProductTypeAssociatePage-Cf7ZcmKx.js        4.52 kB │ gzip:   1.70 kB
+dist/assets/CreateCategoryPage-jEW6n4wK.js              4.83 kB │ gzip:   1.93 kB
+dist/assets/CurrentPricePage-G9LXZrvT.js                4.85 kB │ gzip:   2.16 kB
+dist/assets/BulkReviewPage-B99Mpjgi.js                  5.03 kB │ gzip:   1.92 kB
+dist/assets/RecommendationFormPage-Clzo6Dzh.js          5.08 kB │ gzip:   2.16 kB
+dist/assets/sharedMockTaxonomyRepository-C9i4_uy0.js    5.22 kB │ gzip:   1.75 kB
+dist/assets/AuditHistoryPage-Em_GljJa.js                5.53 kB │ gzip:   2.32 kB
+dist/assets/CategoryDetailPage-ne0q2_ZP.js              5.58 kB │ gzip:   1.86 kB
+dist/assets/CampaignFormPage-C0HUlx1l.js                5.72 kB │ gzip:   2.28 kB
+dist/assets/EditCategoryPage-CcYQgIxj.js                5.91 kB │ gzip:   2.30 kB
+dist/assets/localFileCheck-BwZKYMJQ.js                  6.00 kB │ gzip:   2.11 kB
+dist/assets/BulkDownloadsPage-C3BS0y0u.js               6.14 kB │ gzip:   2.27 kB
+dist/assets/ProductActivationDialog-BMcdy6is.js         6.30 kB │ gzip:   2.60 kB
+dist/assets/ListDemo-1uG-wPfB.js                        6.35 kB │ gzip:   2.50 kB
+dist/assets/DeactivateCategoryPage-DLjbhYWf.js          6.65 kB │ gzip:   1.90 kB
+dist/assets/BrandDetailPage-Dpqusj8-.js                 6.79 kB │ gzip:   2.28 kB
+dist/assets/CouponDetailPage-DAcDUkw7.js                6.86 kB │ gzip:   2.70 kB
+dist/assets/AuditExportPage-DKogI0YR.js                 7.43 kB │ gzip:   2.88 kB
+dist/assets/SeoConfigPage-CEJSY-g0.js                   7.70 kB │ gzip:   2.58 kB
+dist/assets/EditPricePage-CrF7yOEF.js                   7.74 kB │ gzip:   2.89 kB
+dist/assets/VariantDetailPage-DMw19RR-.js               8.32 kB │ gzip:   2.83 kB
+dist/assets/VariantPreparationPage-vff6UFb-.js          8.36 kB │ gzip:   2.91 kB
+dist/assets/PriceSchedulesPage-Dv0iUrPt.js              8.42 kB │ gzip:   3.41 kB
+dist/assets/react-DB-4Zxce.js                           8.52 kB │ gzip:   3.28 kB
+dist/assets/CouponFormPage-DWsUGPbr.js                  8.58 kB │ gzip:   3.38 kB
+dist/assets/ProductsPage-IjKi5kAX.js                    8.74 kB │ gzip:   3.22 kB
+dist/assets/CharacteristicValuesPage-CI4lFebB.js        8.97 kB │ gzip:   2.85 kB
+dist/assets/ProductPreparationPage-CVTIc0dP.js          9.23 kB │ gzip:   2.96 kB
+dist/assets/VariantActivationDialog-CyfEFdZe.js         9.32 kB │ gzip:   2.48 kB
+dist/assets/BatchStatusPanel-D3Ao2Xtt.js                9.56 kB │ gzip:   3.22 kB
+dist/assets/PricingPatternsPage-DPQiakb6.js             9.58 kB │ gzip:   3.45 kB
+dist/assets/createDemoPricingRuntime-8xcZGKo7.js       10.27 kB │ gzip:   3.70 kB
+dist/assets/ProductDetailPage-C_8Id4yA.js              10.94 kB │ gzip:   3.29 kB
+dist/assets/ProductTypeDetailPage--03Vof7X.js          12.30 kB │ gzip:   2.84 kB
+dist/assets/ProductFormFields-Do6j-lOA.js              13.95 kB │ gzip:   5.08 kB
+dist/assets/VariantFormFields-Batv9Pi_.js              14.40 kB │ gzip:   5.03 kB
+dist/assets/usePromotionServices-CN8ZQsQo.js           21.08 kB │ gzip:   6.20 kB
+dist/assets/bulkService-DrMM2jJI.js                    22.19 kB │ gzip:   5.04 kB
+dist/assets/taxonomyServices-CMHSCsSz.js               23.71 kB │ gzip:   5.90 kB
+dist/assets/VariantListPage-CZ0_zz73.js                30.04 kB │ gzip:   8.88 kB
+dist/assets/mockCatalogRepository-CtzXwILM.js          38.09 kB │ gzip:   8.00 kB
+dist/assets/chunk-OB3PAWPO-Br31VkJY.js                 94.77 kB │ gzip:  31.45 kB
+dist/assets/shared-BJpAArr8.js                        184.37 kB │ gzip:  58.18 kB
+dist/assets/index-C-yjQDnH.js                         410.67 kB │ gzip: 125.09 kB
+
+✓ built in 14.08s
+[PLUGIN_TIMINGS] JavaScript callbacks ran for 1.5s of this 14.0s build (11%).
+1 callback is listed without a time. Its calls overlapped, so the time inside one call includes work from other calls. To find its cost, profile the build with `node --cpu-prof`:
+  - plugin vite:css transform (10 calls)
+See https://rolldown.rs/reference/InputOptions.checks#bundlertimings for more details.

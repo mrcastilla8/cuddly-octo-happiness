@@ -1,0 +1,5 @@
+﻿Medicion del tiempo hasta el heading de /inventario (chromium, 1440x900):
+- En reposo:            frio 1338 ms / caliente 974 ms
+- Bajo carga (12 workers, corrida completa): frio max 4792 ms / caliente 2275 ms
+La corrida de carga a 12 workers registro 9 fallos con 'Timeout: 5000ms' / 'element(s) not found',
+confirmando que la alta concurrencia supera el timeout por defecto de expect. CI usa 2 workers.

@@ -1,0 +1,6 @@
+PASS /
+PASS /precios
+PASS /productos + refresh
+PASS /categorias
+PASS /carga-masiva
+PASS smoke mock: cinco rutas, refresh, 38 recursos JS/CSS, cero errores; http://127.0.0.1:5174

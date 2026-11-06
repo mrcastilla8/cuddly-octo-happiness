@@ -1,0 +1,26 @@
+.editor {
+  display: grid;
+  gap: var(--mantine-spacing-lg);
+  max-width: 880px;
+}
+
+.productSelect {
+  flex: 1 1 280px;
+  min-width: 220px;
+}
+
+.comparison {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--mantine-spacing-lg);
+  padding: var(--mantine-spacing-md);
+  border: 1px solid var(--po-border);
+  border-radius: var(--mantine-radius-sm);
+  background: var(--po-cloud);
+}
+
+@media (max-width: 760px) {
+  .comparison {
+    grid-template-columns: 1fr;
+  }
+}

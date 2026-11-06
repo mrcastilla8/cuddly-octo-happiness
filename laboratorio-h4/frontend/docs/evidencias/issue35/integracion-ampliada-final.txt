@@ -1,0 +1,23 @@
+
+[WebServer] (node:6552) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 8 tests using 2 workers
+
+
+(node:29572) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+(node:28624) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1/8] tests\catalog-issue35.spec.ts:9:1 › POM-01: create and rename masters preserve their IDs and refresh Catalog names
+[2/8] tests\catalog-issue35.spec.ts:24:1 › POM-01/POM-04: official roles stay unknown and unknown IDs do not become empty schemas
+[3/8] tests\catalog-issue35.spec.ts:30:1 › POM-01/POM-04: real category creation flows into product selector and persisted names
+[4/8] tests\catalog-issue35.spec.ts:60:1 › POM-02: product SKU cannot reuse an existing variant SKU
+[5/8] tests\catalog-issue35.spec.ts:65:1 › POM-02: variant SKU cannot reuse a simple product sellable SKU
+[6/8] tests\catalog-issue35.spec.ts:70:1 › POM-01/POM-04: a brand created in the real app is selectable in Catalog
+[7/8] tests\catalog-issue35.spec.ts:81:1 › POM-03: Pricing reads the current Catalog identity and state
+[8/8] tests\catalog-issue35.spec.ts:94:1 › POM-03: Promotions preserves Catalog IDs/SKU and excludes inactive parent
+  8 passed (17.4s)

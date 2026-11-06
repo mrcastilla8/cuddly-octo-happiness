@@ -1,0 +1,38 @@
+{
+  "recordedAt": "2026-11-02T02:33:12.380Z",
+  "origin": "https://g6-productos-ofertas.duckdns.org",
+  "kind": "REAL_GATEWAY_READ_ONLY",
+  "requests": [
+    {
+      "method": "GET",
+      "path": "/categorias",
+      "status": 200,
+      "contentType": "application/json; charset=utf-8",
+      "code": null,
+      "detail": null,
+      "correlationId": "b8b5ff33-2007-4c3c-b21b-84b15a535fd6",
+      "elapsedMs": 1039
+    },
+    {
+      "method": "GET",
+      "path": "/productos?canal=MARKETPLACE&estado=BORRADOR&pagina=1&tamanio=20&orden=NOMBRE_ASC",
+      "status": 400,
+      "contentType": "application/problem+json; charset=utf-8",
+      "code": "VALIDACION",
+      "detail": null,
+      "correlationId": "955ed51e-42ca-4e72-b89c-8918f6478b4e",
+      "elapsedMs": 227
+    },
+    {
+      "method": "GET",
+      "path": "/precios/productos/32a4172c-81b2-b643-1d0f-ae66f627f2ef",
+      "status": 503,
+      "contentType": "text/plain; charset=utf-8",
+      "code": null,
+      "detail": null,
+      "correlationId": "f3b52e5c-1740-46c3-baff-42fa218396de",
+      "elapsedMs": 69
+    }
+  ],
+  "result": "BLOCKED_EXTERNAL"
+}

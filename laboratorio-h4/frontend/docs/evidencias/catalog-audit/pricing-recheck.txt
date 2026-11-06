@@ -1,0 +1,10 @@
+
+> productos-ofertas-frontend@0.1.0 test
+> playwright test tests/pricing-workflows.spec.ts --workers=1 --grep six direct views
+
+
+Running 1 test using 1 worker
+
+  ok 1 tests\pricing-workflows.spec.ts:585:1 › MK-013: six direct views, desktop geometry, screenshots and no runtime errors (8.5s)
+
+  1 passed (11.7s)

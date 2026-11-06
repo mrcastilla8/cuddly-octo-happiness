@@ -1,0 +1,73 @@
+import type { CouponView } from "../services/couponRepository";
+
+// MK-005 §13 and S01 HTML: fictitious administrative snapshots, never live usage.
+export const couponFixtures: readonly CouponView[] = [
+  {
+    id: "bienvenida15",
+    promotionId: "bienvenida",
+    code: "BIENVENIDA15",
+    status: "active",
+    promotion: {
+      name: "Campaña Bienvenida 2026",
+      validFrom: "2026-10-01T00:00:00-05:00",
+      validUntil: "2026-11-01T00:00:00-05:00",
+    },
+    globalLimit: 100,
+    customerLimit: 1,
+    consumedUses: 28,
+    remainingUses: 72,
+    minimumAmount: null,
+    cancellationPolicy: "restore",
+  },
+  {
+    id: "run10",
+    promotionId: "running",
+    code: "RUN10",
+    status: "active",
+    promotion: {
+      name: "Descuento Running Otoño",
+      validFrom: "2026-10-01T00:00:00-05:00",
+      validUntil: "2026-11-01T00:00:00-05:00",
+    },
+    globalLimit: null,
+    customerLimit: null,
+    consumedUses: 0,
+    remainingUses: null,
+    minimumAmount: null,
+    cancellationPolicy: "keep",
+  },
+  {
+    id: "cyberinka20",
+    promotionId: "cyber",
+    code: "CYBERINKA20",
+    status: "active",
+    promotion: {
+      name: "Cyber Inka Especial",
+      validFrom: "2026-10-20T00:00:00-05:00",
+      validUntil: "2026-10-31T00:00:00-05:00",
+    },
+    globalLimit: 500,
+    customerLimit: 1,
+    consumedUses: 500,
+    remainingUses: 0,
+    minimumAmount: "200.00",
+    cancellationPolicy: "restore",
+  },
+  {
+    id: "flash25",
+    promotionId: "flash",
+    code: "FLASH25",
+    status: "inactive",
+    promotion: {
+      name: "Venta Flash Fin de Mes",
+      validFrom: undefined,
+      validUntil: undefined,
+    },
+    globalLimit: 50,
+    customerLimit: 1,
+    consumedUses: 45,
+    remainingUses: 5,
+    minimumAmount: "100.00",
+    cancellationPolicy: "keep",
+  },
+];

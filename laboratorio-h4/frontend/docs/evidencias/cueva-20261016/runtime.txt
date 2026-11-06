@@ -1,0 +1,5 @@
+Node=v22.23.3
+npm=11.19.0
+Branch=cueva
+AUDIT_BASE_SHA=2759c8d031b35e665432a9ca0f2a45c87943f072
+Source=working tree changes recorded by the commit containing this evidence

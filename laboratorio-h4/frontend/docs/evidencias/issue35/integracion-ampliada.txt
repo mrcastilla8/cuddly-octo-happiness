@@ -1,0 +1,54 @@
+
+[WebServer] (node:8780) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 8 tests using 2 workers
+
+(node:7592) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+(node:29396) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1/8] tests\catalog-issue35.spec.ts:24:1 › POM-01/POM-04: official roles stay unknown and unknown IDs do not become empty schemas
+[2/8] tests\catalog-issue35.spec.ts:9:1 › POM-01: create and rename masters preserve their IDs and refresh Catalog names
+[3/8] tests\catalog-issue35.spec.ts:30:1 › POM-01/POM-04: real category creation flows into product selector and persisted names
+[4/8] tests\catalog-issue35.spec.ts:60:1 › POM-02: product SKU cannot reuse an existing variant SKU
+[5/8] tests\catalog-issue35.spec.ts:65:1 › POM-02: variant SKU cannot reuse a simple product sellable SKU
+[6/8] tests\catalog-issue35.spec.ts:70:1 › POM-01/POM-04: a brand created in the real app is selectable in Catalog
+[7/8] tests\catalog-issue35.spec.ts:81:1 › POM-03: Pricing reads the current Catalog identity and state
+[8/8] tests\catalog-issue35.spec.ts:94:1 › POM-03: Promotions preserves Catalog IDs/SKU and excludes inactive parent
+  1) tests\catalog-issue35.spec.ts:30:1 › POM-01/POM-04: real category creation flows into product selector and persisted names
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.click: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for getByRole('link', { name: 'Volver al detalle', exact: true })
+
+
+      45 |   await page.getByRole("button", { name: "Guardar borrador", exact: true }).click();
+      46 |   await expect(page).toHaveURL(/\/productos\/PROD-[^/]+\/preparacion$/);
+    > 47 |   await page.getByRole("link", { name: "Volver al detalle", exact: true }).click();
+         |                                                                            ^
+      48 |   await expect(page.getByText("Categoría integrada Poma", { exact: true })).toBeVisible();
+      49 |   const productId = page.url().split("/productos/")[1];
+      50 |   await page.getByRole("link", { name: "Gestión de precios", exact: true }).click();
+        at C:\Users\Gabriel\Desktop\Web Front\G6-Productos-Ofertas-frontend\tests\catalog-issue35.spec.ts:47:76
+
+    Error Context: test-results\catalog-issue35-POM-01-POM-b9421-elector-and-persisted-names\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\catalog-issue35-POM-01-POM-b9421-elector-and-persisted-names\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\catalog-issue35-POM-01-POM-b9421-elector-and-persisted-names\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+  1 failed
+    tests\catalog-issue35.spec.ts:30:1 › POM-01/POM-04: real category creation flows into product selector and persisted names
+  7 passed (40.8s)

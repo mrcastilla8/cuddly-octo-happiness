@@ -1,0 +1,11 @@
+
+Running 3 tests using 1 worker
+
+
+
+(node:31336) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[1/3] tests\catalog-issue35.spec.ts:59:1 › POM-01/POM-04: real category creation flows into product selector and persisted names
+[2/3] tests\catalog-issue35.spec.ts:99:1 › POM-01/POM-04: a brand created in the real app is selectable in Catalog
+[3/3] tests\catalog-issue35.spec.ts:133:1 › POM-03: real Promotions selector follows Catalog parent deactivation
+  3 passed (16.5s)

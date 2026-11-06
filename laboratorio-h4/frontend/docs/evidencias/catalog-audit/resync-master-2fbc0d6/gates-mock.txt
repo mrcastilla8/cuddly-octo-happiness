@@ -1,0 +1,40 @@
+
+> productos-ofertas-frontend@0.1.0 typecheck
+> tsc --noEmit
+
+
+> productos-ofertas-frontend@0.1.0 lint
+> eslint .
+
+
+> productos-ofertas-frontend@0.1.0 build
+> tsc --noEmit && vite build
+
+vite v8.3.4 building client environment for production...
+transforming...
+✓ 7373 modules transformed.
+✗ Build failed in 5.79s
+error during build:
+Build failed with 1 error:
+
+[plugin vite:asset-import-meta-url] C:/Users/Gabriel/Desktop/Web Front/G6-Productos-Ofertas-frontend/src/features/price-audit/adapters/mockAuditRepository.ts
+Error: EPERM: operation not permitted, realpath 'C:\Users\Gabriel\Desktop\Web Front\G6-Productos-Ofertas-frontend\src\features\price-audit\mocks\files\audit-demo.csv'
+    at node:fs:2849:18
+    at getRealPath (file:///C:/Users/Gabriel/Desktop/Web%20Front/G6-Productos-Ofertas-frontend/node_modules/vite/dist/node/chunks/node.js:29592:36)
+    at tryResolveRealFileOrType (file:///C:/Users/Gabriel/Desktop/Web%20Front/G6-Productos-Ofertas-frontend/node_modules/vite/dist/node/chunks/node.js:29586:9)
+    at tryCleanFsResolve (file:///C:/Users/Gabriel/Desktop/Web%20Front/G6-Productos-Ofertas-frontend/node_modules/vite/dist/node/chunks/node.js:29335:21)
+    at tryFsResolve (file:///C:/Users/Gabriel/Desktop/Web%20Front/G6-Productos-Ofertas-frontend/node_modules/vite/dist/node/chunks/node.js:29328:14)
+    at TransformPluginContextImpl.handler (file:///C:/Users/Gabriel/Desktop/Web%20Front/G6-Productos-Ofertas-frontend/node_modules/vite/dist/node/chunks/node.js:27362:14)
+    at TransformPluginContextImpl.handler (file:///C:/Users/Gabriel/Desktop/Web%20Front/G6-Productos-Ofertas-frontend/node_modules/vite/dist/node/chunks/node.js:34958:13)
+    at plugin (file:///C:/Users/Gabriel/Desktop/Web%20Front/G6-Productos-Ofertas-frontend/node_modules/rolldown/dist/shared/bindingify-input-options-C0gEvtnB.mjs:1726:30)
+    at file:///C:/Users/Gabriel/Desktop/Web%20Front/G6-Productos-Ofertas-frontend/node_modules/rolldown/dist/shared/bindingify-input-options-C0gEvtnB.mjs:2118:21
+    at plugin.<computed> (file:///C:/Users/Gabriel/Desktop/Web%20Front/G6-Productos-Ofertas-frontend/node_modules/rolldown/dist/shared/bindingify-input-options-C0gEvtnB.mjs:2316:18)
+    at aggregateBindingErrorsIntoJsError (file:///C:/Users/Gabriel/Desktop/Web%20Front/G6-Productos-Ofertas-frontend/node_modules/rolldown/dist/shared/error-Dsqzw0Oa.mjs:49:18)
+    at unwrapBindingResult (file:///C:/Users/Gabriel/Desktop/Web%20Front/G6-Productos-Ofertas-frontend/node_modules/rolldown/dist/shared/error-Dsqzw0Oa.mjs:19:128)
+    at #build (file:///C:/Users/Gabriel/Desktop/Web%20Front/G6-Productos-Ofertas-frontend/node_modules/rolldown/dist/shared/rolldown-D_vNlorD.mjs:133:34)
+    at async buildEnvironment (file:///C:/Users/Gabriel/Desktop/Web%20Front/G6-Productos-Ofertas-frontend/node_modules/vite/dist/node/chunks/node.js:34716:66)
+    at async Object.build (file:///C:/Users/Gabriel/Desktop/Web%20Front/G6-Productos-Ofertas-frontend/node_modules/vite/dist/node/chunks/node.js:35137:19)
+    at async Object.buildApp (file:///C:/Users/Gabriel/Desktop/Web%20Front/G6-Productos-Ofertas-frontend/node_modules/vite/dist/node/chunks/node.js:35134:153)
+    at async CAC.<anonymous> (file:///C:/Users/Gabriel/Desktop/Web%20Front/G6-Productos-Ofertas-frontend/node_modules/vite/dist/node/cli.js:780:3) {
+  errors: [Getter/Setter]
+}

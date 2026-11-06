@@ -1,0 +1,4 @@
+id_auditoria,sku,product_id,tipo_precio,precio_anterior,precio_nuevo,variacion_porcentual,tipo_operacion,canal_origen,motivo_cambio,batch_id,usuario_id,usuario_email,ip_origen,timestamp
+aud-014-mod-01,CAM-BASE,prd-013-01,REGULAR,100,120,20,MODIFICACION,BACKOFFICE,Actualización de tarifa de temporada,,usr-fixture-01,gestor@example.test,192.0.2.14,2026-10-02T11:00:00Z
+aud-014-alta-01,NUEVO-01,prd-013-01,REGULAR,,100,,CREACION,BACKOFFICE,Alta de producto,,usr-fixture-01,gestor@example.test,192.0.2.14,2026-09-01T00:00:00Z
+aud-014-retiro-01,RUN-41,prd-013-01,OFERTA,90,,,RETIRO_OFERTA,BACKOFFICE,Fin de oferta,,usr-fixture-01,gestor@example.test,192.0.2.14,2026-10-02T10:00:00Z

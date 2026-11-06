@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+a {
+  color: var(--po-primaryHover);
+  text-underline-offset: 3px;
+}
+a:hover {
+  text-decoration: underline;
+}
+:where(button, input, textarea, select, a, [tabindex]):focus-visible,
+.mantine-focus-auto:focus-visible {
+  outline: 2px solid var(--po-focus);
+  outline-offset: 2px;
+}
+input:focus,
+textarea:focus {
+  outline: 2px solid var(--po-focus);
+  outline-offset: 2px;
+}
+header :focus-visible {
+  box-shadow: 0 0 0 2px var(--po-cloud);
+}
+:where(button, a, input, textarea, select, [tabindex]) {
+  scroll-margin-block: 96px;
+}
+button {
+  font-family: inherit;
+}
+button:active:not(:disabled) {
+  transform: none;
+}
+svg {
+  flex-shrink: 0;
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}

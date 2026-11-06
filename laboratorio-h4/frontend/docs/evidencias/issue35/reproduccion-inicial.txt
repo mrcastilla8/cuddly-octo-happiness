@@ -1,0 +1,112 @@
+
+[WebServer] (node:20804) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 3 tests using 1 worker
+
+(node:23452) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+[1/3] tests\catalog-issue35.spec.ts:4:1 › POM-02: product SKU cannot reuse an existing variant SKU
+  1) tests\catalog-issue35.spec.ts:4:1 › POM-02: product SKU cannot reuse an existing variant SKU ──
+
+    Error: expect(received).rejects.toMatchObject()
+
+    Received promise resolved instead of rejected
+    Resolved to value: {"attributes": [], "brandId": "BRD-INKA", "brandName": "Inka Athletic", "catalogVersion": 1, "categoryId": "CAT-ROPA", "categoryName": "Ropa", "description": "Prueba de identidad", "hasVariants": false, "id": "PROD-421a7a1f-df4c-4cfc-a1ce-36a5da2106cc", "images": [], "name": "Duplicado", "physicalProfile": null, "preparation": {"hasVariants": false, "inventario": {"code": null, "manualRetryAllowed": false, "status": "PENDING"}, "pricing": {"code": null, "manualRetryAllowed": false, "status": "PENDING"}, "productId": "PROD-421a7a1f-df4c-4cfc-a1ce-36a5da2106cc", "variantes": []}, "preparationSummary": "PENDING", "priceInitial": 20, "publishedCommercially": false, "skuBase": "CAM-OXF-BLA-M", "status": "BORRADOR", "typeId": "TIP-CAMISA", "typeName": "Camisa", "variants": []}
+
+      4 | test("POM-02: product SKU cannot reuse an existing variant SKU", async () => {
+      5 |   const catalog = new MockCatalogRepository();
+    > 6 |   await expect(catalog.create({ nombre: "Duplicado", descripcion: "Prueba de identidad", categoriaId: "CAT-ROPA", tipoProductoId: "TIP-CAMISA", marcaId: "BRD-INKA", skuBase: "cam-oxf-bla-m", tieneVariantes: false, precioBaseInicial: 20 })).rejects.toMatchObject({ kind: "duplicate_sku" });
+        |                                                                                                                                                                                                                                                         ^
+      7 | });
+      8 |
+      9 | test("POM-02: variant SKU cannot reuse a simple product sellable SKU", async () => {
+        at C:\Users\Gabriel\Desktop\Web Front\G6-Productos-Ofertas-frontend\tests\catalog-issue35.spec.ts:6:249
+
+    Error Context: test-results\catalog-issue35-POM-02-pro-05a05-use-an-existing-variant-SKU\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\catalog-issue35-POM-02-pro-05a05-use-an-existing-variant-SKU\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\catalog-issue35-POM-02-pro-05a05-use-an-existing-variant-SKU\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+
+(node:3400) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[2/3] tests\catalog-issue35.spec.ts:9:1 › POM-02: variant SKU cannot reuse a simple product sellable SKU
+  2) tests\catalog-issue35.spec.ts:9:1 › POM-02: variant SKU cannot reuse a simple product sellable SKU
+
+    Error: expect(received).rejects.toMatchObject()
+
+    Received promise resolved instead of rejected
+    Resolved to value: {"catalogVersion": 1, "identifyingAttributes": [{"caracteristicaId": "CAR-COLOR", "nombre": "Color", "tipo": "LISTA", "valor": "Rojo Carmesí", "valorId": "COL-ROJ"}], "imageUrl": "", "images": [], "inventoryManualRetryAllowed": false, "inventoryPreparationCode": null, "inventoryPreparationStatus": "PENDING", "inventoryStatus": "PENDING", "nonIdentifyingAttributes": [], "physicalProfile": null, "productId": "PROD-OXF-001", "sku": "MOCH-ENT-001", "status": "BORRADOR", "variantId": "VAR-d94d021d-11f4-4ab3-aa04-0271280c8079"}
+
+       9 | test("POM-02: variant SKU cannot reuse a simple product sellable SKU", async () => {
+      10 |   const catalog = new MockCatalogRepository();
+    > 11 |   await expect(catalog.createVariant("PROD-OXF-001", { sku: "moch-ent-001", identifyingAttributes: [{ caracteristicaId: "CAR-COLOR", nombre: "Color", tipo: "LISTA", valorId: "COL-ROJ", valor: "Rojo Carmesí" }] })).rejects.toMatchObject({ kind: "duplicate_sku" });
+         |                                                                                                                                                                                                                               ^
+      12 | });
+      13 |
+      14 | test("POM-01/POM-04: a brand created in the real app is selectable in Catalog", async ({ page }) => {
+        at C:\Users\Gabriel\Desktop\Web Front\G6-Productos-Ofertas-frontend\tests\catalog-issue35.spec.ts:11:223
+
+    Error Context: test-results\catalog-issue35-POM-02-var-be6e8-simple-product-sellable-SKU\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\catalog-issue35-POM-02-var-be6e8-simple-product-sellable-SKU\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\catalog-issue35-POM-02-var-be6e8-simple-product-sellable-SKU\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+(node:19376) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[3/3] tests\catalog-issue35.spec.ts:14:1 › POM-01/POM-04: a brand created in the real app is selectable in Catalog
+  3) tests\catalog-issue35.spec.ts:14:1 › POM-01/POM-04: a brand created in the real app is selectable in Catalog
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('option', { name: 'Marca transversal Poma', exact: true })
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByRole('option', { name: 'Marca transversal Poma', exact: true }) with timeout 5000ms
+      - waiting for getByRole('option', { name: 'Marca transversal Poma', exact: true })
+
+
+      20 |   await page.getByRole("link", { name: "Crear producto", exact: true }).click();
+      21 |   await page.getByRole("combobox", { name: "Marca", exact: false }).click();
+    > 22 |   await expect(page.getByRole("option", { name: "Marca transversal Poma", exact: true })).toBeVisible();
+         |                                                                                           ^
+      23 | });
+      24 |
+        at C:\Users\Gabriel\Desktop\Web Front\G6-Productos-Ofertas-frontend\tests\catalog-issue35.spec.ts:22:91
+
+    Error Context: test-results\catalog-issue35-POM-01-POM-d2123-pp-is-selectable-in-Catalog\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\catalog-issue35-POM-01-POM-d2123-pp-is-selectable-in-Catalog\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\catalog-issue35-POM-01-POM-d2123-pp-is-selectable-in-Catalog\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+  3 failed
+    tests\catalog-issue35.spec.ts:4:1 › POM-02: product SKU cannot reuse an existing variant SKU ───
+    tests\catalog-issue35.spec.ts:9:1 › POM-02: variant SKU cannot reuse a simple product sellable SKU
+    tests\catalog-issue35.spec.ts:14:1 › POM-01/POM-04: a brand created in the real app is selectable in Catalog
