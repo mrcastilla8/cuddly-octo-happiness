@@ -1,0 +1,24 @@
+{
+  "scenario_id": "G6-G7-AUTH-001",
+  "generated_at": "2026-11-06T00:00:00-05:00",
+  "source_shas": {
+    "pizarra_base": "2bf9786b647f6d299dd5e65e4d5526656e8078c3",
+    "frontend": "4d8152708fae736a8ac2ca88b71f2e9b4e175e1a",
+    "backend": "ca1c5a6fd0bf304267007f9b017f5780fb25f538"
+  },
+  "overall": "BLOCKED",
+  "reason": "No real browser session with user-entered G7 credentials/MFA was executed in this run.",
+  "phases": [
+    {"phase":"F0","status":"PARTIAL","evidence":"Repository SHAs and branch origins recorded; no runtime configuration inspection performed."},
+    {"phase":"F1","status":"NOT_RUN","evidence":"G7 discovery not queried."},
+    {"phase":"F2","status":"NOT_RUN","evidence":"Browser CORS not tested."},
+    {"phase":"F3","status":"BLOCKED","evidence":"Requires user-entered human login and MFA in browser."},
+    {"phase":"F4","status":"NOT_RUN","evidence":"No authentic JWT available."},
+    {"phase":"F5","status":"NOT_RUN","evidence":"No authentic session/role available."},
+    {"phase":"F6","status":"NOT_RUN","evidence":"Gateway request not executed."},
+    {"phase":"F7","status":"NOT_RUN","evidence":"No disposable PostgreSQL stack started."},
+    {"phase":"F8","status":"BLOCKED","evidence":"Combined browser-to-database chain not executed."}
+  ],
+  "correlation_ids": [],
+  "sanitization": "No credentials, tokens, cookies, personal data, or raw HTTP bodies recorded."
+}
