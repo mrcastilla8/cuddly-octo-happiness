@@ -1,0 +1,37 @@
+{
+  "estado": "EVALUADO",
+  "pruebas": [
+    {
+      "prueba": "MD1-P01",
+      "etapa": "piloto PAM",
+      "estado": "PASS",
+      "evidencia": "md1_piloto_pam.csv"
+    },
+    {
+      "prueba": "MD1-P01",
+      "etapa": "comparación k=2…8 en muestra común",
+      "estado": "PASS",
+      "evidencia": "md1_seleccion_k.csv (14 combinaciones)"
+    },
+    {
+      "prueba": "MD1-P02",
+      "etapa": "estabilidad 5×5, 10 ARI por condición",
+      "estado": "PASS",
+      "evidencia": "md1_ari_repeticiones.csv; md1_k_congelado.json"
+    },
+    {
+      "prueba": "MD1-P03",
+      "etapa": "tres sensibilidades × dos algoritmos",
+      "estado": "PASS",
+      "evidencia": "md1_sensibilidad.csv"
+    },
+    {
+      "prueba": "MD1-P04",
+      "etapa": "evaluación final y perfiles sobre clientes retenidos",
+      "estado": "PASS",
+      "evidencia": "md1_evaluacion_final.csv; md1_perfiles_finales.csv; md1_firmas.csv; md1_decision_final.json"
+    }
+  ],
+  "invariantes_aprobadas": true,
+  "resultados_verdaderos_no_simulados": true
+}

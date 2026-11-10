@@ -1,0 +1,10 @@
+control,estado
+no_futuro_en_validacion,PASS
+no_futuro_en_test,PASS
+pronosticos_test_finitos_no_negativos,PASS
+Bstar_congelado,PASS
+modelo_recomendado_entre_candidatos_o_Bstar,PASS
+MAE_test_conciliado_ETS_tN_sN_d0,PASS
+MAE_test_conciliado_SARIMA_101_011_7,PASS
+MAE_test_conciliado_naive,PASS
+MAE_test_conciliado_snaive7,PASS

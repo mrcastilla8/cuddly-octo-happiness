@@ -1,0 +1,8 @@
+invariante,modelo,observado,PASS
+proporciones_y_tamanos,KMeans,1.0,True
+proporciones_y_tamanos,PAM,1.0,True
+rango_sil,ambos,14 valores,True
+rango_ari_init,ambos,14 valores,True
+rango_ari_resample,ambos,14 valores,True
+rango_silueta_test,ambos,"[0.5023318190289536, 0.4838499837500583]",True
+k_congelado_en_test,ambos,"[2, 2]",True

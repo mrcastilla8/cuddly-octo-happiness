@@ -1,21 +1,8 @@
-# Artefactos no publicados
+# MD-4 — artefactos no publicados
 
-El inventario completo conserva ruta, extensión, tamaño, SHA-256, finalidad probable y decisión para los 27 archivos del ZIP inicial, nueve archivos del ZIP complementario y dos snapshots de notebook. Se excluyeron archivos que exponen IDs de artículos y descripciones del catálogo derivado del dataset privado, hashes de fuentes que incluyen `customers`, y artefactos redundantes.
+Los archivos originales permanecen en el directorio local/ZIP fuente. Los ZIP no se publican como contenedores.
 
-## Artefacto grande
-
-- `md4/sbert_embeddings.npy` — 162,112,640 bytes; supera el límite de 25 MB y contiene 105,542 vectores de 384 dimensiones. Se conserva localmente. La auditoría pública puede comprobar la afirmación de forma y la etapa PASS en `evidencias/estado_experimentos.csv`; la auditoría de valores individuales requiere acceso autorizado al archivo local y al modelo fuente. No subirlo mediante Git LFS ni dividirlo en fragmentos públicos.
-
-## Archivos privados o derivados del conjunto privado
-
-Se excluyeron `md4_consultas_ajuste.csv`, `md4_consultas_holdout.csv`, `md4_mapa_articulos_textos.csv`, `md4_plantilla_pps_ciega.csv`, `md4_plantilla_pps_todos_escenarios.csv`, `md4_primera_ronda_segundo_evaluador.csv`, `md4_segunda_ronda_si_corresponde.csv` y `md4_recalibracion_10_pares_ajuste.csv`. Contienen listas de IDs de artículos, nombres/descripciones o mapeos del catálogo privado; además las plantillas no contienen calificaciones humanas completadas.
-
-`entrada_y_entorno.json` y `origen_cache.json` no se publican porque contienen fingerprints SHA-256 de archivos fuente, incluidos `customers`. El resumen reproduce únicamente runtime y versiones de paquetes, sin fingerprints.
-
-## Redundancia
-
-`md4_posiciones_pps.csv` se omite porque las posiciones provienen del ranking completo publicado y duplican IDs asociados a los pares PPS.
-
-## Notebook suplementario publicado
-
-El ZIP inicial no contenía notebook. Se publicó primero `nb03-md4-similitud-textual.ipynb` (68,029 bytes) y después una copia complementaria `nb03-md4-similitud-textual-revision-complementaria.ipynb` (79,776 bytes), ambos bajo 25 MB. El segundo conserva sin cambios las celdas/outputs anteriores y agrega una celda; registra 17/17 celdas de código ejecutadas, 43 outputs y cero errores. No contiene vectores ni tablas de clientes; hace referencia al path de Kaggle del dataset privado, sin incluir esos Parquet. La advertencia de Hugging Face por acceso no autenticado se conserva en sus outputs; la descarga terminó y SBERT reportó PASS. Hash y procedencia en `MANIFIESTO.json` e `INVENTARIO_COMPLETO.csv`.
+| Ruta original | Bytes | SHA-256 | Motivo |
+|---|---:|---|---|
+| `HM_MD4_Evidencias.zip!/md4/MANIFIESTO_ZIP.json` | 6000 | `0b47313ba26a126bf672b31fab6b6702165e00402c3ddac04d33e2dce8f7d24f` | Se usa inventario global verificable; el manifiesto de origen incluye listado exhaustivo redundante |
+| `HM_MD4_Evidencias.zip` | 102412 | `19fdfe8106fc72e92fc9760f1efee208beb44260c104abb39184355e34981e6f` | ZIP original conservado localmente; evidencia útil publicada en archivos individuales |

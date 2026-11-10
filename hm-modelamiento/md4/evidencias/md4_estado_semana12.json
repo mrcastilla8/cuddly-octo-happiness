@@ -1,0 +1,50 @@
+{
+  "estado": "EVALUACION_INCOMPLETA",
+  "pruebas": [
+    {
+      "prueba": "MD4-P01",
+      "componente": "corpus y truncamiento WordPieces",
+      "estado": "PASS",
+      "evidencia": "md4_auditoria_corpus.csv; md4_tokenizador.json"
+    },
+    {
+      "prueba": "MD4-P02",
+      "componente": "cuatro TF-IDF y dos LSA evaluados en ajuste",
+      "estado": "PASS",
+      "evidencia": "md4_seleccion_tfidf.csv; md4_seleccion_lsa.csv"
+    },
+    {
+      "prueba": "MD4-P02",
+      "componente": "hiperparámetros consolidados y congelados",
+      "estado": "PASS",
+      "evidencia": "md4_seleccion_hiperparametros.csv"
+    },
+    {
+      "prueba": "MD4-P02",
+      "componente": "rankings top-5/10 y variantes",
+      "estado": "PASS",
+      "evidencia": "md4_comparacion_topk_modelos.csv"
+    },
+    {
+      "prueba": "MD4-P03",
+      "componente": "conteos estructurales auditables",
+      "estado": "PASS",
+      "evidencia": "md4_aporte_vs_jerarquia.csv; definiciones provisionales por ratificar"
+    },
+    {
+      "prueba": "MD4-P04",
+      "componente": "sensibilidad y estratos especiales completos",
+      "estado": "PASS",
+      "evidencia": "md4_sensibilidad_corpus.csv; revisión complementaria si existe"
+    },
+    {
+      "prueba": "MD4-P02/P03",
+      "componente": "PPS reales, dos evaluadores, Kappa y robustez de mejora",
+      "estado": "PENDIENTE",
+      "evidencia": "md4_pps_resultados_reales.csv; md4_concordancia_pps.csv; md4_criterio_pps_por_regimen.csv"
+    }
+  ],
+  "invariantes_aprobadas": true,
+  "evaluacion_humana_real": false,
+  "resultados_verdaderos_no_simulados": true
+}
