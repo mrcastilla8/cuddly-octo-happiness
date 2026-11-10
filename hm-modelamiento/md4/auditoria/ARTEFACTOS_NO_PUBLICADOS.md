@@ -1,6 +1,6 @@
 # Artefactos no publicados
 
-El inventario completo conserva ruta, extensión, tamaño, SHA-256, finalidad probable y decisión para los 27 archivos recibidos. Se excluyeron archivos que exponen IDs de artículos y descripciones del catálogo derivado del dataset privado, hashes de fuentes que incluyen `customers`, y artefactos redundantes.
+El inventario completo conserva ruta, extensión, tamaño, SHA-256, finalidad probable y decisión para los 27 archivos del ZIP y el notebook suplementario. Se excluyeron archivos que exponen IDs de artículos y descripciones del catálogo derivado del dataset privado, hashes de fuentes que incluyen `customers`, y artefactos redundantes.
 
 ## Artefacto grande
 
@@ -16,6 +16,6 @@ Se excluyeron `md4_consultas_ajuste.csv`, `md4_consultas_holdout.csv`, `md4_mapa
 
 `md4_posiciones_pps.csv` se omite porque las posiciones provienen del ranking completo publicado y duplican IDs asociados a los pares PPS.
 
-## Notebook
+## Notebook suplementario publicado
 
-No hay archivo `.ipynb` en el ZIP ni en los resultados extraídos. No se creó ni reconstruyó uno.
+El ZIP no contenía notebook, pero se recibió posteriormente `nb03-md4-similitud-textual.ipynb` y se publicó byte a byte en `notebook/`. Su tamaño es 68,029 bytes, bajo el límite de 25 MB. Registra 16/16 celdas de código ejecutadas, 41 outputs y cero errores. No contiene vectores ni tablas de clientes; hace referencia al path de Kaggle del dataset privado, sin incluir esos Parquet. La advertencia de Hugging Face por acceso no autenticado se conserva en sus outputs; la descarga terminó y SBERT reportó PASS. Hash y procedencia en `MANIFIESTO.json` e `INVENTARIO_COMPLETO.csv`.

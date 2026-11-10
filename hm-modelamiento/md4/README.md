@@ -4,9 +4,10 @@ Evidencias exportadas de una ejecución de Kaggle del proyecto H&M Personalized 
 
 ## Navegación
 
+- [Notebook MD-4 ejecutado (copia recibida posteriormente)](notebook/nb03-md4-similitud-textual.ipynb)
 - [Resumen técnico de ejecución](auditoria/RESUMEN_EJECUCION.md)
 - [Cobertura MD4-P01 a MD4-P04](auditoria/COBERTURA_PRUEBAS.md)
-- [Inventario íntegro de los archivos recibidos (27)](auditoria/INVENTARIO_COMPLETO.csv)
+- [Inventario íntegro: 27 archivos del ZIP y 1 notebook suplementario](auditoria/INVENTARIO_COMPLETO.csv)
 - [Manifiesto de procedencia y publicación](auditoria/MANIFIESTO.json)
 - [Artefactos no publicados y cómo auditarlos](auditoria/ARTEFACTOS_NO_PUBLICADOS.md)
 
@@ -21,4 +22,4 @@ Evidencias exportadas de una ejecución de Kaggle del proyecto H&M Personalized 
 - [Estado PPS/Kappa](evidencias/md4_concordancia_pps.csv) y [plan de revisión humana](evidencias/md4_plan_revision_humana.json)
 - [Diccionario de métricas](evidencias/md4_diccionario_metricas.json), [auditoría de entregables](evidencias/md4_auditoria_entregables.json), [auditoría de tokens](evidencias/md4_tokenizador.json)
 
-El ZIP recibido no contiene notebook (`.ipynb`), por lo que `notebook/` no se crea. Tampoco se publican listas de consultas ni plantillas de evaluación que incluyen identificadores y descripciones de artículos del conjunto privado. Los CSV publicados se preservan byte a byte desde el ZIP; sus SHA-256 están en el inventario.
+El ZIP inicial no incluía notebook. Después se recibió y añadió la copia ejecutada enlazada arriba (SHA-256 en el manifiesto e inventario): las 16 celdas de código tienen contador de ejecución, hay 41 salidas y no hay errores de celda. Esto acredita la ejecución guardada, aunque el estado global del proyecto sigue parcial por PPS/Kappa pendiente y definiciones estructurales provisionales. No se publican listas de consultas ni plantillas de evaluación que contienen identificadores y descripciones del catálogo privado. Los 27 CSV/JSON de resultados conservan sus bytes originales; el notebook se conserva byte a byte desde su archivo suplementario.

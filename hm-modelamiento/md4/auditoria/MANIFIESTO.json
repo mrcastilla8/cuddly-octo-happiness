@@ -8,14 +8,14 @@
   "source_extraction_matches_archive": true,
   "notebook_in_archive": false,
   "publication_counts": {
-    "inventariados": 27,
-    "publicados": 15,
+    "inventariados": 28,
+    "publicados": 16,
     "excluidos": 12,
     "por_decision": {
+      "PUBLICAR": 16,
       "EXCLUIR_PRIVADO": 10,
       "EXCLUIR_REDUNDANTE": 1,
-      "LOCAL_MAYOR_25MB": 1,
-      "PUBLICAR": 15
+      "LOCAL_MAYOR_25MB": 1
     }
   },
   "published_files": [
@@ -108,6 +108,12 @@
       "path": "evidencias/md4_tokenizador.json",
       "size_bytes": 104,
       "sha256": "9242d487653d6be447fc00ca250b480619d1f83fa9eec9e6d6ee464a23bd7027"
+    },
+    {
+      "source": "nb03-md4-similitud-textual.ipynb (fuente suplementaria)",
+      "path": "notebook/nb03-md4-similitud-textual.ipynb",
+      "size_bytes": 68029,
+      "sha256": "96c257f48f21c412f16575c6ff03146f936db3ace04d4266ae5034e74e186acd"
     }
   ],
   "excluded_files": [
@@ -197,13 +203,29 @@
     }
   ],
   "evaluation_status": {
-    "notebook": "NO_INCLUIDO_EN_ARCHIVO",
-    "overall": "PARCIAL",
+    "notebook": "EXECUTED_SAVED_COMPLETE_16_CODE_CELLS_41_OUTPUTS_0_CELL_ERRORS",
+    "overall": "EVIDENCIA_DE_EJECUCION_COMPLETA_EVALUACION_METODOLOGICA_PARCIAL",
     "P01": "PASS_DECLARADO",
     "P02": "PASS_CON_PPS_PENDIENTE_Y_FALTANTE_DE_HIPERPARAMETROS",
     "P03": "PARCIAL",
     "P04": "PASS_CON_RESERVA",
     "pps": "PENDIENTE_REVISION_HUMANA",
     "cohens_kappa": "NO_CALCULADO_O_NO_ENTREGADO"
-  }
+  },
+  "supplemental_sources": [
+    {
+      "filename": "nb03-md4-similitud-textual.ipynb",
+      "sha256": "96c257f48f21c412f16575c6ff03146f936db3ace04d4266ae5034e74e186acd",
+      "size_bytes": 68029,
+      "published_path": "notebook/nb03-md4-similitud-textual.ipynb",
+      "notebook_execution": {
+        "code_cells": 16,
+        "executed_code_cells": 16,
+        "outputs": 41,
+        "cell_errors": 0,
+        "execution_count_sequence": "1-8, 10-17",
+        "execution_snapshot": "COMPLETO"
+      }
+    }
+  ]
 }
