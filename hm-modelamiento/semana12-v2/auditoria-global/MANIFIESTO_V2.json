@@ -33,73 +33,73 @@
   "archivos": [
     {
       "ruta": "auditoria-global/AUDITORIA_ESTRUCTURAL_NOTEBOOKS.md",
-      "bytes": 2075,
-      "sha256": "6af140913d6e6eac4f07d53e97caae536ae4a533719de265c63a254bd7d13374"
+      "bytes": 2055,
+      "sha256": "2098b62bf2c2e4a6faab59e093c18499474dc76a3700f58995cb078fe436d796"
     },
     {
       "ruta": "auditoria-global/AUDITORIA_VISUALIZACIONES.md",
-      "bytes": 2369,
-      "sha256": "bcc795e39eeb7caac05a0a9294fcabe76d69a068c8afd26e2a3a03ccae6f8a85"
+      "bytes": 2355,
+      "sha256": "e76f2187732cde90175968bffb5ba23b8ed9577655e66b1f213c9fb50feff83f"
     },
     {
       "ruta": "auditoria-global/CAMBIOS_V1_A_V2.md",
-      "bytes": 2967,
-      "sha256": "d4b75c342fdbdd377d0b4f9a6a1278355892a283ac03ed9029ce89fea60de9db"
+      "bytes": 2950,
+      "sha256": "c3f77c65382aff16ae1a9d98dd00a0ab5db99b9b6797aa55f30a2e35daa120ed"
     },
     {
       "ruta": "auditoria-global/GUIA_AUDITORIA_CHATGPT.md",
-      "bytes": 2439,
-      "sha256": "69c59d2a11ed23c2e867396c6e05f3532cfc69a3f1dbdca6f06140d56d0431e0"
+      "bytes": 2414,
+      "sha256": "925479eda45b21a0a6424cf38c8eae1ad1d2b91bb80e879e9ba2fd814e7d6c33"
     },
     {
       "ruta": "auditoria-global/INCIDENCIAS_Y_PENDIENTES.md",
-      "bytes": 1886,
-      "sha256": "53def3e1499b9db144e229aa3d6a863aaa16667490433c2526023e6a1a3f55c9"
+      "bytes": 1874,
+      "sha256": "fa5d246b5ed490fa22354b3704ed49eeb59cf294196c7b42d497273c888fc073"
     },
     {
       "ruta": "auditoria-global/INVENTARIO_COMPLETO_V2.csv",
-      "bytes": 65253,
-      "sha256": "42b39b21d1dca22bd730c2ec9fdcbfb03410651a7db0be88223ad903d6553e9c"
+      "bytes": 64962,
+      "sha256": "9d17a3c0857718a7bf0303bd618dcc6395c17e4ad0166cbdcf75a47b7d4aece4"
     },
     {
       "ruta": "auditoria-global/MATRIZ_16_PRUEBAS.md",
-      "bytes": 3443,
-      "sha256": "9b96cb86da0e5ac0a87f8d247b8961b0c6fefc8a2c2c2b90ec0d50b4c8b27516"
+      "bytes": 3412,
+      "sha256": "e41aae12c23785417e22d6900882238fb8e3527bc930373cbf4adee7832689b9"
     },
     {
       "ruta": "auditoria-global/PERSISTENCIA_MODELOS_V2.md",
-      "bytes": 2718,
-      "sha256": "232194f05f16b599887091e80980f6e1147ff680acfb6423dafad3177489cece"
+      "bytes": 2704,
+      "sha256": "72ed87c8bf4a62bf2ead5227c393846a5a805c55d886357dbbed60e6d0e7b631"
     },
     {
       "ruta": "auditoria-global/README.md",
-      "bytes": 1038,
-      "sha256": "354b32298855fbb111a99f058357b2398a5fd1c880226429f30df8aeac3cd556"
+      "bytes": 1024,
+      "sha256": "c890c21329d4f625349a412a7f876dcec08104c8dfc860207094474e30822acb"
     },
     {
       "ruta": "auditoria-global/RENDIMIENTO_EJECUCION.md",
-      "bytes": 2606,
-      "sha256": "84d7cfa823b824576a2096d23b208a8b44dd8bba4dd0b14e04d5a51a6bdd8671"
+      "bytes": 2583,
+      "sha256": "00b9af26d5a620f6e36735356e6f0ffa1eaa209a05e9f1ca0ed38db2137d2176"
     },
     {
       "ruta": "md1/auditoria/ARTEFACTOS_NO_PUBLICADOS.md",
-      "bytes": 1555,
-      "sha256": "87ebcf0c45eea2729dffa1b6a10f54af4bceee35b6ecd97867b841fb08b1da2b"
+      "bytes": 1547,
+      "sha256": "e5be462b2d5f004f6e565023be2364ed658bf1c223929d0b6760181e7260464d"
     },
     {
       "ruta": "md1/auditoria/COBERTURA_PRUEBAS.md",
-      "bytes": 1442,
-      "sha256": "aae129e9beaf81a837490ad9bffd9df6351531d599dcd13759e049cb77b71f39"
+      "bytes": 1432,
+      "sha256": "da15a68e684fe1dd17952122ed2696b47ad2e50b0e0519f4c82ff957e7a0cc48"
     },
     {
       "ruta": "md1/auditoria/INVENTARIO_MODELOS.md",
-      "bytes": 1734,
-      "sha256": "5dbd98f4b694c4a220c4609814a2a208d4993ea17351dce11586f4fed9cd2fd3"
+      "bytes": 1712,
+      "sha256": "a36a5fe4dc2464ff38fceed9c9e616d9e53e4e1a9d20ed06e7d9a9cbe4d82b3a"
     },
     {
       "ruta": "md1/auditoria/RESUMEN_EJECUCION.md",
-      "bytes": 1202,
-      "sha256": "6fa82757af1b04bd3b1e541f97861fee7c701eb2b8b70cfe184c09215175939e"
+      "bytes": 1189,
+      "sha256": "b34ba035b35660dbc0d70d5ed3c5d4ce5c289a295dd6442fc6627eec6f08281c"
     },
     {
       "ruta": "md1/evidencias/estado_experimentos.csv",
@@ -203,23 +203,23 @@
     },
     {
       "ruta": "md2/auditoria/ARTEFACTOS_NO_PUBLICADOS.md",
-      "bytes": 1807,
-      "sha256": "c8eabe3b745592cbb6698c45f2f3b43c01def35fec98f38391893ed918d20f39"
+      "bytes": 1799,
+      "sha256": "501ed8b4d4758623f717d06f2789c3630700cd2436569739c10b86cff649948e"
     },
     {
       "ruta": "md2/auditoria/COBERTURA_PRUEBAS.md",
-      "bytes": 2415,
-      "sha256": "ecbc1083dacf716c57cd7aad39942d52617f43e0b70037a2248c8685ca9af13f"
+      "bytes": 2397,
+      "sha256": "6a3bb35edd72b3d0b833600f4edbdb146bdd999ea9d8dfbf92529b0cce03c08b"
     },
     {
       "ruta": "md2/auditoria/INVENTARIO_MODELOS.md",
-      "bytes": 1944,
-      "sha256": "6e28ee6dc271bc912b30ae57b60872f0a4f5a14af35e5f41f734882dd910f168"
+      "bytes": 1921,
+      "sha256": "20e38a49e171dac695ffd645ea51ad2b28cdf4dcb0585d96b7cb4dd8a2f4705b"
     },
     {
       "ruta": "md2/auditoria/RESUMEN_EJECUCION.md",
-      "bytes": 1300,
-      "sha256": "1414cc605702342492d977d28eb87abc1dcf9bf7e0e3be35791bf624230399fe"
+      "bytes": 1287,
+      "sha256": "0ac63e9ed51887cd2bd11a1363f4d29271f5c144c89c8106622f1eca7e2f4ace"
     },
     {
       "ruta": "md2/evidencias/estado_experimentos.csv",
@@ -353,23 +353,23 @@
     },
     {
       "ruta": "md3/auditoria/ARTEFACTOS_NO_PUBLICADOS.md",
-      "bytes": 1802,
-      "sha256": "a27b85241b963c875c9a35922294653c5a73f9e380a47b451fa1cde25a01eee0"
+      "bytes": 1794,
+      "sha256": "27ae51065ef601adfffc46966673df81aad5a0186718212a7dbdc106a9938984"
     },
     {
       "ruta": "md3/auditoria/COBERTURA_PRUEBAS.md",
-      "bytes": 1920,
-      "sha256": "8397f874d549fde26ee49b61b92e423c8ad439694de7992586da6ded1e01a2e2"
+      "bytes": 1906,
+      "sha256": "a67f6629e7711ca252e6cb24be56f0286c47b32ebd2a57e7bb587872fcdc4c31"
     },
     {
       "ruta": "md3/auditoria/INVENTARIO_MODELOS.md",
-      "bytes": 1848,
-      "sha256": "abb84295d36ac90267551b2b942cac47ce6c38c05045cb474617cfd313fb72c2"
+      "bytes": 1825,
+      "sha256": "8f8394de077ca5a8c7d2b20f25c0adc2e1956c39687260ed215f83382f696b8f"
     },
     {
       "ruta": "md3/auditoria/RESUMEN_EJECUCION.md",
-      "bytes": 1377,
-      "sha256": "2e2ac1d83e66a8148b285a1a23212259529f1fce9c719dabb38f2a07fcb43ed1"
+      "bytes": 1364,
+      "sha256": "ed7612fd4bc4a7a3aeb604a93a0b5118634d1383ed40a18ee7486148f8a0a13e"
     },
     {
       "ruta": "md3/evidencias/baseline_fijada.json",
@@ -513,23 +513,23 @@
     },
     {
       "ruta": "md4/auditoria/ARTEFACTOS_NO_PUBLICADOS.md",
-      "bytes": 1838,
-      "sha256": "9039836fd81f13bad056d479a9d52d285e9c4dcf3de5caa50f194be1372071d7"
+      "bytes": 1830,
+      "sha256": "4aff6b44e9a7bb86f1f6904af04a8b7989ed688b3c9457180f7a058f86903adb"
     },
     {
       "ruta": "md4/auditoria/COBERTURA_PRUEBAS.md",
-      "bytes": 2081,
-      "sha256": "526a57e1c96eb710284a945b05c76f9003f132fa6e31ae7d953ca6682dfc9bc8"
+      "bytes": 2067,
+      "sha256": "62028b3785ac5834cd18f0e9093c565a83e8cc7e6fdee8ce6b322bbec8f7f0d5"
     },
     {
       "ruta": "md4/auditoria/INVENTARIO_MODELOS.md",
-      "bytes": 3898,
-      "sha256": "d4235aa1dfa0a307766df0e6e2524bab73f2776b338544b28390487485520dc9"
+      "bytes": 3861,
+      "sha256": "cfb8fb51cdbb297ba997343be9ddea998e7c92e91f8822dd706fdca2d5700f8c"
     },
     {
       "ruta": "md4/auditoria/RESUMEN_EJECUCION.md",
-      "bytes": 1314,
-      "sha256": "9216ed02ba97a1755c5293c27d08c050650ae1229f9cab46cedf092117446c71"
+      "bytes": 1301,
+      "sha256": "a88298904fe6d861ed24e3c7d24dc75c1879dddd1cfc0d9fe5bda929f6bed44c"
     },
     {
       "ruta": "md4/evidencias/estado_experimentos.csv",
@@ -658,8 +658,8 @@
     },
     {
       "ruta": "README.md",
-      "bytes": 1059,
-      "sha256": "cad3e19a3f837be6d0f9ccde1b7b3f7cb7f1000699c73dbff532851d90c5468a"
+      "bytes": 1048,
+      "sha256": "b29a1d01fd74c506202a8d3f2c7347eb7bf8c2fad9fa58a3dccc56b3554e3e11"
     }
   ]
 }
