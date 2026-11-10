@@ -1,0 +1,629 @@
+{
+  "proyecto": "H&M Grupo 2 Semana 12",
+  "version": "recuperacion-v2.1",
+  "repo": "https://github.com/mrcastilla8/cuddly-octo-happiness",
+  "pr": 3,
+  "rama": "feat/hm-md4-evidencias-kaggle",
+  "base_commit": "a1478abbf37d83b8deadc5da88516fcbe3d37ff5",
+  "materiales_locales": [
+    {
+      "archivo_local": "hm-md1-completa-modelado-evaluacion-modelos.ipynb",
+      "tipo": "notebook ejecutado",
+      "bytes": 435291,
+      "sha256": "a932675335e878bc81cf752974603c521194ee05a45d7a56ee372f3177a4886b",
+      "clasificacion": "histórico/v2",
+      "publicado": "no; fuente auditada"
+    },
+    {
+      "archivo_local": "hm-md2-completa-modelado-evaluacion-modelos.ipynb",
+      "tipo": "notebook ejecutado",
+      "bytes": 483768,
+      "sha256": "4d7ba130768c8a23ae020fb9a188bf206f517a0f69ab56b3ed409f4052346d1e",
+      "clasificacion": "histórico/v2",
+      "publicado": "no; fuente auditada"
+    },
+    {
+      "archivo_local": "hm-md3-completa-modelado-evaluacion-modelos.ipynb",
+      "tipo": "notebook ejecutado",
+      "bytes": 567444,
+      "sha256": "b552e2e79e238d3ce88c7e84992631dd34d23abf7ba68a3b2b03cf47822a1386",
+      "clasificacion": "histórico/v2",
+      "publicado": "no; fuente auditada"
+    },
+    {
+      "archivo_local": "hm-md4-completa-modelado-evaluacion-modelos.ipynb",
+      "tipo": "notebook ejecutado",
+      "bytes": 316977,
+      "sha256": "90c37ed35d3fa6de0deed05abe7417e247463bd3009284390ed3659fa0432329",
+      "clasificacion": "histórico/v2",
+      "publicado": "no; fuente auditada"
+    },
+    {
+      "archivo_local": "HM_MD1_Evidencias (1).zip",
+      "tipo": "ZIP",
+      "bytes": 271135,
+      "sha256": "1acd1d601b3b9e76a41679f2cf1de3aeba73201fc1d986e2ba4a77e83365249d",
+      "clasificacion": "histórico/v2",
+      "publicado": "no; fuente auditada"
+    },
+    {
+      "archivo_local": "HM_MD1_Modelos_PRIVADO.zip",
+      "tipo": "ZIP",
+      "bytes": 2045,
+      "sha256": "1fae44bbc23ef5ef117d8a5bdda0934b1c7926fa6e8b129c93cd4ad3c89dd489",
+      "clasificacion": "privado excluido",
+      "publicado": "no; fuente auditada"
+    },
+    {
+      "archivo_local": "HM_MD2_Evidencias (1).zip",
+      "tipo": "ZIP",
+      "bytes": 277491,
+      "sha256": "7f30978e9319f5855164b65c2313eb728510ab84fc0f8d3cddcfb07f0e9a9da4",
+      "clasificacion": "histórico/v2",
+      "publicado": "no; fuente auditada"
+    },
+    {
+      "archivo_local": "HM_MD2_Modelos_PRIVADO.zip",
+      "tipo": "ZIP",
+      "bytes": 71745,
+      "sha256": "86a4dcdeaa1be67305b966100933c25bce269da39777f8faceabb060a39717ae",
+      "clasificacion": "privado excluido",
+      "publicado": "no; fuente auditada"
+    },
+    {
+      "archivo_local": "HM_MD2_P01_Evidencias_Complemento.zip",
+      "tipo": "ZIP",
+      "bytes": 83499,
+      "sha256": "58d9a4b97e1f24625aee0e521722c8ce5ff4ae53964ea56ae1b21afa82134739",
+      "clasificacion": "nuevo complemento",
+      "publicado": "solo miembros autorizados agregados; original no publicado"
+    },
+    {
+      "archivo_local": "HM_MD2_P01_Modelo_Articulos_PRIVADO.zip",
+      "tipo": "ZIP",
+      "bytes": 2343,
+      "sha256": "69b7f3f8e364fa8b4c9d7d78ef18ca93fb6b2ae93b2484bdf64d1873e20fbafe",
+      "clasificacion": "privado excluido",
+      "publicado": "solo miembros autorizados agregados; original no publicado"
+    },
+    {
+      "archivo_local": "HM_MD3_Evidencias (1).zip",
+      "tipo": "ZIP",
+      "bytes": 2684753,
+      "sha256": "20d18bace110242a404bd6562f7693676b4dedea6851b5706b5b501dcd5efcfd",
+      "clasificacion": "histórico/v2",
+      "publicado": "no; fuente auditada"
+    },
+    {
+      "archivo_local": "HM_MD3_Modelos_PRIVADO.zip",
+      "tipo": "ZIP",
+      "bytes": 10399083,
+      "sha256": "e80bb664492cc8a2e7f310e4ba8f5e05a2aadcacbeb3a2779d21a4e6c4271d11",
+      "clasificacion": "privado excluido",
+      "publicado": "no; fuente auditada"
+    },
+    {
+      "archivo_local": "HM_MD4_Evidencias.zip",
+      "tipo": "ZIP",
+      "bytes": 734747,
+      "sha256": "1280882bbfb9238501e1189ba3edd160a696e68a3218f20c64192564ec62a1af",
+      "clasificacion": "histórico/v2",
+      "publicado": "no; fuente auditada"
+    },
+    {
+      "archivo_local": "HM_MD4_Evidencias_PPS_Complemento.zip",
+      "tipo": "ZIP",
+      "bytes": 2168,
+      "sha256": "54015d7dfed040d06d2fa6bde2f8636faf30e1b9e5589568220fdc8352f57492",
+      "clasificacion": "nuevo complemento",
+      "publicado": "solo miembros autorizados agregados; original no publicado"
+    },
+    {
+      "archivo_local": "HM_MD4_Modelos_PRIVADO.zip",
+      "tipo": "ZIP",
+      "bytes": 215028930,
+      "sha256": "89c7f5b215784e195895867bceef2bbc0761a2047f8effe124eabc9075614cf1",
+      "clasificacion": "privado excluido",
+      "publicado": "no; fuente auditada"
+    },
+    {
+      "archivo_local": "HM_MD4_Plantillas_PPS_PRIVADO.zip",
+      "tipo": "ZIP",
+      "bytes": 53002,
+      "sha256": "74e6dd13baf73e5824a5a4fb6c11af776da9b86c80e2ac670eb8bd5e4f544124",
+      "clasificacion": "privado excluido",
+      "publicado": "no; fuente auditada"
+    },
+    {
+      "archivo_local": "md2-p01-correccion-autonoma-asap.ipynb",
+      "tipo": "notebook ejecutado",
+      "bytes": 110028,
+      "sha256": "a54e940b6e0e2601f2a1709324ad6548e355b8ba72d8005cf06725c866ed8687",
+      "clasificacion": "histórico/v2",
+      "publicado": "no; fuente auditada"
+    },
+    {
+      "archivo_local": "md4-pps-y-metricas-sin-reentrenar.ipynb",
+      "tipo": "notebook ejecutado",
+      "bytes": 40029,
+      "sha256": "05e13ebe3364b456030f77090961bc71565f753a57b3c6114eca43866fa559ee",
+      "clasificacion": "histórico/v2",
+      "publicado": "no; fuente auditada"
+    }
+  ],
+  "zip_privados_auditados_por_miembro_sin_publicar": [
+    {
+      "zip": "HM_MD1_Modelos_PRIVADO.zip",
+      "sha256_zip": "1fae44bbc23ef5ef117d8a5bdda0934b1c7926fa6e8b129c93cd4ad3c89dd489",
+      "miembro": "md1/modelos/estado_modelos.json",
+      "bytes": 689,
+      "crc_ok": true,
+      "publicado": false
+    },
+    {
+      "zip": "HM_MD1_Modelos_PRIVADO.zip",
+      "sha256_zip": "1fae44bbc23ef5ef117d8a5bdda0934b1c7926fa6e8b129c93cd4ad3c89dd489",
+      "miembro": "md1/modelos/kmeans_k2.npz",
+      "bytes": 1044,
+      "crc_ok": true,
+      "publicado": false
+    },
+    {
+      "zip": "HM_MD1_Modelos_PRIVADO.zip",
+      "sha256_zip": "1fae44bbc23ef5ef117d8a5bdda0934b1c7926fa6e8b129c93cd4ad3c89dd489",
+      "miembro": "md1/modelos/pam_k2.npz",
+      "bytes": 1054,
+      "crc_ok": true,
+      "publicado": false
+    },
+    {
+      "zip": "HM_MD1_Modelos_PRIVADO.zip",
+      "sha256_zip": "1fae44bbc23ef5ef117d8a5bdda0934b1c7926fa6e8b129c93cd4ad3c89dd489",
+      "miembro": "md1/manifest_exportacion.json",
+      "bytes": 607,
+      "crc_ok": true,
+      "publicado": false
+    },
+    {
+      "zip": "HM_MD2_Modelos_PRIVADO.zip",
+      "sha256_zip": "86a4dcdeaa1be67305b966100933c25bce269da39777f8faceabb060a39717ae",
+      "miembro": "md2/modelos/contrato_cestas.json",
+      "bytes": 1712,
+      "crc_ok": true,
+      "publicado": false
+    },
+    {
+      "zip": "HM_MD2_Modelos_PRIVADO.zip",
+      "sha256_zip": "86a4dcdeaa1be67305b966100933c25bce269da39777f8faceabb060a39717ae",
+      "miembro": "md2/modelos/estado_modelos.json",
+      "bytes": 309,
+      "crc_ok": true,
+      "publicado": false
+    },
+    {
+      "zip": "HM_MD2_Modelos_PRIVADO.zip",
+      "sha256_zip": "86a4dcdeaa1be67305b966100933c25bce269da39777f8faceabb060a39717ae",
+      "miembro": "md2/modelos/itemsets_frecuentes.csv",
+      "bytes": 83568,
+      "crc_ok": true,
+      "publicado": false
+    },
+    {
+      "zip": "HM_MD2_Modelos_PRIVADO.zip",
+      "sha256_zip": "86a4dcdeaa1be67305b966100933c25bce269da39777f8faceabb060a39717ae",
+      "miembro": "md2/modelos/reglas_desarrollo.csv",
+      "bytes": 149689,
+      "crc_ok": true,
+      "publicado": false
+    },
+    {
+      "zip": "HM_MD2_Modelos_PRIVADO.zip",
+      "sha256_zip": "86a4dcdeaa1be67305b966100933c25bce269da39777f8faceabb060a39717ae",
+      "miembro": "md2/manifest_exportacion.json",
+      "bytes": 801,
+      "crc_ok": true,
+      "publicado": false
+    },
+    {
+      "zip": "HM_MD2_P01_Modelo_Articulos_PRIVADO.zip",
+      "sha256_zip": "69b7f3f8e364fa8b4c9d7d78ef18ca93fb6b2ae93b2484bdf64d1873e20fbafe",
+      "miembro": "md2_p01/md2_p01_reglas_por_articulo.csv",
+      "bytes": 3060,
+      "crc_ok": true,
+      "publicado": false
+    },
+    {
+      "zip": "HM_MD2_P01_Modelo_Articulos_PRIVADO.zip",
+      "sha256_zip": "69b7f3f8e364fa8b4c9d7d78ef18ca93fb6b2ae93b2484bdf64d1873e20fbafe",
+      "miembro": "md2_p01/md2_p01_decision_complementaria.json",
+      "bytes": 970,
+      "crc_ok": true,
+      "publicado": false
+    },
+    {
+      "zip": "HM_MD2_P01_Modelo_Articulos_PRIVADO.zip",
+      "sha256_zip": "69b7f3f8e364fa8b4c9d7d78ef18ca93fb6b2ae93b2484bdf64d1873e20fbafe",
+      "miembro": "md2_p01/manifest.json",
+      "bytes": 499,
+      "crc_ok": true,
+      "publicado": false
+    },
+    {
+      "zip": "HM_MD3_Modelos_PRIVADO.zip",
+      "sha256_zip": "e80bb664492cc8a2e7f310e4ba8f5e05a2aadcacbeb3a2779d21a4e6c4271d11",
+      "miembro": "md3/modelos/ETS_tN_sN_d0.pkl",
+      "bytes": 53666,
+      "crc_ok": true,
+      "publicado": false
+    },
+    {
+      "zip": "HM_MD3_Modelos_PRIVADO.zip",
+      "sha256_zip": "e80bb664492cc8a2e7f310e4ba8f5e05a2aadcacbeb3a2779d21a4e6c4271d11",
+      "miembro": "md3/modelos/SARIMA_101_011_7.pkl",
+      "bytes": 29081444,
+      "crc_ok": true,
+      "publicado": false
+    },
+    {
+      "zip": "HM_MD3_Modelos_PRIVADO.zip",
+      "sha256_zip": "e80bb664492cc8a2e7f310e4ba8f5e05a2aadcacbeb3a2779d21a4e6c4271d11",
+      "miembro": "md3/modelos/baseline_estado.json",
+      "bytes": 386,
+      "crc_ok": true,
+      "publicado": false
+    },
+    {
+      "zip": "HM_MD3_Modelos_PRIVADO.zip",
+      "sha256_zip": "e80bb664492cc8a2e7f310e4ba8f5e05a2aadcacbeb3a2779d21a4e6c4271d11",
+      "miembro": "md3/modelos/estado_modelos.json",
+      "bytes": 583,
+      "crc_ok": true,
+      "publicado": false
+    },
+    {
+      "zip": "HM_MD3_Modelos_PRIVADO.zip",
+      "sha256_zip": "e80bb664492cc8a2e7f310e4ba8f5e05a2aadcacbeb3a2779d21a4e6c4271d11",
+      "miembro": "md3/manifest_exportacion.json",
+      "bytes": 794,
+      "crc_ok": true,
+      "publicado": false
+    },
+    {
+      "zip": "HM_MD4_Modelos_PRIVADO.zip",
+      "sha256_zip": "89c7f5b215784e195895867bceef2bbc0761a2047f8effe124eabc9075614cf1",
+      "miembro": "md4/modelos/articulo_a_texto_unico.npy",
+      "bytes": 422296,
+      "crc_ok": true,
+      "publicado": false
+    },
+    {
+      "zip": "HM_MD4_Modelos_PRIVADO.zip",
+      "sha256_zip": "89c7f5b215784e195895867bceef2bbc0761a2047f8effe124eabc9075614cf1",
+      "miembro": "md4/modelos/catalogo_indice.csv.gz",
+      "bytes": 3120145,
+      "crc_ok": true,
+      "publicado": false
+    },
+    {
+      "zip": "HM_MD4_Modelos_PRIVADO.zip",
+      "sha256_zip": "89c7f5b215784e195895867bceef2bbc0761a2047f8effe124eabc9075614cf1",
+      "miembro": "md4/modelos/configuracion.json",
+      "bytes": 365,
+      "crc_ok": true,
+      "publicado": false
+    },
+    {
+      "zip": "HM_MD4_Modelos_PRIVADO.zip",
+      "sha256_zip": "89c7f5b215784e195895867bceef2bbc0761a2047f8effe124eabc9075614cf1",
+      "miembro": "md4/modelos/estado_modelos.json",
+      "bytes": 391,
+      "crc_ok": true,
+      "publicado": false
+    },
+    {
+      "zip": "HM_MD4_Modelos_PRIVADO.zip",
+      "sha256_zip": "89c7f5b215784e195895867bceef2bbc0761a2047f8effe124eabc9075614cf1",
+      "miembro": "md4/modelos/lsa_svd.joblib",
+      "bytes": 26991870,
+      "crc_ok": true,
+      "publicado": false
+    },
+    {
+      "zip": "HM_MD4_Modelos_PRIVADO.zip",
+      "sha256_zip": "89c7f5b215784e195895867bceef2bbc0761a2047f8effe124eabc9075614cf1",
+      "miembro": "md4/modelos/lsa_unicos.npy",
+      "bytes": 35023328,
+      "crc_ok": true,
+      "publicado": false
+    },
+    {
+      "zip": "HM_MD4_Modelos_PRIVADO.zip",
+      "sha256_zip": "89c7f5b215784e195895867bceef2bbc0761a2047f8effe124eabc9075614cf1",
+      "miembro": "md4/modelos/sbert_modelo_local/1_Pooling/config.json",
+      "bytes": 90,
+      "crc_ok": true,
+      "publicado": false
+    },
+    {
+      "zip": "HM_MD4_Modelos_PRIVADO.zip",
+      "sha256_zip": "89c7f5b215784e195895867bceef2bbc0761a2047f8effe124eabc9075614cf1",
+      "miembro": "md4/modelos/sbert_modelo_local/README.md",
+      "bytes": 10502,
+      "crc_ok": true,
+      "publicado": false
+    },
+    {
+      "zip": "HM_MD4_Modelos_PRIVADO.zip",
+      "sha256_zip": "89c7f5b215784e195895867bceef2bbc0761a2047f8effe124eabc9075614cf1",
+      "miembro": "md4/modelos/sbert_modelo_local/config.json",
+      "bytes": 745,
+      "crc_ok": true,
+      "publicado": false
+    },
+    {
+      "zip": "HM_MD4_Modelos_PRIVADO.zip",
+      "sha256_zip": "89c7f5b215784e195895867bceef2bbc0761a2047f8effe124eabc9075614cf1",
+      "miembro": "md4/modelos/sbert_modelo_local/config_sentence_transformers.json",
+      "bytes": 284,
+      "crc_ok": true,
+      "publicado": false
+    },
+    {
+      "zip": "HM_MD4_Modelos_PRIVADO.zip",
+      "sha256_zip": "89c7f5b215784e195895867bceef2bbc0761a2047f8effe124eabc9075614cf1",
+      "miembro": "md4/modelos/sbert_modelo_local/model.safetensors",
+      "bytes": 90864192,
+      "crc_ok": true,
+      "publicado": false
+    },
+    {
+      "zip": "HM_MD4_Modelos_PRIVADO.zip",
+      "sha256_zip": "89c7f5b215784e195895867bceef2bbc0761a2047f8effe124eabc9075614cf1",
+      "miembro": "md4/modelos/sbert_modelo_local/modules.json",
+      "bytes": 429,
+      "crc_ok": true,
+      "publicado": false
+    },
+    {
+      "zip": "HM_MD4_Modelos_PRIVADO.zip",
+      "sha256_zip": "89c7f5b215784e195895867bceef2bbc0761a2047f8effe124eabc9075614cf1",
+      "miembro": "md4/modelos/sbert_modelo_local/sentence_bert_config.json",
+      "bytes": 241,
+      "crc_ok": true,
+      "publicado": false
+    },
+    {
+      "zip": "HM_MD4_Modelos_PRIVADO.zip",
+      "sha256_zip": "89c7f5b215784e195895867bceef2bbc0761a2047f8effe124eabc9075614cf1",
+      "miembro": "md4/modelos/sbert_modelo_local/tokenizer.json",
+      "bytes": 711649,
+      "crc_ok": true,
+      "publicado": false
+    },
+    {
+      "zip": "HM_MD4_Modelos_PRIVADO.zip",
+      "sha256_zip": "89c7f5b215784e195895867bceef2bbc0761a2047f8effe124eabc9075614cf1",
+      "miembro": "md4/modelos/sbert_modelo_local/tokenizer_config.json",
+      "bytes": 594,
+      "crc_ok": true,
+      "publicado": false
+    },
+    {
+      "zip": "HM_MD4_Modelos_PRIVADO.zip",
+      "sha256_zip": "89c7f5b215784e195895867bceef2bbc0761a2047f8effe124eabc9075614cf1",
+      "miembro": "md4/modelos/sbert_unicos.npy",
+      "bytes": 67244672,
+      "crc_ok": true,
+      "publicado": false
+    },
+    {
+      "zip": "HM_MD4_Modelos_PRIVADO.zip",
+      "sha256_zip": "89c7f5b215784e195895867bceef2bbc0761a2047f8effe124eabc9075614cf1",
+      "miembro": "md4/modelos/tfidf_unicos.npz",
+      "bytes": 5970087,
+      "crc_ok": true,
+      "publicado": false
+    },
+    {
+      "zip": "HM_MD4_Modelos_PRIVADO.zip",
+      "sha256_zip": "89c7f5b215784e195895867bceef2bbc0761a2047f8effe124eabc9075614cf1",
+      "miembro": "md4/modelos/tfidf_vectorizador.joblib",
+      "bytes": 367540,
+      "crc_ok": true,
+      "publicado": false
+    },
+    {
+      "zip": "HM_MD4_Modelos_PRIVADO.zip",
+      "sha256_zip": "89c7f5b215784e195895867bceef2bbc0761a2047f8effe124eabc9075614cf1",
+      "miembro": "md4/manifest_exportacion.json",
+      "bytes": 3340,
+      "crc_ok": true,
+      "publicado": false
+    },
+    {
+      "zip": "HM_MD4_Plantillas_PPS_PRIVADO.zip",
+      "sha256_zip": "74e6dd13baf73e5824a5a4fb6c11af776da9b86c80e2ac670eb8bd5e4f544124",
+      "miembro": "md4_complemento/md4_hoja_ciega_evaluador_1.csv",
+      "bytes": 114166,
+      "crc_ok": true,
+      "publicado": false
+    },
+    {
+      "zip": "HM_MD4_Plantillas_PPS_PRIVADO.zip",
+      "sha256_zip": "74e6dd13baf73e5824a5a4fb6c11af776da9b86c80e2ac670eb8bd5e4f544124",
+      "miembro": "md4_complemento/md4_hoja_ciega_evaluador_2_ronda1.csv",
+      "bytes": 33049,
+      "crc_ok": true,
+      "publicado": false
+    },
+    {
+      "zip": "HM_MD4_Plantillas_PPS_PRIVADO.zip",
+      "sha256_zip": "74e6dd13baf73e5824a5a4fb6c11af776da9b86c80e2ac670eb8bd5e4f544124",
+      "miembro": "md4_complemento/md4_pps_evaluaciones_PLANTILLA.csv",
+      "bytes": 126717,
+      "crc_ok": true,
+      "publicado": false
+    },
+    {
+      "zip": "HM_MD4_Plantillas_PPS_PRIVADO.zip",
+      "sha256_zip": "74e6dd13baf73e5824a5a4fb6c11af776da9b86c80e2ac670eb8bd5e4f544124",
+      "miembro": "md4_complemento/md4_primera_ronda_evaluador_2.csv",
+      "bytes": 36738,
+      "crc_ok": true,
+      "publicado": false
+    },
+    {
+      "zip": "HM_MD4_Plantillas_PPS_PRIVADO.zip",
+      "sha256_zip": "74e6dd13baf73e5824a5a4fb6c11af776da9b86c80e2ac670eb8bd5e4f544124",
+      "miembro": "md4_complemento/md4_segunda_ronda_condicional.csv",
+      "bytes": 36643,
+      "crc_ok": true,
+      "publicado": false
+    },
+    {
+      "zip": "HM_MD4_Plantillas_PPS_PRIVADO.zip",
+      "sha256_zip": "74e6dd13baf73e5824a5a4fb6c11af776da9b86c80e2ac670eb8bd5e4f544124",
+      "miembro": "md4_complemento/manifest.json",
+      "bytes": 975,
+      "crc_ok": true,
+      "publicado": false
+    }
+  ],
+  "hallazgos": {
+    "md2": {
+      "fraccion_ejecutada": 0.01,
+      "cestas": 81660,
+      "reglas": 30,
+      "pares": 18,
+      "reglas_ids_omitidos_de_publicacion": true
+    },
+    "md4": {
+      "pares": 340,
+      "doble_revision": 102,
+      "calificaciones_reales": 0,
+      "kappa": null,
+      "formulas_aritmetica_verificada": 16,
+      "ratificacion_semantica": false
+    }
+  },
+  "notebooks_publicados": false,
+  "razon": "Outputs contienen identificadores/pares de artículos en MD2 y pares/nombres de productos en MD4; originales preservados localmente.",
+  "archivos_publicados_nuevos": [
+    {
+      "ruta_repositorio": "README.md",
+      "bytes": 1458,
+      "sha256": "6c95f13d94e12f5d2b028ae30dfb4ba88ae73503ab5d471b39d65505327a8d7e"
+    },
+    {
+      "ruta_repositorio": "auditoria-global/ARTEFACTOS_PRIVADOS_EXCLUIDOS.md",
+      "bytes": 1398,
+      "sha256": "c0f08a7c41785157f2828d719d70e71fb4124041d669c7570670aff4555cf8bd"
+    },
+    {
+      "ruta_repositorio": "auditoria-global/AUDITORIA_MD2_P01.md",
+      "bytes": 3077,
+      "sha256": "bb4cc1bdaac15d4510494de2b8953b51d59eb8be1fd3fa0c15d7530c82749def"
+    },
+    {
+      "ruta_repositorio": "auditoria-global/AUDITORIA_MD4_PPS.md",
+      "bytes": 3202,
+      "sha256": "3a1b085399330a8c3896f8f410708c4215df51aedfea6f7e306224567b33b836"
+    },
+    {
+      "ruta_repositorio": "auditoria-global/COMPARACION_ANTES_DESPUES.md",
+      "bytes": 2585,
+      "sha256": "243dc7e521054b605d6913f8f6b623c546d711717771f49e2b83812cc575bb8a"
+    },
+    {
+      "ruta_repositorio": "auditoria-global/GUIA_AUDITORIA_CHATGPT.md",
+      "bytes": 1429,
+      "sha256": "b4f5b077526ad98f883ca8ae465a1431d9626c6b9b6a4af54cf2bc30509ef871"
+    },
+    {
+      "ruta_repositorio": "auditoria-global/IMPACTO_EN_16_PRUEBAS.md",
+      "bytes": 3569,
+      "sha256": "12cc931812a4bec8cbdd7d3de9717512ccc7aa3aac2f1720288dc8b86200f334"
+    },
+    {
+      "ruta_repositorio": "auditoria-global/INCIDENCIAS_PENDIENTES.md",
+      "bytes": 1051,
+      "sha256": "681895e888ba64e401bbeff2ba726a4b9aa1094aafa67e6d80f1fd756d02e48b"
+    },
+    {
+      "ruta_repositorio": "md4-pps/auditoria/NOTA_AUDITORIA.md",
+      "bytes": 399,
+      "sha256": "f1d9fd3d7fb837d96c424c4dbd1e4a3ba85a731d12a40851c9e6a18b23f00904"
+    },
+    {
+      "ruta_repositorio": "md4-pps/evidencias/FORMULAS_MD4_PARA_RATIFICACION.md",
+      "bytes": 855,
+      "sha256": "e7a0eaf4c14893ed081457c1c350340f3b37c58cca8d17a6c89d79410050af17"
+    },
+    {
+      "ruta_repositorio": "md4-pps/evidencias/md4_concordancia_pps_complementaria.csv",
+      "bytes": 63,
+      "sha256": "b87dae4f0afb7b76e04ad7e6beff99a3dcdc8f8461a04cefe86e82e37f4edf7c"
+    },
+    {
+      "ruta_repositorio": "md4-pps/evidencias/md4_estado_complementario.json",
+      "bytes": 192,
+      "sha256": "256761cb75fe1147ee7b95a7eeab66960f939f67d94aafec2ff73ac1e64db2fc"
+    },
+    {
+      "ruta_repositorio": "md4-pps/evidencias/md4_verificacion_formulas_propuestas.csv",
+      "bytes": 727,
+      "sha256": "03b29a674e0cfc6d51cf23c2a9cad752c183bf3851b6d5b3f6b9576af1bfcfd0"
+    },
+    {
+      "ruta_repositorio": "md4-pps/notebook/EXCLUSION_NOTEBOOK.md",
+      "bytes": 742,
+      "sha256": "c50ad855ca985c951057a2a87f3901a1e8495b15f150c470a525375284c9044c"
+    },
+    {
+      "ruta_repositorio": "md2-p01/auditoria/NOTA_AUDITORIA.md",
+      "bytes": 395,
+      "sha256": "cef545828837c3e73db40db9b18c1b193131d8719eba60a873d59a615f1941a1"
+    },
+    {
+      "ruta_repositorio": "md2-p01/evidencias/md2_p01_decision_complementaria.json",
+      "bytes": 1002,
+      "sha256": "50becb263f37cc7553332825c0aadee7c4c988dd8fb540a21d45b70df1da94cd"
+    },
+    {
+      "ruta_repositorio": "md2-p01/evidencias/md2_p01_factibilidad_articulos.png",
+      "bytes": 43145,
+      "sha256": "702c8ccb6628af28f5aa9f37ac6d41ff859dc7b684f05a0ed9024f72a9184d88"
+    },
+    {
+      "ruta_repositorio": "md2-p01/evidencias/md2_p01_resumen_reglas_agregado.csv",
+      "bytes": 290,
+      "sha256": "b619c13b5980246bee1c91913cba5dc3bf72f45ca92fa1a55b3bce474e47b0bf"
+    },
+    {
+      "ruta_repositorio": "md2-p01/notebook/EXCLUSION_NOTEBOOK.md",
+      "bytes": 709,
+      "sha256": "5058c68a810820689e75ddefaabb59cc71fc3705a2ff44b032ed8c49fc8d21f4"
+    }
+  ],
+  "validaciones": {
+    "notebooks_json": [
+      {
+        "notebook": "md2-p01-correccion-autonoma-asap.ipynb",
+        "json": "valid",
+        "code_cells": 5,
+        "executed": 5,
+        "errors": 0
+      },
+      {
+        "notebook": "md4-pps-y-metricas-sin-reentrenar.ipynb",
+        "json": "valid",
+        "code_cells": 6,
+        "executed": 6,
+        "errors": 0
+      }
+    ],
+    "todos_los_zip_locales_crc_ok_y_rutas_seguras": true,
+    "ids_articulo_detectados_en_archivos_publicados": 0,
+    "manifest_hash_scope": "todos los artefactos excepto manifiesto e inventario"
+  }
+}
