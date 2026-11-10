@@ -8,14 +8,14 @@
   "source_extraction_matches_archive": true,
   "notebook_in_archive": false,
   "publication_counts": {
-    "inventariados": 28,
-    "publicados": 16,
+    "inventariados": 38,
+    "publicados": 26,
     "excluidos": 12,
     "por_decision": {
-      "PUBLICAR": 16,
       "EXCLUIR_PRIVADO": 10,
       "EXCLUIR_REDUNDANTE": 1,
-      "LOCAL_MAYOR_25MB": 1
+      "LOCAL_MAYOR_25MB": 1,
+      "PUBLICAR": 26
     }
   },
   "published_files": [
@@ -114,6 +114,66 @@
       "path": "notebook/nb03-md4-similitud-textual.ipynb",
       "size_bytes": 68029,
       "sha256": "96c257f48f21c412f16575c6ff03146f936db3ace04d4266ae5034e74e186acd"
+    },
+    {
+      "source": "revision_complementaria/md4_sensibilidad_corpus_consolidada.csv",
+      "path": "evidencias/revision_complementaria/md4_sensibilidad_corpus_consolidada.csv",
+      "size_bytes": 6313,
+      "sha256": "bd9cb91f3b65ce808030d6cdf52137ed4dcd79455e640dd04d2617744722821d"
+    },
+    {
+      "source": "revision_complementaria/md4_distribucion_coseno_top5.png",
+      "path": "evidencias/revision_complementaria/md4_distribucion_coseno_top5.png",
+      "size_bytes": 35298,
+      "sha256": "4b2dbf2be260fcccc81464b12405fbc0365666e9265c132b5675dd5f5bec8405"
+    },
+    {
+      "source": "revision_complementaria/md4_equivalencia_gram_cruzada.csv",
+      "path": "evidencias/revision_complementaria/md4_equivalencia_gram_cruzada.csv",
+      "size_bytes": 470,
+      "sha256": "5a6d0382d72490bc24bd1f651d8eb862a60a1dbde52d4f87e51dc8e0bd25cb2d"
+    },
+    {
+      "source": "revision_complementaria/md4_seleccion_hiperparametros.csv",
+      "path": "evidencias/revision_complementaria/md4_seleccion_hiperparametros.csv",
+      "size_bytes": 680,
+      "sha256": "cf2b173073624e4bb6ac402b6e7b4c8a5c6310c9634def39c31443306de32e10"
+    },
+    {
+      "source": "revision_complementaria/md4_resumen_controles.json",
+      "path": "evidencias/revision_complementaria/md4_resumen_controles.json",
+      "size_bytes": 713,
+      "sha256": "5246d7464248f9709ee6eaa2955667828c450542fede91ad291b2a56fd50cdc9"
+    },
+    {
+      "source": "revision_complementaria/md4_auditoria_bitacora.csv",
+      "path": "evidencias/revision_complementaria/md4_auditoria_bitacora.csv",
+      "size_bytes": 288,
+      "sha256": "1a45867397f9404acba84d28f60e86112d968bd763c2558e222ecd6d1c41278b"
+    },
+    {
+      "source": "revision_complementaria/md4_entorno_modelo_complementario.json",
+      "path": "evidencias/revision_complementaria/md4_entorno_modelo_complementario.json",
+      "size_bytes": 570,
+      "sha256": "c4277c9797b0c127ae552d9744621992909a2a08bd82126a15e63cb1690b31db"
+    },
+    {
+      "source": "revision_complementaria/md4_sensibilidad_LSA_originales_adicional.csv",
+      "path": "evidencias/revision_complementaria/md4_sensibilidad_LSA_originales_adicional.csv",
+      "size_bytes": 447,
+      "sha256": "5ea0c06a088a9eac3d3e8ba83eeed83b641a53bf757de668d986fb97ce2e532a"
+    },
+    {
+      "source": "revision_complementaria/md4_solapamiento_modelos.png",
+      "path": "evidencias/revision_complementaria/md4_solapamiento_modelos.png",
+      "size_bytes": 40898,
+      "sha256": "ac381a67b212cddb130d91ddade02db82274038cecf9e015dfda86055ab08a1a"
+    },
+    {
+      "source": "nb03-md4-similitud-textual-revision-complementaria.ipynb (fuente suplementaria)",
+      "path": "notebook/nb03-md4-similitud-textual-revision-complementaria.ipynb",
+      "size_bytes": 79776,
+      "sha256": "502ee98a06fdf544996b64dba8c50558b16a90ec1c2a30de33afd70dab7aa016"
     }
   ],
   "excluded_files": [
@@ -203,13 +263,13 @@
     }
   ],
   "evaluation_status": {
-    "notebook": "EXECUTED_SAVED_COMPLETE_16_CODE_CELLS_41_OUTPUTS_0_CELL_ERRORS",
-    "overall": "EVIDENCIA_DE_EJECUCION_COMPLETA_EVALUACION_METODOLOGICA_PARCIAL",
+    "notebook": "EXECUTED_SAVED_COMPLETE_17_CODE_CELLS_43_OUTPUTS_0_CELL_ERRORS",
+    "overall": "EVIDENCIA_COMPLEMENTARIA_PUBLICADA; PPS_KAPPA_Y_FORMULAS_ESTRUCTURALES_PENDIENTES",
     "P01": "PASS_DECLARADO",
-    "P02": "PASS_CON_PPS_PENDIENTE_Y_FALTANTE_DE_HIPERPARAMETROS",
+    "P02": "SELECCION_DE_HIPERPARAMETROS_DOCUMENTADA; PPS_KAPPA_PENDIENTE",
     "P03": "PARCIAL",
-    "P04": "PASS_CON_RESERVA",
-    "pps": "PENDIENTE_REVISION_HUMANA",
+    "P04": "SENSIBILIDAD_LSA_ORIGINALES_ADICIONAL_GENERADA_CON_RESERVA",
+    "pps": "PENDIENTE_REVISION_HUMANA; NO_SE_ENCONTRO_md4_pps_evaluaciones.csv",
     "cohens_kappa": "NO_CALCULADO_O_NO_ENTREGADO"
   },
   "supplemental_sources": [
@@ -226,6 +286,86 @@
         "execution_count_sequence": "1-8, 10-17",
         "execution_snapshot": "COMPLETO"
       }
+    },
+    {
+      "filename": "nb03-md4-similitud-textual.ipynb",
+      "sha256": "502ee98a06fdf544996b64dba8c50558b16a90ec1c2a30de33afd70dab7aa016",
+      "size_bytes": 79776,
+      "published_path": "notebook/nb03-md4-similitud-textual-revision-complementaria.ipynb",
+      "notebook_execution": {
+        "code_cells": 17,
+        "executed_code_cells": 17,
+        "outputs": 43,
+        "cell_errors": 0,
+        "execution_count_sequence": "1-8, 10-18",
+        "new_cells": 1,
+        "source_cells_changed": 0,
+        "execution_snapshot": "COMPLETO_CON_AUDITORIA_COMPLEMENTARIA"
+      }
+    }
+  ],
+  "supplemental_archives": [
+    {
+      "filename": "MD4_Revision_Complementaria.zip",
+      "sha256": "48cfc4ff32b576c8aab9b40c59a127186370b821ea6cb892d34e0dcc38f9db1d",
+      "size_bytes": 64742,
+      "files": 9,
+      "published_content": [
+        {
+          "source": "revision_complementaria/md4_sensibilidad_corpus_consolidada.csv",
+          "path": "evidencias/revision_complementaria/md4_sensibilidad_corpus_consolidada.csv",
+          "size_bytes": 6313,
+          "sha256": "bd9cb91f3b65ce808030d6cdf52137ed4dcd79455e640dd04d2617744722821d"
+        },
+        {
+          "source": "revision_complementaria/md4_distribucion_coseno_top5.png",
+          "path": "evidencias/revision_complementaria/md4_distribucion_coseno_top5.png",
+          "size_bytes": 35298,
+          "sha256": "4b2dbf2be260fcccc81464b12405fbc0365666e9265c132b5675dd5f5bec8405"
+        },
+        {
+          "source": "revision_complementaria/md4_equivalencia_gram_cruzada.csv",
+          "path": "evidencias/revision_complementaria/md4_equivalencia_gram_cruzada.csv",
+          "size_bytes": 470,
+          "sha256": "5a6d0382d72490bc24bd1f651d8eb862a60a1dbde52d4f87e51dc8e0bd25cb2d"
+        },
+        {
+          "source": "revision_complementaria/md4_seleccion_hiperparametros.csv",
+          "path": "evidencias/revision_complementaria/md4_seleccion_hiperparametros.csv",
+          "size_bytes": 680,
+          "sha256": "cf2b173073624e4bb6ac402b6e7b4c8a5c6310c9634def39c31443306de32e10"
+        },
+        {
+          "source": "revision_complementaria/md4_resumen_controles.json",
+          "path": "evidencias/revision_complementaria/md4_resumen_controles.json",
+          "size_bytes": 713,
+          "sha256": "5246d7464248f9709ee6eaa2955667828c450542fede91ad291b2a56fd50cdc9"
+        },
+        {
+          "source": "revision_complementaria/md4_auditoria_bitacora.csv",
+          "path": "evidencias/revision_complementaria/md4_auditoria_bitacora.csv",
+          "size_bytes": 288,
+          "sha256": "1a45867397f9404acba84d28f60e86112d968bd763c2558e222ecd6d1c41278b"
+        },
+        {
+          "source": "revision_complementaria/md4_entorno_modelo_complementario.json",
+          "path": "evidencias/revision_complementaria/md4_entorno_modelo_complementario.json",
+          "size_bytes": 570,
+          "sha256": "c4277c9797b0c127ae552d9744621992909a2a08bd82126a15e63cb1690b31db"
+        },
+        {
+          "source": "revision_complementaria/md4_sensibilidad_LSA_originales_adicional.csv",
+          "path": "evidencias/revision_complementaria/md4_sensibilidad_LSA_originales_adicional.csv",
+          "size_bytes": 447,
+          "sha256": "5ea0c06a088a9eac3d3e8ba83eeed83b641a53bf757de668d986fb97ce2e532a"
+        },
+        {
+          "source": "revision_complementaria/md4_solapamiento_modelos.png",
+          "path": "evidencias/revision_complementaria/md4_solapamiento_modelos.png",
+          "size_bytes": 40898,
+          "sha256": "ac381a67b212cddb130d91ddade02db82274038cecf9e015dfda86055ab08a1a"
+        }
+      ]
     }
   ]
 }

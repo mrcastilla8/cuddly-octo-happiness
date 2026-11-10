@@ -1,6 +1,6 @@
 # Artefactos no publicados
 
-El inventario completo conserva ruta, extensión, tamaño, SHA-256, finalidad probable y decisión para los 27 archivos del ZIP y el notebook suplementario. Se excluyeron archivos que exponen IDs de artículos y descripciones del catálogo derivado del dataset privado, hashes de fuentes que incluyen `customers`, y artefactos redundantes.
+El inventario completo conserva ruta, extensión, tamaño, SHA-256, finalidad probable y decisión para los 27 archivos del ZIP inicial, nueve archivos del ZIP complementario y dos snapshots de notebook. Se excluyeron archivos que exponen IDs de artículos y descripciones del catálogo derivado del dataset privado, hashes de fuentes que incluyen `customers`, y artefactos redundantes.
 
 ## Artefacto grande
 
@@ -18,4 +18,4 @@ Se excluyeron `md4_consultas_ajuste.csv`, `md4_consultas_holdout.csv`, `md4_mapa
 
 ## Notebook suplementario publicado
 
-El ZIP no contenía notebook, pero se recibió posteriormente `nb03-md4-similitud-textual.ipynb` y se publicó byte a byte en `notebook/`. Su tamaño es 68,029 bytes, bajo el límite de 25 MB. Registra 16/16 celdas de código ejecutadas, 41 outputs y cero errores. No contiene vectores ni tablas de clientes; hace referencia al path de Kaggle del dataset privado, sin incluir esos Parquet. La advertencia de Hugging Face por acceso no autenticado se conserva en sus outputs; la descarga terminó y SBERT reportó PASS. Hash y procedencia en `MANIFIESTO.json` e `INVENTARIO_COMPLETO.csv`.
+El ZIP inicial no contenía notebook. Se publicó primero `nb03-md4-similitud-textual.ipynb` (68,029 bytes) y después una copia complementaria `nb03-md4-similitud-textual-revision-complementaria.ipynb` (79,776 bytes), ambos bajo 25 MB. El segundo conserva sin cambios las celdas/outputs anteriores y agrega una celda; registra 17/17 celdas de código ejecutadas, 43 outputs y cero errores. No contiene vectores ni tablas de clientes; hace referencia al path de Kaggle del dataset privado, sin incluir esos Parquet. La advertencia de Hugging Face por acceso no autenticado se conserva en sus outputs; la descarga terminó y SBERT reportó PASS. Hash y procedencia en `MANIFIESTO.json` e `INVENTARIO_COMPLETO.csv`.

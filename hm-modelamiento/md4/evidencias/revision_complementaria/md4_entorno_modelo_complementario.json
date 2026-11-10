@@ -1,0 +1,21 @@
+{
+  "python": "3.13.18",
+  "plataforma": "Linux-6.18.55+-x86_64-with-glibc2.39",
+  "modelo": "sentence-transformers/all-MiniLM-L6-v2",
+  "revision_cache": [
+    "1110a243fdf4706b3f48f1d95db1a4f5529b4d41"
+  ],
+  "revision_modelo_confirmada": true,
+  "dispositivo_ejecucion_original": "cpu",
+  "cuda_disponible_ahora": false,
+  "versiones": {
+    "numpy": "2.1.3",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.6.1",
+    "scipy": "1.16.3",
+    "sentence-transformers": "5.7.0",
+    "transformers": "5.20.2",
+    "huggingface-hub": "1.33.0",
+    "torch": "2.11.0+cpu"
+  }
+}
