@@ -1,0 +1,3 @@
+algoritmo,estado,wall_s,rss_bytes,N,vacias,itemsets
+apriori,OK,11.037565478000033,2714423296,81660,85,1831
+fpgrowth,OK,390.7909572289998,191889408,81660,85,1831

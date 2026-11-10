@@ -1,0 +1,7 @@
+control,estado
+conteos_coherentes,PASS
+denominador_test_constante,PASS
+soporte_coherente,PASS
+confianza_coherente,PASS
+clasificacion_excluyente,PASS
+cestas_vacias_en_denominador,PASS

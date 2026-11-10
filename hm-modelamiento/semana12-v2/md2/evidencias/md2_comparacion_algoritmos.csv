@@ -1,0 +1,3 @@
+algoritmo,itemsets,wall_s,rss_bytes,N,vacias,origen_medicion
+apriori,1831,11.037565478000033,2714423296,81660,85,ejecucion_nueva
+fpgrowth,1831,390.7909572289998,191889408,81660,85,piloto_reutilizado

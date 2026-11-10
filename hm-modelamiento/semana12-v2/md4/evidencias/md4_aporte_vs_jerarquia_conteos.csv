@@ -1,0 +1,17 @@
+modelo,regimen,k,vecinos,macrogrupo_igual,departamento_igual,tipo_igual,denominador,vacantes
+LSA,completo,5,150,122,57,81,150,0
+LSA,completo,10,300,243,102,166,300,0
+LSA,refit_orig,5,150,123,59,84,150,0
+LSA,refit_orig,10,300,243,104,168,300,0
+LSA,sin_imputados_modelo_fijo,5,150,122,57,81,150,0
+LSA,sin_imputados_modelo_fijo,10,300,243,102,166,300,0
+SBERT,completo,5,150,129,65,99,150,0
+SBERT,completo,10,300,253,124,191,300,0
+SBERT,sin_imputados_modelo_fijo,5,150,129,65,99,150,0
+SBERT,sin_imputados_modelo_fijo,10,300,253,124,191,300,0
+TFIDF,completo,5,150,118,53,75,150,0
+TFIDF,completo,10,300,241,105,151,300,0
+TFIDF,refit_orig,5,150,118,53,75,150,0
+TFIDF,refit_orig,10,300,241,105,151,300,0
+TFIDF,sin_imputados_modelo_fijo,5,150,118,53,75,150,0
+TFIDF,sin_imputados_modelo_fijo,10,300,241,105,151,300,0

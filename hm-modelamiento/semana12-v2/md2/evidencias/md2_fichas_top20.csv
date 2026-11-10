@@ -1,0 +1,21 @@
+orden_lift,regla,interpretacion,n_test_XY,confianza_test,lift_test,estado,P_Y_desarrollo,popularidad_p99
+1,Swimsuit|Swimwear bottom → Bikini top,"Coocurrencia en cesta cliente-día, no pedido ni causalidad",3774,0.8345864661654135,12.863892539498957,PERSISTENTE,0.06393583149644869,True
+2,Bikini top|Bodysuit → Swimwear bottom,"Coocurrencia en cesta cliente-día, no pedido ni causalidad",452,0.6996904024767802,11.064177356966704,PERSISTENTE,0.06389909380357581,True
+3,Bikini top|Pyjama set → Swimwear bottom,"Coocurrencia en cesta cliente-día, no pedido ni causalidad",560,0.7671232876712328,12.130490970591207,PERSISTENTE,0.06389909380357581,True
+4,Bikini top|Socks → Swimwear bottom,"Coocurrencia en cesta cliente-día, no pedido ni causalidad",959,0.7146050670640834,11.300022373033036,PERSISTENTE,0.06389909380357581,True
+5,Bikini top|Sarong → Swimwear bottom,"Coocurrencia en cesta cliente-día, no pedido ni causalidad",952,0.8164665523156089,12.910754111924263,PERSISTENTE,0.06389909380357581,True
+6,Blazer|Swimwear bottom → Bikini top,"Coocurrencia en cesta cliente-día, no pedido ni causalidad",778,0.7495183044315993,11.55269503577666,PERSISTENTE,0.06393583149644869,True
+7,Bikini top|Swimsuit → Swimwear bottom,"Coocurrencia en cesta cliente-día, no pedido ni causalidad",3774,0.8147668393782384,12.883876616780082,PERSISTENTE,0.06389909380357581,True
+8,Leggings/Tights|Swimwear bottom → Bikini top,"Coocurrencia en cesta cliente-día, no pedido ni causalidad",1317,0.7508551881413911,11.573301083295718,PERSISTENTE,0.06393583149644869,True
+9,Bikini top|Cardigan → Swimwear bottom,"Coocurrencia en cesta cliente-día, no pedido ni causalidad",468,0.7123287671232876,11.264027329834693,PERSISTENTE,0.06389909380357581,True
+10,Bikini top|Top → Swimwear bottom,"Coocurrencia en cesta cliente-día, no pedido ni causalidad",3750,0.6979341150195422,11.03640525112116,PERSISTENTE,0.06389909380357581,True
+11,Sarong|Swimwear bottom → Bikini top,"Coocurrencia en cesta cliente-día, no pedido ni causalidad",952,0.875,13.486806254812532,PERSISTENTE,0.06393583149644869,True
+12,Bikini top|Hoodie → Swimwear bottom,"Coocurrencia en cesta cliente-día, no pedido ni causalidad",508,0.6746347941567065,10.667973988650264,PERSISTENTE,0.06389909380357581,True
+13,Bra|Swimwear bottom → Bikini top,"Coocurrencia en cesta cliente-día, no pedido ni causalidad",4150,0.7726680320238317,11.90951319679166,PERSISTENTE,0.06393583149644869,True
+14,Bag|Bikini top → Swimwear bottom,"Coocurrencia en cesta cliente-día, no pedido ni causalidad",862,0.7476149176062445,11.82200586692204,PERSISTENTE,0.06389909380357581,True
+15,Bikini top|Leggings/Tights → Swimwear bottom,"Coocurrencia en cesta cliente-día, no pedido ni causalidad",1317,0.6895287958115183,10.903492262561793,PERSISTENTE,0.06389909380357581,True
+16,Bikini top|Blazer → Swimwear bottom,"Coocurrencia en cesta cliente-día, no pedido ni causalidad",778,0.6971326164874552,11.023731185736,PERSISTENTE,0.06389909380357581,True
+17,Bikini top|Sandals → Swimwear bottom,"Coocurrencia en cesta cliente-día, no pedido ni causalidad",590,0.7583547557840618,11.991834513940585,PERSISTENTE,0.06389909380357581,True
+18,Bikini top|Trousers → Swimwear bottom,"Coocurrencia en cesta cliente-día, no pedido ni causalidad",4657,0.7088280060882801,11.20866993056414,PERSISTENTE,0.06389909380357581,True
+19,Bikini top|Vest top → Swimwear bottom,"Coocurrencia en cesta cliente-día, no pedido ni causalidad",4858,0.7096114519427403,11.221058529654028,PERSISTENTE,0.06389909380357581,True
+20,Swimwear bottom|Top → Bikini top,"Coocurrencia en cesta cliente-día, no pedido ni causalidad",3750,0.7464171974522293,11.504896145483848,PERSISTENTE,0.06393583149644869,True

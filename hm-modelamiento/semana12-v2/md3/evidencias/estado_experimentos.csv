@@ -1,0 +1,6 @@
+prueba,etapa,estado,detalle,duracion_s
+MD3-P03,entrada,PASS,734 días y canales conciliados,
+MD3-P01,baselines_validacion,PASS,naive,
+MD3-P02,seleccion,PASS,naive,
+MD3-P03,rolling_origin_test,PASS,"15 ventanas de horizonte 7, modelos faltantes: 0",
+MD3-P04,sensibilidad,PASS,32 comparaciones; pendientes 0; diagnósticos 6,

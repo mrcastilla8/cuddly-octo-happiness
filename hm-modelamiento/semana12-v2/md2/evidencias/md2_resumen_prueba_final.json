@@ -1,0 +1,9 @@
+{
+  "N_test": 1040904,
+  "reglas_congeladas": 20,
+  "categorias_que_contienen_articulos_populares": 20,
+  "articulos_populares_p99": 960,
+  "sin_populares": 0,
+  "reglas_nuevas_en_test": 0,
+  "conteo_en_lotes": true
+}

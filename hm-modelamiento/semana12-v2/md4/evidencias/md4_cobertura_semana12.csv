@@ -1,0 +1,8 @@
+prueba,componente,estado,evidencia
+MD4-P01,corpus y truncamiento WordPieces,PASS,md4_auditoria_corpus.csv; md4_tokenizador.json
+MD4-P02,cuatro TF-IDF y dos LSA evaluados en ajuste,PASS,md4_seleccion_tfidf.csv; md4_seleccion_lsa.csv
+MD4-P02,hiperparámetros consolidados y congelados,PASS,md4_seleccion_hiperparametros.csv
+MD4-P02,rankings top-5/10 y variantes,PASS,md4_comparacion_topk_modelos.csv
+MD4-P03,conteos estructurales auditables,PASS,md4_aporte_vs_jerarquia.csv; definiciones provisionales por ratificar
+MD4-P04,sensibilidad y estratos especiales completos,PASS,md4_sensibilidad_corpus.csv; revisión complementaria si existe
+MD4-P02/P03,"PPS reales, dos evaluadores, Kappa y robustez de mejora",PENDIENTE,md4_pps_resultados_reales.csv; md4_concordancia_pps.csv; md4_criterio_pps_por_regimen.csv

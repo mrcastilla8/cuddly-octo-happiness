@@ -1,0 +1,34 @@
+{
+  "preferencia": "KMeans",
+  "k": 2,
+  "test_resultados": [
+    {
+      "modelo": "KMeans",
+      "k": 2,
+      "silueta": 0.5023318190289536,
+      "ari_init_test": 0.9938018426005724,
+      "ari_remuestreo_test": 0.9804569868461661,
+      "n_test_referencia": 2000,
+      "muestra_ajuste": 4000
+    },
+    {
+      "modelo": "PAM",
+      "k": 2,
+      "silueta": 0.4838499837500583,
+      "ari_init_test": 1.0,
+      "ari_remuestreo_test": 0.8661224597348763,
+      "n_test_referencia": 2000,
+      "muestra_ajuste": 4000
+    }
+  ],
+  "condiciones": {
+    "silueta_comparable": true,
+    "ARI_no_deteriorados": "False",
+    "estabilidad_mayor": "False",
+    "firmas_mayores": false
+  },
+  "cobertura_firmas": {
+    "KMeans": 1.0,
+    "PAM": 1.0
+  }
+}
