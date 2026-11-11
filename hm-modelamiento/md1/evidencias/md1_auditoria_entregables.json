@@ -1,0 +1,13 @@
+{
+  "archivos": {
+    "md1_piloto_pam.csv": true,
+    "md1_seleccion_k.csv": true,
+    "md1_ari_repeticiones.csv": true,
+    "md1_sensibilidad.csv": true,
+    "md1_perfiles_finales.csv": true,
+    "md1_evaluacion_final.csv": true,
+    "md1_decision_final.json": true
+  },
+  "completo": true,
+  "faltantes": []
+}

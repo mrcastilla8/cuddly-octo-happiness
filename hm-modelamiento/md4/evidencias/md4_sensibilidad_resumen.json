@@ -1,0 +1,12 @@
+{
+  "gram_equivalente_verificado": true,
+  "filas_texto_unico": 43779,
+  "filas_catalogo": 105542,
+  "imputados": 416,
+  "strata_observados": {
+    "E1_imputados": 416,
+    "E2_texto_menos_3_palabras": 46,
+    "E3_Unknown": 121
+  },
+  "definiciones_tasas_sujetas_a_ratificacion": true
+}

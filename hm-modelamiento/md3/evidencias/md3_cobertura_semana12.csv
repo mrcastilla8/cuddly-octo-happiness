@@ -1,0 +1,5 @@
+prueba,aspecto,estado,evidencia
+MD3-P01,"dos baselines en validación, B* elegido sin test",PASS,md3_baselines_validacion.csv; baseline_fijada.json
+MD3-P02,"ETS, SARIMA, MAE/RMSE en 15 orígenes y selección congelada",PASS,md3_candidatos.csv; md3_pronosticos_validacion.csv; md3_metricas_por_origen.csv; seleccion_congelada.json
+MD3-P03,test retenido con 15 ventanas de horizonte 7,PASS,md3_pronosticos_test.csv; md3_metricas_test.csv
+MD3-P04,"sensibilidad a 28 días, 180 días, canales y residuos",PASS,md3_sensibilidad.csv; md3_diagnosticos_residuos.csv; md3_semanas_observadas.csv

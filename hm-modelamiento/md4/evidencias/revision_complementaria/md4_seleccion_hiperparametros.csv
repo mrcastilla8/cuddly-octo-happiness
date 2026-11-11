@@ -1,0 +1,7 @@
+familia,modelo,stop_words,ngram_range,min_df,max_df,sublinear_tf,norm,n_componentes,TCC_at_10_ajuste,entropia_ajuste,varianza_explicada,jaccard_TFIDF_at_10_ajuste,seleccionado
+TF-IDF,TF_sinSW_1,None,"(1, 1)",2,0.95,True,l2,,1.0,0.8769889663666058,,,False
+TF-IDF,TF_sinSW_2,None,"(1, 2)",2,0.95,True,l2,,1.0,0.9105373578956614,,,False
+TF-IDF,TF_SW_1,english,"(1, 1)",2,0.95,True,l2,,1.0,0.9150283605703226,,,False
+TF-IDF,TF_SW_2,english,"(1, 2)",2,0.95,True,l2,,1.0,0.9179560906078448,,,True
+LSA,LSA_100,english,"(1, 2)",2,0.95,True,l2,100,,,0.3041837811470032,0.25511106843742065,False
+LSA,LSA_200,english,"(1, 2)",2,0.95,True,l2,200,,,0.39881110191345215,0.3090437441511927,True

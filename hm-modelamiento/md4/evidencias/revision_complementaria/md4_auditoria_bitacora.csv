@@ -1,0 +1,11 @@
+prueba,etapa,repeticiones
+MD4-P01,auditoria_completa,1
+MD4-P01,integridad_corpus,1
+MD4-P01,wordpieces,1
+MD4-P02,PPS_Kappa,1
+MD4-P02,embeddings_sbert,1
+MD4-P02,seleccion_lsa,2
+MD4-P02,seleccion_tfidf,1
+MD4-P03,estructurales,1
+MD4-P03,jerarquia_y_cobertura,1
+MD4-P04,ranking_sensibilidad,1

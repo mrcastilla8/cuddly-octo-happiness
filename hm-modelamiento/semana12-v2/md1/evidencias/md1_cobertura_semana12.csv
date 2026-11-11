@@ -1,0 +1,6 @@
+prueba,etapa,estado,evidencia
+MD1-P01,piloto PAM,PASS,md1_piloto_pam.csv
+MD1-P01,comparación k=2…8 en muestra común,PASS,md1_seleccion_k.csv (14 combinaciones)
+MD1-P02,"estabilidad 5×5, 10 ARI por condición",PASS,md1_ari_repeticiones.csv; md1_k_congelado.json
+MD1-P03,tres sensibilidades × dos algoritmos,PASS,md1_sensibilidad.csv
+MD1-P04,evaluación final y perfiles sobre clientes retenidos,PASS,md1_evaluacion_final.csv; md1_perfiles_finales.csv; md1_firmas.csv; md1_decision_final.json

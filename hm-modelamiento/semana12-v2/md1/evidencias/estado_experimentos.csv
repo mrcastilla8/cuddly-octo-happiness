@@ -1,0 +1,7 @@
+prueba,etapa,estado,detalle,duracion_s
+MD1-P01,validar_RFM,PASS,1362281,
+MD1-P01,piloto,PASS,4000,
+MD1-P02,seleccion_k,PASS,2,
+MD1-P03,sensibilidad,PASS,6/6 alternativas y cinco semillas,
+MD1-P04,perfiles,PASS,2,
+MD1-P04,decision_final,PASS,KMeans,

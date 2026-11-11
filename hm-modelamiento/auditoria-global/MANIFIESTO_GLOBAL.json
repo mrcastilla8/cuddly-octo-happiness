@@ -1,0 +1,1019 @@
+{
+  "proyecto": "H&M Personalized Fashion Recommendations — Grupo 2, UNMSM/FISI, 2026-II",
+  "fecha_consolidacion": "2026-11-10",
+  "referencia_publicacion_anterior": "689d709953ae7e2667528c2706b33153f6084a9c",
+  "rama_publicacion": "feat/hm-md4-evidencias-kaggle",
+  "zip_archivos": {
+    "1": {
+      "archivo": "HM_MD1_Evidencias.zip",
+      "sha256": "42beddee8f66a44adc21581ffa6f61a8f19984ab2bca272e42c146d5124a7e68",
+      "bytes": 233683,
+      "integridad": "OK",
+      "miembros": 22
+    },
+    "2": {
+      "archivo": "HM_MD2_Evidencias.zip",
+      "sha256": "8b8e2300e17dbaa44d40eca58735fb23c55f5ede22985cf9a86b7471fcb2393e",
+      "bytes": 241412,
+      "integridad": "OK",
+      "miembros": 26
+    },
+    "3": {
+      "archivo": "HM_MD3_Evidencias.zip",
+      "sha256": "e4869a62d10a44398ed576fe39924b1fd63160fe758a8acd80179e03e07facfa",
+      "bytes": 2537949,
+      "integridad": "OK",
+      "miembros": 30
+    },
+    "4": {
+      "archivo": "HM_MD4_Evidencias.zip",
+      "sha256": "19fdfe8106fc72e92fc9760f1efee208beb44260c104abb39184355e34981e6f",
+      "bytes": 102412,
+      "integridad": "OK",
+      "miembros": 24
+    }
+  },
+  "notebooks": {
+    "nb03-md1-segmentacion-modelo-y-evaluacion-sem12.ipynb": {
+      "md": 1,
+      "sha256": "b47fc4147fefeadf236103869c7d691909235fa6fac714a653917145c8b4d7ae",
+      "bytes": 54323,
+      "celdas_markdown": 15,
+      "celdas_codigo": 13,
+      "celdas_con_execution_count": 13,
+      "outputs": 15,
+      "errores": 0,
+      "error_traceback": "",
+      "ultima_celda_ejecutada": 27,
+      "evaluacion_semana12": true,
+      "exportacion_zip": true,
+      "outputs_pii_pattern": false,
+      "publicacion": "publicado",
+      "ruta_publicada": "hm-modelamiento/md1/notebook/nb03-md1-segmentacion-modelo-y-evaluacion-sem12.ipynb",
+      "advertencias_relevantes": [],
+      "evidencias_requeridas_faltantes": "[]",
+      "riesgos_ejecucion_parcial": "Sin riesgo observado de ejecución parcial a partir del ZIP y outputs; métricas y tablas de test contrastadas."
+    },
+    "nb03-md2-sem12-monitoreo-integral.ipynb": {
+      "md": 2,
+      "sha256": "6305ec7dd977679fdc18d71abcad42052cd0c64188534abcbca091d1a524f33e",
+      "bytes": 129875,
+      "celdas_markdown": 15,
+      "celdas_codigo": 14,
+      "celdas_con_execution_count": 14,
+      "outputs": 48,
+      "errores": 1,
+      "error_traceback": "AttributeError: 'Pandas' object has no attribute 'consequent_support'",
+      "ultima_celda_ejecutada": 28,
+      "evaluacion_semana12": true,
+      "exportacion_zip": true,
+      "outputs_pii_pattern": false,
+      "publicacion": "publicado",
+      "ruta_publicada": "hm-modelamiento/md2/notebook/nb03-md2-sem12-monitoreo-integral.ipynb",
+      "advertencias_relevantes": [
+        {
+          "celda": 10,
+          "tipo_mensaje": "/usr/local/lib/python3.13/dist-packages/jupyter_client/session.py:203: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent d"
+        },
+        {
+          "celda": 12,
+          "tipo_mensaje": "/usr/local/lib/python3.13/dist-packages/jupyter_client/session.py:203: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent d"
+        },
+        {
+          "celda": 12,
+          "tipo_mensaje": "/tmp/ipykernel_50/2477108731.py:81: FutureWarning: Allowing arbitrary scalar fill_value in SparseDtype is deprecated. In a future version, the fill_value must be a valid value for the SparseDtype.subtype."
+        },
+        {
+          "celda": 14,
+          "tipo_mensaje": "/tmp/ipykernel_50/2477108731.py:81: FutureWarning: Allowing arbitrary scalar fill_value in SparseDtype is deprecated. In a future version, the fill_value must be a valid value for the SparseDtype.subtype."
+        },
+        {
+          "celda": 16,
+          "tipo_mensaje": "/tmp/ipykernel_50/2477108731.py:81: FutureWarning: Allowing arbitrary scalar fill_value in SparseDtype is deprecated. In a future version, the fill_value must be a valid value for the SparseDtype.subtype."
+        },
+        {
+          "celda": 18,
+          "tipo_mensaje": "/tmp/ipykernel_50/2477108731.py:81: FutureWarning: Allowing arbitrary scalar fill_value in SparseDtype is deprecated. In a future version, the fill_value must be a valid value for the SparseDtype.subtype."
+        },
+        {
+          "celda": 18,
+          "tipo_mensaje": "/tmp/ipykernel_50/3533194952.py:13: FutureWarning: Allowing arbitrary scalar fill_value in SparseDtype is deprecated. In a future version, the fill_value must be a valid value for the SparseDtype.subtype."
+        }
+      ],
+      "evidencias_requeridas_faltantes": "[] según `md2_auditoria_entregables.json`; traceback inicial de P04 recuperado en outputs posteriores.",
+      "riesgos_ejecucion_parcial": "Error de celda MD2-P04 seguido de artefactos y auditoría final sin faltantes; la copia mayúscula no ejecutada no se usa.",
+      "error_traceback_completo": "Celda 20: AttributeError: 'Pandas' object has no attribute 'consequent_support'\n\u001b[0;31m---------------------------------------------------------------------------\u001b[0m\u001b[0;31mAttributeError\u001b[0m                            Traceback (most recent call last)\u001b[0;32m/tmp/ipykernel_50/3519236299.py\u001b[0m in \u001b[0;36m<cell line: 0>\u001b[0;34m()\u001b[0m\n\u001b[1;32m    103\u001b[0m            \u001b[0;34m'support_test'\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0mab\u001b[0m\u001b[0;34m/\u001b[0m\u001b[0mNtest\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m'confianza_desarrollo'\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0mfloat\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mrow\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mconfidence\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    104\u001b[0m            \u001b[0;34m'confianza_test'\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0mconf\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m'lift_desarrollo'\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0mfloat\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mrow\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mlift\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m'lift_test'\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0mlift\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m--> 105\u001b[0;31m            \u001b[0;34m'P_Y_desarrollo'\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0mfloat\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mrow\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mconsequent_support\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m,\u001b[0m \u001b[0;34m'P_Y_test'\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0mb\u001b[0m\u001b[0;34m/\u001b[0m\u001b[0mNtest\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m'estado'\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0mstate\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m\u001b[1;32m    106\u001b[0m            \u001b[0;34m'contiene_item_popular_p99'\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0mbool\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mpopular_types\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mintersection\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mX\u001b[0m\u001b[0;34m+\u001b[0m\u001b[0mY\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[1;32m    107\u001b[0m            \u001b[0;34m'n_XY_sin_articulos_populares_p99'\u001b[0m\u001b[0;34m:\u001b[0m\u001b[0mab2\u001b[0m\u001b[0;34m,\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;31mAttributeError\u001b[0m: 'Pandas' object has no attribute 'consequent_support'"
+    },
+    "../NB03_MD2_SEM12_MONITOREO_INTEGRAL.ipynb": {
+      "md": 2,
+      "sha256": "0abd60349dc26f562fceee45a22accfe3f2f058000f28889a64904c19b5fd994",
+      "bytes": 77572,
+      "celdas_markdown": 15,
+      "celdas_codigo": 13,
+      "celdas_con_execution_count": 0,
+      "outputs": 0,
+      "errores": 0,
+      "error_traceback": "",
+      "ultima_celda_ejecutada": null,
+      "evaluacion_semana12": true,
+      "exportacion_zip": true,
+      "outputs_pii_pattern": false,
+      "publicacion": "excluido: notebook sin celdas ejecutadas; duplicado no es evidencia ejecutada",
+      "ruta_publicada": "",
+      "advertencias_relevantes": [],
+      "evidencias_requeridas_faltantes": "No aplica: notebook sin outputs.",
+      "riesgos_ejecucion_parcial": "No ejecutado; copia no utilizable como evidencia de resultados."
+    },
+    "nb03-md3-series-tiempo-modelo-y-evaluacion-sem12.ipynb": {
+      "md": 3,
+      "sha256": "5444768d8ae2d3e5e2c1def2a63d6131456dfd9b135a48a0f9c65c0893f3dd78",
+      "bytes": 63953,
+      "celdas_markdown": 14,
+      "celdas_codigo": 14,
+      "celdas_con_execution_count": 14,
+      "outputs": 17,
+      "errores": 0,
+      "error_traceback": "",
+      "ultima_celda_ejecutada": 27,
+      "evaluacion_semana12": true,
+      "exportacion_zip": true,
+      "outputs_pii_pattern": false,
+      "publicacion": "ya publicado byte a byte",
+      "ruta_publicada": "hm-modelamiento/md3/notebook/nb03-md3-series-tiempo-modelo-y-evaluacion-sem12.ipynb",
+      "advertencias_relevantes": [
+        {
+          "celda": 17,
+          "tipo_mensaje": "/tmp/ipykernel_50/3601089935.py:59: FutureWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the op"
+        }
+      ],
+      "evidencias_requeridas_faltantes": "[] según `md3_auditoria_entregables.json`; test retenido publicado para naive.",
+      "riesgos_ejecucion_parcial": "Candidatos ETS/SARIMA evaluados en validación; no tratar configuraciones como modelos serializados."
+    },
+    "nb03-md4-similitud-textual-modelo-y-evaluacion-sem.ipynb": {
+      "md": 4,
+      "sha256": "29a1f03d11ce7b7bd1a2f1618e0e585e585f23878bcb4bfc8b690030a19ae7a5",
+      "bytes": 88479,
+      "celdas_markdown": 15,
+      "celdas_codigo": 17,
+      "celdas_con_execution_count": 17,
+      "outputs": 36,
+      "errores": 0,
+      "error_traceback": "",
+      "ultima_celda_ejecutada": 31,
+      "evaluacion_semana12": true,
+      "exportacion_zip": true,
+      "outputs_pii_pattern": false,
+      "publicacion": "publicado",
+      "ruta_publicada": "hm-modelamiento/md4/notebook/nb03-md4-similitud-textual-modelo-y-evaluacion-sem.ipynb",
+      "advertencias_relevantes": [
+        {
+          "celda": 12,
+          "tipo_mensaje": "Hugging Face sin sesión autenticada; output lo califica como advertencia no fatal."
+        }
+      ],
+      "evidencias_requeridas_faltantes": "Falta `md4_pps_resultados_reales.csv`; evaluación humana real y Kappa siguen pendientes.",
+      "riesgos_ejecucion_parcial": "Sección automática ejecutada, pero salida final `EVALUACION_INCOMPLETA`; fórmulas estructurales señaladas como provisionales."
+    },
+    "PR3_HEAD:hm-modelamiento/md4/notebook/nb03-md4-similitud-textual-revision-complementaria.ipynb": {
+      "md": 4,
+      "sha256": "502ee98a06fdf544996b64dba8c50558b16a90ec1c2a30de33afd70dab7aa016",
+      "bytes": 79776,
+      "celdas_markdown": 13,
+      "celdas_codigo": 17,
+      "celdas_con_execution_count": 17,
+      "outputs": 43,
+      "errores": 0,
+      "error_traceback": "",
+      "ultima_celda_ejecutada": 29,
+      "evaluacion_semana12": false,
+      "exportacion_zip": false,
+      "outputs_pii_pattern": "Revisión histórica; esta copia ya estaba publicada antes de la consolidación.",
+      "publicacion": "preservado en rama abierta PR #3",
+      "ruta_publicada": "hm-modelamiento/md4/notebook/nb03-md4-similitud-textual-revision-complementaria.ipynb"
+    },
+    "PR3_HEAD:hm-modelamiento/md4/notebook/nb03-md4-similitud-textual.ipynb": {
+      "md": 4,
+      "sha256": "96c257f48f21c412f16575c6ff03146f936db3ace04d4266ae5034e74e186acd",
+      "bytes": 68029,
+      "celdas_markdown": 13,
+      "celdas_codigo": 16,
+      "celdas_con_execution_count": 16,
+      "outputs": 41,
+      "errores": 0,
+      "error_traceback": "",
+      "ultima_celda_ejecutada": 28,
+      "evaluacion_semana12": false,
+      "exportacion_zip": false,
+      "outputs_pii_pattern": "Revisión histórica; esta copia ya estaba publicada antes de la consolidación.",
+      "publicacion": "preservado en rama abierta PR #3",
+      "ruta_publicada": "hm-modelamiento/md4/notebook/nb03-md4-similitud-textual.ipynb"
+    }
+  },
+  "artefactos_publicados": [
+    {
+      "objetivo_md": "MD-1",
+      "archivo_fuente": "HM_MD1_Evidencias.zip!/md1/estado_experimentos.csv",
+      "ruta_publicacion": "hm-modelamiento/md1/evidencias/estado_experimentos.csv",
+      "sha256": "c21f95096322a07b72f8e4d151eabe1ad3fa7fee096ed3df65c6c0dda0df70e2",
+      "bytes": 249,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-1",
+      "archivo_fuente": "HM_MD1_Evidencias.zip!/md1/md1_ari_repeticiones.csv",
+      "ruta_publicacion": "hm-modelamiento/md1/evidencias/md1_ari_repeticiones.csv",
+      "sha256": "cafaaf0f5c8265dd5c7621ce2cd68799276c2943fb95abaa8f7de6a579059354",
+      "bytes": 8788,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-1",
+      "archivo_fuente": "HM_MD1_Evidencias.zip!/md1/md1_auditoria_entregables.json",
+      "ruta_publicacion": "hm-modelamiento/md1/evidencias/md1_auditoria_entregables.json",
+      "sha256": "f85e60cfdde91ae420efaeef90de15a45a2d0ebd97168d6ce1c60173bf067155",
+      "bytes": 311,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-1",
+      "archivo_fuente": "HM_MD1_Evidencias.zip!/md1/md1_cobertura_semana12.csv",
+      "ruta_publicacion": "hm-modelamiento/md1/evidencias/md1_cobertura_semana12.csv",
+      "sha256": "4db4bf5aff4f16be589432c4fd445d8a718f79bfdc7108484091fe540aef096b",
+      "bytes": 497,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-1",
+      "archivo_fuente": "HM_MD1_Evidencias.zip!/md1/md1_decision_final.json",
+      "ruta_publicacion": "hm-modelamiento/md1/evidencias/md1_decision_final.json",
+      "sha256": "10add8f992afc9e10590106b6cff3a16ca80da342eb0d0cf3e5344e628ff4279",
+      "bytes": 753,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-1",
+      "archivo_fuente": "HM_MD1_Evidencias.zip!/md1/md1_estado_semana12.json",
+      "ruta_publicacion": "hm-modelamiento/md1/evidencias/md1_estado_semana12.json",
+      "sha256": "dd20a754350f3ce0e16aec34e355af8e0a5d3c247233cd79bffd866fbba8f77d",
+      "bytes": 1039,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-1",
+      "archivo_fuente": "HM_MD1_Evidencias.zip!/md1/md1_evaluacion_final.csv",
+      "ruta_publicacion": "hm-modelamiento/md1/evidencias/md1_evaluacion_final.csv",
+      "sha256": "d3a31b0d589f54e6de576384ac76c64ba64151d4ca7570092506ca1c6e179099",
+      "bytes": 218,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-1",
+      "archivo_fuente": "HM_MD1_Evidencias.zip!/md1/md1_evaluacion_k_y_estabilidad.png",
+      "ruta_publicacion": "hm-modelamiento/md1/evidencias/md1_evaluacion_k_y_estabilidad.png",
+      "sha256": "bbfd04a8e4e277a2c76b27fe70b76e6cd733c60776dda37b12fe78ef36808666",
+      "bytes": 110844,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-1",
+      "archivo_fuente": "HM_MD1_Evidencias.zip!/md1/md1_evaluacion_sensibilidad.png",
+      "ruta_publicacion": "hm-modelamiento/md1/evidencias/md1_evaluacion_sensibilidad.png",
+      "sha256": "c5b8b0a536ca336de4a795f3dc426bb2f777573f3bb4dea550466aaf6e4107f1",
+      "bytes": 54712,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-1",
+      "archivo_fuente": "HM_MD1_Evidencias.zip!/md1/md1_firmas.csv",
+      "ruta_publicacion": "hm-modelamiento/md1/evidencias/md1_firmas.csv",
+      "sha256": "05c8734735a6a9e633a29634007a7c01039917e19ba17ed7371d975ec35b625d",
+      "bytes": 179,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-1",
+      "archivo_fuente": "HM_MD1_Evidencias.zip!/md1/md1_informe_evaluacion_semana12.md",
+      "ruta_publicacion": "hm-modelamiento/md1/evidencias/md1_informe_evaluacion_semana12.md",
+      "sha256": "5714fcea976d91baaa1b2744eac0e7fe89f2c3566b08498f2b980e4635fab3b7",
+      "bytes": 1863,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-1",
+      "archivo_fuente": "HM_MD1_Evidencias.zip!/md1/md1_invariantes_evaluacion.csv",
+      "ruta_publicacion": "hm-modelamiento/md1/evidencias/md1_invariantes_evaluacion.csv",
+      "sha256": "470084bcc11f922be00223eed5609f37503d3f730a7291e7fcdd992212440e45",
+      "bytes": 331,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-1",
+      "archivo_fuente": "HM_MD1_Evidencias.zip!/md1/md1_k_congelado.json",
+      "ruta_publicacion": "hm-modelamiento/md1/evidencias/md1_k_congelado.json",
+      "sha256": "c1e73d2ef93ca5da13e0678ee63ca724016fa683b394ddbad691c08bb3d48bd6",
+      "bytes": 73,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-1",
+      "archivo_fuente": "HM_MD1_Evidencias.zip!/md1/md1_perfiles_finales.csv",
+      "ruta_publicacion": "hm-modelamiento/md1/evidencias/md1_perfiles_finales.csv",
+      "sha256": "5e77adde69764d5e112f8e2614a0acba1042b4f01b50f1c2b1d6b3ad28ac4721",
+      "bytes": 604,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-1",
+      "archivo_fuente": "HM_MD1_Evidencias.zip!/md1/md1_perfiles_frecuencia_registros.png",
+      "ruta_publicacion": "hm-modelamiento/md1/evidencias/md1_perfiles_frecuencia_registros.png",
+      "sha256": "757d8bfac7727008bd13537c82370bbd2014a084381696e1fb7af2b7ee810f97",
+      "bytes": 29735,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-1",
+      "archivo_fuente": "HM_MD1_Evidencias.zip!/md1/md1_perfiles_recencia_dias.png",
+      "ruta_publicacion": "hm-modelamiento/md1/evidencias/md1_perfiles_recencia_dias.png",
+      "sha256": "334c659535c4bd31f81a1e2f7e365ed7fd30d2f91096968de8b51d93b67525e1",
+      "bytes": 30413,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-1",
+      "archivo_fuente": "HM_MD1_Evidencias.zip!/md1/md1_perfiles_valor_agregado_price.png",
+      "ruta_publicacion": "hm-modelamiento/md1/evidencias/md1_perfiles_valor_agregado_price.png",
+      "sha256": "a302019e716be432de6fe11273c3d59dd042be3cd096ddb5ce1ad4d5f1a5d448",
+      "bytes": 32627,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-1",
+      "archivo_fuente": "HM_MD1_Evidencias.zip!/md1/md1_piloto_pam.csv",
+      "ruta_publicacion": "hm-modelamiento/md1/evidencias/md1_piloto_pam.csv",
+      "sha256": "82221211a279f3e2e69811d2473b4e71aa5609786fdc77c359c397bd73437c25",
+      "bytes": 707,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-1",
+      "archivo_fuente": "HM_MD1_Evidencias.zip!/md1/md1_representantes_anonimos.csv",
+      "ruta_publicacion": "hm-modelamiento/md1/evidencias/md1_representantes_anonimos.csv",
+      "sha256": "4c3dee4d73ea05ef3655fef5e63c06cea53a6e593b434a14f1c553288ed7aa8c",
+      "bytes": 199,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-1",
+      "archivo_fuente": "HM_MD1_Evidencias.zip!/md1/md1_seleccion_k.csv",
+      "ruta_publicacion": "hm-modelamiento/md1/evidencias/md1_seleccion_k.csv",
+      "sha256": "de6a97bcd86fa66a20b7a9d0b9722b1a33c815e19a8e512b3fc8e90aac077f67",
+      "bytes": 1036,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-1",
+      "archivo_fuente": "HM_MD1_Evidencias.zip!/md1/md1_sensibilidad.csv",
+      "ruta_publicacion": "hm-modelamiento/md1/evidencias/md1_sensibilidad.csv",
+      "sha256": "dfac5be56eb97f245d201b16e7f53a7a65bad760948728d1d4f3a89b6f586678",
+      "bytes": 721,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-2",
+      "archivo_fuente": "HM_MD2_Evidencias.zip!/md2/estado_experimentos.csv",
+      "ruta_publicacion": "hm-modelamiento/md2/evidencias/estado_experimentos.csv",
+      "sha256": "88080b1143394af689cad6ad7bbb531b91540f263900552cd858105c7f753739",
+      "bytes": 1197,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-2",
+      "archivo_fuente": "HM_MD2_Evidencias.zip!/md2/md2_auditoria_entregables.json",
+      "ruta_publicacion": "hm-modelamiento/md2/evidencias/md2_auditoria_entregables.json",
+      "sha256": "544fe736a5aa8477b3ddd40e7478be7ab4920efbbe250de0108a42dcb075455d",
+      "bytes": 52,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-2",
+      "archivo_fuente": "HM_MD2_Evidencias.zip!/md2/md2_bitacora_pasos.csv",
+      "ruta_publicacion": "hm-modelamiento/md2/evidencias/md2_bitacora_pasos.csv",
+      "sha256": "e0ec5f7bc2377b7f728fb4a64990675ea8260a7b60471b4b38959b50d996ea6f",
+      "bytes": 19838,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-2",
+      "archivo_fuente": "HM_MD2_Evidencias.zip!/md2/md2_cobertura_semana12.csv",
+      "ruta_publicacion": "hm-modelamiento/md2/evidencias/md2_cobertura_semana12.csv",
+      "sha256": "7730adaa64333d570a737f5ffca447c717d143b24f025d58b8fdf658bdd575ad",
+      "bytes": 645,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-2",
+      "archivo_fuente": "HM_MD2_Evidencias.zip!/md2/md2_comparacion_algoritmos.csv",
+      "ruta_publicacion": "hm-modelamiento/md2/evidencias/md2_comparacion_algoritmos.csv",
+      "sha256": "1246c2bd6d99b42281badf6ef55e64ee5522160cf045a256bb3f90636f732397",
+      "bytes": 148,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-2",
+      "archivo_fuente": "HM_MD2_Evidencias.zip!/md2/md2_comparacion_algoritmos_estado.csv",
+      "ruta_publicacion": "hm-modelamiento/md2/evidencias/md2_comparacion_algoritmos_estado.csv",
+      "sha256": "8215df4a686c52258fcf8a73a4d34eb07767185e8af588a645a2227da3b4d079",
+      "bytes": 161,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-2",
+      "archivo_fuente": "HM_MD2_Evidencias.zip!/md2/md2_concordancia_itemsets_soportes.csv",
+      "ruta_publicacion": "hm-modelamiento/md2/evidencias/md2_concordancia_itemsets_soportes.csv",
+      "sha256": "db10a4fa5d870fa68a42d368756725b80aa275a2e0b7e9d0641746eb39fb5f76",
+      "bytes": 90,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-2",
+      "archivo_fuente": "HM_MD2_Evidencias.zip!/md2/md2_conteos_lote_original.csv",
+      "ruta_publicacion": "hm-modelamiento/md2/evidencias/md2_conteos_lote_original.csv",
+      "sha256": "1f4ba75305bd68af909f92578e0a55c0dcbd1cee476280149fdc3da5ccb5ff01",
+      "bytes": 1028,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-2",
+      "archivo_fuente": "HM_MD2_Evidencias.zip!/md2/md2_conteos_lote_sin_p99.csv",
+      "ruta_publicacion": "hm-modelamiento/md2/evidencias/md2_conteos_lote_sin_p99.csv",
+      "sha256": "4f0f6b14c00da48562aeefa419484782df59bfb99aae5ead325af37c3be3e6ab",
+      "bytes": 1022,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-2",
+      "archivo_fuente": "HM_MD2_Evidencias.zip!/md2/md2_control_popularidad_p99.csv",
+      "ruta_publicacion": "hm-modelamiento/md2/evidencias/md2_control_popularidad_p99.csv",
+      "sha256": "98c994ddb2be5e9db03d2470bbee9cfb18d901de1b5473a4779fa704f9b68b93",
+      "bytes": 3250,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-2",
+      "archivo_fuente": "HM_MD2_Evidencias.zip!/md2/md2_estabilidad_jaccard.png",
+      "ruta_publicacion": "hm-modelamiento/md2/evidencias/md2_estabilidad_jaccard.png",
+      "sha256": "dfb337f7f671047f30eebd83e1bc6b65540d9b9cee7a603c33078fa4d3a05f65",
+      "bytes": 34551,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-2",
+      "archivo_fuente": "HM_MD2_Evidencias.zip!/md2/md2_estabilidad_remuestreos.csv",
+      "ruta_publicacion": "hm-modelamiento/md2/evidencias/md2_estabilidad_remuestreos.csv",
+      "sha256": "f4897b36d31289f787d6f557ae34dd2173f2f2a0bcf2864d13bd56c124a03bd8",
+      "bytes": 425,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-2",
+      "archivo_fuente": "HM_MD2_Evidencias.zip!/md2/md2_estado_semana12.json",
+      "ruta_publicacion": "hm-modelamiento/md2/evidencias/md2_estado_semana12.json",
+      "sha256": "d3a457328ab181da1b606b853ece98bac90731733fe2995c20ffc061ef048260",
+      "bytes": 1195,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-2",
+      "archivo_fuente": "HM_MD2_Evidencias.zip!/md2/md2_fichas_top20.csv",
+      "ruta_publicacion": "hm-modelamiento/md2/evidencias/md2_fichas_top20.csv",
+      "sha256": "2c4cc534aee0132777a0ab499785a6e45ca8fc5479dce994c43af0c0efa91841",
+      "bytes": 3746,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-2",
+      "archivo_fuente": "HM_MD2_Evidencias.zip!/md2/md2_informe_evaluacion_semana12.md",
+      "ruta_publicacion": "hm-modelamiento/md2/evidencias/md2_informe_evaluacion_semana12.md",
+      "sha256": "b0211b216deec88b6e757575fb8dd29557e55fd2ecbd9e621a669c6fef79660d",
+      "bytes": 1888,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-2",
+      "archivo_fuente": "HM_MD2_Evidencias.zip!/md2/md2_invariantes_evaluacion.csv",
+      "ruta_publicacion": "hm-modelamiento/md2/evidencias/md2_invariantes_evaluacion.csv",
+      "sha256": "5134eba83416bb872673a4f017c62a31d390d1141f5e43529fe0982e2694ec6c",
+      "bytes": 183,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-2",
+      "archivo_fuente": "HM_MD2_Evidencias.zip!/md2/md2_persistencia_reglas_test.png",
+      "ruta_publicacion": "hm-modelamiento/md2/evidencias/md2_persistencia_reglas_test.png",
+      "sha256": "25bc6497561c9abae7774621655533a6d2388d749ca98ae9efe3ec699950cc03",
+      "bytes": 79472,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-2",
+      "archivo_fuente": "HM_MD2_Evidencias.zip!/md2/md2_pilotos.csv",
+      "ruta_publicacion": "hm-modelamiento/md2/evidencias/md2_pilotos.csv",
+      "sha256": "020d0a9d2c4d67890b3c698331d1c8e7def03a55afcdad8c5291286c7b291be9",
+      "bytes": 439,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-2",
+      "archivo_fuente": "HM_MD2_Evidencias.zip!/md2/md2_reglas_congeladas_test.csv",
+      "ruta_publicacion": "hm-modelamiento/md2/evidencias/md2_reglas_congeladas_test.csv",
+      "sha256": "4cddf05459649d6cbb735192598e594d4c3138edb4bd2f16cce29b54a134e98b",
+      "bytes": 6291,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-2",
+      "archivo_fuente": "HM_MD2_Evidencias.zip!/md2/md2_reglas_desarrollo_congeladas.csv",
+      "ruta_publicacion": "hm-modelamiento/md2/evidencias/md2_reglas_desarrollo_congeladas.csv",
+      "sha256": "0490840c2c452363f3bcb44b5eb5dbd4878adbf3a2d37ed3e2808be1c3daea68",
+      "bytes": 149689,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-2",
+      "archivo_fuente": "HM_MD2_Evidencias.zip!/md2/md2_resumen_prueba_final.json",
+      "ruta_publicacion": "hm-modelamiento/md2/evidencias/md2_resumen_prueba_final.json",
+      "sha256": "909ac4d996554819ad9236a574f7b8c7820ec2a4a3217e1f8e761900552394d4",
+      "bytes": 281,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-2",
+      "archivo_fuente": "HM_MD2_Evidencias.zip!/md2/md2_semanas_iso_parciales.csv",
+      "ruta_publicacion": "hm-modelamiento/md2/evidencias/md2_semanas_iso_parciales.csv",
+      "sha256": "ddbfd154f6b7b10e00898a27f2dc13a8c368e527a677765dc7271a6dd693a136",
+      "bytes": 92,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-2",
+      "archivo_fuente": "HM_MD2_Evidencias.zip!/md2/md2_sensibilidad_cestas.csv",
+      "ruta_publicacion": "hm-modelamiento/md2/evidencias/md2_sensibilidad_cestas.csv",
+      "sha256": "9559496746c97d2ff48f3494c65b555bb7cf3e9de6e48802d54fe1ae612a9e6a",
+      "bytes": 304,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-2",
+      "archivo_fuente": "HM_MD2_Evidencias.zip!/md2/md2_sensibilidad_umbrales.csv",
+      "ruta_publicacion": "hm-modelamiento/md2/evidencias/md2_sensibilidad_umbrales.csv",
+      "sha256": "bbb23cbc436c75fc045aa616133aae004dc4cd0a094d7e42c00f105aaa19f5ef",
+      "bytes": 506,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-2",
+      "archivo_fuente": "HM_MD2_Evidencias.zip!/md2/md2_sensibilidad_umbrales.png",
+      "ruta_publicacion": "hm-modelamiento/md2/evidencias/md2_sensibilidad_umbrales.png",
+      "sha256": "f73065533715521974655fc59ba12f5509373204ab747d8e8aab860d6c5855b8",
+      "bytes": 90176,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-3",
+      "archivo_fuente": "HM_MD3_Evidencias.zip!/md3/baseline_fijada.json",
+      "ruta_publicacion": "hm-modelamiento/md3/evidencias/baseline_fijada.json",
+      "sha256": "e2d79904cff7ac46bc1609af0101b1cb9958a14e7d93b6f1bb7ee62864fafd03",
+      "bytes": 218,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-3",
+      "archivo_fuente": "HM_MD3_Evidencias.zip!/md3/bitacora_ajustes.jsonl",
+      "ruta_publicacion": "hm-modelamiento/md3/evidencias/bitacora_ajustes.jsonl",
+      "sha256": "5ae9655d19fd0529aca7eee0bd363c28cfbbee0c5c8da06283d0528556bb55de",
+      "bytes": 4698561,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-3",
+      "archivo_fuente": "HM_MD3_Evidencias.zip!/md3/estado_experimentos.csv",
+      "ruta_publicacion": "hm-modelamiento/md3/evidencias/estado_experimentos.csv",
+      "sha256": "df0c1d6db92c2ebb2ef24604150378bc254e90b9cbe04f4816da48b3fc812372",
+      "bytes": 324,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-3",
+      "archivo_fuente": "HM_MD3_Evidencias.zip!/md3/md3_auditoria_entregables.json",
+      "ruta_publicacion": "hm-modelamiento/md3/evidencias/md3_auditoria_entregables.json",
+      "sha256": "d017a2426fbbd2a906489cdbef80fc89379ac11544e344607ad7454b37b00005",
+      "bytes": 923,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-3",
+      "archivo_fuente": "HM_MD3_Evidencias.zip!/md3/md3_baselines_validacion.csv",
+      "ruta_publicacion": "hm-modelamiento/md3/evidencias/md3_baselines_validacion.csv",
+      "sha256": "ec37b82e1eefe55d35d1860aa25c16094b3803b747880b5412c67a20683cb61f",
+      "bytes": 13935,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-3",
+      "archivo_fuente": "HM_MD3_Evidencias.zip!/md3/md3_candidatos.csv",
+      "ruta_publicacion": "hm-modelamiento/md3/evidencias/md3_candidatos.csv",
+      "sha256": "c4962a85e0a4faf7b5e0f76d402919740c161b2faf1fa4429ec8502d6a159eae",
+      "bytes": 931,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-3",
+      "archivo_fuente": "HM_MD3_Evidencias.zip!/md3/md3_cobertura_semana12.csv",
+      "ruta_publicacion": "hm-modelamiento/md3/evidencias/md3_cobertura_semana12.csv",
+      "sha256": "d37fc1459c76b56a54389252f943a28cb2c4239fa5b8d6d6622e4ecc6c20eda0",
+      "bytes": 586,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-3",
+      "archivo_fuente": "HM_MD3_Evidencias.zip!/md3/md3_diagnosticos_residuos.csv",
+      "ruta_publicacion": "hm-modelamiento/md3/evidencias/md3_diagnosticos_residuos.csv",
+      "sha256": "80f53f420265f181676c20a5bb2f187144da6b5bbbbe961fa05f549052692f0d",
+      "bytes": 564,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-3",
+      "archivo_fuente": "HM_MD3_Evidencias.zip!/md3/md3_diagnosticos_residuos.png",
+      "ruta_publicacion": "hm-modelamiento/md3/evidencias/md3_diagnosticos_residuos.png",
+      "sha256": "ac5952a9dbbd68698456ffd641d9684fc6ea588301ebd9694c83a1a54edda3b1",
+      "bytes": 56061,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-3",
+      "archivo_fuente": "HM_MD3_Evidencias.zip!/md3/md3_estado_semana12.json",
+      "ruta_publicacion": "hm-modelamiento/md3/evidencias/md3_estado_semana12.json",
+      "sha256": "c864946838cc89cf7a7c23aa6cd21efc1f47257e22f9206207cf284b8b73ebc8",
+      "bytes": 1040,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-3",
+      "archivo_fuente": "HM_MD3_Evidencias.zip!/md3/md3_evaluacion_comparativa_semana12.csv",
+      "ruta_publicacion": "hm-modelamiento/md3/evidencias/md3_evaluacion_comparativa_semana12.csv",
+      "sha256": "ff75a45fc57b4e46d1f23ac2624e2c3f393018eeb9c7e2ceccc62b6333e92a14",
+      "bytes": 1509,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-3",
+      "archivo_fuente": "HM_MD3_Evidencias.zip!/md3/md3_evaluacion_sensibilidades.png",
+      "ruta_publicacion": "hm-modelamiento/md3/evidencias/md3_evaluacion_sensibilidades.png",
+      "sha256": "27caa58b70d2d37f81eb214977e13d912de0ed6c7da0171fea9a90912e8bdc57",
+      "bytes": 79773,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-3",
+      "archivo_fuente": "HM_MD3_Evidencias.zip!/md3/md3_evaluacion_test.png",
+      "ruta_publicacion": "hm-modelamiento/md3/evidencias/md3_evaluacion_test.png",
+      "sha256": "ba4ae49dc2ebf7a94b9708ef16bc875a2d1d73306ee53e9ca4c4187939f8d59d",
+      "bytes": 57716,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-3",
+      "archivo_fuente": "HM_MD3_Evidencias.zip!/md3/md3_evaluacion_validacion.png",
+      "ruta_publicacion": "hm-modelamiento/md3/evidencias/md3_evaluacion_validacion.png",
+      "sha256": "f6c9c5ac218b4fab404417b2a3e825eea98aa9c98cc403fbcc57517f22c9454c",
+      "bytes": 73614,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-3",
+      "archivo_fuente": "HM_MD3_Evidencias.zip!/md3/md3_informe_evaluacion_semana12.md",
+      "ruta_publicacion": "hm-modelamiento/md3/evidencias/md3_informe_evaluacion_semana12.md",
+      "sha256": "9a6d6564f08dca55cbba7718300808a9b477dd0a6e54bad362145d8c6820a05b",
+      "bytes": 1788,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-3",
+      "archivo_fuente": "HM_MD3_Evidencias.zip!/md3/md3_invariantes_evaluacion.csv",
+      "ruta_publicacion": "hm-modelamiento/md3/evidencias/md3_invariantes_evaluacion.csv",
+      "sha256": "75183a8a59d0ddcbc4ec1175114267eb50869c88a2aa66e1e6dcb02105946435",
+      "bytes": 324,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-3",
+      "archivo_fuente": "HM_MD3_Evidencias.zip!/md3/md3_metricas_por_origen.csv",
+      "ruta_publicacion": "hm-modelamiento/md3/evidencias/md3_metricas_por_origen.csv",
+      "sha256": "3dfbb3c0afb14366bca0d6352fe5a95f2c0eb8b456e2b3880ae51bbd4f01c96c",
+      "bytes": 18549,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-3",
+      "archivo_fuente": "HM_MD3_Evidencias.zip!/md3/md3_metricas_test.csv",
+      "ruta_publicacion": "hm-modelamiento/md3/evidencias/md3_metricas_test.csv",
+      "sha256": "817aa179a796366b51593777004ac3660b4a14010b3df2bd1c9263ae8f7d6fe0",
+      "bytes": 198,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-3",
+      "archivo_fuente": "HM_MD3_Evidencias.zip!/md3/md3_piloto.csv",
+      "ruta_publicacion": "hm-modelamiento/md3/evidencias/md3_piloto.csv",
+      "sha256": "d0c9592d4698e1346cf520f153b97ec2c163a92f49e398a1268ec06634ecf80f",
+      "bytes": 749,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-3",
+      "archivo_fuente": "HM_MD3_Evidencias.zip!/md3/md3_pronosticos_sensibilidad.csv",
+      "ruta_publicacion": "hm-modelamiento/md3/evidencias/md3_pronosticos_sensibilidad.csv",
+      "sha256": "ed8c94c4f63f70228ba6d7c0e47a8a7f976fb790b4afdf86f8793797ad0b4ed6",
+      "bytes": 433334,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-3",
+      "archivo_fuente": "HM_MD3_Evidencias.zip!/md3/md3_pronosticos_test.csv",
+      "ruta_publicacion": "hm-modelamiento/md3/evidencias/md3_pronosticos_test.csv",
+      "sha256": "c1243695120d6bf7ff56c945d02ff523f10874bd0ff081a5ef0c6f2d06dff793",
+      "bytes": 31283,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-3",
+      "archivo_fuente": "HM_MD3_Evidencias.zip!/md3/md3_pronosticos_validacion.csv",
+      "ruta_publicacion": "hm-modelamiento/md3/evidencias/md3_pronosticos_validacion.csv",
+      "sha256": "ede7d991c6adc2303b4066c3a61da555c739b033cc1e56340fa39335a115fbe3",
+      "bytes": 110506,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-3",
+      "archivo_fuente": "HM_MD3_Evidencias.zip!/md3/md3_sarima_aicc.csv",
+      "ruta_publicacion": "hm-modelamiento/md3/evidencias/md3_sarima_aicc.csv",
+      "sha256": "d4f8a673f570789b159b1e42d5a0290d30b9b253802a8924df091feb1281145a",
+      "bytes": 2324,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-3",
+      "archivo_fuente": "HM_MD3_Evidencias.zip!/md3/md3_semanas_observadas.csv",
+      "ruta_publicacion": "hm-modelamiento/md3/evidencias/md3_semanas_observadas.csv",
+      "sha256": "5f02f49cbdc7510c583b0e913b703677cb9871a30cd545935baf2a8e318ddaef",
+      "bytes": 2686,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-3",
+      "archivo_fuente": "HM_MD3_Evidencias.zip!/md3/md3_sensibilidad.csv",
+      "ruta_publicacion": "hm-modelamiento/md3/evidencias/md3_sensibilidad.csv",
+      "sha256": "adbe13c1ebff118aa73166a426857eeaa0a94e3db3f20492afc10432a6173627",
+      "bytes": 2954,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-3",
+      "archivo_fuente": "HM_MD3_Evidencias.zip!/md3/md3_sensibilidad_estado.json",
+      "ruta_publicacion": "hm-modelamiento/md3/evidencias/md3_sensibilidad_estado.json",
+      "sha256": "48aa6862ffeedc0ea380f5f22792c77b71c7d46e3920aadb1c95404dcf85cb33",
+      "bytes": 62,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-3",
+      "archivo_fuente": "HM_MD3_Evidencias.zip!/md3/proyeccion_presupuesto.json",
+      "ruta_publicacion": "hm-modelamiento/md3/evidencias/proyeccion_presupuesto.json",
+      "sha256": "8c05a799b5c54adf67a4052e77e2b2000f47d3c36ba6381a717f43e9f74346e6",
+      "bytes": 131,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-3",
+      "archivo_fuente": "HM_MD3_Evidencias.zip!/md3/seleccion_congelada.json",
+      "ruta_publicacion": "hm-modelamiento/md3/evidencias/seleccion_congelada.json",
+      "sha256": "866728ff2819f233d0470925ff8fab9e51af2aa624b2e208332f0a33e4daec2b",
+      "bytes": 433,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-3",
+      "archivo_fuente": "HM_MD3_Evidencias.zip!/md3/serie_diaria_y_canales.csv",
+      "ruta_publicacion": "hm-modelamiento/md3/evidencias/serie_diaria_y_canales.csv",
+      "sha256": "aaea9dfd9158eb2e36467e2967d8bf39d8240cf0ec3bbeed12fb93d6b9657dab",
+      "bytes": 20905,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-4",
+      "archivo_fuente": "HM_MD4_Evidencias.zip!/md4/estado_experimentos.csv",
+      "ruta_publicacion": "hm-modelamiento/md4/evidencias/archivo_2026-11-10/estado_experimentos.csv",
+      "sha256": "b387ab4de2eea6db114164d3ddaa72c7219adc11a05f4125b202cbfd7b1f39de",
+      "bytes": 916,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-4",
+      "archivo_fuente": "HM_MD4_Evidencias.zip!/md4/md4_aporte_vs_jerarquia.csv",
+      "ruta_publicacion": "hm-modelamiento/md4/evidencias/md4_aporte_vs_jerarquia.csv",
+      "sha256": "befe403e00dc7059179b0ddf0cb6d66b784c63a25665328bcee46c15687be1df",
+      "bytes": 2667,
+      "reutilizado_de_pr3": true
+    },
+    {
+      "objetivo_md": "MD-4",
+      "archivo_fuente": "HM_MD4_Evidencias.zip!/md4/md4_aporte_vs_jerarquia_conteos.csv",
+      "ruta_publicacion": "hm-modelamiento/md4/evidencias/md4_aporte_vs_jerarquia_conteos.csv",
+      "sha256": "822d80980deebb3405a07482aa47ab53b6218247dbcc935817543f1e7eb80489",
+      "bytes": 807,
+      "reutilizado_de_pr3": true
+    },
+    {
+      "objetivo_md": "MD-4",
+      "archivo_fuente": "HM_MD4_Evidencias.zip!/md4/md4_auditoria_corpus.csv",
+      "ruta_publicacion": "hm-modelamiento/md4/evidencias/md4_auditoria_corpus.csv",
+      "sha256": "97567adfea560f2b144a2a8e43260f06a3787fb88f46ddfd12a0caf0a891915f",
+      "bytes": 540,
+      "reutilizado_de_pr3": true
+    },
+    {
+      "objetivo_md": "MD-4",
+      "archivo_fuente": "HM_MD4_Evidencias.zip!/md4/md4_auditoria_entregables.json",
+      "ruta_publicacion": "hm-modelamiento/md4/evidencias/archivo_2026-11-10/md4_auditoria_entregables.json",
+      "sha256": "322ead496b92fc8c062511cfa14761213ed92a5a5bb63fa800147678c9ef357e",
+      "bytes": 141,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-4",
+      "archivo_fuente": "HM_MD4_Evidencias.zip!/md4/md4_cobertura_semana12.csv",
+      "ruta_publicacion": "hm-modelamiento/md4/evidencias/md4_cobertura_semana12.csv",
+      "sha256": "048e28bf33f6caf4f78ce8e4c1da117240bb7fe519e5beb6cb52ac7648b6a360",
+      "bytes": 806,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-4",
+      "archivo_fuente": "HM_MD4_Evidencias.zip!/md4/md4_concordancia_pps.csv",
+      "ruta_publicacion": "hm-modelamiento/md4/evidencias/md4_concordancia_pps.csv",
+      "sha256": "b87dae4f0afb7b76e04ad7e6beff99a3dcdc8f8461a04cefe86e82e37f4edf7c",
+      "bytes": 63,
+      "reutilizado_de_pr3": true
+    },
+    {
+      "objetivo_md": "MD-4",
+      "archivo_fuente": "HM_MD4_Evidencias.zip!/md4/md4_diccionario_metricas.json",
+      "ruta_publicacion": "hm-modelamiento/md4/evidencias/md4_diccionario_metricas.json",
+      "sha256": "653b0557ae5e1e1d49cf98418c328233cd974a67cca7dffde26dbba7fdfafcfe",
+      "bytes": 703,
+      "reutilizado_de_pr3": true
+    },
+    {
+      "objetivo_md": "MD-4",
+      "archivo_fuente": "HM_MD4_Evidencias.zip!/md4/md4_estado_semana12.json",
+      "ruta_publicacion": "hm-modelamiento/md4/evidencias/md4_estado_semana12.json",
+      "sha256": "eeb9e9fc973a20f6195180487c26960e30e80897a63605f928cc636577beedb9",
+      "bytes": 1606,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-4",
+      "archivo_fuente": "HM_MD4_Evidencias.zip!/md4/md4_evaluacion_cosenos.png",
+      "ruta_publicacion": "hm-modelamiento/md4/evidencias/md4_evaluacion_cosenos.png",
+      "sha256": "13cab5719b4f6c3d762c437f36011c2f61f7ab8074dd2a85d59f8b592fe1d2cd",
+      "bytes": 37440,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-4",
+      "archivo_fuente": "HM_MD4_Evidencias.zip!/md4/md4_evaluacion_jerarquia.png",
+      "ruta_publicacion": "hm-modelamiento/md4/evidencias/md4_evaluacion_jerarquia.png",
+      "sha256": "8f2c1a8fb8772683ed90fd99879804f4cc33f3066005f9902d689905ab786767",
+      "bytes": 37042,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-4",
+      "archivo_fuente": "HM_MD4_Evidencias.zip!/md4/md4_evaluacion_solapamiento.png",
+      "ruta_publicacion": "hm-modelamiento/md4/evidencias/md4_evaluacion_solapamiento.png",
+      "sha256": "a241ed361a63a9524355cde681ed07301c35edc4fc4dafd9e35a625202e8e281",
+      "bytes": 37415,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-4",
+      "archivo_fuente": "HM_MD4_Evidencias.zip!/md4/md4_informe_evaluacion_semana12.md",
+      "ruta_publicacion": "hm-modelamiento/md4/evidencias/md4_informe_evaluacion_semana12.md",
+      "sha256": "07548ff7e4c01f4fc4ab68ad4c161da34c22e0fdc4e6f1fdad1c1fff90fcbb58",
+      "bytes": 2088,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-4",
+      "archivo_fuente": "HM_MD4_Evidencias.zip!/md4/md4_invariantes_evaluacion.csv",
+      "ruta_publicacion": "hm-modelamiento/md4/evidencias/md4_invariantes_evaluacion.csv",
+      "sha256": "9351e81235724dc0df2b9c363264cdf35a3851877e8eec5ac23e5b5c38bbdacb",
+      "bytes": 58,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-4",
+      "archivo_fuente": "HM_MD4_Evidencias.zip!/md4/md4_plan_revision_humana.json",
+      "ruta_publicacion": "hm-modelamiento/md4/evidencias/md4_plan_revision_humana.json",
+      "sha256": "99cda8a16b36cb73d0590a53baae2e1fbf7925c6ff067c8b07eb7d0bc9046632",
+      "bytes": 203,
+      "reutilizado_de_pr3": true
+    },
+    {
+      "objetivo_md": "MD-4",
+      "archivo_fuente": "HM_MD4_Evidencias.zip!/md4/md4_seleccion_hiperparametros.csv",
+      "ruta_publicacion": "hm-modelamiento/md4/evidencias/md4_seleccion_hiperparametros.csv",
+      "sha256": "d6475749f04c81e38f257a0b95f864bfb4384a357a431350133b0f3c88eaae99",
+      "bytes": 620,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-4",
+      "archivo_fuente": "HM_MD4_Evidencias.zip!/md4/md4_seleccion_lsa.csv",
+      "ruta_publicacion": "hm-modelamiento/md4/evidencias/archivo_2026-11-10/md4_seleccion_lsa.csv",
+      "sha256": "5e7ec9c469602e05f28737031473fb09bd5da0e1ed959933799b5bfcb7871ecb",
+      "bytes": 217,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-4",
+      "archivo_fuente": "HM_MD4_Evidencias.zip!/md4/md4_seleccion_tfidf.csv",
+      "ruta_publicacion": "hm-modelamiento/md4/evidencias/md4_seleccion_tfidf.csv",
+      "sha256": "4c5259926bddff98516c1c49ad9d2e08c24a11f082707b4e8e5c19f5b7d33fb6",
+      "bytes": 152,
+      "reutilizado_de_pr3": true
+    },
+    {
+      "objetivo_md": "MD-4",
+      "archivo_fuente": "HM_MD4_Evidencias.zip!/md4/md4_sensibilidad_corpus.csv",
+      "ruta_publicacion": "hm-modelamiento/md4/evidencias/archivo_2026-11-10/md4_sensibilidad_corpus.csv",
+      "sha256": "2dd8df3625c17647de4714734ec62eae10ceae94085c51de0c3b9839b96738d2",
+      "bytes": 6459,
+      "reutilizado_de_pr3": false
+    },
+    {
+      "objetivo_md": "MD-4",
+      "archivo_fuente": "HM_MD4_Evidencias.zip!/md4/md4_sensibilidad_resumen.json",
+      "ruta_publicacion": "hm-modelamiento/md4/evidencias/md4_sensibilidad_resumen.json",
+      "sha256": "32be281611cc6661c9386bf48cd16a2af281ba8b76dea034ddf6b39b78eb3f95",
+      "bytes": 286,
+      "reutilizado_de_pr3": true
+    },
+    {
+      "objetivo_md": "MD-4",
+      "archivo_fuente": "HM_MD4_Evidencias.zip!/md4/md4_solapamiento_modelos.csv",
+      "ruta_publicacion": "hm-modelamiento/md4/evidencias/md4_solapamiento_modelos.csv",
+      "sha256": "92702cbcd4b0ac065494e0180f71f7db9ecc9896e36316c49a65fa7870de86e7",
+      "bytes": 686,
+      "reutilizado_de_pr3": true
+    },
+    {
+      "objetivo_md": "MD-4",
+      "archivo_fuente": "HM_MD4_Evidencias.zip!/md4/md4_tokenizador.json",
+      "ruta_publicacion": "hm-modelamiento/md4/evidencias/md4_tokenizador.json",
+      "sha256": "9242d487653d6be447fc00ca250b480619d1f83fa9eec9e6d6ee464a23bd7027",
+      "bytes": 104,
+      "reutilizado_de_pr3": true
+    },
+    {
+      "objetivo_md": "MD-4",
+      "archivo_fuente": "HM_MD4_Evidencias.zip!/md4/md4_verificacion_gram_bilineal.csv",
+      "ruta_publicacion": "hm-modelamiento/md4/evidencias/md4_verificacion_gram_bilineal.csv",
+      "sha256": "0d353a44137850afc96c2a4626a25c8f2a6119c191179452097a1744a008c1d6",
+      "bytes": 379,
+      "reutilizado_de_pr3": false
+    }
+  ],
+  "inventario_csv_sha256": "8980f755297ea8a46017ce276b6cd4a44e82e023fac6338538b34bdc95d4a588",
+  "notas": [
+    "Los hashes y rutas originales son del material local/ZIP.",
+    "Notebooks inspeccionados como JSON sin ejecutar.",
+    "No se cargaron artefactos pickle/joblib desconocidos."
+  ],
+  "resumen_conteos": {
+    "archivos_inventariados": 143,
+    "filas_publicadas": 134,
+    "filas_excluidas": 9,
+    "filas_duplicado": 20,
+    "sha256_distintos_duplicados": 10,
+    "rutas_publicacion_unicas": 124,
+    "rutas_nuevas_vs_base": 92,
+    "rutas_historial_preexistentes": 32,
+    "artefactos_nuevos_publicados": 92,
+    "sha256_inventario_csv": "8980f755297ea8a46017ce276b6cd4a44e82e023fac6338538b34bdc95d4a588"
+  },
+  "baseline_prepublicacion_rama": "feat/hm-md4-evidencias-kaggle",
+  "baseline_prepublicacion_commit": "aae32d0b9fc39138404778d4dd48540d7fce0142",
+  "commit_referencia_anterior": "689d709953ae7e2667528c2706b33153f6084a9c"
+}

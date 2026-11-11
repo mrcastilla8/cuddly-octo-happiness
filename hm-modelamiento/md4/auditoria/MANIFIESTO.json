@@ -1,0 +1,371 @@
+{
+  "schema_version": 1,
+  "source_archive": {
+    "filename": "HM_MD4_Resultados.zip",
+    "sha256": "5707af2559f8121314f3de21cbabec0a53281f23bcf4ac1325c6f145f21585e4",
+    "files": 27
+  },
+  "source_extraction_matches_archive": true,
+  "notebook_in_archive": false,
+  "publication_counts": {
+    "inventariados": 38,
+    "publicados": 26,
+    "excluidos": 12,
+    "por_decision": {
+      "EXCLUIR_PRIVADO": 10,
+      "EXCLUIR_REDUNDANTE": 1,
+      "LOCAL_MAYOR_25MB": 1,
+      "PUBLICAR": 26
+    }
+  },
+  "published_files": [
+    {
+      "source": "md4/md4_concordancia_pps.csv",
+      "path": "evidencias/md4_concordancia_pps.csv",
+      "size_bytes": 63,
+      "sha256": "b87dae4f0afb7b76e04ad7e6beff99a3dcdc8f8461a04cefe86e82e37f4edf7c"
+    },
+    {
+      "source": "md4/md4_seleccion_tfidf.csv",
+      "path": "evidencias/md4_seleccion_tfidf.csv",
+      "size_bytes": 152,
+      "sha256": "4c5259926bddff98516c1c49ad9d2e08c24a11f082707b4e8e5c19f5b7d33fb6"
+    },
+    {
+      "source": "md4/md4_comparacion_topk_modelos.csv",
+      "path": "evidencias/md4_comparacion_topk_modelos.csv",
+      "size_bytes": 320259,
+      "sha256": "ca3ae3aaf76c14c03198f5add1f879d8ac3b820cc843260006eb2d602c23d661"
+    },
+    {
+      "source": "md4/md4_auditoria_corpus.csv",
+      "path": "evidencias/md4_auditoria_corpus.csv",
+      "size_bytes": 540,
+      "sha256": "97567adfea560f2b144a2a8e43260f06a3787fb88f46ddfd12a0caf0a891915f"
+    },
+    {
+      "source": "md4/md4_diccionario_metricas.json",
+      "path": "evidencias/md4_diccionario_metricas.json",
+      "size_bytes": 703,
+      "sha256": "653b0557ae5e1e1d49cf98418c328233cd974a67cca7dffde26dbba7fdfafcfe"
+    },
+    {
+      "source": "md4/md4_aporte_vs_jerarquia_conteos.csv",
+      "path": "evidencias/md4_aporte_vs_jerarquia_conteos.csv",
+      "size_bytes": 807,
+      "sha256": "822d80980deebb3405a07482aa47ab53b6218247dbcc935817543f1e7eb80489"
+    },
+    {
+      "source": "md4/md4_seleccion_lsa.csv",
+      "path": "evidencias/md4_seleccion_lsa.csv",
+      "size_bytes": 218,
+      "sha256": "6a1b211327a19f43dca99dc38d6a605c4a745b6abc74f09ffec51d797ef7a4db"
+    },
+    {
+      "source": "md4/estado_experimentos.csv",
+      "path": "evidencias/estado_experimentos.csv",
+      "size_bytes": 897,
+      "sha256": "92e700bb618e55f6d62f1195953220fccbd2ccf01d64d4c6a61c831d5125b39a"
+    },
+    {
+      "source": "md4/md4_plan_revision_humana.json",
+      "path": "evidencias/md4_plan_revision_humana.json",
+      "size_bytes": 203,
+      "sha256": "99cda8a16b36cb73d0590a53baae2e1fbf7925c6ff067c8b07eb7d0bc9046632"
+    },
+    {
+      "source": "md4/md4_sensibilidad_resumen.json",
+      "path": "evidencias/md4_sensibilidad_resumen.json",
+      "size_bytes": 286,
+      "sha256": "32be281611cc6661c9386bf48cd16a2af281ba8b76dea034ddf6b39b78eb3f95"
+    },
+    {
+      "source": "md4/md4_solapamiento_modelos.csv",
+      "path": "evidencias/md4_solapamiento_modelos.csv",
+      "size_bytes": 686,
+      "sha256": "92702cbcd4b0ac065494e0180f71f7db9ecc9896e36316c49a65fa7870de86e7"
+    },
+    {
+      "source": "md4/md4_aporte_vs_jerarquia.csv",
+      "path": "evidencias/md4_aporte_vs_jerarquia.csv",
+      "size_bytes": 2667,
+      "sha256": "befe403e00dc7059179b0ddf0cb6d66b784c63a25665328bcee46c15687be1df"
+    },
+    {
+      "source": "md4/md4_auditoria_entregables.json",
+      "path": "evidencias/md4_auditoria_entregables.json",
+      "size_bytes": 184,
+      "sha256": "b72f1527c81bfe4ba48e6ca39b6bc982346efaf3f7b70c0501a4b4708a7be4ad"
+    },
+    {
+      "source": "md4/md4_sensibilidad_corpus.csv",
+      "path": "evidencias/md4_sensibilidad_corpus.csv",
+      "size_bytes": 6140,
+      "sha256": "28d114da1f84b5a432958f15e5b589bc250a072092c59ebb3787829386b6ee6e"
+    },
+    {
+      "source": "md4/md4_tokenizador.json",
+      "path": "evidencias/md4_tokenizador.json",
+      "size_bytes": 104,
+      "sha256": "9242d487653d6be447fc00ca250b480619d1f83fa9eec9e6d6ee464a23bd7027"
+    },
+    {
+      "source": "nb03-md4-similitud-textual.ipynb (fuente suplementaria)",
+      "path": "notebook/nb03-md4-similitud-textual.ipynb",
+      "size_bytes": 68029,
+      "sha256": "96c257f48f21c412f16575c6ff03146f936db3ace04d4266ae5034e74e186acd"
+    },
+    {
+      "source": "revision_complementaria/md4_sensibilidad_corpus_consolidada.csv",
+      "path": "evidencias/revision_complementaria/md4_sensibilidad_corpus_consolidada.csv",
+      "size_bytes": 6313,
+      "sha256": "bd9cb91f3b65ce808030d6cdf52137ed4dcd79455e640dd04d2617744722821d"
+    },
+    {
+      "source": "revision_complementaria/md4_distribucion_coseno_top5.png",
+      "path": "evidencias/revision_complementaria/md4_distribucion_coseno_top5.png",
+      "size_bytes": 35298,
+      "sha256": "4b2dbf2be260fcccc81464b12405fbc0365666e9265c132b5675dd5f5bec8405"
+    },
+    {
+      "source": "revision_complementaria/md4_equivalencia_gram_cruzada.csv",
+      "path": "evidencias/revision_complementaria/md4_equivalencia_gram_cruzada.csv",
+      "size_bytes": 470,
+      "sha256": "5a6d0382d72490bc24bd1f651d8eb862a60a1dbde52d4f87e51dc8e0bd25cb2d"
+    },
+    {
+      "source": "revision_complementaria/md4_seleccion_hiperparametros.csv",
+      "path": "evidencias/revision_complementaria/md4_seleccion_hiperparametros.csv",
+      "size_bytes": 680,
+      "sha256": "cf2b173073624e4bb6ac402b6e7b4c8a5c6310c9634def39c31443306de32e10"
+    },
+    {
+      "source": "revision_complementaria/md4_resumen_controles.json",
+      "path": "evidencias/revision_complementaria/md4_resumen_controles.json",
+      "size_bytes": 713,
+      "sha256": "5246d7464248f9709ee6eaa2955667828c450542fede91ad291b2a56fd50cdc9"
+    },
+    {
+      "source": "revision_complementaria/md4_auditoria_bitacora.csv",
+      "path": "evidencias/revision_complementaria/md4_auditoria_bitacora.csv",
+      "size_bytes": 288,
+      "sha256": "1a45867397f9404acba84d28f60e86112d968bd763c2558e222ecd6d1c41278b"
+    },
+    {
+      "source": "revision_complementaria/md4_entorno_modelo_complementario.json",
+      "path": "evidencias/revision_complementaria/md4_entorno_modelo_complementario.json",
+      "size_bytes": 570,
+      "sha256": "c4277c9797b0c127ae552d9744621992909a2a08bd82126a15e63cb1690b31db"
+    },
+    {
+      "source": "revision_complementaria/md4_sensibilidad_LSA_originales_adicional.csv",
+      "path": "evidencias/revision_complementaria/md4_sensibilidad_LSA_originales_adicional.csv",
+      "size_bytes": 447,
+      "sha256": "5ea0c06a088a9eac3d3e8ba83eeed83b641a53bf757de668d986fb97ce2e532a"
+    },
+    {
+      "source": "revision_complementaria/md4_solapamiento_modelos.png",
+      "path": "evidencias/revision_complementaria/md4_solapamiento_modelos.png",
+      "size_bytes": 40898,
+      "sha256": "ac381a67b212cddb130d91ddade02db82274038cecf9e015dfda86055ab08a1a"
+    },
+    {
+      "source": "nb03-md4-similitud-textual-revision-complementaria.ipynb (fuente suplementaria)",
+      "path": "notebook/nb03-md4-similitud-textual-revision-complementaria.ipynb",
+      "size_bytes": 79776,
+      "sha256": "502ee98a06fdf544996b64dba8c50558b16a90ec1c2a30de33afd70dab7aa016"
+    }
+  ],
+  "excluded_files": [
+    {
+      "source": "md4/md4_plantilla_pps_todos_escenarios.csv",
+      "decision": "EXCLUIR_PRIVADO",
+      "reason": "Excluido privado: contiene IDs, nombres y descripciones de artículos; plantilla sin evaluación completada.",
+      "sha256": "02ecbf6e893bb656636f3a3502c89b468e62f38c7b8e7380a4e89eacaab4b742",
+      "size_bytes": 126717
+    },
+    {
+      "source": "md4/sbert_embeddings.npy",
+      "decision": "LOCAL_MAYOR_25MB",
+      "reason": "Artefacto grande local (162,112,640 bytes): embeddings completos; supera 25 MB y no se publica. Auditar la forma (105542, 384) y el estado de generación desde estado_experimentos.csv, sin descargar vectores.",
+      "sha256": "ffe96b2ecea3f250c2c9f3232d5321f8550dbe33878d9e2fbab5bd3e7ab203e5",
+      "size_bytes": 162112640
+    },
+    {
+      "source": "md4/origen_cache.json",
+      "decision": "EXCLUIR_PRIVADO",
+      "reason": "Excluido privado: contiene hashes de fuentes que incluyen customers; no es evidencia necesaria para auditar resultados agregados.",
+      "sha256": "414bf552ef304da6f5c2d092a15bec4d0a8f993770c7068727a512e72385a0d8",
+      "size_bytes": 365
+    },
+    {
+      "source": "md4/md4_posiciones_pps.csv",
+      "decision": "EXCLUIR_REDUNDANTE",
+      "reason": "Derivado redundante: posiciones seleccionadas para PPS ya están representadas en la tabla completa de rankings; se excluye para evitar duplicación de IDs.",
+      "sha256": "1058de20d7463b1bca68e91460ae2a0bacfbea88e0fcb3f9af09f7744025c26d",
+      "size_bytes": 41684
+    },
+    {
+      "source": "md4/md4_recalibracion_10_pares_ajuste.csv",
+      "decision": "EXCLUIR_PRIVADO",
+      "reason": "Excluido privado: incluye pares y nombres de artículos del conjunto de ajuste.",
+      "sha256": "eafe0c099ec2c18182861bec56da67a3653c234dba61db7419f00689e86b3ee4",
+      "size_bytes": 616
+    },
+    {
+      "source": "md4/md4_segunda_ronda_si_corresponde.csv",
+      "decision": "EXCLUIR_PRIVADO",
+      "reason": "Excluido privado: incluye identificadores y descripciones de artículos para una ronda condicional.",
+      "sha256": "d4944eee83aaa6e354b4edab0fa36b61587084589e3f7e4373712e74b367afa3",
+      "size_bytes": 35330
+    },
+    {
+      "source": "md4/md4_mapa_articulos_textos.csv",
+      "decision": "EXCLUIR_PRIVADO",
+      "reason": "Excluido privado y redundante: mapeo completo de artículos a textos del corpus privado.",
+      "sha256": "b78726d763902cbc77f76d806e5bb3fcf810114d275fdd1a4fb675c616a7fd31",
+      "size_bytes": 1767683
+    },
+    {
+      "source": "md4/md4_consultas_holdout.csv",
+      "decision": "EXCLUIR_PRIVADO",
+      "reason": "Excluido privado: lista de article_id de consultas de holdout del corpus privado.",
+      "sha256": "caea6a7ea23262f81b254b6e30cef66203e3131fe8ac6ac0c53e913fea2acdae",
+      "size_bytes": 885
+    },
+    {
+      "source": "md4/entrada_y_entorno.json",
+      "decision": "EXCLUIR_PRIVADO",
+      "reason": "Excluido privado: mezcla versiones útiles con hashes de archivos fuente, incluido customers. Las versiones se transcriben en la documentación.",
+      "sha256": "d1eba4eb69839b32ddf2717f78b5d85772f661ecc4e56a049e7012c9560d4bae",
+      "size_bytes": 587
+    },
+    {
+      "source": "md4/md4_primera_ronda_segundo_evaluador.csv",
+      "decision": "EXCLUIR_PRIVADO",
+      "reason": "Excluido privado: incluye identificadores y descripciones de artículos para la evaluación humana.",
+      "sha256": "5d962b2269e27a063c12f5a9ccba5dde239474f03a8bfc5bfdef830343e89aeb",
+      "size_bytes": 35309
+    },
+    {
+      "source": "md4/md4_plantilla_pps_ciega.csv",
+      "decision": "EXCLUIR_PRIVADO",
+      "reason": "Excluido privado: contiene IDs, nombres y descripciones de artículos; además es plantilla sin calificaciones humanas.",
+      "sha256": "689c57af08cd51514763d4f389c4ccbbb4d5049503d50f4ef68e42175801d28c",
+      "size_bytes": 122763
+    },
+    {
+      "source": "md4/md4_consultas_ajuste.csv",
+      "decision": "EXCLUIR_PRIVADO",
+      "reason": "Excluido privado: lista de article_id de consultas asociadas al corpus privado.",
+      "sha256": "4c2980bc09949f10979c77e6d399c7accc0fe5030843cb65a2016bc8546eb90e",
+      "size_bytes": 4731
+    }
+  ],
+  "evaluation_status": {
+    "notebook": "EXECUTED_SAVED_COMPLETE_17_CODE_CELLS_43_OUTPUTS_0_CELL_ERRORS",
+    "overall": "EVIDENCIA_COMPLEMENTARIA_PUBLICADA; PPS_KAPPA_Y_FORMULAS_ESTRUCTURALES_PENDIENTES",
+    "P01": "PASS_DECLARADO",
+    "P02": "SELECCION_DE_HIPERPARAMETROS_DOCUMENTADA; PPS_KAPPA_PENDIENTE",
+    "P03": "PARCIAL",
+    "P04": "SENSIBILIDAD_LSA_ORIGINALES_ADICIONAL_GENERADA_CON_RESERVA",
+    "pps": "PENDIENTE_REVISION_HUMANA; NO_SE_ENCONTRO_md4_pps_evaluaciones.csv",
+    "cohens_kappa": "NO_CALCULADO_O_NO_ENTREGADO"
+  },
+  "supplemental_sources": [
+    {
+      "filename": "nb03-md4-similitud-textual.ipynb",
+      "sha256": "96c257f48f21c412f16575c6ff03146f936db3ace04d4266ae5034e74e186acd",
+      "size_bytes": 68029,
+      "published_path": "notebook/nb03-md4-similitud-textual.ipynb",
+      "notebook_execution": {
+        "code_cells": 16,
+        "executed_code_cells": 16,
+        "outputs": 41,
+        "cell_errors": 0,
+        "execution_count_sequence": "1-8, 10-17",
+        "execution_snapshot": "COMPLETO"
+      }
+    },
+    {
+      "filename": "nb03-md4-similitud-textual.ipynb",
+      "sha256": "502ee98a06fdf544996b64dba8c50558b16a90ec1c2a30de33afd70dab7aa016",
+      "size_bytes": 79776,
+      "published_path": "notebook/nb03-md4-similitud-textual-revision-complementaria.ipynb",
+      "notebook_execution": {
+        "code_cells": 17,
+        "executed_code_cells": 17,
+        "outputs": 43,
+        "cell_errors": 0,
+        "execution_count_sequence": "1-8, 10-18",
+        "new_cells": 1,
+        "source_cells_changed": 0,
+        "execution_snapshot": "COMPLETO_CON_AUDITORIA_COMPLEMENTARIA"
+      }
+    }
+  ],
+  "supplemental_archives": [
+    {
+      "filename": "MD4_Revision_Complementaria.zip",
+      "sha256": "48cfc4ff32b576c8aab9b40c59a127186370b821ea6cb892d34e0dcc38f9db1d",
+      "size_bytes": 64742,
+      "files": 9,
+      "published_content": [
+        {
+          "source": "revision_complementaria/md4_sensibilidad_corpus_consolidada.csv",
+          "path": "evidencias/revision_complementaria/md4_sensibilidad_corpus_consolidada.csv",
+          "size_bytes": 6313,
+          "sha256": "bd9cb91f3b65ce808030d6cdf52137ed4dcd79455e640dd04d2617744722821d"
+        },
+        {
+          "source": "revision_complementaria/md4_distribucion_coseno_top5.png",
+          "path": "evidencias/revision_complementaria/md4_distribucion_coseno_top5.png",
+          "size_bytes": 35298,
+          "sha256": "4b2dbf2be260fcccc81464b12405fbc0365666e9265c132b5675dd5f5bec8405"
+        },
+        {
+          "source": "revision_complementaria/md4_equivalencia_gram_cruzada.csv",
+          "path": "evidencias/revision_complementaria/md4_equivalencia_gram_cruzada.csv",
+          "size_bytes": 470,
+          "sha256": "5a6d0382d72490bc24bd1f651d8eb862a60a1dbde52d4f87e51dc8e0bd25cb2d"
+        },
+        {
+          "source": "revision_complementaria/md4_seleccion_hiperparametros.csv",
+          "path": "evidencias/revision_complementaria/md4_seleccion_hiperparametros.csv",
+          "size_bytes": 680,
+          "sha256": "cf2b173073624e4bb6ac402b6e7b4c8a5c6310c9634def39c31443306de32e10"
+        },
+        {
+          "source": "revision_complementaria/md4_resumen_controles.json",
+          "path": "evidencias/revision_complementaria/md4_resumen_controles.json",
+          "size_bytes": 713,
+          "sha256": "5246d7464248f9709ee6eaa2955667828c450542fede91ad291b2a56fd50cdc9"
+        },
+        {
+          "source": "revision_complementaria/md4_auditoria_bitacora.csv",
+          "path": "evidencias/revision_complementaria/md4_auditoria_bitacora.csv",
+          "size_bytes": 288,
+          "sha256": "1a45867397f9404acba84d28f60e86112d968bd763c2558e222ecd6d1c41278b"
+        },
+        {
+          "source": "revision_complementaria/md4_entorno_modelo_complementario.json",
+          "path": "evidencias/revision_complementaria/md4_entorno_modelo_complementario.json",
+          "size_bytes": 570,
+          "sha256": "c4277c9797b0c127ae552d9744621992909a2a08bd82126a15e63cb1690b31db"
+        },
+        {
+          "source": "revision_complementaria/md4_sensibilidad_LSA_originales_adicional.csv",
+          "path": "evidencias/revision_complementaria/md4_sensibilidad_LSA_originales_adicional.csv",
+          "size_bytes": 447,
+          "sha256": "5ea0c06a088a9eac3d3e8ba83eeed83b641a53bf757de668d986fb97ce2e532a"
+        },
+        {
+          "source": "revision_complementaria/md4_solapamiento_modelos.png",
+          "path": "evidencias/revision_complementaria/md4_solapamiento_modelos.png",
+          "size_bytes": 40898,
+          "sha256": "ac381a67b212cddb130d91ddade02db82274038cecf9e015dfda86055ab08a1a"
+        }
+      ]
+    }
+  ]
+}

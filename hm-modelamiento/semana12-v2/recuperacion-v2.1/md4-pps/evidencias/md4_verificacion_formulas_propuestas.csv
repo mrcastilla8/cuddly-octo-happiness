@@ -1,0 +1,17 @@
+modelo,regimen,k,TCMG_mas_TDIG_igual_cobertura,TCTipo_mas_TDIT_igual_cobertura,TCC_igual_recuperados_sobre_D
+LSA,completo,5,True,True,True
+LSA,completo,10,True,True,True
+LSA,refit_orig,5,True,True,True
+LSA,refit_orig,10,True,True,True
+LSA,sin_imputados_modelo_fijo,5,True,True,True
+LSA,sin_imputados_modelo_fijo,10,True,True,True
+SBERT,completo,5,True,True,True
+SBERT,completo,10,True,True,True
+SBERT,sin_imputados_modelo_fijo,5,True,True,True
+SBERT,sin_imputados_modelo_fijo,10,True,True,True
+TFIDF,completo,5,True,True,True
+TFIDF,completo,10,True,True,True
+TFIDF,refit_orig,5,True,True,True
+TFIDF,refit_orig,10,True,True,True
+TFIDF,sin_imputados_modelo_fijo,5,True,True,True
+TFIDF,sin_imputados_modelo_fijo,10,True,True,True

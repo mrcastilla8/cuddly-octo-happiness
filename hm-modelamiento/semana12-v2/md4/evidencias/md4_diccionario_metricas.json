@@ -1,0 +1,12 @@
+{
+  "estado": "DEFINICIONES_OPERACIONALES_PROPUESTAS_NO_APROBADAS",
+  "formulas": {
+    "TCC@k": "recuperados/(consultas*k); posiciones vacantes cuentan en denominador",
+    "TCT@k": "pares con intersección no vacía de palabras normalizadas/(consultas*k); PROPUESTA",
+    "TCMG@k": "pares del mismo product_group_name/(consultas*k); PROPUESTA",
+    "TDIG@k": "pares de distinto product_group_name/(consultas*k); PROPUESTA",
+    "TCTipo@k": "pares del mismo product_type_name/(consultas*k); PROPUESTA",
+    "TDIT@k": "pares de distinto product_type_name/(consultas*k); PROPUESTA",
+    "Jaccard@k": "interseccion/union de conjuntos top-k article_id para cada consulta; indefinido si ambos vacíos"
+  }
+}

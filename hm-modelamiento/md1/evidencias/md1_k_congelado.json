@@ -1,0 +1,4 @@
+{
+  "k": 2,
+  "criterio": "Silueta <= .02 del max; max(min ARI); min k"
+}

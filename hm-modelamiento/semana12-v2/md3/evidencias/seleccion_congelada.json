@@ -1,0 +1,22 @@
+{
+  "Bstar": "naive",
+  "ETS": "ETS_tN_sN_d0",
+  "SARIMA": "SARIMA_101_011_7",
+  "checks": {
+    "ETS_tN_sN_d0": {
+      "cumple": false,
+      "mejora_pct": -1.3138301906984013,
+      "victorias": 7
+    },
+    "SARIMA_101_011_7": {
+      "cumple": false,
+      "mejora_pct": 2.5258440344751794,
+      "victorias": 9
+    }
+  },
+  "recomendacion_validacion": "naive",
+  "finalistas": [
+    "ETS_tN_sN_d0",
+    "SARIMA_101_011_7"
+  ]
+}

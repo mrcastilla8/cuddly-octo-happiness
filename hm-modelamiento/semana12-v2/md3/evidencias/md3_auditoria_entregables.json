@@ -1,0 +1,41 @@
+{
+  "estado": "COMPLETO_PRELIMINAR",
+  "faltantes": [],
+  "eventos": [
+    {
+      "prueba": "MD3-P03",
+      "etapa": "entrada",
+      "estado": "PASS",
+      "detalle": "734 días y canales conciliados",
+      "duracion_s": null
+    },
+    {
+      "prueba": "MD3-P01",
+      "etapa": "baselines_validacion",
+      "estado": "PASS",
+      "detalle": "naive",
+      "duracion_s": null
+    },
+    {
+      "prueba": "MD3-P02",
+      "etapa": "seleccion",
+      "estado": "PASS",
+      "detalle": "naive",
+      "duracion_s": null
+    },
+    {
+      "prueba": "MD3-P03",
+      "etapa": "rolling_origin_test",
+      "estado": "PASS",
+      "detalle": "15 ventanas de horizonte 7, modelos faltantes: 0",
+      "duracion_s": null
+    },
+    {
+      "prueba": "MD3-P04",
+      "etapa": "sensibilidad",
+      "estado": "PASS",
+      "detalle": "32 comparaciones; pendientes 0; diagnósticos 6",
+      "duracion_s": null
+    }
+  ]
+}

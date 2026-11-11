@@ -1,0 +1,8 @@
+{
+  "estado": "PENDIENTE_EVALUACION_HUMANA_REAL",
+  "pares_Q": 340,
+  "doble_revision_primera_ronda": 102,
+  "n_modelos": 3,
+  "kappa_primera_ronda": null,
+  "aprobacion_metodologica": false
+}

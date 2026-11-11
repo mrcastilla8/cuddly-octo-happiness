@@ -1,0 +1,12 @@
+﻿metrica,valor
+reglas,30
+confidence_min,0.200729927
+confidence_mediana,0.6175229586
+confidence_max,0.9375
+lift_min,41.60306051
+lift_mediana,689.8901718
+lift_max,2183.42246
+support_min,0.0003673769287
+support_max,0.0008939505266
+reglas_confidence_ge_020,30
+reglas_lift_gt_1,30

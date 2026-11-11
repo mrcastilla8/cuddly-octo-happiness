@@ -1,0 +1,31 @@
+{
+  "estado": "EVIDENCIA_COMPLEMENTARIA_CON_REGLAS_DE_PARES",
+  "muestras": [
+    {
+      "fraccion_clientes": 0.01,
+      "N_cestas": 81660,
+      "transacciones_unicas": 257607,
+      "n_articulos_distintos": 47383,
+      "n_articulos_elegibles": 886,
+      "piso_presencia": 30,
+      "max_presencia": 394,
+      "cobertura_presencias": 0.17169952679857303,
+      "duracion_s": 2.9340641350000283,
+      "estado": "REGLAS_PARES_ENCONTRADAS",
+      "n_pares_elegibles": 18,
+      "n_cestas_con_item_elegible": 28760,
+      "n_cestas_vacias_filtradas": 52900,
+      "cobertura_cestas": 0.35219201567474895,
+      "n_reglas_elegibles": 30
+    }
+  ],
+  "alcance": "reglas de 2 artículos sin evaluación temporal; desarrollo exclusivamente",
+  "criterios": {
+    "soporte": 5e-05,
+    "piso_abs": 30,
+    "confianza": 0.2,
+    "lift_mayor": 1.0
+  },
+  "no_repite": "modelos por categoría, P02, P03, P04",
+  "se_reutiliza": "reglas/modelos antiguos permanecen intactos"
+}

@@ -1,0 +1,5 @@
+modelo,grupo,recencia_dias,frecuencia_registros,valor_agregado_price
+KMeans,0,297,5,0.1778813559322034
+KMeans,1,92,53,1.598966101694915
+PAM,0,70,38,1.0760508474576271
+PAM,1,299,5,0.14906779661016947

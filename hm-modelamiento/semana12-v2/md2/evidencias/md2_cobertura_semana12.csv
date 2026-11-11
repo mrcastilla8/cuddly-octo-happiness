@@ -1,0 +1,7 @@
+prueba,control,estado,evidencia
+MD2-P01,"Apriori frente a FP-Growth, mismos datos y itemsets",PASS,md2_pilotos.csv; md2_comparacion_algoritmos.csv; estado_experimentos.csv
+MD2-P01,factibilidad de reglas por artículo en piloto,PENDIENTE,md2_pilotos.csv; estado_experimentos.csv
+MD2-P02,sensibilidad soporte/confianza/pisos absolutos,PASS,md2_sensibilidad_umbrales.csv
+MD2-P02,robustez con tres remuestreos de 80% de clientes,PASS,md2_estabilidad_remuestreos.csv
+MD2-P03,sensibilidad cestas diaria/semanal y fronteras ISO,PASS,md2_sensibilidad_cestas.csv; md2_semanas_iso_parciales.csv
+MD2-P04,hasta 20 reglas congeladas reevaluadas en todas las cestas de test,PASS,md2_reglas_congeladas_test.csv; md2_fichas_top20.csv; md2_control_popularidad_p99.csv

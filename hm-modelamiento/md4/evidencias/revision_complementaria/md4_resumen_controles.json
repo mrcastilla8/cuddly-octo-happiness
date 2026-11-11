@@ -1,0 +1,40 @@
+{
+  "H01": {
+    "estado": "GENERADO",
+    "filas": 6,
+    "TFIDF": "TF_SW_2",
+    "LSA": 200
+  },
+  "H04": {
+    "estado": "GENERADO",
+    "consultas": 170,
+    "filas": 2
+  },
+  "H05": {
+    "estado": "PASS",
+    "comparaciones": 8,
+    "max_error_absoluto": 8.881784197001252e-16
+  },
+  "H03": {
+    "estado": "PENDIENTE_REVISION_HUMANA",
+    "nota": "No se encontró md4_pps_evaluaciones.csv"
+  },
+  "H06": {
+    "estado": "DIAGNOSTICO",
+    "etapas_repetidas": [
+      {
+        "prueba": "MD4-P02",
+        "etapa": "seleccion_lsa",
+        "repeticiones": 2
+      }
+    ]
+  },
+  "H07": {
+    "estado": "GENERADOS",
+    "graficos": 2
+  },
+  "H08": {
+    "estado": "GENERADO",
+    "revisiones_cache": 1
+  }
+}

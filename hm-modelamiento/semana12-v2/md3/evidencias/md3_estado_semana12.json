@@ -1,0 +1,31 @@
+{
+  "estado": "EVALUADO",
+  "pruebas": [
+    {
+      "prueba": "MD3-P01",
+      "aspecto": "dos baselines en validación, B* elegido sin test",
+      "estado": "PASS",
+      "evidencia": "md3_baselines_validacion.csv; baseline_fijada.json"
+    },
+    {
+      "prueba": "MD3-P02",
+      "aspecto": "ETS, SARIMA, MAE/RMSE en 15 orígenes y selección congelada",
+      "estado": "PASS",
+      "evidencia": "md3_candidatos.csv; md3_pronosticos_validacion.csv; md3_metricas_por_origen.csv; seleccion_congelada.json"
+    },
+    {
+      "prueba": "MD3-P03",
+      "aspecto": "test retenido con 15 ventanas de horizonte 7",
+      "estado": "PASS",
+      "evidencia": "md3_pronosticos_test.csv; md3_metricas_test.csv"
+    },
+    {
+      "prueba": "MD3-P04",
+      "aspecto": "sensibilidad a 28 días, 180 días, canales y residuos",
+      "estado": "PASS",
+      "evidencia": "md3_sensibilidad.csv; md3_diagnosticos_residuos.csv; md3_semanas_observadas.csv"
+    }
+  ],
+  "invariantes_aprobadas": true,
+  "resultados_verdaderos_no_simulados": true
+}

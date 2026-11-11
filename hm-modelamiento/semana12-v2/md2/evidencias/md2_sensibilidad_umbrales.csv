@@ -1,0 +1,10 @@
+familia,valor,estado,n_reglas,jaccard20_vs_principal,jaccard50_vs_principal,N,vacias
+soporte,0.0005,OK,368,1.0,1.0,,
+soporte,0.001,OK,191,0.5384615384615384,0.6129032258064516,,
+soporte,0.005,OK,25,0.1111111111111111,0.20967741935483872,,
+confianza,0.2,OK,1717,1.0,1.0,,
+confianza,0.4,OK,368,1.0,1.0,,
+confianza,0.6,OK,63,1.0,1.0,,
+piso_absoluto,20.0,OK,1717,1.0,1.0,81660.0,45.0
+piso_absoluto,30.0,OK,1717,1.0,1.0,81660.0,45.0
+piso_absoluto,50.0,OK,1488,0.9047619047619048,0.8518518518518519,81660.0,45.0

@@ -1,0 +1,8 @@
+prueba,etapa,estado,detalle,duracion_s
+MD2-P01,preparacion,PASS,Cestas por cliente-fecha sin duplicados,
+MD2-P01,pilotos,PARCIAL,"[{'vista': 'product_type_name', 'fraccion_clientes': 0.001, 'support': 0.0005, 'nmin': 30, 'N': 8321, 'vacias': 68, 'items': 49, 'cobertura': 0.9763187979748489, 'estado': 'OK', 'itemsets_n': 296, 'segundos': 5.801399634000063, 'rss_max_bytes': 125140992, 'wall_s': 7.028047142999867}, {'vista': 'product_type_name', 'fraccion_clientes': 0.01, 'support': 0.0005, 'nmin': 41, 'N': 81660, 'vacias': 85, 'items': 76, 'cobertura': 0.9974702124465548, 'estado': 'OK', 'itemsets_n': 1831, 'segundos': 389.91680673300016, 'rss_max_bytes': 191889408, 'wall_s': 390.7909572289998}, {'vista': 'article_id', 'fraccion_clientes': 0.001, 'support': 5e-05, 'nmin': 30, 'N': 8321, 'vacias': 8321, 'items': 0, 'cobertura': 0.0, 'estado': 'SIN_PATRONES_ELEGIBLES', 'itemsets_n': 0, 'segundos': 0.023664007999968817, 'rss_max_bytes': 102346752, 'wall_s': 1.0155204950001462, 'error': 'El proceso terminó, pero no existen itemsets elegibles al umbral fijado'}, {'vista': 'article_id', 'fraccion_clientes': 0.0001, 'support': 5e-05, 'nmin': 30, 'N': 792, 'vacias': 792, 'items': 0, 'cobertura': 0.0, 'estado': 'SIN_PATRONES_ELEGIBLES', 'itemsets_n': 0, 'segundos': 0.005236153000168997, 'rss_max_bytes': 102268928, 'wall_s': 1.0171962120000444, 'error': 'El proceso terminó, pero no existen itemsets elegibles al umbral fijado'}]",
+MD2-P01,algoritmos,PASS,1831,
+MD2-P02,umbrales,PASS,9,
+MD2-P02,remuestreo,PASS,6,
+MD2-P03,cestas,PASS,diarias 81660 vs. semanas 72697; fraction=0.01,
+MD2-P04,test_total,PASS,"20 reglas; N_test=1040904, popularidad P99 en desarrollo",

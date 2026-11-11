@@ -1,0 +1,5 @@
+vista,fraccion_clientes,support,nmin,N,vacias,items,cobertura,estado,itemsets_n,segundos,rss_max_bytes,wall_s,error
+product_type_name,0.001,0.0005,30,8321,68,49,0.9763187979748489,OK,296,5.801399634000063,125140992,7.028047142999867,
+product_type_name,0.01,0.0005,41,81660,85,76,0.9974702124465548,OK,1831,389.91680673300016,191889408,390.7909572289998,
+article_id,0.001,5e-05,30,8321,8321,0,0.0,SIN_PATRONES_ELEGIBLES,0,0.023664007999968817,102346752,1.0155204950001462,"El proceso terminó, pero no existen itemsets elegibles al umbral fijado"
+article_id,0.0001,5e-05,30,792,792,0,0.0,SIN_PATRONES_ELEGIBLES,0,0.005236153000168997,102268928,1.0171962120000444,"El proceso terminó, pero no existen itemsets elegibles al umbral fijado"
