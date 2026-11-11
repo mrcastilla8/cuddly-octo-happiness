@@ -1,6 +1,6 @@
 # Rúbrica PPS para evaluación asistida por IA
 
-Para cada par consulta–vecino, evalúa si la recomendación tiene una relación semántica o complementariedad justificable a partir de los nombres y descripciones proporcionados. La coincidencia de tipo o grupo es contexto, no evidencia suficiente por sí sola. Un producto de distinto tipo puede ser pertinente si complementa claramente al producto consultado; dos productos del mismo tipo pueden no ser pertinentes.
+El universo de evaluación contiene 656 pares únicos Q, V y R. La columna `origen_par` identifica la procedencia del par, no el modelo. Para cada par consulta–vecino, evalúa si la recomendación tiene una relación semántica o complementariedad justificable a partir de los nombres y descripciones proporcionados. La coincidencia de tipo o grupo es contexto, no evidencia suficiente por sí sola. Un producto de distinto tipo puede ser pertinente si complementa claramente al producto consultado; dos productos del mismo tipo pueden no ser pertinentes.
 
 ## Escala
 
